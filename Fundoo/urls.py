@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework_swagger.views import get_swagger_view
+from rest_framework_simplejwt.views import (
+    TokenObtainSlidingView,
+    TokenRefreshSlidingView,
+)
+
+schema_view = get_swagger_view(title='Fundoo API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include('login.urls')),
+    path('swagger/', schema_view),
+    path('api/token/', TokenObtainSlidingView.as_view(), name='token_obtain'),
+    path('api/token/refresh/', TokenRefreshSlidingView.as_view(), name='token_refresh'),
 ]
