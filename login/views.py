@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.sites.shortcuts import get_current_site
 from django.shortcuts import redirect
 import json
 import jwt
@@ -7,14 +8,18 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.core.mail import send_mail
 from django.http import HttpResponse, HttpResponseRedirect
+from django.template.loader import render_to_string
 from rest_framework import status, generics
+from rest_framework.exceptions import ValidationError
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .serializers import UserSerializer
+from .serializers import UserSerializer, EmailSerializer, PasswordSerializer
 from django.shortcuts import render
 from utils import Jwt_Token
 from rest_framework.permissions import IsAuthenticated, AllowAny
+from django.core.validators import validate_email
+import re
 
 
 class User_Create(GenericAPIView):
@@ -27,10 +32,11 @@ class User_Create(GenericAPIView):
         :return:in this function we take user input for registration and sent mail to email id
 
         """
+
         try:
-            response = {'success': False,
-                        'Message': 'please register again',
-                        'Data': []}
+            smd = {'success': False,
+                   'Message': 'please register again',
+                   'Data': []}
             serializer = UserSerializer(data=request.data)
             if serializer.is_valid():
                 user = serializer.save()
@@ -44,47 +50,51 @@ class User_Create(GenericAPIView):
                     }
                     token = Jwt_Token(payload)
                     Tokan = token['token']
-                    # subject = 'Thank you for registering to our site'
-                    # email_from = settings.EMAIL_HOST_USER
-                    # message = 'please click below link for activate your account'
-                    # recipient_list = [self.request.data['email'], ]
-                    response['success'] = True
-                    response['Message'] = 'you registered succesfully for activate your account please check your email'
-                    response['Data'] = Tokan
-                    # send_mail(subject, message + '\n' "http://localhost:8000/activate/" + Tokan, email_from,
-                    #           recipient_list)
-                    return Response(response)
-                return Response(response)
+                    subject = 'Thank you for registering to our site'
+                    email_from = settings.EMAIL_HOST_USER
+                    message = render_to_string('login/token.html', {
+                        'name': user.username,
+                        'domain': get_current_site(request).domain,
+                        'token': Tokan
+                    })
+                    recipient_list = [self.request.data['email'], ]
+                    smd['success'] = True
+                    smd['Message'] = 'you registered successfully for activate your account please check your email'
+                    smd['Data'] = Tokan
+                    send_mail(subject, message, email_from, recipient_list)
+                    return Response(smd)
+                return Response(smd)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
             return Response(status.HTTP_417_EXPECTATION_FAILED)
 
 
-class Active_user(APIView):
-
-    def get(self, request, id, *args, **kwargs):
-        """
+def activate(request, id, *args, **kwargs):
+    """
 
         :param request: here we use get request
         :param id:in this id we gate token
         :return:in this function we get tokan when user click the link and we decode the token and
                 activate the user
         """
-        try:
-            decodedPayload = jwt.decode(id, "SECRET_KEY")
-            username = decodedPayload["username"]
-            email = decodedPayload["email"]
-            user = User.objects.get(username=username, email=email)
-            if user:
-                user.is_active = True
-                user.save()
-
-                return HttpResponseRedirect(redirect_to="http://localhost:8000/loginpage/")
-            else:
-                return HttpResponseRedirect(redirect_to="http://localhost:8000/register/")
-        except Exception:
-            messages.info(request, "activation failed")
-            return HttpResponseRedirect(redirect_to="http://localhost:8000/register/")
+    smd = {'success': False,
+           'Message': 'account activation failed',
+           'Data': []}
+    try:
+        decodedPayload = jwt.decode(id, "SECRET_KEY")
+        username = decodedPayload["username"]
+        email = decodedPayload["email"]
+        user = User.objects.get(username=username, email=email)
+        if user:
+            user.is_active = True
+            user.save()
+            smd['success'] = True
+            smd['Message'] = 'account activated successfully'
+            return HttpResponse(json.dumps(smd))
+        else:
+            return HttpResponse(json.dumps(smd))
+    except Exception:
+        return HttpResponse(json.dumps(smd))
 
 
 class Login(APIView):
@@ -115,7 +125,8 @@ class Login(APIView):
             return redirect('loginpage')
 
 
-class Reset_Passward(APIView):
+class Reset_Passward(GenericAPIView):
+    serializer_class = EmailSerializer
 
     def post(self, request, *args, **kwargs):
         """
@@ -124,28 +135,39 @@ class Reset_Passward(APIView):
         :return: in this function we take email from user and send toaken for verification
         """
         try:
-            email = request.POST["email"]
+            smd = {'success': False,
+                   'Message': 'please enter valid email address',
+                   'Data': []}
+            email = request.data['email']
             print(email)
+            # validate = check_email(email)
+            # if validate:
             user = User.objects.get(email=email)
-            print(user, '...........')
             if user:
                 payload = {
                     'username': user.username,
                     'email': user.email,
                 }
-                jwt_token = {'token': jwt.encode(payload, "SECRET_KEY", algorithm="HS256").decode('utf-8')}
+                jwt_token = Jwt_Token(payload)
                 Tokan = jwt_token['token']
                 subject = 'reset password'
-                message = 'please click below link for activate your account'
+                message = render_to_string('login/reset_token.html', {
+                    'name': user.username,
+                    'domain': get_current_site(request).domain,
+                    'token': Tokan
+                })
                 email_from = settings.EMAIL_HOST_USER
                 recipient_list = [user.email, ]
-                send_mail(subject, message + " \n " + "http://localhost:8000/reset_password/" + Tokan, email_from,
-                          recipient_list)
-                return Response("please check you're email")
+                send_mail(subject, message, email_from, recipient_list)
+                smd['success'] = True
+                smd['Message'] = 'your email is validated for reset password check email'
+                return Response(smd)
+                # else:
+                #     return Response(smd)
             else:
-                return Response("you are not valid user")
+                return Response(smd)
         except Exception:
-            return redirect('Reset_Passward')
+            return Response(smd)
 
 
 def reset_password(request, id):
@@ -166,47 +188,60 @@ def reset_password(request, id):
 
             return redirect('http://localhost:8000/resetpassword/' + str(user))
         else:
-            messages.info(request, 'was not able to sent the email')
-            return redirect('reset_password')
+            return Response('not')
     except KeyError:
-        messages.info(request, 'was not able to sent the email')
-        return redirect('reset_password')
+        return redirect('not')
     except Exception:
-        messages.info(request, 'activation link expired')
-        return redirect('reset_password')
+        return redirect('not')
 
 
-def resetpassword(request, userReset):
-    """
-    :param request:  user will request for resetting password
-    :param userReset: username is fetched
-    :return: will chnage the password
-    """
-    try:
-        if request.method == 'POST':
-            password = request.POST['password']
-            confirm_password = request.POST['confirm_password']
+class resetpassword(GenericAPIView):
+    serializer_class = PasswordSerializer
 
-            # password validation is done in this form
+    def get(self, request, userReset, *args, **kwargs):
+        global username
+        """
+          :param request:  user will request for resetting password
+          :param userReset: username is fetched
+          :return: will chnage the password
+          """
+        try:
+            user = User.objects.get(username=userReset)
+            if user:
+                username = user.username
+                return Response('gfdgfgrff')
+            return Response('hhhhhhhhhhh')
+        except Exception:
+            Response('hiiiiiiiiiiiiii')
+
+    def post(self, request, *args, **kwargs):
+        smd = {'success': False,
+               'Message': 'please enter valid password',
+               'Data': []}
+        try:
+            password = request.data['password']
+            confirm_password = request.data['password']
+            # here we will save the user password in the database
             if password == "" or confirm_password == "":
-                messages.info(request, "please check the re entered password again")
-                return redirect('http://localhost:8000/resetpassword/' + str(userReset))
-
+                return Response(smd)
             elif password != confirm_password:
-                messages.info(request, "please check the re entered password again")
-                return redirect('http://localhost:8000/resetpassword/' + str(userReset))
 
+                smd['Message'] = 'password not match'
+                return Response(smd)
             else:
-                user = User.objects.get(username=userReset)
+                user = User.objects.get(username=username)
                 user.set_password(password)
                 # here we will save the user password in the database
                 user.save()
-                messages.info(request, "password reset done")
-                return redirect('http://localhost:8000/loginpage/')
-        else:
-            return render(request, 'login/set_password.html')
-    except Exception:
-        return redirect('http://localhost:8000/resetpassword/' + str(userReset))
+                smd['success'] = True
+                smd['Message'] = 'password changed successfully'
+                return Response(smd)
+
+
+
+        except Exception:
+            smd['Message'] = 'something was wrong try again'
+            return Response(smd)
 
 
 def logout(request):
@@ -215,13 +250,13 @@ def logout(request):
     :return: here is logout function redirect to loginpage
 
     """
-    return HttpResponseRedirect(redirect_to="http://localhost:8000/loginpage/")
+    return HttpResponseRedirect(redirect_to="http://localhost:80")
 
 
 class HelloView(GenericAPIView):
-    serializer_class = UserSerializer
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
+        print(request.META['HTTP_AUTHORIZATION'])
         content = {'message': 'Hello, World!'}
         return Response(content)

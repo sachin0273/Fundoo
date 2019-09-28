@@ -16,17 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
-from rest_framework_simplejwt.views import (
-    TokenObtainSlidingView,
-    TokenRefreshSlidingView,
-)
+from rest_framework_simplejwt import views as jwt_views
 
 schema_view = get_swagger_view(title='Fundoo API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('login.urls')),
+    path('', include('login.urls')),
     path('swagger/', schema_view),
-    path('api/token/', TokenObtainSlidingView.as_view(), name='token_obtain'),
-    path('api/token/refresh/', TokenRefreshSlidingView.as_view(), name='token_refresh'),
+    path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
 ]

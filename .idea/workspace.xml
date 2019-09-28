@@ -2,22 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce6891f1-2e3d-49ca-8a90-768763f18dee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/decoraters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login/reset_token.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/login/token.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,12 +35,16 @@
   <component name="ProjectId" id="1RNTVa3pXZ8N9JWmgTrBVZisK2r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/login" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -128,12 +126,19 @@
       <workItem from="1569506579058" duration="1087000" />
       <workItem from="1569555782362" duration="7114000" />
       <workItem from="1569566115167" duration="295000" />
-      <workItem from="1569566656306" duration="15610000" />
+      <workItem from="1569566656306" duration="15855000" />
+      <workItem from="1569641637636" duration="3469000" />
+      <workItem from="1569645337606" duration="11668000" />
+      <workItem from="1569661957442" duration="2422000" />
+      <workItem from="1569665254724" duration="13921000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
