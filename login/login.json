@@ -1,0 +1,22 @@
+{"login": [
+  {
+    "username":"sachin",
+    "email": "sachinjadhav@gmail.com",
+    "password": "admin123"
+  },
+  {
+    "username":" ",
+    "email": "  ",
+    "password": "  "
+  },{
+    "username":"sachin",
+    "email": "sachinjadhagmail.com",
+    "password": "admin123"
+  },{
+    "username":" ",
+    "email": "sachinjadhagmail.com",
+    "password": "admin123"
+  }
+]
+
+}

@@ -20,6 +20,9 @@ from utils import Jwt_Token
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.core.validators import validate_email
 import re
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class User_Create(GenericAPIView):
@@ -62,10 +65,13 @@ class User_Create(GenericAPIView):
                     smd['Message'] = 'you registered successfully for activate your account please check your email'
                     smd['Data'] = Tokan
                     send_mail(subject, message, email_from, recipient_list)
+                    logger.warning('somthing was wrong')
                     return Response(smd)
                 return Response(smd)
+            logger.warning('somthing was wrong')
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
+            logger.warning('somthing was wrong')
             return Response(status.HTTP_417_EXPECTATION_FAILED)
 
 
@@ -220,7 +226,7 @@ class resetpassword(GenericAPIView):
                'Data': []}
         try:
             password = request.data['password']
-            confirm_password = request.data['password']
+            confirm_password = request.data['confirm_password']
             # here we will save the user password in the database
             if password == "" or confirm_password == "":
                 return Response(smd)

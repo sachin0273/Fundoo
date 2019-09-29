@@ -1,5 +1,5 @@
 import re
-
+import json
 import jwt
 from pyee import BaseEventEmitter
 
@@ -14,6 +14,10 @@ def Jwt_Token(payload):
     return jwt_token
 
 
+def load(filename):
+    with open(filename) as json_file:
+        data = json.load(json_file)
+    return data
 
 # @mail.on('event')
 # def event_handler():

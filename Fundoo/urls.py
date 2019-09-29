@@ -23,7 +23,7 @@ schema_view = get_swagger_view(title='Fundoo API')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('login.urls')),
-    path('swagger/', schema_view),
+    path('', schema_view),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
 ]
