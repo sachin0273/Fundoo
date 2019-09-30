@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce6891f1-2e3d-49ca-8a90-768763f18dee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/login/login.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/bridgelabz.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fundoo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/decoraters.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/decoraters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/reset_token.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/reset_token.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login/token.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/token.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,12 +46,12 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/templates/login" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -63,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.utils">
+  <component name="RunManager" selected="Django server.Fundoo">
     <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Fundoo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,6 +95,7 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Fundoo.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -135,6 +139,7 @@
       <workItem from="1569665254724" duration="13921000" />
       <workItem from="1569734352908" duration="2428000" />
       <workItem from="1569737330134" duration="12530000" />
+      <workItem from="1569814586573" duration="27364000" />
     </task>
     <servers />
   </component>
@@ -158,6 +163,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Fundoo$utils.coverage" NAME="utils Coverage Results" MODIFIED="1569755683303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fundoo$utils.coverage" NAME="utils Coverage Results" MODIFIED="1569817994295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
