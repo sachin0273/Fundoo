@@ -15,23 +15,25 @@ import jwt
 from django.conf import settings
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
-from django.core.mail import send_mail
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.template.loader import render_to_string
-from rest_framework import status, generics
-from rest_framework.exceptions import ValidationError
+from django.utils.decorators import method_decorator
+from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
+
+from Services import redis
+from login.decoraters import login_required
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer
-from django.shortcuts import render
-from utils import Jwt_Token
+from Services.pyjwt_token import Jwt_Token
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from django.core.validators import validate_email
-import re
-from bitly_api import Connection
-from utils import ee
+from Services.bitly_api import Connection
+from Services.event_emmiter import ee
 import logging
+from utils import validate_email
+from urlshortening.models import get_short_url, invalidate_url, get_full_url, Url
+from utils import Smd_Response
 
 logger = logging.getLogger(__name__)
 
@@ -41,7 +43,7 @@ class User_Create(GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         """
-
+        :purpose: in this function we register a new user via sending jwt token on email
         :param request: here we get post request
         :return:in this function we take user input for registration and sent mail to email id
 
@@ -49,9 +51,11 @@ class User_Create(GenericAPIView):
 
         try:
             smd = {'success': False,
-                   'Message': 'please register again',
+                   'Message': 'something went wrong',
                    'Data': []}
+
             serializer = UserSerializer(data=request.data)
+
             if serializer.is_valid():
                 user = serializer.save()
                 user.is_active = False
@@ -64,15 +68,19 @@ class User_Create(GenericAPIView):
                     }
                     token = Jwt_Token(payload)
                     Tokan = token['token']
-                    message1 = 'http://' + get_current_site(request).domain + '/' + 'activate' + '/' + Tokan
-                    API_USER = settings.API_USER
-                    API_KEY = settings.API_KEY
-                    bitly = Connection(API_USER, API_KEY)
-                    response = bitly.shorten(message1)
-                    url = response["url"]
+                    message1 = 'activate' + '/' + Tokan
+                    short_url = get_short_url(message1)  # Url object
+                    print(type(short_url.short_id))
+                    print(short_url.short_id)  # id for short url
+                    # API_USER = settings.API_USER
+                    # API_KEY = settings.API_KEY
+                    # bitly = Connection(API_USER, API_KEY)
+                    # response = bitly.shorten(message1)s
+                    # url = response["url"]
                     message = render_to_string('login/token.html', {
                         'name': user.username,
-                        'url': url
+                        'domain': get_current_site(request).domain,
+                        'url': short_url.short_id
                     })
                     recipient_list = [self.request.data['email'], ]
                     smd['success'] = True
@@ -87,19 +95,21 @@ class User_Create(GenericAPIView):
             return Response(status.HTTP_417_EXPECTATION_FAILED)
 
 
-def activate(request, id, *args, **kwargs):
+def activate(request, short_id, *args, **kwargs):
     """
-
-        :param request: here we use get request
-        :param id:in this id we gate token
-        :return:in this function we get tokan when user click the link and we decode the token and
-                activate the user
-        """
+    :param request: here we use get request
+    :param id:in this id we gate token
+    :return:in this function we get tokan when user click the link and we decode the token and
+            activate the user
+    """
     smd = {'success': False,
            'Message': 'account activation failed',
            'Data': []}
     try:
-        decodedPayload = jwt.decode(id, "SECRET_KEY")
+        gh = Url.objects.get(short_id=short_id)
+        ty = gh.url.split('/')
+        print(ty[1])
+        decodedPayload = jwt.decode(ty[1], "SECRET_KEY")
         username = decodedPayload["username"]
         email = decodedPayload["email"]
         user = User.objects.get(username=username, email=email)
@@ -115,48 +125,20 @@ def activate(request, id, *args, **kwargs):
         return HttpResponse(json.dumps(smd))
 
 
-class Login(APIView):
-
-    def post(self, request, *args, **kwargs):
-        """
-
-        :param request: here we get post request
-        :return:this is login api view for user login after login its generate the token
-
-        """
-        try:
-            username = request.POST["username"]
-            password = request.POST["password"]
-            user = authenticate(username=username, password=password)
-            if user:
-                payload = {
-                    'username': user.username,
-                    'email': user.email,
-                }
-                jwt_token = {'token': jwt.encode(payload, "SECRET_KEY", algorithm="HS256").decode('utf-8')}
-                Tokan = jwt_token['token']
-                response = json.dumps({"success": True, "message": "successful", "data": Tokan})
-
-            messages.info(request, "credential not authorized")
-            return redirect('loginpage')
-        except Exception:
-            return redirect('loginpage')
-
-
 class Reset_Passward(GenericAPIView):
     serializer_class = EmailSerializer
 
     def post(self, request, *args, **kwargs):
         """
-
         :param request: here is post request por set password
         :return: in this function we take email from user and send toaken for verification
         """
         try:
-            smd = {'success': False,
-                   'Message': 'please enter valid email address',
-                   'Data': []}
             email = request.data['email']
+            if email == "":
+                raise KeyError
+            if not validate_email(email):
+                raise ValueError
             user = User.objects.get(email=email)
             if user:
                 payload = {
@@ -165,34 +147,40 @@ class Reset_Passward(GenericAPIView):
                 }
                 jwt_token = Jwt_Token(payload)
                 Tokan = jwt_token['token']
-                message1 = 'http://' + get_current_site(request).domain + '/' + 'reset_password' + '/' + Tokan
-                API_USER = settings.API_USER
-                API_KEY = settings.API_KEY
-                bitly = Connection(API_USER, API_KEY)
-                response = bitly.shorten(message1)
-                short_url = response["url"]
+                message1 = 'reset_password' + '/' + Tokan
+                # API_USER = settings.API_USER
+                # API_KEY = settings.API_KEY
+                # bitly = Connection(API_USER, API_KEY)
+                # response = bitly.shorten(message1)
+                short_url = get_short_url(message1)  # Url object
+                print(short_url.short_id)  # id for short url
+                print('http://' + str(short_url.short_id))
+
+                # short_url = response["url"]
                 message = render_to_string('login/reset_token.html', {
                     'name': user.username,
                     'url': short_url
                 })
                 recipient_list = [user.email, ]
                 ee.emit("myevent2", message, recipient_list)
-                smd['success'] = True
-                smd['Message'] = 'your email is validated for reset password check email'
+                smd = Smd_Response(True, 'you"re email is verified for reset password check you"re mail', [])
+
                 return Response(smd)
             else:
-                return Response(smd)
+                return Response('dfffd')
+        except ValueError:
+            return Response('dfhdhdhdhdhdhdhdhdhdhdhdhdh')
+        except KeyError:
+            return Response('=========================>')
         except Exception:
             return Response(smd)
 
 
 def reset_password(request, id):
     """
-
     :param request: request for reset password
     :param id: here we token for decoding
     :return:this function used for reset password
-
     """
     smd = {'success': False,
            'Message': 'you are not valid user',
@@ -219,33 +207,14 @@ def reset_password(request, id):
 class Resetpassword(GenericAPIView):
     serializer_class = PasswordSerializer
 
-    def get(self, request, userReset, *args, **kwargs):
-        global username
-        """
-          :param request:  user will request for resetting password
-          :param userReset: username is fetched
-          :return: will change the password
-          """
-        smd = {'success': False,
-               'Message': 'you are not valid user',
-               'Data': []}
-        try:
-            user = User.objects.get(username=userReset)
-            if user:
-                username = user.username
-                smd['success'] = True
-                smd['Message'] = 'successful'
-                return Response(smd)
-            return Response(smd)
-        except Exception:
-            smd['Message'] = 'insufficient credential'
-            Response(smd)
+    def post(self, request, userReset, *args, **kwargs):
 
-    def post(self, request, *args, **kwargs):
         smd = {'success': False,
                'Message': 'please enter valid password',
                'Data': []}
         try:
+            print(userReset)
+            username = userReset
             password = request.data['password']
             confirm_password = request.data['confirm_password']
             # here we will save the user password in the database
@@ -267,11 +236,26 @@ class Resetpassword(GenericAPIView):
             return Response(smd)
 
 
+@method_decorator(login_required, name='dispatch')
 class HelloView(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
+        print('jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj')
         print(request.user)
         print(request.META['HTTP_AUTHORIZATION'])
         content = {'message': 'Hello, World!'}
+        return Response(content)
+
+
+@method_decorator(login_required, name='dispatch')
+class Logout(GenericAPIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        rty = request.META['HTTP_AUTHORIZATION']
+        gh = rty.split(' ')
+        decoded = jwt.decode(gh[1], settings.SECRET_KEY, algorithm="HS256")
+        redis.Del(decoded['user_id'])
+        content = {'message': 'safely logged out'}
         return Response(content)
