@@ -17,7 +17,9 @@ from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
+from django.views.generic import CreateView
 from rest_framework import status
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
@@ -259,3 +261,6 @@ class Logout(GenericAPIView):
         redis.Del(decoded['user_id'])
         content = {'message': 'safely logged out'}
         return Response(content)
+#
+# class S3Api(GenericAPIView):
+

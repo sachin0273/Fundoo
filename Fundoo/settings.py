@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'login',
     'corsheaders',
     'urlshortening',
+    'storages',
 ]
 
 MIDDLEWARE = [
