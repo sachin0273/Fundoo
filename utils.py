@@ -41,5 +41,4 @@ def Smd_Response(success=False, message='something was wrong', data=[]):
         'message': message,
         'data': data,
     }
-    response = json.dumps(smd)
-    return response
+    return smd
