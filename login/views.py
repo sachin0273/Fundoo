@@ -7,7 +7,6 @@ since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
-from django.contrib import messages
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import redirect
@@ -31,7 +30,7 @@ from rest_framework.views import APIView
 from Services import redis
 from login.decoraters import login_required
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, ImageSerializer, LoginSerializer
-from Services.pyjwt_token import Jwt_Token
+from Services.pyjwt_token import Jwt_Token, Jwt_token
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from Services.bitly_api import Connection
 from Services.event_emmiter import ee
@@ -68,11 +67,8 @@ class User_Create(GenericAPIView):
                         'email': self.request.data['email'],
                     }
                     token = Jwt_Token(payload)
-                    Tokan = token['token']
-                    message1 = 'activate' + '/' + Tokan
-                    short_url = get_short_url(message1)  # Url object
-                    print(type(short_url.short_id))
-                    print(short_url.short_id)  # id for short url
+                    long_url = 'activate' + '/' + token
+                    short_url = get_short_url(long_url)  # Url object
                     message = render_to_string('login/token.html', {
                         'name': user.username,
                         'domain': get_current_site(request).domain,
@@ -82,12 +78,13 @@ class User_Create(GenericAPIView):
                     response = Smd_Response(True, 'you registered successfully for activate your account please check '
                                                   'your email', [])
                     ee.emit("myevent", message, recipient_list)
-                    return HttpResponse(response)
+                    return HttpResponse(json.dumps(response))
                 response = Smd_Response(False, 'you are not validated try again', [])
                 return Response(response)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
-            return Response(status.HTTP_417_EXPECTATION_FAILED)
+            smd = Smd_Response()
+            return Response(smd)
 
 
 class Login(GenericAPIView):
@@ -107,29 +104,27 @@ class Login(GenericAPIView):
                 raise KeyError
             if username == "":
                 raise KeyError
-            if password == " ":
+            if password == "":
                 raise KeyError
             user = authenticate(username=username, password=password)
             if user:
-                'http post http://127.0.0.1:8000/api/token/'
-
-                # payload = {
-                #     'username': user.username,
-                #     'email': user.email,
-                # }
-                # jwt_token = {'token': jwt.encode(payload, "SECRET_KEY", algorithm="HS256").decode('utf-8')}
-                # Tokan = jwt_token['token']
-                # response = json.dumps({"success": True, "message": "successful", "data": Tokan})
-                #
-
-                print('ffffffffffffffffffffffffffffffffffffffffffffff')
-                return Response('fjhgdsufhfydfdfhdfdhdbshdsdsygdshdbdegfyw')
+                payload = {
+                    'username': username,
+                    'password': password,
+                }
+                token = Jwt_token(payload)
+                redis.Set(username, token)
+                smd = {"success": True, "message": "successful", "data": token}
+                return HttpResponse(json.dumps(smd))
             else:
-                return Response('login')
-        except ValueError:
-            return Response('hhhh')
-        # except Exception:
-        #     return Response('loginpage')
+                smd = Smd_Response(False, 'please provide valid credentials', [])
+                return Response(smd)
+        except KeyError:
+            smd = Smd_Response(False, 'one of above field may not be blank', [])
+            return Response(smd)
+        except Exception:
+            smd = Smd_Response()
+            return Response(smd)
 
 
 def activate(request, short_id, *args, **kwargs):
@@ -165,6 +160,8 @@ def activate(request, short_id, *args, **kwargs):
             return HttpResponse(json.dumps(smd))
         else:
             return HttpResponse(json.dumps(smd))
+    except ObjectDoesNotExist:
+        HttpResponse(json.dumps(smd))
     except KeyError:
         HttpResponse(json.dumps(smd))
     except Exception:
@@ -191,15 +188,13 @@ class Reset_Passward(GenericAPIView):
                     'username': user.username,
                     'email': user.email,
                 }
-                jwt_token = Jwt_Token(payload)
-                Tokan = jwt_token['token']
-                message1 = 'reset_password' + '/' + Tokan
-                short_url = get_short_url(message1)  # Url object
-                print(short_url.short_id)  # id for short url
-                print('http://' + str(short_url.short_id))
+                token = Jwt_Token(payload)
+                long_url = 'reset_password' + '/' + token
+                short_url = get_short_url(long_url)  # Url object
                 message = render_to_string('login/reset_token.html', {
                     'name': user.username,
-                    'url': short_url
+                    'domain': get_current_site(request).domain,
+                    'url': short_url.short_id
                 })
                 recipient_list = [user.email, ]
                 ee.emit("myevent2", message, recipient_list)
@@ -234,7 +229,9 @@ def reset_password(request, id):
            'Data': []}
     try:
         try:
-            decode = jwt.decode(id, "SECRET_KEY")
+            url = Url.objects.get(short_id=id)
+            token = url.url.split('/')
+            decode = jwt.decode(token[1], "SECRET_KEY")
         except DecodeError:
             smd['Message'] = 'token is invalid'
             return Response(smd)
@@ -247,7 +244,8 @@ def reset_password(request, id):
             return redirect('http://localhost:8000/resetpassword/' + str(user))
         else:
             return Response(smd)
-    except KeyError:
+    except ObjectDoesNotExist:
+        smd['Message'] = 'please provide valid credential'
         return Response(smd)
     except Exception:
         smd['Message'] = 'something was wrong try again'
@@ -302,8 +300,6 @@ class HelloView(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        print(request.user)
-        print(request.META['HTTP_AUTHORIZATION'])
         content = {'message': 'Hello, World!'}
         return Response(content)
 
@@ -313,24 +309,36 @@ class Logout(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        rty = request.META['HTTP_AUTHORIZATION']
-        gh = rty.split(' ')
-        decoded = jwt.decode(gh[1], settings.SECRET_KEY, algorithm="HS256")
-        redis.Del(decoded['user_id'])
-        content = {'message': 'safely logged out'}
-        return Response(content)
+        try:
+            header = request.META['HTTP_AUTHORIZATION']
+            token = header.split(' ')
+            decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
+            user = User.objects.get(pk=decoded['user_id'])
+            if user:
+                redis.Del(user.username)
+                smd = Smd_Response(True, 'safely logged out', [])
+                return Response(smd)
+            else:
+                smd = Smd_Response(True, 'you are not authorized user ', [])
+                return Response(smd)
+        except ObjectDoesNotExist:
+            smd = Smd_Response(False, 'not valid credentials', [])
+            return Response(smd)
+        except Exception:
+            smd = Smd_Response()
+            return Response(smd)
 
 
 class S3Api(GenericAPIView):
     serializer_class = ImageSerializer
 
     def post(self, request, *args, **kwargs):
-        # serializer = UserSerializer(data=request.data)
-        # if serializer.is_valid():
-        image = request.data['file']
-        if image:
-            print("here after image is found", image)
-        upload_file(image)
-        return Response('fghjvhdsjvfhdjchdbhf')
-    # else:
-    #     return Response('kcdjhfdhfdh')
+        serializer = ImageSerializer(data=request.data)
+        if serializer.is_valid():
+            image = request.data['file']
+            if image:
+                print("here after image is found", image)
+            upload_file(image)
+            return Response(serializer.data)
+        else:
+            return Response('kcdjhfdhfdh')

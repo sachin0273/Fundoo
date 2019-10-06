@@ -10,7 +10,7 @@ since :  25-09-2019
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.models import User
-from .models import Password, Image
+from .models import  Image
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -46,7 +46,7 @@ class PasswordSerializer(serializers.ModelSerializer):
     confirm_password = serializers.CharField(min_length=8, write_only=True)
 
     class Meta:
-        model = Password
+        model = User
         fields = ['password', 'confirm_password']
 
 

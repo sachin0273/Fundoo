@@ -238,3 +238,5 @@ INITIAL_URL_LEN = 6
 RETRY_COUNT = 5
 # SHORT_URL_PATH = 'http://127.0.0.1:8000/short-prefix/'
 REDIRECT_PREFIX = 'r'
+
+Token = 'http://127.0.0.1:8000/api/token/'

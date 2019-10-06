@@ -10,6 +10,9 @@ since :  25-09-2019
 
 """
 import jwt
+import requests
+
+from Fundoo import settings
 
 
 def Jwt_Token(payload):
@@ -18,4 +21,9 @@ def Jwt_Token(payload):
     :return:this function return jwt token
     """
     jwt_token = {'token': jwt.encode(payload, "SECRET_KEY", algorithm="HS256").decode('utf-8')}
-    return jwt_token
+    return jwt_token['token']
+
+
+def Jwt_token(payload):
+    response = requests.post(settings.Token, payload)
+    return response.json()['access']

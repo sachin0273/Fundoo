@@ -16,11 +16,11 @@ from . import views
 urlpatterns = [
     url(r'^register/$', views.User_Create.as_view(), name='register'),
     path('Reset_Passward/', views.Reset_Passward.as_view(), name='Reset_Passward'),
-    # path('<str:short_id>/', views.activate, name='activate'),
-    url(r'^reset_password/(?P<id>[\w.-]+)/$', views.reset_password, name='reset_password'),
     path('resetpassword/<userReset>', views.Resetpassword.as_view(), name='resetpassword'),
     path('hello/', views.HelloView.as_view(), name='hello'),
     path('logout/', views.Logout.as_view(), name='logout'),
     path('s3/', views.S3Api.as_view(), name='s3'),
-    path('login', views.Login.as_view(), name='login')
+    path('login/', views.Login.as_view(), name='login'),
+    path('r/<str:id>/', views.reset_password, name='reset_password'),
+    path('a/<str:short_id>/', views.activate, name='activate'),
 ]
