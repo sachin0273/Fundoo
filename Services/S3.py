@@ -1,6 +1,10 @@
 import logging
 import boto3
 from botocore.exceptions import ClientError
+from django.contrib.sites.shortcuts import get_current_site
+from requests import request
+
+from Fundoo import settings
 
 
 def upload_file(image, object_name=None):
@@ -18,16 +22,7 @@ def upload_file(image, object_name=None):
     bucket = 'sachin0273'
     # Upload the file
     s3 = boto3.client('s3')
-    client = boto3.client('sts')
     s3.upload_fileobj(image, bucket, object_name)
-    gg = client.get_federation_token(DurationSeconds=3600,
-                                     Name='bob',
-                                     Policy='{"Version": "2012-10-17","Statement": [{"Effect": "Allow","Action":"s3:*",'
-                                            '"sts:GetFederationToken","Resource": '
-                                            '"arn:aws:s3:uap-south-1:457221949031:federated-user/Bob"}]}')
-
-    file_url = '%s/%s/%s' % (s3.meta.endpoint_url, bucket, object_name)
-    print(gg)
+    file_url = 'http://127.0.0.1:8000'+'/S3/'+bucket+'/'+object_name+'/'
     print(file_url)
-    print('sucess')
     return file_url

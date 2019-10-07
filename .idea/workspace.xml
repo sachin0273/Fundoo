@@ -5,16 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/S3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/S3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/pyjwt_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/pyjwt_token.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/decoraters.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/decoraters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/login/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/reset_token.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/reset_token.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/token.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/token.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,6 +219,7 @@
       <workItem from="1570245659279" duration="17335000" />
       <workItem from="1570268106364" duration="11094000" />
       <workItem from="1570338584299" duration="19090000" />
+      <workItem from="1570419803976" duration="17220000" />
     </task>
     <servers />
   </component>

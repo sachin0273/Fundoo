@@ -29,6 +29,7 @@ from rest_framework.views import APIView
 
 from Services import redis
 from login.decoraters import login_required
+from login.models import Profile
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, ImageSerializer, LoginSerializer
 from Services.pyjwt_token import Jwt_Token, Jwt_token
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -332,13 +333,37 @@ class Logout(GenericAPIView):
 class S3Api(GenericAPIView):
     serializer_class = ImageSerializer
 
+    # permission_classes = (IsAuthenticated,)
+
     def post(self, request, *args, **kwargs):
-        serializer = ImageSerializer(data=request.data)
-        if serializer.is_valid():
-            image = request.data['file']
-            if image:
-                print("here after image is found", image)
-            upload_file(image)
-            return Response(serializer.data)
-        else:
-            return Response('kcdjhfdhfdh')
+        try:
+            serializer = ImageSerializer(data=request.data)
+            if serializer.is_valid():
+                image = request.data['image']
+                if image:
+                    print("here after image is found", image)
+                user = request.user
+                url = upload_file(image, object_name=request.user + image.name)
+                Profile.objects.create(file=url, user_id=user.id)
+                smd = Smd_Response(True, 'image uploaded successfully')
+                return Response(smd)
+            else:
+                smd = Smd_Response(False, 'please provide valid image', [])
+                return Response(smd)
+        except Exception:
+            smd = Smd_Response()
+            return Response(smd)
+
+
+class S3(APIView):
+    def get(self, request, bucket, object_name, *args, **kwargs):
+        import boto3
+        s3 = boto3.client('s3')
+        url = s3.generate_presigned_url(
+            ClientMethod='get_object',
+            Params={
+                'Bucket': bucket,
+                'Key': object_name
+            }
+        )
+        return redirect(url)

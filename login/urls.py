@@ -23,4 +23,5 @@ urlpatterns = [
     path('login/', views.Login.as_view(), name='login'),
     path('r/<str:id>/', views.reset_password, name='reset_password'),
     path('a/<str:short_id>/', views.activate, name='activate'),
+    path('S3/<str:bucket>/<str:object_name>/', views.S3.as_view(), name='s3')
 ]
