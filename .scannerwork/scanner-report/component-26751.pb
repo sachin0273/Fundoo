@@ -1,0 +1,1 @@
+ÿĞLvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/windowslive :şĞ€ÑÑ‚ÑƒÑ

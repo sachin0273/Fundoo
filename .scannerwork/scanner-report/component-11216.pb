@@ -1,0 +1,1 @@
+ÐW:venv/lib64/python3.6/site-packages/PIL/GimpGradientFile.py 2pyXŒh

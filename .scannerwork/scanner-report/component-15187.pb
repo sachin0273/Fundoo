@@ -1,0 +1,1 @@
+ÓvCvenv/lib64/python3.6/site-packages/rest_framework/authtoken/apps.py 2pyXh

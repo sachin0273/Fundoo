@@ -1,0 +1,1 @@
+½74venv/lib64/python3.6/site-packages/django_extensions :¼7Õ7Ö7Ž8Ð8Ñ8Ú8

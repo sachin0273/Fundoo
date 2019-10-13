@@ -1,0 +1,1 @@
+£òEvenv/lib/python3.6/site-packages/awscli/customizations/rekognition.py 2pyX]h

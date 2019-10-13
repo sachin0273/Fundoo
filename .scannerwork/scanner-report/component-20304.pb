@@ -1,0 +1,1 @@
+ОPvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/oracle/models.py 2pyXAh

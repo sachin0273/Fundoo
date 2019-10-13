@@ -1,0 +1,1 @@
+©оGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/gitlab :╬оюоаобоцо

@@ -1,0 +1,1 @@
+ìw;venv/lib64/python3.6/site-packages/openid/yadis/__init__.py 2pyXh

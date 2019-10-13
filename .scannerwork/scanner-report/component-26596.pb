@@ -1,0 +1,1 @@
+ДоZvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openstreetmap/__init__.py 2pyXh

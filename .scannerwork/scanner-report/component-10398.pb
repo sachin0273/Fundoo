@@ -1,0 +1,1 @@
+žQVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/discord/provider.py 2pyX/h

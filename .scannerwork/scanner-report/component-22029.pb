@@ -1,0 +1,1 @@
+ç¨@venv/lib/python3.6/site-packages/django/core/serializers/base.py 2pyXøh

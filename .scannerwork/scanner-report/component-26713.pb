@@ -1,0 +1,1 @@
+йаHvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/spotify :иакаламана

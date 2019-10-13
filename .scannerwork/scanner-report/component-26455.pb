@@ -1,0 +1,1 @@
+внGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/strava :жньнынзншн

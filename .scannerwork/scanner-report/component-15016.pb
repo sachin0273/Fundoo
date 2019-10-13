@@ -1,0 +1,1 @@
+¨uPvenv/lib64/python3.6/site-packages/rest_framework/templatetags/rest_framework.py 2pyX’h

@@ -1,0 +1,1 @@
+½Ù6venv/lib/python3.6/site-packages/PIL/CurImagePlugin.py 2pyXRh

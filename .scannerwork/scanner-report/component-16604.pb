@@ -1,0 +1,1 @@
+Ü0venv/lib64/python3.6/site-packages/pytest_django :Ûëíîïğñò

@@ -1,0 +1,1 @@
+»OPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/kakao/urls.py 2pyXh

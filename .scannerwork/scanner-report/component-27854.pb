@@ -1,0 +1,1 @@
+ÎÙ6venv/lib/python3.6/site-packages/PIL/DdsImagePlugin.py 2pyX³h

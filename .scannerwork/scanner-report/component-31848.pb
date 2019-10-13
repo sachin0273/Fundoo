@@ -1,0 +1,1 @@
+ишBvenv/lib/python3.6/site-packages/rest_framework/authtoken/admin.py 2pyXh

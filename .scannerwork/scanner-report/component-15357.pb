@@ -1,0 +1,1 @@
+ýw1venv/lib64/python3.6/site-packages/openid/sreg.py 2pyXh

@@ -1,0 +1,1 @@
+ศาIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/doximity :วาสาหาฬาอา

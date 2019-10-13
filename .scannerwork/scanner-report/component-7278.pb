@@ -1,0 +1,1 @@
+î8Uvenv/lib64/python3.6/site-packages/django_extensions/management/notebook_extension.py 2pyXh

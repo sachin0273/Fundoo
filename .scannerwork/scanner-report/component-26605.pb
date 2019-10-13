@@ -1,0 +1,1 @@
+МоQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twentythreeandme :КоНоОоПоЯо

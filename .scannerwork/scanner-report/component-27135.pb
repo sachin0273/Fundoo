@@ -1,0 +1,1 @@
+ÿÓIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/linkedin :şÓ€ÔÔ‚ÔƒÔ

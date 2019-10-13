@@ -1,0 +1,1 @@
+тоGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/oauth2 :сожовоьоыо

@@ -1,0 +1,1 @@
+ğRAvenv/lib64/python3.6/site-packages/allauth/socialaccount/views.py 2pyXh

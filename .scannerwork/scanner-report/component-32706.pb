@@ -1,0 +1,1 @@
+Âÿ1venv/lib/python3.6/site-packages/colorama/ansi.py 2pyXgh

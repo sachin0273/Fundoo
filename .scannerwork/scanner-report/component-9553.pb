@@ -1,0 +1,1 @@
+ÑJRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/mailru/tests.py 2pyXh

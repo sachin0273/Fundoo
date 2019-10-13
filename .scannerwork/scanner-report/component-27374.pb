@@ -1,0 +1,1 @@
+Ну6venv/lib/python3.6/site-packages/allauth/exceptions.py 2pyXh

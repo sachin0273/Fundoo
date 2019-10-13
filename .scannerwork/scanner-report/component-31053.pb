@@ -1,0 +1,1 @@
+ÍòJvenv/lib/python3.6/site-packages/awscli/customizations/s3/filegenerator.py 2pyXóh

@@ -1,0 +1,1 @@
+ÐüEvenv/lib/python3.6/site-packages/docutils/parsers/rst/languages/fi.py 2pyXch

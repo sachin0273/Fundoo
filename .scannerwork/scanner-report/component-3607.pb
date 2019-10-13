@@ -1,0 +1,1 @@
+—Fvenv/lib64/python3.6/site-packages/django/contrib/gis/geos/coordseq.py 2pyXÅh

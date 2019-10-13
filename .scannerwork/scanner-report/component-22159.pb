@@ -1,0 +1,1 @@
+è≠Pvenv/lib/python3.6/site-packages/django/core/management/commands/makemessages.py 2pyX∞h

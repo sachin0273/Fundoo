@@ -1,0 +1,1 @@
+Èÿ4venv/lib/python3.6/site-packages/colorama/winterm.py 2pyX£h

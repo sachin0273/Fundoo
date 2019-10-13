@@ -1,0 +1,1 @@
+ ƒ9venv/lib/python3.6/site-packages/django/db/backends/dummy :	Ÿƒ¡ƒ¤ƒ

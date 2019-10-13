@@ -1,0 +1,1 @@
+ìù8venv/lib/python3.6/site-packages/openid/yadis/manager.py 2pyXÄh

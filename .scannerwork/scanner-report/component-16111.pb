@@ -1,0 +1,1 @@
+ï}2venv/lib64/python3.6/site-packages/sqlparse/sql.py 2pyXøh

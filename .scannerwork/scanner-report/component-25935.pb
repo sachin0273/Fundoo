@@ -1,0 +1,1 @@
+œ ;venv/lib/python3.6/site-packages/allauth/account/adapter.py 2pyXÑh

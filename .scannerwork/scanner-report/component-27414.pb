@@ -1,0 +1,1 @@
+–Ö2venv/lib/python3.6/site-packages/requests_oauthlib :•Ö¬Ö­Ö®Ö±Ö

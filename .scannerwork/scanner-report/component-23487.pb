@@ -1,0 +1,1 @@
+¿·4venv/lib/python3.6/site-packages/botocore/docs/bcdoc :¾·Ç·È·É·Ê·Ë·

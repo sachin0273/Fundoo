@@ -1,0 +1,1 @@
+Áz7venv/lib64/python3.6/site-packages/docutils/parsers/rst :Âzé{è{§{

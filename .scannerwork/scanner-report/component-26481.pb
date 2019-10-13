@@ -1,0 +1,1 @@
+ñÎJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/authentiq :ğÎòÎóÎôÎõÎ

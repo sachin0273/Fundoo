@@ -1,0 +1,1 @@
+¾r8venv/lib64/python3.6/site-packages/pyshorteners/utils.py 2pyXh

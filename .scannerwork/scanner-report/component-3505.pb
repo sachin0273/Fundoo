@@ -1,0 +1,1 @@
+±Evenv/lib64/python3.6/site-packages/django/contrib/gis/gdal/prototypes :°¹»¼½¾¿

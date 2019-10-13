@@ -1,0 +1,1 @@
+öH;venv/lib64/python3.6/site-packages/allauth/account/tests.py 2pyXÄ	h

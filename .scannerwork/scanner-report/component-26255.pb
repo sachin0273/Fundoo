@@ -1,0 +1,1 @@
+èÕSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/battlenet/views.py 2pyXóh

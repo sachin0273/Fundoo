@@ -1,0 +1,1 @@
+¾€qvenv/lib/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lib/highlight.9.1.0.pack.js 2jsXh

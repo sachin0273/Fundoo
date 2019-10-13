@@ -1,0 +1,1 @@
+ÁKVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/twitter/__init__.py 2pyXh

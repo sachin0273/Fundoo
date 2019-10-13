@@ -1,0 +1,1 @@
+¼u9venv/lib64/python3.6/site-packages/rest_framework/schemas :ºu½u¾u¿uÀuÁuÂu

@@ -1,0 +1,1 @@
+õ½Rvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/html5lib/filters :ô½ö½÷½ø½ù½ú½û½ü½

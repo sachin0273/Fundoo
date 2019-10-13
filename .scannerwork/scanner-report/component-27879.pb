@@ -1,0 +1,1 @@
+çÙ%venv/lib/python3.6/site-packages/attr :óÙôÙõÙöÙ÷ÙøÙùÙúÙıÙ

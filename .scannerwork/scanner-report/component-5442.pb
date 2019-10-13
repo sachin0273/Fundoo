@@ -1,0 +1,1 @@
+Â*<venv/lib64/python3.6/site-packages/django/core/files/temp.py 2pyXKh

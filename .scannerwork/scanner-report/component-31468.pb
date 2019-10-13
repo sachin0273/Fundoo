@@ -1,0 +1,1 @@
+ìõ>venv/lib/python3.6/site-packages/importlib_metadata/_compat.py 2pyXeh

@@ -1,0 +1,1 @@
+ÏNRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid/utils.py 2pyXøh

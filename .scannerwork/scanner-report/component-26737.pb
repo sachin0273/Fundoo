@@ -1,0 +1,1 @@
+ñÐQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid/models.py 2pyXh

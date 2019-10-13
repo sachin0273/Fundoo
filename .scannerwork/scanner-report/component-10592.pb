@@ -1,0 +1,1 @@
+‡REvenv/lib64/python3.6/site-packages/allauth/socialaccount/templatetags :ﬂR·R

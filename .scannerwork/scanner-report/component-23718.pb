@@ -1,0 +1,1 @@
+¦¹3venv/lib/python3.6/site-packages/jmespath/compat.py 2pyXBh

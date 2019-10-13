@@ -1,0 +1,1 @@
+à¬Dvenv/lib/python3.6/site-packages/django/core/management/templates.py 2pyXÏh

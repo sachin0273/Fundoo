@@ -1,0 +1,1 @@
+æžGvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/postgis :åžòžóžôžõžöž÷žøžùžúž

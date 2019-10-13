@@ -1,0 +1,1 @@
+þÐUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/windowslive/views.py 2pyX)h

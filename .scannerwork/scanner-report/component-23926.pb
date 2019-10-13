@@ -1,0 +1,1 @@
+öº`venv/lib/python3.6/site-packages/django_extensions/management/commands/print_user_for_session.py 2pyX@h

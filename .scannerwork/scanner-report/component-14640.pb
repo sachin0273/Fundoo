@@ -1,0 +1,1 @@
+°rBvenv/lib64/python3.6/site-packages/pyshorteners/shorteners/awsm.py 2pyX3h

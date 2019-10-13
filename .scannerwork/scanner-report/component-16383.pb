@@ -1,0 +1,1 @@
+ÿ1venv/lib64/python3.6/site-packages/_pytest/config :ş€€€‚€

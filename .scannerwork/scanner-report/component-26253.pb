@@ -1,0 +1,1 @@
+ÍJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/battlenet :ŒÍÍÍÍ‘Í’Í“Í

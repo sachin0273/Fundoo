@@ -1,0 +1,1 @@
+„­Ivenv/lib/python3.6/site-packages/django/core/management/commands/shell.py 2pyXgh

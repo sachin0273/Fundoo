@@ -1,0 +1,1 @@
+îÌFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/naver :íÌïÌğÌñÌòÌóÌ

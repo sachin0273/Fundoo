@@ -1,0 +1,1 @@
+ÜQSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/xing/provider.py 2pyX%h

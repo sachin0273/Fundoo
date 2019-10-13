@@ -1,0 +1,1 @@
+£Nvenv/lib64/python3.6/site-packages/django/contrib/sitemaps/management/commands :¡

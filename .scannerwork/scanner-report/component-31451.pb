@@ -1,0 +1,1 @@
+џх,venv/lib/python3.6/site-packages/corsheaders :ЏхЁх№хёхяхах

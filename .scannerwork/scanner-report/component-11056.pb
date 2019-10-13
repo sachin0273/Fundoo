@@ -1,0 +1,1 @@
+°V3venv/lib64/python3.6/site-packages/PIL/ImageShow.py 2pyXáh

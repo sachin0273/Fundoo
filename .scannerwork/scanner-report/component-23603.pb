@@ -1,0 +1,1 @@
+³¸_venv/lib/python3.6/site-packages/botocore/vendored/requests/packages/chardet/sbcharsetprober.py 2pyXyh

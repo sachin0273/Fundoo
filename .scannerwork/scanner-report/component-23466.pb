@@ -1,0 +1,1 @@
+ª·7venv/lib/python3.6/site-packages/botocore/docs/shape.py 2pyXvh

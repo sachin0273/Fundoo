@@ -1,0 +1,1 @@
+·¼Avenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor :¶¼¸¼’½Ó¾ž¿´¿µ¿

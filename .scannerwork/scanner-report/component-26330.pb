@@ -1,0 +1,1 @@
+ÚÍEvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/line :ÙÍÛÍÜÍİÍŞÍßÍ

@@ -1,0 +1,1 @@
+åžRvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/postgis/adapter.py 2pyXBh

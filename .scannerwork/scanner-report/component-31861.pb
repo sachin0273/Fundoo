@@ -1,0 +1,1 @@
+ץרDvenv/lib/python3.6/site-packages/rest_framework/authtoken/management :פר

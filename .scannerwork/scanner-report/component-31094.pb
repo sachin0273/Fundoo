@@ -1,0 +1,1 @@
+צעFvenv/lib/python3.6/site-packages/awscli/customizations/ec2/paginate.py 2pyXAh

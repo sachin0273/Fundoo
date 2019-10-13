@@ -1,0 +1,1 @@
+Цу#venv/lib/python3.6/site-packages/py :ХубувугудуѓфЋф—ф

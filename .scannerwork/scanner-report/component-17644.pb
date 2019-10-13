@@ -1,0 +1,1 @@
+ì‰]venv/lib/python3.6/site-packages/django/contrib/staticfiles/management/commands/findstatic.py 2pyX,h

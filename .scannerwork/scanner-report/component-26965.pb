@@ -1,0 +1,1 @@
+евDvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/box :двжвзвивйв

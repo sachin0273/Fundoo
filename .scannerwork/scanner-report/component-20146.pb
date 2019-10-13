@@ -1,0 +1,1 @@
+≤ùCvenv/lib/python3.6/site-packages/django/contrib/gis/gdal/prototypes :±ùªùºùΩùæùøù¿ù

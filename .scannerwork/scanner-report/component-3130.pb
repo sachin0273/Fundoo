@@ -1,0 +1,1 @@
+ºWvenv/lib64/python3.6/site-packages/django/contrib/admin/static/admin/js/collapse.min.js 2jsXh

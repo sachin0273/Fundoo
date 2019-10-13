@@ -1,0 +1,1 @@
+ÌW8venv/lib64/python3.6/site-packages/PIL/GifImagePlugin.py 2pyXõh

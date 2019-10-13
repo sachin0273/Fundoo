@@ -1,0 +1,1 @@
+á½Jvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/lockfile :à½å½æ½ç½è½é½

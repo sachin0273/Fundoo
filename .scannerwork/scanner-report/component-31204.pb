@@ -1,0 +1,1 @@
+ду+venv/lib/python3.6/site-packages/py/_std.py 2pyXh

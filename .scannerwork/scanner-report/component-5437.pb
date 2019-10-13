@@ -1,0 +1,1 @@
+½*4venv/lib64/python3.6/site-packages/django/core/files :¼*¾*¿*À*Á*Â*Ã*Ä*Å*Æ*

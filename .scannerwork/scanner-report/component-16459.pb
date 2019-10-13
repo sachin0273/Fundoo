@@ -1,0 +1,1 @@
+ˀCvenv/lib64/python3.6/site-packages/urllib3/contrib/_securetransport :	ʀ̀΀

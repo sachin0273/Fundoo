@@ -1,0 +1,1 @@
+ázGvenv/lib64/python3.6/site-packages/docutils/parsers/rst/languages/ko.py 2pyXph

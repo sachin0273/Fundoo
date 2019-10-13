@@ -1,0 +1,1 @@
+Øù'venv/lib/python3.6/site-packages/openid :$Öù×ùşùÿù€úú‚ú™úšú›úúœú

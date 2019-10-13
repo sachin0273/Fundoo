@@ -1,0 +1,1 @@
+Ç»Svenv/lib/python3.6/site-packages/django_extensions/management/commands/runscript.py 2pyXóh

@@ -1,0 +1,1 @@
+Î‘Avenv/lib/python3.6/site-packages/allauth/socialaccount/migrations :Í‘Ï‘Ì‘Ó‘

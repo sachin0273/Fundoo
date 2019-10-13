@@ -1,0 +1,1 @@
+ˆ#Cvenv/lib64/python3.6/site-packages/django/conf/locale/ja/formats.py 2pyXh

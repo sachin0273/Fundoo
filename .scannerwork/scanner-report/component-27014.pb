@@ -1,0 +1,1 @@
+†ÓGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/feedly :„Ó…Ó‡ÓˆÓ‰Ó

@@ -1,0 +1,1 @@
+ˆÓSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/feedly/__init__.py 2pyXh

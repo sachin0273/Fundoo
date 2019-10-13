@@ -10,7 +10,7 @@ since :  25-09-2019
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.models import User
-from .models import Profile
+# from .models import Profile
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -56,13 +56,14 @@ class EmailSerializer(serializers.ModelSerializer):
         fields = ['email']
 
 
-class ImageSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Profile
-        fields = ['image', 'time_stamp']
+# class ImageSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Profile
+#         fields = ['image', 'time_stamp']
 
 
 class LoginSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['username', 'password']
+

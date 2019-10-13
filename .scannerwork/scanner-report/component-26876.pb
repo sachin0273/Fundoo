@@ -1,0 +1,1 @@
+üÑJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/mailchimp :ûÑşÑÿÑ€ÒÒ

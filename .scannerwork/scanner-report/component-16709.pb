@@ -1,0 +1,1 @@
+ł,venv/lib/python3.6/site-packages/django/urls :Ă͂ςЂт҂ӂ

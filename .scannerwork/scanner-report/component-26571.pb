@@ -1,0 +1,1 @@
+коIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/telegram :иойоломо

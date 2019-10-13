@@ -1,0 +1,1 @@
+µNdvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/facebook/data/FacebookLocales.xml 2xmlXÒh

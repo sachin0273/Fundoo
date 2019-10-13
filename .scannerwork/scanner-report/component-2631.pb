@@ -1,0 +1,1 @@
+ÇRvenv/lib64/python3.6/site-packages/django/contrib/admin/templatetags/admin_urls.py 2pyX9h

@@ -1,0 +1,1 @@
+Øs6venv/lib64/python3.6/site-packages/corsheaders/conf.py 2pyX6h

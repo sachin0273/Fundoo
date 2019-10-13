@@ -1,0 +1,1 @@
+»PPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/weibo/urls.py 2pyXh

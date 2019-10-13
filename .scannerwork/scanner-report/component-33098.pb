@@ -1,0 +1,1 @@
+ʂ0venv/lib/python3.6/site-packages/urllib3/contrib :ɂڂ܂݂ނ߂��

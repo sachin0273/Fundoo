@@ -1,0 +1,1 @@
+ŽÑVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/instagram/__init__.py 2pyXh

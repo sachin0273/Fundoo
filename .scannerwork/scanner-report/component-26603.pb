@@ -1,0 +1,1 @@
+КоZvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twentythreeandme/views.py 2pyXh

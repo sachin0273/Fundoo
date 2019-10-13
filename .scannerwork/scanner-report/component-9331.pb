@@ -1,0 +1,1 @@
+ÛH;venv/lib64/python3.6/site-packages/allauth/account/views.py 2pyX∏h

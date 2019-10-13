@@ -1,0 +1,1 @@
+çÍGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/github :æÍèÍéÍêÍëÍ

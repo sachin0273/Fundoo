@@ -1,0 +1,1 @@
+¬LJvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/untappd :«L­L®L¯L°L±L

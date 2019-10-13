@@ -1,0 +1,1 @@
+ñSvenv/lib64/python3.6/site-packages/django/contrib/gis/db/backends/postgis/models.py 2pyXGh

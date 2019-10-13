@@ -1,0 +1,1 @@
+¨50venv/lib64/python3.6/site-packages/botocore/docs :§5¶5·5¸5¹5º5É5Ê5Ë5Ì5Í5Î5

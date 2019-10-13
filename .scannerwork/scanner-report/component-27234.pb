@@ -1,0 +1,1 @@
+‚‘Tvenv/lib/python3.6/site-packages/allauth/socialaccount/templatetags/socialaccount.py 2pyX_h

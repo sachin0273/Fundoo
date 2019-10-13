@@ -1,0 +1,1 @@
+¯PQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/amazon/urls.py 2pyXh

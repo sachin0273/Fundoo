@@ -1,0 +1,1 @@
+ûLQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/edmodo/urls.py 2pyXh

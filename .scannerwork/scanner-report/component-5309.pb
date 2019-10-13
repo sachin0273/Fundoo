@@ -1,0 +1,1 @@
+½)>venv/lib64/python3.6/site-packages/django/template/response.py 2pyX’h

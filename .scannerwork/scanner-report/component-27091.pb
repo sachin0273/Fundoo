@@ -1,0 +1,1 @@
+ссUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/evernote/provider.py 2pyXh

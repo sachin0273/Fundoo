@@ -1,0 +1,1 @@
+¾QSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/meetup/models.py 2pyXh

@@ -1,0 +1,1 @@
+u@venv/lib64/python3.6/site-packages/django/db/backends/postgresql :	twxyz{|}v

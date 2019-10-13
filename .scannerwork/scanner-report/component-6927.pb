@@ -1,0 +1,1 @@
+è6avenv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet/langhebrewmodel.py 2pyX h

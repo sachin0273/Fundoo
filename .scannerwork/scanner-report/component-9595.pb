@@ -1,0 +1,1 @@
+ûJJvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/persona :úJüJıJşJÿJ€K

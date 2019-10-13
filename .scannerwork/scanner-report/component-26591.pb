@@ -1,0 +1,1 @@
+ßÏWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openstreetmap/views.py 2pyX2h

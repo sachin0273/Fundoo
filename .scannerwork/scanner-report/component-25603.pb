@@ -1,0 +1,1 @@
+É»2venv/lib/python3.6/site-packages/coreapi/client.py 2pyX≥h

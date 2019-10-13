@@ -1,0 +1,1 @@
+€¹Gvenv/lib/python3.6/site-packages/botocore/vendored/requests/sessions.py 2pyX¦h

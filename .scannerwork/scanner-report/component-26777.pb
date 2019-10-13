@@ -1,0 +1,1 @@
+™ÑQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/shopify/tests.py 2pyX‘h

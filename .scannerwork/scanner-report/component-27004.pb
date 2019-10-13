@@ -1,0 +1,1 @@
+üÒRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/oauth/provider.py 2pyX'h

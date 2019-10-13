@@ -1,0 +1,1 @@
+ç@venv/lib/python3.6/site-packages/django/contrib/gis/gdal/base.py 2pyXh

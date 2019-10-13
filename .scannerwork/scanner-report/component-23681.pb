@@ -1,0 +1,1 @@
+ÅπBvenv/lib/python3.6/site-packages/botocore/vendored/requests/api.py 2pyX©h

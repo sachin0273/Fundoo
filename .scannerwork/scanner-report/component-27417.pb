@@ -1,0 +1,1 @@
+™ÖCvenv/lib/python3.6/site-packages/requests_oauthlib/compliance_fixes :˜ÖšÖ¥Ö¦Ö§Ö¨Ö©ÖªÖ«Ö

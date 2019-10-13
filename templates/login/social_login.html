@@ -1,10 +1,21 @@
 <!DOCTYPE html>
+
+{% load socialaccount %}
+{% load social_share %}
+{% providers_media_js %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>social_login</title>
 </head>
-<body>
-$END$
+<body bgcolor="#7fffd4">
+        <div align="center" ><br/><br/><br/><br/><br/><br/><br/><br/>
+        <a href={% provider_login_url "google" %}>
+        <button type="button" name="button" class="btn btn-danger">login with Google</button>
+        </a><br/><br/><br/><br/><br/>
+         <a href={% provider_login_url "github" %}>
+        <button type="button" name="button" class="btn btn-danger">login with Github</button>
+        </a>
+        </div>
 </body>
 </html>

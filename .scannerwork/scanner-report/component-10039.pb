@@ -1,0 +1,1 @@
+·NUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/facebook/locale.py 2pyXGh

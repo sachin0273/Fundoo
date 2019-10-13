@@ -1,0 +1,1 @@
+ïÌOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/naver/views.py 2pyXh

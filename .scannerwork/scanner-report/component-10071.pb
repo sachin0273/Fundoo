@@ -1,0 +1,1 @@
+×NRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/spotify/urls.py 2pyXh

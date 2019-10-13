@@ -1,0 +1,1 @@
+÷E=venv/lib64/python3.6/site-packages/coreapi/transports/http.py 2pyX…h

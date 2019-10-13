@@ -1,0 +1,1 @@
+óv=venv/lib64/python3.6/site-packages/rest_framework/__init__.py 2pyX"h

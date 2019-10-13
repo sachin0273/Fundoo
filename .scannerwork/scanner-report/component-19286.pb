@@ -1,0 +1,1 @@
+Ö–Pvenv/lib/python3.6/site-packages/django/contrib/admin/templatetags/admin_list.py 2pyXæh

@@ -1,0 +1,1 @@
+†ÐMvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/vimeo_oauth2 :…Ð‡ÐˆÐ‰ÐŠÐ‹Ð

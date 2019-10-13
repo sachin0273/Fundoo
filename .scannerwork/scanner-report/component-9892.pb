@@ -1,0 +1,1 @@
+¤MVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/foursquare/tests.py 2pyXBh

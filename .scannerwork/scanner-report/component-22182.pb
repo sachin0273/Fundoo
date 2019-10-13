@@ -1,0 +1,1 @@
+жн,venv/lib/python3.6/site-packages/django/test :ензнинйнкнлнмннн

@@ -1,0 +1,1 @@
+ƞFvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/oracle :ŞОўҞӞԞ՞֞

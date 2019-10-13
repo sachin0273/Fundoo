@@ -1,0 +1,1 @@
+åù7venv/lib/python3.6/site-packages/openid/yadis/accept.py 2pyXŠh

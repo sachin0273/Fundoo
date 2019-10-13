@@ -1,0 +1,1 @@
+€ÑTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/windowslive/urls.py 2pyXh

@@ -1,0 +1,1 @@
+ÕLQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/strava/urls.py 2pyXh

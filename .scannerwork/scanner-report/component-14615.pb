@@ -1,0 +1,1 @@
+—r:venv/lib64/python3.6/site-packages/pyshorteners/shorteners :"–r˜r«r¬r­r®r¯r°r±r²r³r´rµr¶r·r¸r¹r

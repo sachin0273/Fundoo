@@ -1,0 +1,1 @@
+¿Xvenv/lib64/python3.6/site-packages/django/contrib/gis/db/backends/spatialite/features.py 2pyXh

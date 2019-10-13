@@ -1,0 +1,1 @@
+ÆGvenv/lib64/python3.6/site-packages/django/db/backends/mysql/compiler.py 2pyXh

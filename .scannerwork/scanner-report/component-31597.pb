@@ -1,0 +1,1 @@
+нцRvenv/lib/python3.6/site-packages/rest_framework/templates/rest_framework/schema.js 2jsXh

@@ -1,0 +1,1 @@
+ÇRRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/slack/models.py 2pyXh

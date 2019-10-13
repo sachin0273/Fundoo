@@ -1,0 +1,1 @@
+ùK\venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/fivehundredpx/provider.py 2pyX'h

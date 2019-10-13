@@ -1,0 +1,1 @@
+Ђ:venv/lib/python3.6/site-packages/django/urls/converters.py 2pyXCh

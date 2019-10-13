@@ -1,0 +1,1 @@
+Àr=venv/lib64/python3.6/site-packages/pyshorteners/exceptions.py 2pyXh

@@ -1,0 +1,1 @@
+¡s2venv/lib64/python3.6/site-packages/boto3/resources : s¢s£s¤s¥s¦s¨s§s

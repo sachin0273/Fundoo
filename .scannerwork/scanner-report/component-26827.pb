@@ -1,0 +1,1 @@
+หัOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/weixin/urls.py 2pyXh

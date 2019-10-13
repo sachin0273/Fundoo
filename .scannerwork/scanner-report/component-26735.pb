@@ -1,0 +1,1 @@
+ïĞGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid :îĞğĞñĞòĞóĞôĞõĞöĞ÷Ğ

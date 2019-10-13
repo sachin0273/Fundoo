@@ -1,0 +1,1 @@
+ž6_venv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet/langthaimodel.py 2pyXÉh

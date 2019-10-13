@@ -1,0 +1,1 @@
+ëÐbvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid/migrations/0001_initial.py 2pyX*h

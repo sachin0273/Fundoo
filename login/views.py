@@ -9,11 +9,11 @@ since :  25-09-2019
 """
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ObjectDoesNotExist
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 import json
 import jwt
 from django.conf import settings
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.template.loader import render_to_string
@@ -29,11 +29,10 @@ from rest_framework.views import APIView
 
 from Services import redis
 from login.decoraters import login_required
-from login.models import Profile
-from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, ImageSerializer, LoginSerializer
+# from login.models import Profile
+from .serializers import UserSerializer, EmailSerializer, PasswordSerializer,  LoginSerializer
 from Services.pyjwt_token import Jwt_Token, Jwt_token
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from Services.bitly_api import Connection
 from Services.event_emmiter import ee
 from Services.S3 import upload_file
 import logging
@@ -42,6 +41,10 @@ from urlshortening.models import get_short_url, invalidate_url, get_full_url, Ur
 from utils import Smd_Response
 
 logger = logging.getLogger(__name__)
+
+
+def index(requset):
+    return render(requset, 'login/social_login.html')
 
 
 class User_Create(GenericAPIView):
@@ -330,40 +333,40 @@ class Logout(GenericAPIView):
             return Response(smd)
 
 
-class S3Api(GenericAPIView):
-    serializer_class = ImageSerializer
-
-    # permission_classes = (IsAuthenticated,)
-
-    def post(self, request, *args, **kwargs):
-        try:
-            serializer = ImageSerializer(data=request.data)
-            if serializer.is_valid():
-                image = request.data['image']
-                if image:
-                    print("here after image is found", image)
-                user = request.user
-                url = upload_file(image, object_name=request.user + image.name)
-                Profile.objects.create(file=url, user_id=user.id)
-                smd = Smd_Response(True, 'image uploaded successfully')
-                return Response(smd)
-            else:
-                smd = Smd_Response(False, 'please provide valid image', [])
-                return Response(smd)
-        except Exception:
-            smd = Smd_Response()
-            return Response(smd)
-
-
-class S3(APIView):
-    def get(self, request, bucket, object_name, *args, **kwargs):
-        import boto3
-        s3 = boto3.client('s3')
-        url = s3.generate_presigned_url(
-            ClientMethod='get_object',
-            Params={
-                'Bucket': bucket,
-                'Key': object_name
-            }
-        )
-        return redirect(url)
+# class S3Api(GenericAPIView):
+#     serializer_class = ImageSerializer
+#
+#     # permission_classes = (IsAuthenticated,)
+#
+#     def post(self, request, *args, **kwargs):
+#         try:
+#             serializer = ImageSerializer(data=request.data)
+#             if serializer.is_valid():
+#                 image = request.data['image']
+#                 if image:
+#                     print("here after image is found", image)
+#                 user = request.user
+#                 url = upload_file(image, object_name=request.user + image.name)
+#                 Profile.objects.create(file=url, user_id=user.id)
+#                 smd = Smd_Response(True, 'image uploaded successfully')
+#                 return Response(smd)
+#             else:
+#                 smd = Smd_Response(False, 'please provide valid image', [])
+#                 return Response(smd)
+#         except Exception:
+#             smd = Smd_Response()
+#             return Response(smd)
+#
+# class S3(APIView):
+#     def get(self, request, bucket, object_name, *args, **kwargs):
+#         import boto3
+#         s3 = boto3.client('s3')
+#         url = s3.generate_presigned_url(
+#             ClientMethod='get_object',
+#             Params={
+#                 'Bucket': bucket,
+#                 'Key': object_name
+#             }
+#         )
+#         print(url)
+#         return redirect(url)

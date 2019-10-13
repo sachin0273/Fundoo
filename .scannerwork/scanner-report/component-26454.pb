@@ -1,0 +1,1 @@
+жнPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/strava/views.py 2pyXh

@@ -1,0 +1,1 @@
+ßƒ.venv/lib/python3.6/site-packages/pytest_django :Ýƒïƒðƒñƒòƒóƒôƒ÷ƒ

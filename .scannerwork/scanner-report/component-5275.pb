@@ -1,0 +1,1 @@
+›)2venv/lib64/python3.6/site-packages/django/template :š)œ)º)»)¼)½)¾)¿)À)Á)Â)Ã)Ä)Å)

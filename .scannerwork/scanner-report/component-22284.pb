@@ -1,0 +1,1 @@
+Œ®6venv/lib/python3.6/site-packages/django/utils/cache.py 2pyX„h

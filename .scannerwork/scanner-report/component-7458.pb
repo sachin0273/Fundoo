@@ -1,0 +1,1 @@
+¢:;venv/lib64/python3.6/site-packages/packaging/_structures.py 2pyXEh

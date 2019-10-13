@@ -1,0 +1,1 @@
+¾ÌPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/fxa/provider.py 2pyX'h

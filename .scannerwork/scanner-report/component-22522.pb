@@ -1,0 +1,1 @@
+ú¯6venv/lib/python3.6/site-packages/pygraphviz/version.py 2pyXh

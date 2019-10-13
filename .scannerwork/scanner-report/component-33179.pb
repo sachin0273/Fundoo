@@ -1,0 +1,1 @@
+›ƒ&venv/lib/python3.6/site-packages/redis :šƒ¤ƒ¦ƒ§ƒ¨ƒ©ƒªƒ«ƒ

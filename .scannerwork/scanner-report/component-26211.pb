@@ -1,0 +1,1 @@
+„Ã]venv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitbucket_oauth2/provider.py 2pyX&h

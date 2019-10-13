@@ -1,0 +1,1 @@
+Å9Uvenv/lib64/python3.6/site-packages/django_extensions/management/commands/runscript.py 2pyXóh

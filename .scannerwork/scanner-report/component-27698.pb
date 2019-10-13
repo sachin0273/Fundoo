@@ -1,0 +1,1 @@
+²Ø6venv/lib/python3.6/site-packages/PIL/MspImagePlugin.py 2pyXÇh

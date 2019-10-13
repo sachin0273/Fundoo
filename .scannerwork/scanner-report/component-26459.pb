@@ -1,0 +1,1 @@
+шнSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/strava/provider.py 2pyX.h

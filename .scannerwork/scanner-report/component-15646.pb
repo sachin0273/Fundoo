@@ -1,0 +1,1 @@
+žzGvenv/lib64/python3.6/site-packages/docutils/writers/latex2e/__init__.py 2pyX‡h

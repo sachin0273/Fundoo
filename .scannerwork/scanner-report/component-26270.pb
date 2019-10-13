@@ -1,0 +1,1 @@
+žÍVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/fivehundredpx/urls.py 2pyXh

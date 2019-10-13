@@ -1,0 +1,1 @@
+Ô¯5venv/lib/python3.6/site-packages/chardet/euctwfreq.py 2pyX„h

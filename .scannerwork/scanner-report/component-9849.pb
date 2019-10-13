@@ -1,0 +1,1 @@
+ùLRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/edmodo/views.py 2pyXh

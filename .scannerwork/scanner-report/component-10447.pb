@@ -1,0 +1,1 @@
+ÏQWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/evernote/__init__.py 2pyXh

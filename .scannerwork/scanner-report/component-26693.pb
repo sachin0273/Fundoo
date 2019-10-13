@@ -1,0 +1,1 @@
+ÅÐ\venv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook/static/facebook/js :ÄÐ

@@ -1,0 +1,1 @@
+ú-3venv/lib64/python3.6/site-packages/pygraphviz/tests : ù-Œ.....‘.’.“.”.•.–.—.˜.™.š.

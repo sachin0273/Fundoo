@@ -1,0 +1,1 @@
+‘ó4venv/lib/python3.6/site-packages/awscli/formatter.py 2pyX•h

@@ -1,0 +1,1 @@
+ãw/venv/lib64/python3.6/site-packages/openid/yadis :áwäwåwæwçwèwéwêwëwìwíw

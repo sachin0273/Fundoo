@@ -1,0 +1,1 @@
+ÒW2venv/lib64/python3.6/site-packages/attr/_compat.py 2pyX†h

@@ -1,0 +1,1 @@
+йнKvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/quickbooks :инкнлнмнннон

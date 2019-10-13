@@ -1,0 +1,1 @@
+ÔOPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/baidu/urls.py 2pyXh

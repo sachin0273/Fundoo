@@ -1,0 +1,1 @@
+Ášavenv/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js 2jsXh

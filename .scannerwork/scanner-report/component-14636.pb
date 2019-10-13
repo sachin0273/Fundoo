@@ -1,0 +1,1 @@
+¬rCvenv/lib64/python3.6/site-packages/pyshorteners/shorteners/adfly.py 2pyX"h

@@ -1,0 +1,1 @@
+Å∫?venv/lib/python3.6/site-packages/django_extensions/templatetags :Ä∫Ç∫É∫Ñ∫ç∫é∫è∫

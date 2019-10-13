@@ -1,0 +1,1 @@
+ÉQQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/feedly/urls.py 2pyXh

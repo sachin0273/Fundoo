@@ -1,0 +1,1 @@
+ځ7venv/lib64/python3.6/site-packages/django_redis/pool.py 2pyX|h

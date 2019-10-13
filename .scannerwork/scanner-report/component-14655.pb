@@ -1,0 +1,1 @@
+ør/venv/lib64/python3.6/site-packages/pyshorteners :ær¿r¡r

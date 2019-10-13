@@ -1,0 +1,1 @@
+ÈNTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid/migrations :ËNÍN

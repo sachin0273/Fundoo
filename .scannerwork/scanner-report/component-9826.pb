@@ -1,0 +1,1 @@
+‚LQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/asana/views.py 2pyXh

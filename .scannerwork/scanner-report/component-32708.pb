@@ -1,0 +1,1 @@
+Äÿ)venv/lib/python3.6/site-packages/colorama :ÂÿÃÿÅÿÆÿÇÿÈÿ

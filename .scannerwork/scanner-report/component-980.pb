@@ -1,0 +1,1 @@
+ÔIvenv/lib64/python3.6/site-packages/django/contrib/staticfiles/handlers.py 2pyXCh

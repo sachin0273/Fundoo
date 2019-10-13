@@ -1,0 +1,1 @@
+ݖavenv/lib/python3.6/site-packages/django/contrib/admin/migrations/0002_logentry_remove_auto_add.py 2pyXh

@@ -1,0 +1,1 @@
+юдMvenv/lib/python3.6/site-packages/allauth/socialaccount/migrations/__init__.py 2pyXh

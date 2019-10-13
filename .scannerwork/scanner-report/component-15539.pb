@@ -1,0 +1,1 @@
+³y>venv/lib64/python3.6/site-packages/docutils/languages/pt_br.py 2pyX=h

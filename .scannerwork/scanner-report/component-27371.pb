@@ -1,0 +1,1 @@
+Î’1venv/lib/python3.6/site-packages/allauth/utils.py 2pyXØh

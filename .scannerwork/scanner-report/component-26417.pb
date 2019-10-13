@@ -1,0 +1,1 @@
+±ÎPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/untappd/urls.py 2pyXh

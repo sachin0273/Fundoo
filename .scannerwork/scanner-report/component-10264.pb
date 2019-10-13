@@ -1,0 +1,1 @@
+˜PRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/google/tests.py 2pyXÓh

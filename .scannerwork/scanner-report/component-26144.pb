@@ -1,0 +1,1 @@
+ ÌGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/trello :ŸÌ¡Ì¢Ì£Ì¤Ì

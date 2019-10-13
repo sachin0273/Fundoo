@@ -1,0 +1,1 @@
+¶7Cvenv/lib64/python3.6/site-packages/django_extensions/mongodb/fields :µ7·7¸7

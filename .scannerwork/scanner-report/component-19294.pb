@@ -1,0 +1,1 @@
+Þ–@venv/lib/python3.6/site-packages/django/contrib/admin/migrations :Ý–ß–à–á–

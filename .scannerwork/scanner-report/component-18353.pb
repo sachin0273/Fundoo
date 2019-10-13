@@ -1,0 +1,1 @@
+±èBvenv/lib/python3.6/site-packages/django/contrib/flatpages/admin.py 2pyXh

@@ -1,0 +1,1 @@
+®®-venv/lib/python3.6/site-packages/django/views :­®Á®Â®Ã®Ä®Å®

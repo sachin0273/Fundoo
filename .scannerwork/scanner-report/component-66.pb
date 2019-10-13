@@ -1,0 +1,1 @@
+B.venv/lib64/python3.6/site-packages/django/urls :AKLMNOP

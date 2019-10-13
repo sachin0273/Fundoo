@@ -1,0 +1,1 @@
+Æ¤?venv/lib/python3.6/site-packages/django/conf/global_settings.py 2pyXýh

@@ -1,0 +1,1 @@
+«ÓLvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/vk/tests.py 2pyXh

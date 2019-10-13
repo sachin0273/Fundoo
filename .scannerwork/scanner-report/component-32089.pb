@@ -1,0 +1,1 @@
+Ùת1venv/lib/python3.6/site-packages/pyasn1/codec/der :	״תÞתבת

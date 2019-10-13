@@ -1,0 +1,1 @@
+šW2venv/lib64/python3.6/site-packages/PIL/TiffTags.py 2pyXôh

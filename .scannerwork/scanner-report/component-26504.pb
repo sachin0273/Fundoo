@@ -1,0 +1,1 @@
+ˆÏUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/dataporten/models.py 2pyXh

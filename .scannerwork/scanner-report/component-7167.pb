@@ -1,0 +1,1 @@
+ÿ7Avenv/lib64/python3.6/site-packages/django_extensions/templatetags :ş7€88‚8‹8Œ88

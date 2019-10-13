@@ -1,0 +1,1 @@
+ªt1venv/lib64/python3.6/site-packages/rest_framework :D©t«t¬t­tÏtÑtÓtÔtÕtÖt«u¬u­u®u¯u°u±u²u«v¬v­v®v¯v°v±v²v³v´vµvÒvóvôvşv€w

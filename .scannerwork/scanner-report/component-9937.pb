@@ -1,0 +1,1 @@
+ÑMRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/oauth2/views.py 2pyX˜h

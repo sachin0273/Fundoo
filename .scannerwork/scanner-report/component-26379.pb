@@ -1,0 +1,1 @@
+‹ÎRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/basecamp/views.py 2pyXh

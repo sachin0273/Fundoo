@@ -1,0 +1,1 @@
+ÈÌTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/salesforce/tests.py 2pyXCh

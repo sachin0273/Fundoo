@@ -1,0 +1,1 @@
+Ÿ6\venv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet/gb2312freq.py 2pyXÙh

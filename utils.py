@@ -9,6 +9,7 @@ since :  25-09-2019
 """
 
 import json
+from django.http import JsonResponse
 
 
 def load(filename):
@@ -35,10 +36,11 @@ def validate_email(email):
         return False
 
 
-def Smd_Response(success=False, message='something was wrong', data=[]):
+def Smd_Response(success=False, message='something was wrong', data=[], status_code=400):
     smd = {
         'success': success,
         'message': message,
         'data': data,
     }
-    return smd
+    response = JsonResponse(smd, status=status_code)
+    return response

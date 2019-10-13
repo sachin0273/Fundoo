@@ -1,0 +1,1 @@
+˜MQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/dwolla/urls.py 2pyXh

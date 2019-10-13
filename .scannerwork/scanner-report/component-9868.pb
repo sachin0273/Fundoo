@@ -1,0 +1,1 @@
+ŒMYvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/dataporten/provider.py 2pyX_h

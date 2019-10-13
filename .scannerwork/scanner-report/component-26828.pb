@@ -1,0 +1,1 @@
+ляQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/weixin/client.py 2pyX6h

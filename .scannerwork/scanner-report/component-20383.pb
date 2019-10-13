@@ -1,0 +1,1 @@
+ŸŸGvenv/lib/python3.6/site-packages/django/contrib/gis/db/models/fields.py 2pyXþh

@@ -1,0 +1,1 @@
+üOUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/mailchimp/tests.py 2pyXh

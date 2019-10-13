@@ -1,0 +1,1 @@
+Ò»3venv/lib/python3.6/site-packages/uritemplate/api.py 2pyXHh

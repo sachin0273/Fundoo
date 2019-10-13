@@ -1,0 +1,1 @@
+þQSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/linkedin/urls.py 2pyXh

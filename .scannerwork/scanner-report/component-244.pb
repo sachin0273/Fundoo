@@ -1,0 +1,1 @@
+Ù7venv/lib64/python3.6/site-packages/django/db/migrations :ÛÇÉÑÖÜàâäãåçéë

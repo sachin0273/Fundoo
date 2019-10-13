@@ -1,0 +1,1 @@
+˜6Wvenv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet/escsm.py 2pyXóh

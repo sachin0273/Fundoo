@@ -1,0 +1,1 @@
+ßGvenv/lib64/python3.6/site-packages/django/db/models/functions/window.py 2pyXmh

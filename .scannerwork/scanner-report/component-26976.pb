@@ -1,0 +1,1 @@
+рвSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/eveonline/views.py 2pyXh

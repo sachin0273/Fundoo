@@ -1,0 +1,1 @@
+Ì’2venv/lib/python3.6/site-packages/allauth/compat.py 2pyXPh

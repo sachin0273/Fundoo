@@ -1,0 +1,1 @@
+·Dvenv/lib64/python3.6/site-packages/django/contrib/flatpages/views.py 2pyXGh

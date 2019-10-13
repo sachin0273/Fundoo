@@ -1,0 +1,1 @@
+¥ÒFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/orcid :¤Ò§Ò¨Ò©Ò¦Ò

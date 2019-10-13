@@ -1,0 +1,1 @@
+É5;venv/lib64/python3.6/site-packages/botocore/docs/example.py 2pyXÑh

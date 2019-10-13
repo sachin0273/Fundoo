@@ -1,0 +1,1 @@
+€Rvenv/lib64/python3.6/site-packages/django/contrib/redirects/migrations/__init__.py 2pyXh

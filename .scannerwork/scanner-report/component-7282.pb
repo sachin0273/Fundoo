@@ -1,0 +1,1 @@
+ò8Hvenv/lib64/python3.6/site-packages/django_extensions/management/commands :\ñ8ó8ô8õ8ö8÷8ø8¨9©9ª9«9¬9­9®9¯9°9±9²9³9´9µ9¶9·9¸9¹9º9»9¼9½9¾9¿9À9Á9Â9Ã9Ä9Å9Æ9Ç9È9É9Ê9Ë9Ì9Í9Î9

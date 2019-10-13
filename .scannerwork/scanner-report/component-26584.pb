@@ -1,0 +1,1 @@
+ØÏQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/oauth2/client.py 2pyX_h

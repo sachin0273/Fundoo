@@ -1,0 +1,1 @@
+ù(6venv/lib64/python3.6/site-packages/django/templatetags :ú(û(ü(†(°(¢(

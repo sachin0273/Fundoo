@@ -1,0 +1,1 @@
+Å+Kvenv/lib64/python3.6/site-packages/django/core/management/commands/shell.py 2pyXgh

@@ -1,0 +1,1 @@
+้ง6venv/lib/python3.6/site-packages/django/conf/locale/eu :่งํง

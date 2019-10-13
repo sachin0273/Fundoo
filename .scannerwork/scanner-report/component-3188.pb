@@ -1,0 +1,1 @@
+ôVvenv/lib64/python3.6/site-packages/django/contrib/admin/static/admin/js/vendor/select2 :õö

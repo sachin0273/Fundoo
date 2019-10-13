@@ -1,0 +1,1 @@
+›ÍXvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/fivehundredpx/models.py 2pyXh

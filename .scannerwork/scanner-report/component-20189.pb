@@ -1,0 +1,1 @@
+İAvenv/lib/python3.6/site-packages/django/contrib/gis/gdal/layer.py 2pyX×h

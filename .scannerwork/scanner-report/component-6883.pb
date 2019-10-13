@@ -1,0 +1,1 @@
+ã5Fvenv/lib64/python3.6/site-packages/botocore/vendored/requests/hooks.py 2pyX.h

@@ -1,0 +1,1 @@
+‡OQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/daum/models.py 2pyXh

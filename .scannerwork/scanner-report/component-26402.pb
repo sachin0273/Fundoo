@@ -1,0 +1,1 @@
+¢ÎNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/odnoklassniki :¡Î¤Î¥Î¦Î§Î

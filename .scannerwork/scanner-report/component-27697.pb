@@ -1,0 +1,1 @@
+±Ø2venv/lib/python3.6/site-packages/PIL/ImageDraw2.py 2pyXlh

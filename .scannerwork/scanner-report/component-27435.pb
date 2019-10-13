@@ -1,0 +1,1 @@
+ซึPvenv/lib/python3.6/site-packages/requests_oauthlib/compliance_fixes/mailchimp.py 2pyXh

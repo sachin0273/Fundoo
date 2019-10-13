@@ -1,0 +1,1 @@
+ÞFvenv/lib64/python3.6/site-packages/django/contrib/staticfiles/views.py 2pyX(h

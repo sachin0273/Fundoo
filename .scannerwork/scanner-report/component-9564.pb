@@ -1,0 +1,1 @@
+ÜJ[venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/bitbucket_oauth2/urls.py 2pyXh

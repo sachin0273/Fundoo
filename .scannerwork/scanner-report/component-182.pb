@@ -1,0 +1,1 @@
+¶Bvenv/lib64/python3.6/site-packages/django/db/backends/base/base.py 2pyX”h

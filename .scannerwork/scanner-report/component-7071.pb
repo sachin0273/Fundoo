@@ -1,0 +1,1 @@
+Ÿ7+venv/lib64/python3.6/site-packages/jmespath :ž7 7¡7¢7£7¤7¥7¦7

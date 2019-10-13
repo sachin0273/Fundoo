@@ -1,0 +1,1 @@
+זנCvenv/lib/python3.6/site-packages/awscli/customizations/datapipeline :ונםנמנןנננ

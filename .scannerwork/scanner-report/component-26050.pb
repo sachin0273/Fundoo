@@ -1,0 +1,1 @@
+ÂËAvenv/lib/python3.6/site-packages/allauth/socialaccount/adapter.py 2pyXÅh

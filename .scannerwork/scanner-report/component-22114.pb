@@ -1,0 +1,1 @@
+‚¨@venv/lib/python3.6/site-packages/django/core/management/commands :H·¨„¨‰¨Â¨Ê¨Á¨Å≠Ç≠É≠Ñ≠Ö≠Ü≠á≠à≠â≠ä≠ã≠å≠ç≠é≠è≠ê≠ë≠í≠

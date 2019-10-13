@@ -1,0 +1,1 @@
+›ðUvenv/lib/python3.6/site-packages/awscli/customizations/servicecatalog/generatebase.py 2pyX6h

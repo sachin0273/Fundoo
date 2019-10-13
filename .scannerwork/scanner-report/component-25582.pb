@@ -1,0 +1,1 @@
+îÇ(venv/lib/python3.6/site-packages/coreapi :íÇÿÇ€ÈÈ‚ÈƒÈ„È

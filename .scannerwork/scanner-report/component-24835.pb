@@ -1,0 +1,1 @@
+ƒÂIvenv/lib/python3.6/site-packages/rest_framework_simplejwt/token_blacklist :‚Â›ÂœÂÂ

@@ -1,0 +1,1 @@
+Ë—Qvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/daum/__init__.py 2pyXh

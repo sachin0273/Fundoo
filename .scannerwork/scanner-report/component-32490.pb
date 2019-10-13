@@ -1,0 +1,1 @@
+êý>venv/lib/python3.6/site-packages/docutils/utils/smartquotes.py 2pyXóh

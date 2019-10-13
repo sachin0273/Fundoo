@@ -1,0 +1,1 @@
+ñÏ]venv/lib/python3.6/site-packages/allauth/socialaccount/providers/twentythreeandme/provider.py 2pyXh

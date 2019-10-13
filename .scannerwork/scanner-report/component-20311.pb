@@ -1,0 +1,1 @@
+מHvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/utils.py 2pyXh

@@ -1,0 +1,1 @@
+L6venv/lib64/python3.6/site-packages/django/urls/conf.py 2pyXNh

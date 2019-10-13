@@ -1,0 +1,1 @@
+ë{Bvenv/lib64/python3.6/site-packages/docutils/parsers/rst/directives :ê{ú{ù{û{ü{†{°{¢{£{

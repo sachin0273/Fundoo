@@ -1,0 +1,1 @@
+¹¯1venv/lib/python3.6/site-packages/chardet/enums.py 2pyXMh

@@ -1,0 +1,1 @@
+ÙH:venv/lib64/python3.6/site-packages/allauth/account/urls.py 2pyX#h

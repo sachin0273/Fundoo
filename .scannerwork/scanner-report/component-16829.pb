@@ -1,0 +1,1 @@
+��9venv/lib/python3.6/site-packages/django/db/backends/mysql :��ȃʃ˃̃̓΃σЃу

@@ -1,0 +1,1 @@
+¢ÏTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/foursquare/views.py 2pyX"h

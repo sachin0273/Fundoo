@@ -1,0 +1,1 @@
+±v;venv/lib64/python3.6/site-packages/rest_framework/compat.py 2pyXïh

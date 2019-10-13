@@ -1,0 +1,1 @@
+Í-@venv/lib64/python3.6/site-packages/chardet/langbulgarianmodel.py 2pyXåh

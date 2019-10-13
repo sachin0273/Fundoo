@@ -1,0 +1,1 @@
+ú”Pvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/discord/urls.py 2pyXh

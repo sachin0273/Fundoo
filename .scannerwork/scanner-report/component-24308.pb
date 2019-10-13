@@ -1,0 +1,1 @@
+ô½bvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/html5lib/filters/optionaltags.py 2pyXÐh

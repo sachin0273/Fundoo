@@ -1,0 +1,1 @@
+é¶6venv/lib/python3.6/site-packages/django/conf/locale/es :ç¶í¶

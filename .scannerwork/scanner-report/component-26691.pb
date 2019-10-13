@@ -1,0 +1,1 @@
+ÃÐUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook/provider.py 2pyXÛh

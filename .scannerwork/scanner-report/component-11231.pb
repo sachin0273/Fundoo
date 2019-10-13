@@ -1,0 +1,1 @@
+ßW5venv/lib64/python3.6/site-packages/PIL/BdfFontFile.py 2pyXsh

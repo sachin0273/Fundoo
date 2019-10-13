@@ -1,0 +1,1 @@
+à§;venv/lib/python3.6/site-packages/django/conf/locale/zh_Hant :ß§ä§

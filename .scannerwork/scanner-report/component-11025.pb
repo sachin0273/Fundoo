@@ -1,0 +1,1 @@
+‘V)venv/lib64/python3.6/site-packages/dotenv :šV›VœVVVŸV V

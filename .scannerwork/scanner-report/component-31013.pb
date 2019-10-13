@@ -1,0 +1,1 @@
+¥ò?venv/lib/python3.6/site-packages/awscli/customizations/gamelift :	¤ò¦ò«ò

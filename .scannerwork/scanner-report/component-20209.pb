@@ -1,0 +1,1 @@
+ñCvenv/lib/python3.6/site-packages/django/contrib/gis/geos/prototypes :ğıÿ€‚ƒ„…†

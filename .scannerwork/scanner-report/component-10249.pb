@@ -1,0 +1,1 @@
+‰PSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/patreon/views.py 2pyX9h

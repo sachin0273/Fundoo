@@ -1,0 +1,1 @@
+ÚžDvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/base :Ùžàžâžãžäž

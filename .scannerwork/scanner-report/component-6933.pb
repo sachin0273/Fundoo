@@ -1,0 +1,1 @@
+•6cvenv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet/langcyrillicmodel.py 2pyXÊh

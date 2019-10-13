@@ -1,0 +1,1 @@
+Æ*<venv/lib64/python3.6/site-packages/django/core/files/base.py 2pyX¡h

@@ -1,0 +1,1 @@
+É—Xvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/windowslive/provider.py 2pyX,h

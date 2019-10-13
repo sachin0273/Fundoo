@@ -1,0 +1,1 @@
+ъд[venv/lib/python3.6/site-packages/allauth/socialaccount/migrations/0002_token_max_lengths.py 2pyX$h

@@ -1,0 +1,1 @@
+ชุ3venv/lib/python3.6/site-packages/PIL/GdImageFile.py 2pyX[h

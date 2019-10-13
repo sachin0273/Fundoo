@@ -1,0 +1,1 @@
+§ÏWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/foursquare/__init__.py 2pyXh

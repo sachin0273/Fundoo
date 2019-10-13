@@ -1,0 +1,1 @@
+Å~7venv/lib64/python3.6/site-packages/sqlparse/keywords.py 2pyXŸh

@@ -1,0 +1,1 @@
+·{6venv/lib64/python3.6/site-packages/docutils/transforms :¶{Â{Ã{Ä{Å{Æ{Ç{È{É{

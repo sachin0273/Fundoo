@@ -1,0 +1,1 @@
+‘ÍVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/battlenet/__init__.py 2pyXh

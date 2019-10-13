@@ -1,0 +1,1 @@
+«0venv/lib/python3.6/site-packages/django/template :*«Ÿ«¼«½«¾«¿«À«Á«Â«Ã«Ä«Å«Æ«Ç«

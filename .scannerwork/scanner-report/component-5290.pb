@@ -1,0 +1,1 @@
+ª)Fvenv/lib64/python3.6/site-packages/django/template/loaders/__init__.py 2pyXh

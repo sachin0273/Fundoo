@@ -1,0 +1,1 @@
+”R[venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/linkedin_oauth2/views.py 2pyX4h

@@ -1,0 +1,1 @@
+ÒR@venv/lib64/python3.6/site-packages/allauth/socialaccount/urls.py 2pyXh

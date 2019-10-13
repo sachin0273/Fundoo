@@ -1,0 +1,1 @@
+Ù—Rvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/auth0/__init__.py 2pyXh

@@ -1,0 +1,1 @@
+¼Ÿ?venv/lib/python3.6/site-packages/django/contrib/gis/serializers :»Ÿ½Ÿ

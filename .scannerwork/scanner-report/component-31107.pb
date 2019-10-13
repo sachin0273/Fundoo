@@ -1,0 +1,1 @@
+ƒóJvenv/lib/python3.6/site-packages/awscli/customizations/cloudtrail/utils.py 2pyX!h

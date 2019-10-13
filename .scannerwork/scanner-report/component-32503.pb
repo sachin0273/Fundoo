@@ -1,0 +1,1 @@
+÷ý.venv/lib/python3.6/site-packages/openapi_codec :öýþýÿý€þ

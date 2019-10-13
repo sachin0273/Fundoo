@@ -1,0 +1,1 @@
+ùÏGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/tumblr :øÏúÏûÏüÏıÏ

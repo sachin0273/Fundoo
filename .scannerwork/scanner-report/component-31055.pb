@@ -1,0 +1,1 @@
+ÏòFvenv/lib/python3.6/site-packages/awscli/customizations/s3/s3handler.py 2pyX¯h

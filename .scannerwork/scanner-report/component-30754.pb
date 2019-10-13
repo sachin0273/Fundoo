@@ -1,0 +1,1 @@
+¢ðQvenv/lib/python3.6/site-packages/awscli/customizations/servicecatalog/__init__.py 2pyXh

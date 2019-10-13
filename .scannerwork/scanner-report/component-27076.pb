@@ -1,0 +1,1 @@
+дсOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/meetup/urls.py 2pyXh

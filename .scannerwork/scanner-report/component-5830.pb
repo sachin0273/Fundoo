@@ -1,0 +1,1 @@
+Æ-<venv/lib64/python3.6/site-packages/chardet/cli/chardetect.py 2pyXVh

@@ -1,0 +1,1 @@
+’ÍSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/battlenet/tests.py 2pyXBh

@@ -1,0 +1,1 @@
+°ÎHvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/untappd :¯Î±Î²Î³Î´ÎµÎ

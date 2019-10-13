@@ -1,0 +1,1 @@
+µÏOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/yahoo/tests.py 2pyXVh

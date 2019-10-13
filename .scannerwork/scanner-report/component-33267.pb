@@ -1,0 +1,1 @@
+óƒ8venv/lib/python3.6/site-packages/pytest_django/compat.py 2pyXh

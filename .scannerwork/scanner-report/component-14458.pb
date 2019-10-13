@@ -1,0 +1,1 @@
+úpCvenv/lib64/python3.6/site-packages/awscli/customizations/cloudtrail :ùp€qq‚q

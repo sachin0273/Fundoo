@@ -1,0 +1,1 @@
+врMvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/box/tests.py 2pyX h

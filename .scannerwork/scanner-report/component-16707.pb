@@ -1,0 +1,1 @@
+ร venv/lib/python3.6/site-packages :ยฅฐชนฅม’

@@ -1,0 +1,1 @@
+©ÓCvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/vk :¨ÓªÓ«Ó¬Ó­Ó

@@ -1,0 +1,1 @@
+»ôBvenv/lib/python3.6/site-packages/pyshorteners/shorteners/clckru.py 2pyXh

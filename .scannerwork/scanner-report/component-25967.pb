@@ -1,0 +1,1 @@
+Ô Kvenv/lib/python3.6/site-packages/allauth/account/migrations/0001_initial.py 2pyX9h

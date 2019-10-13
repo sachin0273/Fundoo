@@ -1,0 +1,1 @@
+Åƒ?venv/lib/python3.6/site-packages/django_redis/client/sharded.py 2pyX‰h

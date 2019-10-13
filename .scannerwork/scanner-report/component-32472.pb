@@ -1,0 +1,1 @@
+ØýCvenv/lib/python3.6/site-packages/docutils/utils/math/tex2unichar.py 2pyX—h

@@ -1,0 +1,1 @@
+ÂšSvenv/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/vendor/jquery :ÁšÃš

@@ -1,0 +1,1 @@
+ıW)venv/lib64/python3.6/site-packages/awscli :0üWïmˆn‹n„q‹qŒqqqqq‘q’q“q”q•q–q—q˜q™qšq›qœqq

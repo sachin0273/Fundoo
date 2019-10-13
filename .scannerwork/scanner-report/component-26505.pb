@@ -1,0 +1,1 @@
+‰ÏKvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/dataporten :ˆÏ‹ÏŒÏÏÏ¬Ï

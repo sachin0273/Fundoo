@@ -1,0 +1,1 @@
+ÙNVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/spotify/__init__.py 2pyXh

@@ -1,0 +1,1 @@
+¯ðDvenv/lib/python3.6/site-packages/awscli/customizations/configservice :®ð°ð±ð²ð´ð

@@ -1,0 +1,1 @@
+¯:venv/lib64/python3.6/site-packages/django/contrib/gis/gdal :®ÛÜÝÞßàáâãäåæ

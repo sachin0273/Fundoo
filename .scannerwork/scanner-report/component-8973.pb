@@ -1,0 +1,1 @@
+F=venv/lib64/python3.6/site-packages/coreapi/codecs/corejson.py 2pyXÛh

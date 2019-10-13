@@ -1,0 +1,1 @@
+ì¸Xvenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/urllib3/util/url.py 2pyX×h

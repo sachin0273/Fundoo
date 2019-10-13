@@ -1,0 +1,1 @@
+½oHvenv/lib64/python3.6/site-packages/awscli/customizations/history/show.py 2pyXœh

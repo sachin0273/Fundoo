@@ -1,0 +1,1 @@
+цы;venv/lib/python3.6/site-packages/PIL/GribStubImagePlugin.py 2pyXKh

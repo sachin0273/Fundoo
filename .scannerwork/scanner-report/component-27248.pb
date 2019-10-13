@@ -1,0 +1,1 @@
+ðÔ?venv/lib/python3.6/site-packages/allauth/socialaccount/admin.py 2pyX6h

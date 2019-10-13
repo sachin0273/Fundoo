@@ -1,0 +1,1 @@
+÷Ù.venv/lib/python3.6/site-packages/attr/_make.py 2pyX§h

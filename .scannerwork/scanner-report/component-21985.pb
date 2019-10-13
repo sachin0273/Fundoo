@@ -1,0 +1,1 @@
+сл=venv/lib/python3.6/site-packages/django/core/mail/__init__.py 2pyXuh

@@ -1,0 +1,1 @@
+Öt?venv/lib64/python3.6/site-packages/rest_framework/versioning.py 2pyX¹h

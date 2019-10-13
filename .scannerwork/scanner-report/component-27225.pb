@@ -1,0 +1,1 @@
+йдFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/azure :идкдлдмдндод

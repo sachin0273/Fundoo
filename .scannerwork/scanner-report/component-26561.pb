@@ -1,0 +1,1 @@
+¡œPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/gitlab/tests.py 2pyX+h

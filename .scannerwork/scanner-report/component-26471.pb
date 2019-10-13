@@ -1,0 +1,1 @@
+çÎOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/asana/tests.py 2pyXh

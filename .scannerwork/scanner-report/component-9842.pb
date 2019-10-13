@@ -1,0 +1,1 @@
+ÚLXvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/authentiq/provider.py 2pyX]h

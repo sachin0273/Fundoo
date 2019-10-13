@@ -1,0 +1,1 @@
+îGvenv/lib/python3.6/site-packages/django/contrib/gis/geoip2/resources.py 2pyXh

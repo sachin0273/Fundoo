@@ -1,0 +1,1 @@
+Æ,5venv/lib64/python3.6/site-packages/django/__init__.py 2pyXh

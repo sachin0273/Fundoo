@@ -1,0 +1,1 @@
+ ÃWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/salesforce/provider.py 2pyX4h

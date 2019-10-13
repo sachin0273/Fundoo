@@ -1,0 +1,1 @@
+•W8venv/lib64/python3.6/site-packages/PIL/MicImagePlugin.py 2pyXwh

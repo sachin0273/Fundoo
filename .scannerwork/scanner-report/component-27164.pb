@@ -1,0 +1,1 @@
+ú‘\venv/lib/python3.6/site-packages/allauth/socialaccount/providers/linkedin_oauth2/provider.py 2pyX`h

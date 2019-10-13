@@ -1,0 +1,1 @@
+опVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/digitalocean/tests.py 2pyX'h

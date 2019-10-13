@@ -1,0 +1,1 @@
+É×+venv/lib/python3.6/site-packages/coreschema :È×Ê×Ë×Ì×Í×

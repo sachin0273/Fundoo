@@ -1,0 +1,1 @@
+¦ðEvenv/lib/python3.6/site-packages/awscli/customizations/cloudsearch.py 2pyXuh

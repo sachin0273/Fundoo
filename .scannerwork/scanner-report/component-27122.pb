@@ -1,0 +1,1 @@
+Ú”Nvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/cern/views.py 2pyX"h

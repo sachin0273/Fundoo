@@ -1,0 +1,1 @@
+кя1venv/lib/python3.6/site-packages/sqlparse/filters :йямяняояпяряся

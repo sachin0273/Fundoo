@@ -1,0 +1,1 @@
+ºÉ<venv/lib/python3.6/site-packages/MySQLdb/constants/CLIENT.py 2pyXh

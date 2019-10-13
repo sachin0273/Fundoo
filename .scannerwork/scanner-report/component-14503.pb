@@ -1,0 +1,1 @@
+§q8venv/lib64/python3.6/site-packages/markupsafe/_compat.py 2pyX"h

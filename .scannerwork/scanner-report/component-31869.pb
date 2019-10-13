@@ -1,0 +1,1 @@
+ýøOvenv/lib/python3.6/site-packages/rest_framework/management/commands/__init__.py 2pyXh

@@ -1,0 +1,1 @@
+ÍRSvenv/lib64/python3.6/site-packages/allauth/socialaccount/migrations/0001_initial.py 2pyXMh

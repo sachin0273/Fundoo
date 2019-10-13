@@ -1,0 +1,1 @@
+илWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/salesforce/__init__.py 2pyXh

@@ -1,0 +1,1 @@
+˜ôAvenv/lib/python3.6/site-packages/pyshorteners/shorteners/wpaco.py 2pyXh

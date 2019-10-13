@@ -1,0 +1,1 @@
+\Ivenv/lib64/python3.6/site-packages/django/db/backends/postgresql_psycopg2 :	[]^_`abcr

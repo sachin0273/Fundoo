@@ -1,0 +1,1 @@
+ÛHvenv/lib64/python3.6/site-packages/django/contrib/staticfiles/storage.py 2pyXöh

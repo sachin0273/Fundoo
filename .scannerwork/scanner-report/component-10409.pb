@@ -1,0 +1,1 @@
+©QQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vk/__init__.py 2pyXh

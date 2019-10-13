@@ -1,0 +1,1 @@
+ê»;venv/lib/python3.6/site-packages/coreapi/codecs/corejson.py 2pyX€h

@@ -1,0 +1,1 @@
+ˆMVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/dataporten/views.py 2pyXAh

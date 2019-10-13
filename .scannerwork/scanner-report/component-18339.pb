@@ -1,0 +1,1 @@
+£èEvenv/lib/python3.6/site-packages/django/contrib/flatpages/sitemaps.py 2pyXh

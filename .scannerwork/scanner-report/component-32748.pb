@@ -1,0 +1,1 @@
+ìÿCvenv/lib/python3.6/site-packages/sqlparse/filters/aligned_indent.py 2pyX‹h

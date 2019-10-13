@@ -1,0 +1,1 @@
+½‘Evenv/lib/python3.6/site-packages/django/contrib/flatpages/__init__.py 2pyXh

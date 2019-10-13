@@ -1,0 +1,1 @@
+ŒÎIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/basecamp :ŠÎ‹ÎÎÎÎ

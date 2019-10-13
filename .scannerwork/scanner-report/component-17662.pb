@@ -1,0 +1,1 @@
+þ‰Gvenv/lib/python3.6/site-packages/django/contrib/contenttypes/migrations :	ý‰ÿ‰€Š

@@ -1,0 +1,1 @@
+Ë»8venv/lib/python3.6/site-packages/uritemplate/variable.py 2pyXÅh

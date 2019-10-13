@@ -1,0 +1,1 @@
+¨ƒ4venv/lib/python3.6/site-packages/redis/exceptions.py 2pyXBh

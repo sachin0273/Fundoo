@@ -1,0 +1,1 @@
+ܩBvenv/lib/python3.6/site-packages/django/conf/locale/mn/__init__.py 2pyXh

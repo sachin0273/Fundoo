@@ -1,0 +1,1 @@
+þ«2venv/lib/python3.6/site-packages/django/core/cache :ý«ÿ«

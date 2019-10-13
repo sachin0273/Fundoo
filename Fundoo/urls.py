@@ -19,12 +19,19 @@ from rest_framework_swagger.views import get_swagger_view
 from rest_framework_simplejwt import views as jwt_views
 
 schema_view = get_swagger_view(title='Fundoo API')
+from django.views.generic import TemplateView
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
+    path('', TemplateView.as_view(template_name='login/social_login.html')),
     path('', include('login.urls')),
-    path('', schema_view),
+    path('', include('Note.urls')),
+    path('fundoo', schema_view, name='fundoo'),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-    path('linkshortening/', include('urlshortening.urls'))
+    path('linkshortening/', include('urlshortening.urls')),
+    # path('api/login/', include('rest_social_auth.urls_jwt_pair')),
+    path('accounts/', include('allauth.urls')),
+    # path('', include('social_django.urls', namespace='social'))
 ]

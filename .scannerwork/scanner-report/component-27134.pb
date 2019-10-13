@@ -1,0 +1,1 @@
+þÓRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/linkedin/views.py 2pyXDh

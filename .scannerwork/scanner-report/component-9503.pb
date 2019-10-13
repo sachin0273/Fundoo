@@ -1,0 +1,1 @@
+ŸJRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/trello/tests.py 2pyXh

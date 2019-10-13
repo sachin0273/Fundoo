@@ -1,0 +1,1 @@
+øºTvenv/lib/python3.6/site-packages/django_extensions/management/commands/dumpscript.py 2pyXøh

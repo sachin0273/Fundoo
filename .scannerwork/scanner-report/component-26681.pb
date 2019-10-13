@@ -1,0 +1,1 @@
+¹ÐNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook/data :¸Ð

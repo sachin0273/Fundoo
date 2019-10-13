@@ -1,0 +1,1 @@
+‰F:venv/lib64/python3.6/site-packages/uritemplate/variable.py 2pyXÅh

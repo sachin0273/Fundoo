@@ -1,0 +1,1 @@
+ö9Bvenv/lib64/python3.6/site-packages/django_extensions/jobs/minutely :õ9

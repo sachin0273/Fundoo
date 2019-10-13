@@ -1,0 +1,1 @@
+­V;venv/lib64/python3.6/site-packages/PIL/SpiderImagePlugin.py 2pyXÇh

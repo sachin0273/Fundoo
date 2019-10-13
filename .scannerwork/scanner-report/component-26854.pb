@@ -1,0 +1,1 @@
+Ê—Mvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/daum/urls.py 2pyXh

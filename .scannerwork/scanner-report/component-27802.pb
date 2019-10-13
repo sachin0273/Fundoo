@@ -1,0 +1,1 @@
+šÙ6venv/lib/python3.6/site-packages/PIL/SgiImagePlugin.py 2pyXìh

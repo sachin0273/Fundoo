@@ -1,0 +1,1 @@
+ˆKZvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/battlenet/validators.py 2pyXh

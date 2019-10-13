@@ -1,0 +1,1 @@
+ÛK\venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/stackexchange/__init__.py 2pyXh

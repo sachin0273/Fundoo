@@ -1,0 +1,1 @@
+çŒRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/basecamp/tests.py 2pyX)h

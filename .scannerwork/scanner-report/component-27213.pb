@@ -1,0 +1,1 @@
+Õ‘Ovenv/lib/python3.6/site-packages/allauth/socialaccount/providers/slack/tests.py 2pyXh

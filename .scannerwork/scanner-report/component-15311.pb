@@ -1,0 +1,1 @@
+œw:venv/lib64/python3.6/site-packages/openid/extensions/draft :Œw–w—w

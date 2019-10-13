@@ -1,0 +1,1 @@
+шеEvenv/lib/python3.6/site-packages/django/conf/locale/es_MX/__init__.py 2pyXh

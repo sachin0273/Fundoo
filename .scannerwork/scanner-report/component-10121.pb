@@ -1,0 +1,1 @@
+‰OTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/instagram/urls.py 2pyXh

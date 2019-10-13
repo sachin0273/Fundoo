@@ -1,0 +1,1 @@
+šÀCvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_internal :$™À¨ÀªÀ«À¬ÀÛÀ€ÁÁ‚ÁƒÁ Á¡Á

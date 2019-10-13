@@ -1,0 +1,1 @@
+€ÒVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/mailchimp/__init__.py 2pyXh

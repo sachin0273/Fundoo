@@ -1,0 +1,1 @@
+­zAvenv/lib64/python3.6/site-packages/docutils/parsers/rst/languages :6¬z®z¯zÌzÍzÎzÏzĞzÑzÒzÓzÔzÕzÖz×zØzÙzÚzÛzÜzİzŞzßzàzázâzãz

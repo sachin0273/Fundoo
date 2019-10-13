@@ -1,0 +1,1 @@
+’„Cvenv/lib/python3.6/site-packages/django/db/migrations/serializer.py 2pyXÎh

@@ -1,0 +1,1 @@
+ãW'venv/lib64/python3.6/site-packages/attr :ğWñWòWóWôWõWöW÷WúW

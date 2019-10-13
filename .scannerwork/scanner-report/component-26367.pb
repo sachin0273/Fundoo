@@ -1,0 +1,1 @@
+ÿÍJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/robinhood :şÍ€ÎÎ‚ÎƒÎ

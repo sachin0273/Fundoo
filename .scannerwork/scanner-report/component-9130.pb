@@ -1,0 +1,1 @@
+ªG5venv/lib64/python3.6/site-packages/MySQLdb/release.py 2pyXh

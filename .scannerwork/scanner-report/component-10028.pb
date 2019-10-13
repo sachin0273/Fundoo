@@ -1,0 +1,1 @@
+¬NXvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/angellist/provider.py 2pyX h

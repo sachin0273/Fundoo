@@ -1,0 +1,1 @@
+ƒ‚.venv/share/doc/pygraphviz-1.5/examples/star.py 2pyX,h

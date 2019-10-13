@@ -1,0 +1,1 @@
+·JNvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/fxa/urls.py 2pyXh

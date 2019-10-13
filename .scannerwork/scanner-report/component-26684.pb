@@ -1,0 +1,1 @@
+МаSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook/locale.py 2pyXGh

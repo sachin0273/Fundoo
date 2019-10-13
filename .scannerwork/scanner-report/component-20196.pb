@@ -1,0 +1,1 @@
+äAvenv/lib/python3.6/site-packages/django/contrib/gis/gdal/error.py 2pyX>h

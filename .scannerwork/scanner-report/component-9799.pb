@@ -1,0 +1,1 @@
+ÇLMvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/quickbooks :ÆLÈLÉLÊLËLÌL

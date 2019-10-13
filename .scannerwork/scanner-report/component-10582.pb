@@ -1,0 +1,1 @@
+ÖRHvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/azure :ÕR×RØRÙRÚRÛR

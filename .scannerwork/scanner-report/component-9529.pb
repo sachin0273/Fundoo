@@ -1,0 +1,1 @@
+¹JRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/fxa/__init__.py 2pyXh

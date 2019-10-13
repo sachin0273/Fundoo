@@ -1,0 +1,1 @@
+Я;venv/lib/python3.6/site-packages/chardet/mbcharsetprober.py 2pyX\h

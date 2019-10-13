@@ -1,0 +1,1 @@
+ÿSvenv/lib64/python3.6/site-packages/django/contrib/gis/geos/prototypes/predicates.py 2pyX,h

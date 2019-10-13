@@ -1,0 +1,1 @@
+ûÌRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/persona/models.py 2pyXh

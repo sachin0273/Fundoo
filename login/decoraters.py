@@ -1,6 +1,7 @@
 import jwt
 import redis
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 from jwt import DecodeError
 from rest_framework.response import Response
 from Services import redis
@@ -17,7 +18,7 @@ def login_required(function):
                 decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
             except DecodeError:
                 smd = Smd_Response(False, 'invalid token redirected to login page', [])
-                return Response(smd)
+                return HttpResponse(smd)
             user = User.objects.get(pk=decoded['user_id'])
             tokan = redis.Get(user.username)
             try:
@@ -25,16 +26,16 @@ def login_required(function):
                 payload = jwt.decode(tokan, settings.SECRET_KEY, algorithm="HS256")
             except DecodeError:
                 smd = Smd_Response(False, 'invalid user redirected to login page', [])
-                return Response(smd)
+                return HttpResponse(smd)
             user = User.objects.get(pk=payload['user_id'])
             if user:
                 print('in wrapper', user)
                 return function(request, *args, **kwargs)
             else:
                 smd = Smd_Response(False, 'invalid user redirected to login page', [])
-                return Response(smd)
+                return HttpResponse(smd)
         except Exception:
             smd = Smd_Response()
-            return Response(smd)
+            return HttpResponse(smd)
 
     return wraper

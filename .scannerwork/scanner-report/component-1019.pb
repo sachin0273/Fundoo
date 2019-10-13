@@ -1,0 +1,1 @@
+ûIvenv/lib64/python3.6/site-packages/django/contrib/contenttypes/migrations :úüý

@@ -1,0 +1,1 @@
+¹OHvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/kakao :¸OºO»O¼O½O¾O

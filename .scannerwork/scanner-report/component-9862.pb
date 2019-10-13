@@ -1,0 +1,1 @@
+†MWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/dataporten/models.py 2pyXh

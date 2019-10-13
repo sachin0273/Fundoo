@@ -1,0 +1,1 @@
+Ö5Evenv/lib64/python3.6/site-packages/botocore/vendored/requests/auth.py 2pyXÕh

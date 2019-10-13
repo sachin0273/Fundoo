@@ -1,0 +1,1 @@
+ияPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/weixin/views.py 2pyXJh

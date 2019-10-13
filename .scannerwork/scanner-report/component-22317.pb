@@ -1,0 +1,1 @@
+­®7venv/lib/python3.6/site-packages/django/views/static.py 2pyXˆh

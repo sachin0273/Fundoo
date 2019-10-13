@@ -1,0 +1,1 @@
+­ÍSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/stripe/provider.py 2pyXh

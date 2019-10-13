@@ -1,0 +1,1 @@
+ÍøAvenv/lib/python3.6/site-packages/rest_framework/utils/encoders.py 2pyXDh

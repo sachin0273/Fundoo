@@ -1,0 +1,1 @@
+ã—Jvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/instagram :ä—å—ç—é—è—

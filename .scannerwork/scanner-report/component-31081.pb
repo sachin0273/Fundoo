@@ -1,0 +1,1 @@
+יע:venv/lib/python3.6/site-packages/awscli/customizations/ec2 :טעךעפעץעצעקערעשע

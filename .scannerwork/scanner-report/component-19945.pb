@@ -1,0 +1,1 @@
+é›Gvenv/lib/python3.6/site-packages/django/contrib/postgres/forms/jsonb.py 2pyX?h

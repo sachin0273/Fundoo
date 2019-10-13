@@ -1,0 +1,1 @@
+³ÔNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitly/urls.py 2pyXh

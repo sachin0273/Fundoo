@@ -1,0 +1,1 @@
+¼Ö6venv/lib/python3.6/site-packages/wcwidth/table_wide.py 2pyXqh

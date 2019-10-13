@@ -1,0 +1,1 @@
+ª¸\venv/lib/python3.6/site-packages/botocore/vendored/requests/packages/chardet/latin1prober.py 2pyXŒh

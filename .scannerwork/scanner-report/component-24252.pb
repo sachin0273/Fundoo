@@ -1,0 +1,1 @@
+��Jvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/requests :6����ϽѽҽӽԽսֽ׽ؽٽڽ۽ܽݽ޽߽

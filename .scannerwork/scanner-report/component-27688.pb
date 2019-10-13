@@ -1,0 +1,1 @@
+¨Ø7venv/lib/python3.6/site-packages/PIL/FtexImagePlugin.py 2pyXkh

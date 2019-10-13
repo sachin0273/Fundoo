@@ -1,0 +1,1 @@
+‚8Qvenv/lib64/python3.6/site-packages/django_extensions/templatetags/syntax_color.py 2pyXph

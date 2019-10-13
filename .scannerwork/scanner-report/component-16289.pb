@@ -1,0 +1,1 @@
+°6venv/lib64/python3.6/site-packages/_pytest/hookspec.py 2pyXçh

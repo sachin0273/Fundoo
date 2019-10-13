@@ -1,0 +1,1 @@
+–#Hvenv/lib64/python3.6/site-packages/django/conf/locale/sr_Latn/formats.py 2pyX,h

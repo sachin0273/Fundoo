@@ -1,0 +1,1 @@
+…È;venv/lib/python3.6/site-packages/coreapi/codecs/download.py 2pyX–h

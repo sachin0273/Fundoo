@@ -1,0 +1,1 @@
+«OUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/pinterest/views.py 2pyX,h

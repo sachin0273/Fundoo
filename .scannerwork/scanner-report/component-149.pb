@@ -1,0 +1,1 @@
+•Fvenv/lib64/python3.6/site-packages/django/db/backends/oracle/schema.py 2pyX¬h

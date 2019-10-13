@@ -1,0 +1,1 @@
+¥ÑPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twitch/tests.py 2pyX`h

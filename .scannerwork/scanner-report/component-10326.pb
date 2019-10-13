@@ -1,0 +1,1 @@
+ÖPRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/box/provider.py 2pyXh

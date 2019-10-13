@@ -1,0 +1,1 @@
+ÃU8venv/lib64/python3.6/site-packages/coreschema/formats.py 2pyXh

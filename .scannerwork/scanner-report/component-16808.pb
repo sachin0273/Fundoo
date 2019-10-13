@@ -1,0 +1,1 @@
+¨ƒ8venv/lib/python3.6/site-packages/django/db/backends/base :§ƒ²ƒ´ƒµƒ¶ƒ·ƒ¸ƒ¹ƒ»ƒ

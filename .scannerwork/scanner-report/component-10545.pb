@@ -1,0 +1,1 @@
+±RQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/bitly/tests.py 2pyXh

@@ -1,0 +1,1 @@
+ğÑFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/auth0 :ïÑòÑóÑôÑõÑ

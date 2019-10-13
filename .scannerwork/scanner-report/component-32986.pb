@@ -1,0 +1,1 @@
+Ú4venv/lib/python3.6/site-packages/_pytest/terminal.py 2pyX¬h

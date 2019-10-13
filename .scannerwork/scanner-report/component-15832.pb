@@ -1,0 +1,1 @@
+Ø{Kvenv/lib64/python3.6/site-packages/docutils/utils/math/tex2mathml_extern.py 2pyX“h

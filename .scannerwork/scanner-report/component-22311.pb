@@ -1,0 +1,1 @@
+§®=venv/lib/python3.6/site-packages/django/views/generic/base.py 2pyXÚh

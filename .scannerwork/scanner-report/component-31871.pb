@@ -1,0 +1,1 @@
+ÿøCvenv/lib/python3.6/site-packages/rest_framework/management/commands :ýøþø

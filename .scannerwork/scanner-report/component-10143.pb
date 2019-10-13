@@ -1,0 +1,1 @@
+ŸORvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/twitch/views.py 2pyX,h

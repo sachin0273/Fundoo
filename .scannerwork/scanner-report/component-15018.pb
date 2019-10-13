@@ -1,0 +1,1 @@
+ªuJvenv/lib64/python3.6/site-packages/rest_framework/templatetags/__init__.py 2pyXh

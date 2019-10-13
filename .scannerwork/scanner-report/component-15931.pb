@@ -1,0 +1,1 @@
+»|Dvenv/lib64/python3.6/site-packages/oauthlib/oauth2/rfc6749/endpoints :º|¼|½|¾|¿|À|Á|Â|Ã|

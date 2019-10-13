@@ -1,0 +1,1 @@
+емTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twitter/provider.py 2pyX4h

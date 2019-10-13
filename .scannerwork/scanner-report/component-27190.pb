@@ -1,0 +1,1 @@
+¶ÔRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitly/provider.py 2pyX"h

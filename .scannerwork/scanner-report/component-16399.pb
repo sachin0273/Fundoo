@@ -1,0 +1,1 @@
+€6venv/lib64/python3.6/site-packages/_pytest/junitxml.py 2pyX¸h

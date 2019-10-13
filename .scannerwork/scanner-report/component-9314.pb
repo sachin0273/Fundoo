@@ -1,0 +1,1 @@
+‚HJvenv/lib64/python3.6/site-packages/allauth/account/templatetags/account.py 2pyXh

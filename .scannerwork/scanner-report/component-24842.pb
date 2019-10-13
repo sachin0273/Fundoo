@@ -1,0 +1,1 @@
+ŠÂTvenv/lib/python3.6/site-packages/rest_framework_simplejwt/token_blacklist/migrations :‰Â”Â•Â–Â—Â˜Â™ÂšÂ

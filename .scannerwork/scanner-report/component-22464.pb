@@ -1,0 +1,1 @@
+À¯=venv/lib/python3.6/site-packages/chardet/universaldetector.py 2pyXŸh

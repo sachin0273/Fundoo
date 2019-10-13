@@ -1,0 +1,1 @@
+ˆJTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vimeo/__init__.py 2pyXh

@@ -1,0 +1,1 @@
+«ÐJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/angellist :ªÐ¬Ð­Ð®Ð¯Ð

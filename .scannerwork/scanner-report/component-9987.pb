@@ -1,0 +1,1 @@
+ƒNOvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vimeo_oauth2 :‚N„N…N†N‡NˆN

@@ -1,0 +1,1 @@
+ªÐSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/angellist/views.py 2pyXh

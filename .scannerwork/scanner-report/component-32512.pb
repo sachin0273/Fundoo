@@ -1,0 +1,1 @@
+€þ:venv/lib/python3.6/site-packages/openapi_codec/__init__.py 2pyX'h

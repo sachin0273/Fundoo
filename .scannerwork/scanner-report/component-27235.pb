@@ -1,0 +1,1 @@
+„‘Cvenv/lib/python3.6/site-packages/allauth/socialaccount/templatetags :‚‘‰‘

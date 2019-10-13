@@ -1,0 +1,1 @@
+—W8venv/lib64/python3.6/site-packages/PIL/SgiImagePlugin.py 2pyXìh

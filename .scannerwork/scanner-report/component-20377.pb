@@ -1,0 +1,1 @@
+™ŸAvenv/lib/python3.6/site-packages/django/contrib/gis/db/models/sql :˜ŸšŸ

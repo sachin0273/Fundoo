@@ -1,0 +1,1 @@
+àÿ0venv/lib/python3.6/site-packages/sqlparse/cli.py 2pyXËh

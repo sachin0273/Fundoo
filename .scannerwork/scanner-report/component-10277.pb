@@ -1,0 +1,1 @@
+¥PTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/orcid/__init__.py 2pyXh

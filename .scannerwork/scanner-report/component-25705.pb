@@ -1,0 +1,1 @@
+éÈ,venv/lib/python3.6/site-packages/uritemplate :èÈïÈğÈñÈ

@@ -1,0 +1,1 @@
+¬ÌFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/hubic :«Ì­Ì®Ì¯Ì°Ì

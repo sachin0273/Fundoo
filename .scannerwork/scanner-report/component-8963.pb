@@ -1,0 +1,1 @@
+ƒF1venv/lib64/python3.6/site-packages/coreapi/codecs :‚FFFFF‘F’F“F

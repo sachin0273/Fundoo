@@ -1,0 +1,1 @@
+„ÓPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/feedly/views.py 2pyX!h

@@ -1,0 +1,1 @@
+НоYvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twentythreeandme/urls.py 2pyXh

@@ -1,0 +1,1 @@
+î¡Avenv/lib/python3.6/site-packages/django/contrib/gis/static/gis/js :í¡

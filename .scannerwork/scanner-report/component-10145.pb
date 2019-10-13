@@ -1,0 +1,1 @@
+¡OQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/twitch/urls.py 2pyXh

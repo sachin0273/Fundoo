@@ -1,0 +1,1 @@
+§ÍPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/stripe/views.py 2pyXh

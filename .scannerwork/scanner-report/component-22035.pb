@@ -1,0 +1,1 @@
+“¬3venv/lib/python3.6/site-packages/django/core/checks :’¬ž¬©¬ª¬«¬¬¬­¬®¬¯¬

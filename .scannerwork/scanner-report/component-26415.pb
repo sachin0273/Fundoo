@@ -1,0 +1,1 @@
+¯ÎQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/untappd/views.py 2pyX-h

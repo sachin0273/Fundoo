@@ -1,0 +1,1 @@
+псIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/evernote :нсосясрссс

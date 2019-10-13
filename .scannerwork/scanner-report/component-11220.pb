@@ -1,0 +1,1 @@
+ÔW9venv/lib64/python3.6/site-packages/PIL/GimpPaletteFile.py 2pyX;h

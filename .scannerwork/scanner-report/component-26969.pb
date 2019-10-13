@@ -1,0 +1,1 @@
+ырPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/box/__init__.py 2pyXh

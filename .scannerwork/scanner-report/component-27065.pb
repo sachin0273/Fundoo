@@ -1,0 +1,1 @@
+นำSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/douban/provider.py 2pyX.h

@@ -1,0 +1,1 @@
+×)Dvenv/lib64/python3.6/site-packages/django/core/mail/backends/base.py 2pyX<h

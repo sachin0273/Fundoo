@@ -1,0 +1,1 @@
+ú¡Yvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/cli/autocompletion.py 2pyXôh

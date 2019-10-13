@@ -1,0 +1,1 @@
+огQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/xing/__init__.py 2pyXh

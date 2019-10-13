@@ -1,0 +1,1 @@
+ËRCvenv/lib64/python3.6/site-packages/allauth/socialaccount/migrations :ÁRÈRÍRÎR

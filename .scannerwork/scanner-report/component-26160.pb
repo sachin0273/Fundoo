@@ -1,0 +1,1 @@
+°ÌRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/hubic/provider.py 2pyXh

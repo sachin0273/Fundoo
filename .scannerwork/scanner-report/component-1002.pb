@@ -1,0 +1,1 @@
+êbvenv/lib64/python3.6/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py 2pyXâh

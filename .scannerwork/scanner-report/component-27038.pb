@@ -1,0 +1,1 @@
+û”Qvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/discord/tests.py 2pyXh

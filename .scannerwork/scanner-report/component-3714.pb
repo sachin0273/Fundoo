@@ -1,0 +1,1 @@
+ÇGvenv/lib64/python3.6/site-packages/django/contrib/gis/db/backends/mysql :ÅÉÑÜÖá

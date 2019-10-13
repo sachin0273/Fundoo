@@ -1,0 +1,1 @@
+פת'venv/lib/python3.6/site-packages/pyasn1 :	ףתעתץת

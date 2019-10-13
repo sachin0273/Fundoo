@@ -1,0 +1,1 @@
+ôUvenv/lib64/python3.6/site-packages/django/contrib/gis/db/backends/postgis/__init__.py 2pyXh

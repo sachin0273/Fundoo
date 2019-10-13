@@ -1,0 +1,1 @@
+K7venv/lib64/python3.6/site-packages/django/urls/utils.py 2pyX?h

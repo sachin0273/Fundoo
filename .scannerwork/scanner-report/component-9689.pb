@@ -1,0 +1,1 @@
+ÙKOvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/line/urls.py 2pyXh

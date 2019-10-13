@@ -1,0 +1,1 @@
+ˆ„Avenv/lib/python3.6/site-packages/django/db/migrations/executor.py 2pyXùh

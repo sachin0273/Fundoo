@@ -1,0 +1,1 @@
+ÍH=venv/lib64/python3.6/site-packages/allauth/account/adapter.py 2pyX„h

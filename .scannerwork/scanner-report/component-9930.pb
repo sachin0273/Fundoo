@@ -1,0 +1,1 @@
+ÊMWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/telegram/provider.py 2pyXh

@@ -1,0 +1,1 @@
+Œ8Pvenv/lib64/python3.6/site-packages/django_extensions/templatetags/indent_text.py 2pyX8h

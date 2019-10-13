@@ -1,0 +1,1 @@
+Ä¯9venv/lib/python3.6/site-packages/chardet/charsetprober.py 2pyX’h

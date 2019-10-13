@@ -1,0 +1,1 @@
+ß‚Gvenv/lib/python3.6/site-packages/django/db/backends/postgresql_psycopg2 :Þ‚à‚á‚â‚ã‚ä‚å‚æ‚ç‚

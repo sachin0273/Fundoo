@@ -1,0 +1,1 @@
+·~vvenv/lib64/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lib/object-assign-pollyfill.js 2jsXh
