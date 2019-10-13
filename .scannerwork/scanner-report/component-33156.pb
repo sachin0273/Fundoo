@@ -1,1 +1,0 @@
-„ƒ8venv/lib/python3.6/site-packages/urllib3/util/request.py 2pyXˆh

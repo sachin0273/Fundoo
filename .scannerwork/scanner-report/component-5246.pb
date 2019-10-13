@@ -1,1 +1,0 @@
-þ(2venv/lib64/python3.6/site-packages/django/dispatch :‚)ƒ)

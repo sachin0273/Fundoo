@@ -1,1 +1,0 @@
-ó«;venv/lib/python3.6/site-packages/django/core/cache/backends :ò«ô«õ«ö«÷«ø«ù«

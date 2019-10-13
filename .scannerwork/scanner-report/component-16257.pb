@@ -1,1 +1,0 @@
-Å)venv/lib64/python3.6/site-packages/pluggy :ÄÇÉÑÖÜ

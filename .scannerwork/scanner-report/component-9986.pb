@@ -1,1 +1,0 @@
-‚NWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vimeo_oauth2/test.py 2pyXh

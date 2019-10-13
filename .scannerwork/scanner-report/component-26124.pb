@@ -1,1 +1,0 @@
-ŒÌRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/vimeo/provider.py 2pyXh

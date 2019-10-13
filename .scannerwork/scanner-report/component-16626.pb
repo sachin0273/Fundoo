@@ -1,1 +1,0 @@
-ò?venv/lib64/python3.6/site-packages/pytest_django/lazy_django.py 2pyX"h

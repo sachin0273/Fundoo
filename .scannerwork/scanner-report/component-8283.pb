@@ -1,1 +1,0 @@
-Û@'venv/lib64/python3.6/site-packages/pytz :Ú@Ü@Ý@Þ@ß@ÌE

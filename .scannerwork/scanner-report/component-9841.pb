@@ -1,1 +1,0 @@
-ÒLXvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/authentiq/__init__.py 2pyXh

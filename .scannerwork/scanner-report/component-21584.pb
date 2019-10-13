@@ -1,1 +1,0 @@
-ШAvenv/lib/python3.6/site-packages/django/conf/locale/tr/formats.py 2pyXh

@@ -1,1 +1,0 @@
-ÀÐRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook/tests.py 2pyX†h

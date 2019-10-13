@@ -1,1 +1,0 @@
-—6venv/lib64/python3.6/site-packages/redis/connection.py 2pyXî	h

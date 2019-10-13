@@ -1,1 +1,0 @@
-идPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/azure/models.py 2pyXh

@@ -1,1 +1,0 @@
-ÛBvenv/lib64/python3.6/site-packages/django/contrib/admin/migrations :ÚÜÝÞ

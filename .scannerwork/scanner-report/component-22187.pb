@@ -1,1 +1,0 @@
-«­6venv/lib/python3.6/site-packages/django/test/client.py 2pyXÕh

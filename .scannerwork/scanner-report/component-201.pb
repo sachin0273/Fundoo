@@ -1,1 +1,0 @@
-ÉLvenv/lib64/python3.6/site-packages/django/db/backends/mysql/introspection.py 2pyXÒh

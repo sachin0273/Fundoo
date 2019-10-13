@@ -1,1 +1,0 @@
-ê+7venv/lib64/python3.6/site-packages/django/utils/http.py 2pyXËh

@@ -1,1 +1,0 @@
-¶ÌNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/fxa/models.py 2pyXh

@@ -1,1 +1,0 @@
-ùŸ0venv/lib/python3.6/site-packages/PIL/TiffTags.py 2pyXÙh

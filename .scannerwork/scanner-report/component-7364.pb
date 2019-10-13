@@ -1,1 +1,0 @@
-Ä9Rvenv/lib64/python3.6/site-packages/django_extensions/management/commands/sqldsn.py 2pyXŽh

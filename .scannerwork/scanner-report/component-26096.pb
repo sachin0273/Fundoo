@@ -1,1 +1,0 @@
-ğËIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/draugiem :ïËñËòËóËôË

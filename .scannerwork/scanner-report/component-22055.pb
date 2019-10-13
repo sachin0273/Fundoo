@@ -1,1 +1,0 @@
-змHvenv/lib/python3.6/site-packages/django/core/checks/security/sessions.py 2pyXbh

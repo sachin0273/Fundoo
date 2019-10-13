@@ -1,1 +1,0 @@
-ÎS4venv/lib64/python3.6/site-packages/allauth/compat.py 2pyXPh

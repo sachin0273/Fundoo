@@ -1,1 +1,0 @@
-žJQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/trello/urls.py 2pyXh

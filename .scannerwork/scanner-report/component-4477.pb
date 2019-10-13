@@ -1,1 +1,0 @@
-ı";venv/lib64/python3.6/site-packages/django/conf/locale/es_CO :ü"#

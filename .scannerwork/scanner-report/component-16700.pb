@@ -1,1 +1,0 @@
-¼‚venv/bin/rst2man.py 2pyXh

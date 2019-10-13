@@ -1,1 +1,0 @@
-ý‚Jvenv/lib/python3.6/site-packages/django/db/backends/postgresql/__init__.py 2pyXh

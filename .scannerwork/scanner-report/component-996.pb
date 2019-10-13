@@ -1,1 +1,0 @@
-äQvenv/lib64/python3.6/site-packages/django/contrib/staticfiles/management/commands :ãéê

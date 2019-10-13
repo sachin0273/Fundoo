@@ -1,1 +1,0 @@
-атRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/agave/__init__.py 2pyXh

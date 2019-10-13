@@ -1,1 +1,0 @@
-åËPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/disqus/tests.py 2pyX<h

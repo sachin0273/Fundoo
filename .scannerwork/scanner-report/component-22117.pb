@@ -1,1 +1,0 @@
-å¬Tvenv/lib/python3.6/site-packages/django/core/management/commands/createcachetable.py 2pyXmh

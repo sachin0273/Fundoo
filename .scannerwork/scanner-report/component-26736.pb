@@ -1,1 +1,0 @@
-ðÐPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid/utils.py 2pyX¿h

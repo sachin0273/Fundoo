@@ -1,1 +1,0 @@
-¤V<venv/lib64/python3.6/site-packages/PIL/XVThumbImagePlugin.py 2pyXSh

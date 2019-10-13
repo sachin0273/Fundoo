@@ -1,1 +1,0 @@
-ȖRvenv/lib/python3.6/site-packages/django/contrib/admin/templatetags/admin_static.py 2pyXh

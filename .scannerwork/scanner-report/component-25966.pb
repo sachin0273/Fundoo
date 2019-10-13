@@ -1,1 +1,0 @@
-îÊ;venv/lib/python3.6/site-packages/allauth/account/migrations :	íÊïÊğÊ

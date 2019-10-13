@@ -1,1 +1,0 @@
-°Qvenv/lib64/python3.6/site-packages/django/contrib/gis/gdal/prototypes/errcheck.py 2pyXŒh

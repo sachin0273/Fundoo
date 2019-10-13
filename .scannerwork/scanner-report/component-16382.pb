@@ -1,1 +1,0 @@
-þ>venv/lib64/python3.6/site-packages/_pytest/config/findpaths.py 2pyX˜h

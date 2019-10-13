@@ -1,1 +1,0 @@
-æ¬Pvenv/lib/python3.6/site-packages/django/core/management/commands/diffsettings.py 2pyXPh

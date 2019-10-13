@@ -1,1 +1,0 @@
-’@fvenv/lib64/python3.6/site-packages/rest_framework_simplejwt/token_blacklist/migrations/0001_initial.py 2pyX*h

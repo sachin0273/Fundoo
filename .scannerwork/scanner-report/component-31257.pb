@@ -1,1 +1,0 @@
-™ô8venv/lib/python3.6/site-packages/pyshorteners/shorteners :3˜ôšô­ô®ô¯ô°ô±ô²ô³ô´ôµô¶ô·ô¸ô¹ôºô»ô

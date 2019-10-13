@@ -1,1 +1,0 @@
-ŠEvenv/lib/python3.6/site-packages/django/contrib/contenttypes/admin.py 2pyX‚h

@@ -1,1 +1,0 @@
-–º8venv/lib/python3.6/site-packages/django_extensions/admin :	•º—º˜º

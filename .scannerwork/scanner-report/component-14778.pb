@@ -1,1 +1,0 @@
-ºs,venv/lib64/python3.6/site-packages/boto3/ec2 :¹s»s¼s

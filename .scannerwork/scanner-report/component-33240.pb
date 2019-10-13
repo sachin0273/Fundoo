@@ -1,1 +1,0 @@
-؃Evenv/lib/python3.6/site-packages/django_redis/compressors/identity.py 2pyXh

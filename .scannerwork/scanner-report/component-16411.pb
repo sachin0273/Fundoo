@@ -1,1 +1,0 @@
-›€6venv/lib64/python3.6/site-packages/_pytest/_version.py 2pyXh

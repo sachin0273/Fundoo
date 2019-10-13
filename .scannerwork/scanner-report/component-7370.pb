@@ -1,1 +1,0 @@
-Ê9Uvenv/lib64/python3.6/site-packages/django_extensions/management/commands/show_urls.py 2pyXøh

@@ -1,1 +1,0 @@
-ÈRcvenv/lib64/python3.6/site-packages/allauth/socialaccount/migrations/0003_extra_data_default_dict.py 2pyXh

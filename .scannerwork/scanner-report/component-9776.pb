@@ -1,1 +1,0 @@
-°LVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/untappd/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-¯-9venv/lib64/python3.6/site-packages/chardet/cp949prober.py 2pyX2h

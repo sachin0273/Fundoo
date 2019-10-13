@@ -1,1 +1,0 @@
-«t=venv/lib64/python3.6/site-packages/rest_framework/settings.py 2pyXüh

@@ -1,1 +1,0 @@
-ÛKSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/line/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-…wRvenv/lib64/python3.6/site-packages/rest_framework/static/rest_framework/js/csrf.js 2jsX5h

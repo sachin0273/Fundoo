@@ -1,1 +1,0 @@
-òvFvenv/lib64/python3.6/site-packages/rest_framework/authtoken/management :ñv

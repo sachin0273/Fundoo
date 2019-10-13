@@ -1,1 +1,0 @@
-ëFvenv/lib64/python3.6/site-packages/pytest_django/live_server_helper.py 2pyXwh

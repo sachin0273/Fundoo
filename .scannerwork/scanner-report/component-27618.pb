@@ -1,1 +1,0 @@
-â×*venv/lib/python3.6/site-packages/pydotplus :á×é×ê×ë×

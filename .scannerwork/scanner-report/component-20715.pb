@@ -1,1 +1,0 @@
-ë¡Gvenv/lib/python3.6/site-packages/django/contrib/gis/management/commands :ê¡ì¡

@@ -1,1 +1,0 @@
-×5=venv/lib64/python3.6/site-packages/botocore/vendored/requests :Ö5ã5ó6ô6õ6ö6÷6ø6ù6ú6û6ý6þ6ÿ6

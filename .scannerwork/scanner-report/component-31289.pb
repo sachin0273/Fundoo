@@ -1,1 +1,0 @@
-¹ô@venv/lib/python3.6/site-packages/pyshorteners/shorteners/isgd.py 2pyXh

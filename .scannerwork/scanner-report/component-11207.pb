@@ -1,1 +1,0 @@
-ÇW2venv/lib64/python3.6/site-packages/PIL/ExifTags.py 2pyX»h

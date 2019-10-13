@@ -1,1 +1,0 @@
-рсUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/evernote/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-º¯9venv/lib/python3.6/site-packages/chardet/langthaimodel.py 2pyXÈh

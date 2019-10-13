@@ -1,1 +1,0 @@
-ях8venv/lib/python3.6/site-packages/corsheaders/defaults.py 2pyXh

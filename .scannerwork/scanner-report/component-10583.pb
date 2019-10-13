@@ -1,1 +1,0 @@
-×RQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/azure/views.py 2pyX?h

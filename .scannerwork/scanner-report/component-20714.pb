@@ -1,1 +1,0 @@
-ê¡Tvenv/lib/python3.6/site-packages/django/contrib/gis/management/commands/inspectdb.py 2pyXh

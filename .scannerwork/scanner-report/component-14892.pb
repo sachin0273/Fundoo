@@ -1,1 +1,0 @@
-¬t@venv/lib64/python3.6/site-packages/rest_framework/serializers.py 2pyXÕh

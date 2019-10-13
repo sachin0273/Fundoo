@@ -1,1 +1,0 @@
-£V&venv/lib64/python3.6/site-packages/PIL :¸¡V¢V¤V¦V¥V§V¨V©VªV«V¬V­V®V¯V°V±VWW’W“W”W•W–W—W˜W™WšWœWWWŸW¡W£W¤W¥W¦W§W¨W©WªW«W¬W­W®W¯W°W±W²W³W´WµW¶W·W¸W¹WºW»W¼W¾W¿WÀWÁWÂWÃWÄWÅWÆWÇWÈWÉWÊWËWÌWÍWÎWÏWĞWÑWÒWÔWÕWÖW×WØWÙWÚWÛWİWŞWßWàWáW

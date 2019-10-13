@@ -1,1 +1,0 @@
-£OUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/twitch/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-˜ÒPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/google/views.py 2pyX h

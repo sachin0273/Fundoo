@@ -1,1 +1,0 @@
-Ãš]venv/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js 2jsXşPh

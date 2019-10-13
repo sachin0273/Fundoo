@@ -1,1 +1,0 @@
-¾ÀLvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/commands :*½À¿ÀÎÀĞÀÑÀÒÀÓÀÔÀÕÀÖÀ×ÀØÀÙÀÚÀ

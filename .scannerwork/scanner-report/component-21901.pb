@@ -1,1 +1,0 @@
-«8venv/lib/python3.6/site-packages/django/apps/registry.py 2pyX«h

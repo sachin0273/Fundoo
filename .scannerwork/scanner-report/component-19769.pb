@@ -1,1 +1,0 @@
-¹šRvenv/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/SelectBox.js 2jsX‘h

@@ -1,1 +1,0 @@
-·OGvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/daum :‡O‚O„O‰OÂOÊO

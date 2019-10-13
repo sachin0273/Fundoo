@@ -1,1 +1,0 @@
-ç≠Svenv/lib/python3.6/site-packages/django/core/management/commands/compilemessages.py 2pyXîh

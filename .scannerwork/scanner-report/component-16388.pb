@@ -1,1 +1,0 @@
-„€4venv/lib64/python3.6/site-packages/_pytest/compat.py 2pyXåh

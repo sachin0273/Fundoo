@@ -1,1 +1,0 @@
-ÑPOvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/box/views.py 2pyX$h

@@ -1,1 +1,0 @@
-¾Ë>venv/lib/python3.6/site-packages/allauth/socialaccount/apps.py 2pyX	h

@@ -1,1 +1,0 @@
-ÁU7venv/lib64/python3.6/site-packages/pydotplus/version.py 2pyX$h

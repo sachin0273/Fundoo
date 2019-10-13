@@ -1,1 +1,0 @@
-–ÑQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/shopify/views.py 2pyX]h

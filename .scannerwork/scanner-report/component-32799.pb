@@ -1,1 +1,0 @@
-Ÿ€`venv/lib/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lang/fr.js 2jsX7h

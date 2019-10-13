@@ -1,1 +1,0 @@
-╫тFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/agave :╪т©тютатбт

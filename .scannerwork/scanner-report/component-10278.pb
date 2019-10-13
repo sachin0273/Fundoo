@@ -1,1 +1,0 @@
-¦PTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/orcid/provider.py 2pyX8h

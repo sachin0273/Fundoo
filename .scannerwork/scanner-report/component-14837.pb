@@ -1,1 +1,0 @@
-õs;venv/lib64/python3.6/site-packages/importlib_metadata/tests :ôsƒt„t…t†t‡t

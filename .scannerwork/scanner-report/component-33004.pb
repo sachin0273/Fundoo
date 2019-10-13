@@ -1,1 +1,0 @@
-ì-venv/lib/python3.6/site-packages/_pytest/mark :ëíîñ

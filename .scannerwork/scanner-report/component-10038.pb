@@ -1,1 +1,0 @@
-¶NPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/facebook/data :µN

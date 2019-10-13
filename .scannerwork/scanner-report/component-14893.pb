@@ -1,1 +1,0 @@
-­t=venv/lib64/python3.6/site-packages/rest_framework/viewsets.py 2pyXäh

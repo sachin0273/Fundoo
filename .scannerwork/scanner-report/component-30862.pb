@@ -1,1 +1,0 @@
-ñ@venv/lib/python3.6/site-packages/awscli/customizations/configure :ñ—ñ˜ñ™ñšñ›ñœñ

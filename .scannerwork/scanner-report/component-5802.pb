@@ -1,1 +1,0 @@
-ª-4venv/lib64/python3.6/site-packages/chardet/jpcntx.py 2pyXêh

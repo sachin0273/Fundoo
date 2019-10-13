@@ -1,1 +1,0 @@
-މTvenv/lib/python3.6/site-packages/django/contrib/staticfiles/templatetags/__init__.py 2pyXh

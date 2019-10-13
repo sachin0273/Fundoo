@@ -1,1 +1,0 @@
-ßÍQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/line/provider.py 2pyX"h

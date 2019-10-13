@@ -1,1 +1,0 @@
-É«,venv/lib/python3.6/site-packages/django/core :È«°¬²¬±¬³¬Ê¬Ô¬

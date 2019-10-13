@@ -1,1 +1,0 @@
-‹oBvenv/lib64/python3.6/site-packages/awscli/customizations/configure :Šo”o•o–o—o˜o™o

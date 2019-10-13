@@ -1,1 +1,0 @@
-öÍZvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/stackexchange/__init__.py 2pyXh

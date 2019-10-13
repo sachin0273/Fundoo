@@ -1,1 +1,0 @@
-¶½Qvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/pep517/check.py 2pyXËh

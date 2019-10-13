@@ -1,1 +1,0 @@
-”Ø'venv/lib/python3.6/site-packages/dotenv :ØØŸØ Ø¡Ø¢Ø£Ø

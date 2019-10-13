@@ -1,1 +1,0 @@
-Ç°4venv/lib/python3.6/site-packages/botocore/session.py 2pyXúh

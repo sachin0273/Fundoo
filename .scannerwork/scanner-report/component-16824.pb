@@ -1,1 +1,0 @@
-¸ƒBvenv/lib/python3.6/site-packages/django/db/backends/base/schema.py 2pyXŒ	h

@@ -1,1 +1,0 @@
-‰HKvenv/lib64/python3.6/site-packages/allauth/account/templatetags/__init__.py 2pyXh

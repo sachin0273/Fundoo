@@ -1,1 +1,0 @@
-…ô'venv/lib/python3.6/site-packages/py/_io :„ô‹ôŒôô

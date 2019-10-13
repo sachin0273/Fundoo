@@ -1,1 +1,0 @@
-ï„'venv/lib/python3.6/site-packages/django :	î„Ê®Ë®

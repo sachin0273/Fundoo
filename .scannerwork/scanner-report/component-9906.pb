@@ -1,1 +1,0 @@
-²MQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/yahoo/tests.py 2pyXVh

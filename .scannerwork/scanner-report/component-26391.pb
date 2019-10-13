@@ -1,1 +1,0 @@
-—ÎGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/flickr :–Î˜Î™ÎšÎ›Î

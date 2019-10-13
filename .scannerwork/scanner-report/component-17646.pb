@@ -1,1 +1,0 @@
-î‰Dvenv/lib/python3.6/site-packages/django/contrib/contenttypes/apps.py 2pyXh

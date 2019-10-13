@@ -1,1 +1,0 @@
-µy;venv/lib64/python3.6/site-packages/docutils/languages/fa.py 2pyX>h

@@ -1,1 +1,0 @@
-és6venv/lib64/python3.6/site-packages/boto3/docs/utils.py 2pyXèh

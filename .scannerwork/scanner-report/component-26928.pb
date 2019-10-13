@@ -1,1 +1,0 @@
-°ÒGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/amazon :¯Ò²Ò³Ò´ÒµÒ

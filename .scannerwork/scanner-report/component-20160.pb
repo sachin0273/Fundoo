@@ -1,1 +1,0 @@
-¿ùMvenv/lib/python3.6/site-packages/django/contrib/gis/gdal/prototypes/raster.py 2pyXmh

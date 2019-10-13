@@ -1,1 +1,0 @@
-ýÒRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/oauth/__init__.py 2pyXh

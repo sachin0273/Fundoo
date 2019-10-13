@@ -1,1 +1,0 @@
-ƀ2venv/lib64/python3.6/site-packages/urllib3/contrib :ŀ׀؀ـڀۀ܀

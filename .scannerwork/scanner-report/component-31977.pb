@@ -1,1 +1,0 @@
-ιω7venv/lib/python3.6/site-packages/openid/yadis/xrires.py 2pyX|h

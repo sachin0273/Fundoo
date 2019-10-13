@@ -1,1 +1,0 @@
-º-4venv/lib64/python3.6/site-packages/chardet/mbcssm.py 2pyX½h

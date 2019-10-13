@@ -1,1 +1,0 @@
-ÆÁ5venv/lib/python3.6/site-packages/requests/__init__.py 2pyX„h

@@ -1,1 +1,0 @@
-ˆŸMvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/mysql/base.py 2pyXh

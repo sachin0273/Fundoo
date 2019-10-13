@@ -1,1 +1,0 @@
-´ÏNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/yahoo/urls.py 2pyXh

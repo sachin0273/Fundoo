@@ -1,1 +1,0 @@
-…ÅAvenv/lib64/python3.6/site-packages/django_redis/client/default.py 2pyX¨h

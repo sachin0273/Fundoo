@@ -1,1 +1,0 @@
-аж.venv/lib/python3.6/site-packages/wcwidth/tests :южеж

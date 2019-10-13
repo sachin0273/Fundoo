@@ -1,1 +1,0 @@
-•3venv/lib64/python3.6/site-packages/django/db/models :”§¨©ÌÍÎÏÐÑÒÓÔÕ‘

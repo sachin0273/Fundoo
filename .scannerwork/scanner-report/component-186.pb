@@ -1,1 +1,0 @@
-º;venv/lib64/python3.6/site-packages/django/db/backends/mysql :¹ÆÇÈÉÊËÌÍñ

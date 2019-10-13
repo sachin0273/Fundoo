@@ -1,1 +1,0 @@
-¡ÌPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/trello/views.py 2pyX%h

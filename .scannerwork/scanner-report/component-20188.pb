@@ -1,1 +1,0 @@
-‹ùDvenv/lib/python3.6/site-packages/django/contrib/gis/gdal/envelope.py 2pyX≥h

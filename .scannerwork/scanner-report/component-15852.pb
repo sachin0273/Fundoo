@@ -1,1 +1,0 @@
-ì{1venv/lib64/python3.6/site-packages/docutils/io.py 2pyXéh

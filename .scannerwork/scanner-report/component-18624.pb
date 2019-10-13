@@ -1,1 +1,0 @@
-À‘@venv/lib/python3.6/site-packages/django/contrib/humanize/apps.py 2pyXh

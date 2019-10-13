@@ -1,1 +1,0 @@
-«ı/venv/lib/python3.6/site-packages/boto3/dynamodb :∆ı»ı…ı ıÀı

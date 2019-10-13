@@ -1,1 +1,0 @@
-±þ)venv/lib/python3.6/site-packages/oauthlib :°þ²þùþ¤ÿ

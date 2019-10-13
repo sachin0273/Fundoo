@@ -1,1 +1,0 @@
-êy;venv/lib64/python3.6/site-packages/docutils/languages/gl.py 2pyX@h

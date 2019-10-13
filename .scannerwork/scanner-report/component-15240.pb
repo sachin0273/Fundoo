@@ -1,1 +1,0 @@
-ˆwWvenv/lib64/python3.6/site-packages/rest_framework/static/rest_framework/js/ajax-form.js 2jsX€h

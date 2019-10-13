@@ -1,1 +1,0 @@
-‚I;venv/lib64/python3.6/site-packages/allauth/account/forms.py 2pyXÔh

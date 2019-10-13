@@ -1,1 +1,0 @@
-¾„8venv/lib/python3.6/site-packages/django/db/models/fields :½„¿„É„Ê„Ë„Ì„Í„Î„

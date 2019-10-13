@@ -1,1 +1,0 @@
-Ì–^venv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid/migrations/__init__.py 2pyXh

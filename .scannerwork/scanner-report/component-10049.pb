@@ -1,1 +1,0 @@
-ÁNkvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/facebook/static/facebook/js/fbconnect.js 2jsX~h

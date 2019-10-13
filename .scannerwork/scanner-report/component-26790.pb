@@ -1,1 +1,0 @@
-¦ÑSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twitch/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-¶ôGvenv/lib/python3.6/site-packages/pyshorteners/shorteners/readability.py 2pyX*h

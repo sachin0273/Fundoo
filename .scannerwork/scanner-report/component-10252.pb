@@ -1,1 +1,0 @@
-ŒPVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/patreon/provider.py 2pyX0h

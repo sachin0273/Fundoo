@@ -1,1 +1,0 @@
-ßLRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/asana/models.py 2pyXh

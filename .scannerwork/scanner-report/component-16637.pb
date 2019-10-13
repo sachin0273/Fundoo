@@ -1,1 +1,0 @@
-ı&venv/share/doc/pygraphviz-1.5/examples :üşÿ€‚‚‚‚ƒ‚

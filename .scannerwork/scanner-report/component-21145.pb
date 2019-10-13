@@ -1,1 +1,0 @@
-ô•;venv/lib/python3.6/site-packages/django/conf/locale/sr_Latn :ò•ù•

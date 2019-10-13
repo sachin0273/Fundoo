@@ -1,1 +1,0 @@
-Ã?>venv/lib64/python3.6/site-packages/requests/_internal_utils.py 2pyX+h

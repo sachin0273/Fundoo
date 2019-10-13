@@ -1,1 +1,0 @@
-Œ*Ovenv/lib64/python3.6/site-packages/django/core/checks/compatibility/__init__.py 2pyXh

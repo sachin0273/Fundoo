@@ -1,1 +1,0 @@
-บท9venv/lib/python3.6/site-packages/botocore/docs/service.py 2pyXah

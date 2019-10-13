@@ -1,1 +1,0 @@
-Á->venv/lib64/python3.6/site-packages/chardet/langturkishmodel.py 2pyXÂh

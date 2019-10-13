@@ -1,1 +1,0 @@
-ô[venv/lib/python3.6/site-packages/django/contrib/auth/management/commands/createsuperuser.py 2pyXÔh

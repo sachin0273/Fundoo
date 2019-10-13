@@ -1,1 +1,0 @@
-Ê Ivenv/lib/python3.6/site-packages/allauth/account/templatetags/__init__.py 2pyXh

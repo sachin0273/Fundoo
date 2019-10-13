@@ -1,1 +1,0 @@
-Ã“Uvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/doximity/provider.py 2pyX'h

@@ -1,1 +1,0 @@
-”œPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/oauth2/views.py 2pyXòh

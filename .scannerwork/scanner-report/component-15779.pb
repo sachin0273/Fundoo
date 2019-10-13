@@ -1,1 +1,0 @@
-£{Nvenv/lib64/python3.6/site-packages/docutils/parsers/rst/directives/__init__.py 2pyX¡h

@@ -1,1 +1,0 @@
-ԫGvenv/lib/python3.6/site-packages/django/core/mail/backends/filebased.py 2pyXGh

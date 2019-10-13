@@ -1,1 +1,0 @@
-Fundoo/settings.py 2pyX‰h

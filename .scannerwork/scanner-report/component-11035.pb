@@ -1,1 +1,0 @@
-›V4venv/lib64/python3.6/site-packages/dotenv/ipython.py 2pyX*h

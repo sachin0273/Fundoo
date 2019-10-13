@@ -1,1 +1,0 @@
-укQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/dropbox/views.py 2pyX$h

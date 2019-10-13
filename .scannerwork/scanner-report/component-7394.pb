@@ -1,1 +1,0 @@
-â9?venv/lib64/python3.6/site-packages/django_extensions/jobs/daily :á9ã9ä9

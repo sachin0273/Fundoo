@@ -1,1 +1,0 @@
-…%Dvenv/lib64/python3.6/site-packages/django/conf/locale/ka/__init__.py 2pyXh

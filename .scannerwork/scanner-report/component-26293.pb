@@ -1,1 +1,0 @@
-µÍJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitbucket :´Í¶Í·Í¸Í¹Í

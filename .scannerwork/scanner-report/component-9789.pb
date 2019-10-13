@@ -1,1 +1,0 @@
-½LYvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/eventbrite/provider.py 2pyX=h

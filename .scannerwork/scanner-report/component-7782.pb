@@ -1,1 +1,0 @@
-æ<^venv/lib64/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/cachecontrol/controller.py 2pyXðh

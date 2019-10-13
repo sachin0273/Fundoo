@@ -1,1 +1,0 @@
-͹5venv/lib/python3.6/site-packages/django_extensions/db :̹ι

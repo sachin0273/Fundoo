@@ -1,1 +1,0 @@
-«s6venv/lib64/python3.6/site-packages/boto3/exceptions.py 2pyXnh

@@ -1,1 +1,0 @@
-ªQQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vk/provider.py 2pyX2h

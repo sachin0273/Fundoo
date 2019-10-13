@@ -1,1 +1,0 @@
-´ƒFvenv/lib/python3.6/site-packages/django/db/backends/base/operations.py 2pyX¢h

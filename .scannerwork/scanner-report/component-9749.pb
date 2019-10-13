@@ -1,1 +1,0 @@
-•LQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/flickr/urls.py 2pyXh

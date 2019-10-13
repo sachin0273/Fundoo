@@ -1,1 +1,0 @@
-¾NWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/facebook/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-«W3venv/lib64/python3.6/site-packages/PIL/ImageFont.py 2pyXÔh

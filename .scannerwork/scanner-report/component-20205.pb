@@ -1,1 +1,0 @@
-í:venv/lib/python3.6/site-packages/django/contrib/gis/geoip2 :	ìîï

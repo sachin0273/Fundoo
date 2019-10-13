@@ -1,1 +1,0 @@
-Ñ>Xvenv/lib64/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/commands/freeze.py 2pyXah

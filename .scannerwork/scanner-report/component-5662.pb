@@ -1,1 +1,0 @@
-û,7venv/lib64/python3.6/site-packages/django/views/generic :ù,ü,†,°,¢,£,

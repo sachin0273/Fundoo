@@ -1,1 +1,0 @@
-¢ÑGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twitch :¡Ñ¤Ñ¥Ñ¦Ñ§Ñ

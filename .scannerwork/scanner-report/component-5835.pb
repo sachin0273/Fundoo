@@ -1,1 +1,0 @@
-Ë-:venv/lib64/python3.6/site-packages/chardet/cli/__init__.py 2pyXh

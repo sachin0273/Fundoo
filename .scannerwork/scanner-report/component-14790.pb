@@ -1,1 +1,0 @@
-∆s:venv/lib64/python3.6/site-packages/boto3/dynamodb/table.py 2pyXùh

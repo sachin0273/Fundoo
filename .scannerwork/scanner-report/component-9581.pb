@@ -1,1 +1,0 @@
-ÌJPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/naver/urls.py 2pyXh

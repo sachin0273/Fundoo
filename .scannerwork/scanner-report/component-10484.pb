@@ -1,1 +1,0 @@
-ÙQSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/cern/provider.py 2pyX#h

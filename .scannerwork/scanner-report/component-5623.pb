@@ -1,1 +1,0 @@
-÷+?venv/lib64/python3.6/site-packages/django/utils/regex_helper.py 2pyXÎh

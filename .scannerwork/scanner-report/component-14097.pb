@@ -1,1 +1,0 @@
-‘n8venv/lib64/python3.6/site-packages/awscli/customizations :Xn¡n¢n£n¤n±n²n½nànín„o…o‡oˆo‰ošo¨o©oªo«o¬o­oÏo–p—p˜p™pšp›pœpppŸp p´pµp¶p·pâpãpäp÷pøpƒq

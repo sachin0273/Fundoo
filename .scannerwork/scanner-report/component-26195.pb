@@ -1,1 +1,0 @@
-слGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/mailru :ялрлтлулжл

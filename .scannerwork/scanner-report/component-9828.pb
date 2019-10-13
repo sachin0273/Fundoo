@@ -1,1 +1,0 @@
-‰LPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/asana/urls.py 2pyXh

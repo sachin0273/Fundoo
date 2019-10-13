@@ -1,1 +1,0 @@
-ó®0venv/lib/python3.6/site-packages/dateutil/parser :	ò®õ®ö®

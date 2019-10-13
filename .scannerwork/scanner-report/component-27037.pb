@@ -1,1 +1,0 @@
-ù”Hvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/discord :ú”û”ü”†”§”

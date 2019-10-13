@@ -1,1 +1,0 @@
-ÊPWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/doximity/provider.py 2pyX'h

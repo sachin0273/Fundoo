@@ -1,1 +1,0 @@
-„ÿGvenv/lib/python3.6/site-packages/oauthlib/openid/connect/core/endpoints :	‚ÿƒÿ…ÿ

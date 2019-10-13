@@ -1,1 +1,0 @@
-¢L\venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/odnoklassniki/__init__.py 2pyXh

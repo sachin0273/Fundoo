@@ -1,1 +1,0 @@
-¬»Yvenv/lib/python3.6/site-packages/django_extensions/management/commands/set_fake_emails.py 2pyXah

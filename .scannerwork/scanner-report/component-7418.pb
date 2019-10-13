@@ -1,1 +1,0 @@
-ú9Pvenv/lib64/python3.6/site-packages/django_extensions/static/django_extensions/js :ù9û9ü9

@@ -1,1 +1,0 @@
-€RWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/linkedin/provider.py 2pyXBh

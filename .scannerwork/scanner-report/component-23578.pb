@@ -1,1 +1,0 @@
-š¸[venv/lib/python3.6/site-packages/botocore/vendored/requests/packages/chardet/cp949prober.py 2pyX-h

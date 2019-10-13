@@ -1,1 +1,0 @@
-þOXvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/mailchimp/provider.py 2pyX1h

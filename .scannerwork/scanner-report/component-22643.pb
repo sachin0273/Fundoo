@@ -1,1 +1,0 @@
-ó°8venv/lib/python3.6/site-packages/botocore/credentials.py 2pyX™h

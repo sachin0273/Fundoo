@@ -1,1 +1,0 @@
-€€7venv/lib/python3.6/site-packages/sqlparse/exceptions.py 2pyXh

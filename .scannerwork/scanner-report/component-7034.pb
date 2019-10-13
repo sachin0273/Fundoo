@@ -1,1 +1,0 @@
-ú6Fvenv/lib64/python3.6/site-packages/botocore/vendored/requests/certs.py 2pyXh

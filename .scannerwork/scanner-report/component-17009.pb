@@ -1,1 +1,0 @@
-ñ„;venv/lib/python3.6/site-packages/django/contrib/syndication :	ð„ö„÷„

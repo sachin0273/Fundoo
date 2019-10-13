@@ -1,1 +1,0 @@
-ü}8venv/lib64/python3.6/site-packages/sqlparse/formatter.py 2pyXÈh

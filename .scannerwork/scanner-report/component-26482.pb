@@ -1,1 +1,0 @@
-òÎRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/authentiq/urls.py 2pyXh

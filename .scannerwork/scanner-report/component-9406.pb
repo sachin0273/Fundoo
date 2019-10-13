@@ -1,1 +1,0 @@
-¾I8venv/lib64/python3.6/site-packages/allauth/socialaccount :½I¿IìRíRîRïRğRñRòRóRôRõRöR

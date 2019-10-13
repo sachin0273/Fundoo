@@ -1,1 +1,0 @@
-þVvenv/lib64/python3.6/site-packages/django/contrib/redirects/migrations/0001_initial.py 2pyX)h

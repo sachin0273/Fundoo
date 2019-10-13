@@ -1,1 +1,0 @@
-ТаRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook/forms.py 2pyXh

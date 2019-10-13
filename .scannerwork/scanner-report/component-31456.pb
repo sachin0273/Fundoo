@@ -1,1 +1,0 @@
-‡ı:venv/lib/python3.6/site-packages/corsheaders/middleware.py 2pyXØh

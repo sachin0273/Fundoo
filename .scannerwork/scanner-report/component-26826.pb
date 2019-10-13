@@ -1,1 +1,0 @@
-йяGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/weixin :иякялямяняоя

@@ -1,1 +1,0 @@
-µJFvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/fxa :´J¶J·J¸J¹JºJ

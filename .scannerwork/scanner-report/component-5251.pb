@@ -1,1 +1,0 @@
-ƒ)@venv/lib64/python3.6/site-packages/django/dispatch/dispatcher.py 2pyX¥h

@@ -1,1 +1,0 @@
-ŠùUvenv/lib/python3.6/site-packages/rest_framework/static/rest_framework/js/ajax-form.js 2jsX€h

@@ -1,1 +1,0 @@
-³ƒ-venv/lib/python3.6/site-packages/django_redis :²ƒÀƒÂƒÃƒÄƒÞƒ

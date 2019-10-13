@@ -1,1 +1,0 @@
-î¸]venv/lib/python3.6/site-packages/botocore/vendored/requests/packages/urllib3/util/response.py 2pyXh

@@ -1,1 +1,0 @@
-žòCvenv/lib/python3.6/site-packages/awscli/customizations/translate.py 2pyXDh

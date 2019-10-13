@@ -1,1 +1,0 @@
-£Ê7venv/lib/python3.6/site-packages/simplejson/__init__.py 2pyXÂh

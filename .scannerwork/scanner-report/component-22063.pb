@@ -1,1 +1,0 @@
-¯¬?venv/lib/python3.6/site-packages/django/core/checks/registry.py 2pyXbh

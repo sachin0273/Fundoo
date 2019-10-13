@@ -1,1 +1,0 @@
-ìz3venv/lib64/python3.6/site-packages/docutils/writers :ízîzïzñzózüz

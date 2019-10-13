@@ -1,1 +1,0 @@
-©×/venv/lib/python3.6/site-packages/idna/compat.py 2pyXh

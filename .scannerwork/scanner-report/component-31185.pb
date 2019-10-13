@@ -1,1 +1,0 @@
-—Û6venv/lib/python3.6/site-packages/py/_vendored_packages :	–Û”Û‘Û

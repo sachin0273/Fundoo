@@ -1,1 +1,0 @@
-×ø>venv/lib/python3.6/site-packages/rest_framework/permissions.py 2pyX­h

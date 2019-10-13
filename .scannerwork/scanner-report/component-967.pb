@@ -1,1 +1,0 @@
-Ç=venv/lib64/python3.6/site-packages/django/contrib/staticfiles :ÆÈÔÛÜÝÞßàâ

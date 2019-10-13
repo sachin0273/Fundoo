@@ -1,1 +1,0 @@
-‰ÒRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/patreon/models.py 2pyXh

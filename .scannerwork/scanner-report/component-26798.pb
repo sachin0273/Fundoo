@@ -1,1 +1,0 @@
-®ÑJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/pinterest :­Ñ°Ñ±Ñ²Ñ³Ñ

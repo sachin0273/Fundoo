@@ -1,1 +1,0 @@
-¿Ë6venv/lib/python3.6/site-packages/allauth/socialaccount :'¾ËÂËïÔğÔñÔòÔóÔôÔõÔöÔ÷ÔøÔùÔ

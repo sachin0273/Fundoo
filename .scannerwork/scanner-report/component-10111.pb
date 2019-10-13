@@ -1,1 +1,0 @@
-ÿNZvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/windowslive/__init__.py 2pyXh

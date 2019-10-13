@@ -1,1 +1,0 @@
-æ‰\venv/lib/python3.6/site-packages/django/contrib/staticfiles/management/commands/runserver.py 2pyX!h

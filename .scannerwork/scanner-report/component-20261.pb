@@ -1,1 +1,0 @@
-¥ž>venv/lib/python3.6/site-packages/django/contrib/gis/geos/io.py 2pyXh

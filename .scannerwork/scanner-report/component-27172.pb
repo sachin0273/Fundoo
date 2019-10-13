@@ -1,1 +1,0 @@
-คิTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/microsoft/models.py 2pyXh

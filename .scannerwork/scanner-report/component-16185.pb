@@ -1,1 +1,0 @@
-¹~lvenv/lib64/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lib/swagger-oauth.js 2jsXÜh

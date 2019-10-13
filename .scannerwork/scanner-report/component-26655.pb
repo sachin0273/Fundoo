@@ -1,1 +1,0 @@
-ü–Gvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/paypal :û–†–°–¢–£–

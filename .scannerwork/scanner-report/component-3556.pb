@@ -1,1 +1,0 @@
-äFvenv/lib64/python3.6/site-packages/django/contrib/gis/gdal/geomtype.py 2pyX`h

@@ -1,1 +1,0 @@
-Ã€:venv/lib64/python3.6/site-packages/urllib3/_collections.py 2pyXÑh

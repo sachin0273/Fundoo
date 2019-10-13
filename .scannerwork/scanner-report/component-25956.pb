@@ -1,1 +1,0 @@
-‰ Hvenv/lib/python3.6/site-packages/allauth/account/templatetags/account.py 2pyXh

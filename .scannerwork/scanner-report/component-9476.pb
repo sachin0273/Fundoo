@@ -1,1 +1,0 @@
-„JQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vimeo/views.py 2pyX&h

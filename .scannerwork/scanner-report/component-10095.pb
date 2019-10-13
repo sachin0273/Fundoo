@@ -1,1 +1,0 @@
-ÔNRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid/views.py 2pyXÆh

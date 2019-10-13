@@ -1,1 +1,0 @@
-Ë‰;venv/lib/python3.6/site-packages/django/contrib/staticfiles :Ê‰Ì‰Ø‰ß‰à‰á‰â‰ã‰ä‰å‰

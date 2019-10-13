@@ -1,1 +1,0 @@
-®-6venv/lib64/python3.6/site-packages/chardet/big5freq.py 2pyXƒh

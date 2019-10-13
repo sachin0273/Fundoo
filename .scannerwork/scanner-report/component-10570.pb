@@ -1,1 +1,0 @@
-ÊRPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/slack/urls.py 2pyXh

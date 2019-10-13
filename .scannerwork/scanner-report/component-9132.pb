@@ -1,1 +1,0 @@
-¬G4venv/lib64/python3.6/site-packages/MySQLdb/constants :«G´GµG¶G·G¸G

@@ -1,1 +1,0 @@
-â„;venv/lib/python3.6/site-packages/django/db/models/functions :á„ã„ä„å„æ„ç„è„

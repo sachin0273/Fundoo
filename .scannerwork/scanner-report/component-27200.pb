@@ -1,1 +1,0 @@
-ютOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/agave/tests.py 2pyXh

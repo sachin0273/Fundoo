@@ -1,1 +1,0 @@
-½õ*venv/lib/python3.6/site-packages/boto3/ec2 :	¼õ¾õ¿õ

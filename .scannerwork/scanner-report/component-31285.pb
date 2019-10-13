@@ -1,1 +1,0 @@
-µôAvenv/lib/python3.6/site-packages/pyshorteners/shorteners/qpsru.py 2pyXh

@@ -1,1 +1,0 @@
-Ë„Kvenv/lib/python3.6/site-packages/django/db/models/fields/related_lookups.py 2pyX›h

@@ -1,1 +1,0 @@
-›ÁWvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/cli/base_command.py 2pyXÖh

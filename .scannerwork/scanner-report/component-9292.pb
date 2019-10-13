@@ -1,1 +1,0 @@
-ÌH2venv/lib64/python3.6/site-packages/allauth/account :ËHÍHŞHåHîHïHğHñHòHóHôHõHöH÷H‚I

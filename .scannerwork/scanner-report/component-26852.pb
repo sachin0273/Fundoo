@@ -1,1 +1,0 @@
-‰—Evenv/lib/python3.6/site-packages/allauth/socialaccount/providers/daum :„—Â—Ê—Á—Ë—È—

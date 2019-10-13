@@ -1,1 +1,0 @@
-ŠÑSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/instagram/views.py 2pyXh

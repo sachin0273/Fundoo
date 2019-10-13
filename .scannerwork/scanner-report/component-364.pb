@@ -1,1 +1,0 @@
-ì=venv/lib64/python3.6/site-packages/django/contrib/syndication :ëñò

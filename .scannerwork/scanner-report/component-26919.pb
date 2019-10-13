@@ -1,1 +1,0 @@
-§ÒOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/orcid/tests.py 2pyX‚h

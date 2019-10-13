@@ -1,1 +1,0 @@
-‘Jvenv/lib64/python3.6/site-packages/django/db/backends/oracle/operations.py 2pyXÎh

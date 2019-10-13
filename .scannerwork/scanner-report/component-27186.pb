@@ -1,1 +1,0 @@
-²ÔFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitly :±Ô³Ô´ÔµÔ¶Ô

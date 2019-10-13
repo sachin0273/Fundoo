@@ -1,1 +1,0 @@
-Ÿª4venv/lib/python3.6/site-packages/django/templatetags :žª ª¡ª¢ª£ª¤ª

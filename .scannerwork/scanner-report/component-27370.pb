@@ -1,1 +1,0 @@
-ъе(venv/lib/python3.6/site-packages/allauth :щеыеьеэеюеяе№еѓе

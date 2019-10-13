@@ -1,1 +1,0 @@
-û4venv/lib/python3.6/site-packages/_pytest/warnings.py 2pyX—h

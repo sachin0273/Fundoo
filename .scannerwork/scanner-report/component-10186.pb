@@ -1,1 +1,0 @@
-ÊORvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/weixin/tests.py 2pyX h

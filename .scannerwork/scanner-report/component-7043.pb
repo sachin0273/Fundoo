@@ -1,1 +1,0 @@
-ƒ76venv/lib64/python3.6/site-packages/botocore/regions.py 2pyX½h

@@ -1,1 +1,0 @@
-ÎÍSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/soundcloud/urls.py 2pyXh

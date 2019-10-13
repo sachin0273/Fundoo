@@ -1,1 +1,0 @@
-žŸFvenv/lib/python3.6/site-packages/django/contrib/gis/db/models/proxy.py 2pyXQh

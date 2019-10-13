@@ -1,1 +1,0 @@
-¦ÒNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/orcid/urls.py 2pyXh

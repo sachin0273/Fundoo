@@ -1,1 +1,0 @@
-úDvenv/lib64/python3.6/site-packages/django/contrib/sitemaps/templates :õù

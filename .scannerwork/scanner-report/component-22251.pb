@@ -1,1 +1,0 @@
-ë­;venv/lib/python3.6/site-packages/django/utils/functional.py 2pyX²h

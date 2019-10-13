@@ -1,1 +1,0 @@
-ø6Kvenv/lib64/python3.6/site-packages/botocore/vendored/requests/exceptions.py 2pyXdh

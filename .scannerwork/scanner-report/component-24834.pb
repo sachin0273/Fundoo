@@ -1,1 +1,0 @@
-‚ÂQvenv/lib/python3.6/site-packages/rest_framework_simplejwt/token_blacklist/apps.py 2pyXh

@@ -1,1 +1,0 @@
-åH>venv/lib64/python3.6/site-packages/allauth/account/managers.py 2pyXLh

@@ -1,1 +1,0 @@
-НаIvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/facebook :МаОаПаРаСаТаУа

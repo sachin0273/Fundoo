@@ -1,1 +1,0 @@
-•x=venv/lib64/python3.6/site-packages/openid/server/trustroot.py 2pyXÇh

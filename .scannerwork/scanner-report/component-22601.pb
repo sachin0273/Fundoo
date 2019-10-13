@@ -1,1 +1,0 @@
-É°1venv/lib/python3.6/site-packages/botocore/auth.py 2pyXéh

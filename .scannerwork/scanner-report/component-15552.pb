@@ -1,1 +1,0 @@
-Ày;venv/lib64/python3.6/site-packages/docutils/languages/ru.py 2pyX<h

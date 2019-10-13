@@ -1,1 +1,0 @@
-ã¸Qvenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/urllib3/util :â¸ì¸í¸î¸ï¸ð¸ñ¸ò¸

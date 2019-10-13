@@ -1,1 +1,0 @@
- pGvenv/lib64/python3.6/site-packages/awscli/customizations/rekognition.py 2pyX]h

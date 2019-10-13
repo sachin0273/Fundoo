@@ -1,1 +1,0 @@
-·ÍSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitbucket/tests.py 2pyX&h

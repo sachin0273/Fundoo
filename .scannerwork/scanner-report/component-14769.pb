@@ -1,1 +1,0 @@
-±s+venv/lib64/python3.6/site-packages/boto3/s3 :°s²s³s

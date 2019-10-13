@@ -1,1 +1,0 @@
-ли6venv/lib/python3.6/site-packages/django/conf/locale/uk :кипи

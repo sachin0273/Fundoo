@@ -1,1 +1,0 @@
-Ï–Rvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid/migrations :Î–Ì–

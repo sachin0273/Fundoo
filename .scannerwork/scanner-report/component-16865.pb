@@ -1,1 +1,0 @@
-áƒEvenv/lib/python3.6/site-packages/django/db/backends/sqlite3/schema.py 2pyXœh

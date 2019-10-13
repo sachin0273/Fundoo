@@ -1,1 +1,0 @@
-ÿÌQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/persona/views.py 2pyX.h

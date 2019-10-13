@@ -1,1 +1,0 @@
-­»Xvenv/lib/python3.6/site-packages/django_extensions/management/commands/print_settings.py 2pyXWh

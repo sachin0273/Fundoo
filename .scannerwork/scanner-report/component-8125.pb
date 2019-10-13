@@ -1,1 +1,0 @@
-½?;venv/lib64/python3.6/site-packages/requests/status_codes.py 2pyXyh

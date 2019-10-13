@@ -1,1 +1,0 @@
-ÑvEvenv/lib64/python3.6/site-packages/rest_framework/utils/mediatypes.py 2pyXTh

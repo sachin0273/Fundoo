@@ -1,1 +1,0 @@
-êKXvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/battlenet/provider.py 2pyX h

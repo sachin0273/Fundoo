@@ -1,1 +1,0 @@
-èÎRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/asana/__init__.py 2pyXh

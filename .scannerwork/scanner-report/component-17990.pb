@@ -1,1 +1,0 @@
-ƌ`venv/lib/python3.6/site-packages/django/contrib/auth/migrations/0004_alter_user_username_opts.py 2pyXh

@@ -1,1 +1,0 @@
-яе0venv/lib/python3.6/site-packages/allauth/urls.py 2pyXh

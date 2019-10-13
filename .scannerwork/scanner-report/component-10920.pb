@@ -1,1 +1,0 @@
-®U/venv/lib64/python3.6/site-packages/idna/core.py 2pyXçh

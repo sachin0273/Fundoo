@@ -1,1 +1,0 @@
-ߖPvenv/lib/python3.6/site-packages/django/contrib/admin/migrations/0001_initial.py 2pyX0h

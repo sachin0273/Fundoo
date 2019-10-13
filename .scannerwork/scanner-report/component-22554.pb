@@ -1,1 +1,0 @@
-š°@venv/lib/python3.6/site-packages/pygraphviz/tests/test_string.py 2pyX7h

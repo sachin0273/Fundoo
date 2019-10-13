@@ -1,1 +1,0 @@
-¥+:venv/lib64/python3.6/site-packages/django/test/selenium.py 2pyXth

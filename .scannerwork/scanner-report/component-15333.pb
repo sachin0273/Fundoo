@@ -1,1 +1,0 @@
-åw<venv/lib64/python3.6/site-packages/openid/yadis/parsehtml.py 2pyXÐh

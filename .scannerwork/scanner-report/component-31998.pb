@@ -1,1 +1,0 @@
-ющ4venv/lib/python3.6/site-packages/openid/extension.py 2pyX4h

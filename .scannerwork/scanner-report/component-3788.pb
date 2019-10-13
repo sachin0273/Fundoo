@@ -1,1 +1,0 @@
-ÌGvenv/lib64/python3.6/site-packages/django/contrib/gis/admin/__init__.py 2pyXh

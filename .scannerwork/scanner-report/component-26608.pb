@@ -1,1 +1,0 @@
-ПоZvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twentythreeandme/tests.py 2pyXh

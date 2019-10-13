@@ -1,1 +1,0 @@
-Çñ5venv/lib/python3.6/site-packages/django/contrib/admin :-Åñíñìñ°ö¢ö£ö§ö•ö¶ö±ö≤ö≥ö¥öµö∏õ

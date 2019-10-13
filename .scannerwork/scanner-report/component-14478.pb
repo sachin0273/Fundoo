@@ -1,1 +1,0 @@
-Žq6venv/lib64/python3.6/site-packages/awscli/formatter.py 2pyX•h

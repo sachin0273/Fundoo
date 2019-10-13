@@ -1,1 +1,0 @@
-ÿHlvenv/lib64/python3.6/site-packages/allauth/account/management/commands/account_unsetmultipleprimaryemails.py 2pyX,h

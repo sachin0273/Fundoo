@@ -1,1 +1,0 @@
-ì~\venv/lib64/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lang :í~î~ï~ñ~ó~ò~ô~ö~õ~ú~ù~û~ü~

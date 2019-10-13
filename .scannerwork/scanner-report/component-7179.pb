@@ -1,1 +1,0 @@
-‹8Uvenv/lib64/python3.6/site-packages/django_extensions/templatetags/truncate_letters.py 2pyXh

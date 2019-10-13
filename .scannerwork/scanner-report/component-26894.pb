@@ -1,1 +1,0 @@
-ŽÒTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/patreon/__init__.py 2pyXh

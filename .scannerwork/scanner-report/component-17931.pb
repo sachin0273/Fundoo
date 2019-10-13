@@ -1,1 +1,0 @@
-‹ŒEvenv/lib/python3.6/site-packages/django/contrib/contenttypes/views.py 2pyXYh

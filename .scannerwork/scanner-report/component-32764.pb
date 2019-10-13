@@ -1,1 +1,0 @@
-ья2venv/lib/python3.6/site-packages/sqlparse/lexer.py 2pyXSh

@@ -1,1 +1,0 @@
-à>venv/lib64/python3.6/site-packages/django/contrib/auth/urls.py 2pyXh

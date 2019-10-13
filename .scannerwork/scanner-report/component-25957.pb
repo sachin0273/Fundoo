@@ -1,1 +1,0 @@
-Â =venv/lib/python3.6/site-packages/allauth/account/templatetags :‰ Ê 

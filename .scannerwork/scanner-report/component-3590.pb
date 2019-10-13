@@ -1,1 +1,0 @@
-Ü:venv/lib64/python3.6/site-packages/django/contrib/gis/geos :Öñóòôöõúùûü†°¢

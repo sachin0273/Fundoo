@@ -1,1 +1,0 @@
-¾LUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/flickr/provider.py 2pyXDh

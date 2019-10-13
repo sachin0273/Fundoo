@@ -1,1 +1,0 @@
-¥ÏSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/foursquare/urls.py 2pyXh

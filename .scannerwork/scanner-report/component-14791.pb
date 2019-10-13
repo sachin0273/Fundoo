@@ -1,1 +1,0 @@
-Çs=venv/lib64/python3.6/site-packages/boto3/dynamodb/__init__.py 2pyXh

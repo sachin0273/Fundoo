@@ -1,1 +1,0 @@
-É·Bvenv/lib/python3.6/site-packages/botocore/docs/bcdoc/textwriter.py 2pyX h

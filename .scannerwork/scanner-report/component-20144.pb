@@ -1,1 +1,0 @@
-°8venv/lib/python3.6/site-packages/django/contrib/gis/gdal :'¯ÜİŞßàáâãäåæç

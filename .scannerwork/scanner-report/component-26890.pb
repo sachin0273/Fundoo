@@ -1,1 +1,0 @@
-ŠÒPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/patreon/test.py 2pyX9h

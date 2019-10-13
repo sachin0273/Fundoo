@@ -1,1 +1,0 @@
-·+Ivenv/lib64/python3.6/site-packages/django/utils/translation/trans_null.py 2pyXDh

@@ -1,1 +1,0 @@
-»šMvenv/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/core.js 2jsXÕh

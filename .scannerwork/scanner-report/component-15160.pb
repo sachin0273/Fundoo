@@ -1,1 +1,0 @@
-¸vEvenv/lib64/python3.6/site-packages/rest_framework/utils/formatting.py 2pyX^h

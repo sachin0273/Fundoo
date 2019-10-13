@@ -1,1 +1,0 @@
-ÛNRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid/forms.py 2pyXh

@@ -1,1 +1,0 @@
-ØRPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/azure/urls.py 2pyXh

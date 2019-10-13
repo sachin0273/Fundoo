@@ -1,1 +1,0 @@
-öÙ/venv/lib/python3.6/site-packages/attr/_funcs.py 2pyX£h

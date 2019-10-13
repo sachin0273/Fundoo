@@ -1,1 +1,0 @@
-Ø=venv/lib64/python3.6/site-packages/django/db/backends/sqlite3 :×ÙÚÛÜÝÞß

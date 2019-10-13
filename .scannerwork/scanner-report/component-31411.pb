@@ -1,1 +1,0 @@
-³õ)venv/lib/python3.6/site-packages/boto3/s3 :	²õ´õ¶õ

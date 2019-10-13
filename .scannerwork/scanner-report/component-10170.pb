@@ -1,1 +1,0 @@
-ºOQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/kakao/views.py 2pyXh

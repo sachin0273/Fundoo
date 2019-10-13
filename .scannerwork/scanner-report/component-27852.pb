@@ -1,1 +1,0 @@
-ÌÙ/venv/lib/python3.6/site-packages/PIL/ImageQt.py 2pyXáh

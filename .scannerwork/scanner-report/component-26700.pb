@@ -1,1 +1,0 @@
-ÌÐVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/digitalocean/views.py 2pyXh

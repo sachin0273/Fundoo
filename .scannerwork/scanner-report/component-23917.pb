@@ -1,1 +1,0 @@
-íº=venv/lib/python3.6/site-packages/django_extensions/management :$ëºìºîºïºðºñºòºóºÑ»Ò»Ó»Ô»

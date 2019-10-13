@@ -1,1 +1,0 @@
-þJSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/persona/tests.py 2pyXh

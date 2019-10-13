@@ -1,1 +1,0 @@
-žó7venv/lib/python3.6/site-packages/awscli/errorhandler.py 2pyXOh

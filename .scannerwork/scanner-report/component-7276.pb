@@ -1,1 +1,0 @@
-ì8Kvenv/lib64/python3.6/site-packages/django_extensions/management/modelviz.py 2pyX±h

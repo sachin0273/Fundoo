@@ -1,1 +1,0 @@
-пы5venv/lib/python3.6/site-packages/PIL/ImageSequence.py 2pyXOh

@@ -1,1 +1,0 @@
-íNIvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid :ëNìNîNïNğNñNòNóNôN

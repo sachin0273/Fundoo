@@ -1,1 +1,0 @@
-æ%Cvenv/lib64/python3.6/site-packages/django/conf/locale/eu/formats.py 2pyXh

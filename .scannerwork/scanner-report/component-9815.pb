@@ -1,1 +1,0 @@
-×LUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/strava/__init__.py 2pyXh

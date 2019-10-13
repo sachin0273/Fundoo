@@ -1,1 +1,0 @@
-Éû9venv/lib/python3.6/site-packages/docutils/languages/ko.py 2pyX>h

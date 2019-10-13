@@ -1,1 +1,0 @@
-˜ÏQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/dwolla/models.py 2pyXh

@@ -1,1 +1,0 @@
-‰wVvenv/lib64/python3.6/site-packages/rest_framework/static/rest_framework/docs/js/api.js 2jsXÂh

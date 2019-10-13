@@ -1,1 +1,0 @@
-œ(>venv/lib64/python3.6/site-packages/django/templatetags/l10n.py 2pyX@h

@@ -1,1 +1,0 @@
-Ž,;venv/lib64/python3.6/site-packages/django/utils/encoding.py 2pyXŽh

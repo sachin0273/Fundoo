@@ -1,1 +1,0 @@
-убOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/daum/models.py 2pyXh

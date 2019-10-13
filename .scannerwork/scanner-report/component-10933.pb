@@ -1,1 +1,0 @@
-µU7venv/lib64/python3.6/site-packages/coreschema/encodings :´U¶U·U¸U

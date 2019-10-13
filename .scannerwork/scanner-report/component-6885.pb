@@ -1,1 +1,0 @@
-å5Nvenv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet :Lä5æ5ç566‘6’6“6”6•6–6—6˜6™6š6›6œ666Ÿ6 6¡6¢6£6¤6¥6¦6§6¨6©6ª6«6¬6­6®6¯6°6§7

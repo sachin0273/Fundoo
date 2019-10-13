@@ -1,1 +1,0 @@
-ظhvenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/urllib3/packages/ssl_match_hostname :׸ٸ

@@ -1,1 +1,0 @@
-Ã9Xvenv/lib64/python3.6/site-packages/django_extensions/management/commands/reset_schema.py 2pyXBh

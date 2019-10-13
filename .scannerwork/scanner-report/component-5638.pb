@@ -1,1 +1,0 @@
-†,@venv/lib64/python3.6/site-packages/django/utils/feedgenerator.py 2pyX‰h

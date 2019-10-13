@@ -1,1 +1,0 @@
-´6Fvenv/lib64/python3.6/site-packages/botocore/vendored/requests/packages :³6

@@ -1,1 +1,0 @@
-þ+:venv/lib64/python3.6/site-packages/django/utils/version.py 2pyXih

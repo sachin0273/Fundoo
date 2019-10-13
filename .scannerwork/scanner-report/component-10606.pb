@@ -1,1 +1,0 @@
-ÓRHvenv/lib64/python3.6/site-packages/allauth/socialaccount/app_settings.py 2pyXSh

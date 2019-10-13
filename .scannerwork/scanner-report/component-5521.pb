@@ -1,1 +1,0 @@
-‘+Bvenv/lib64/python3.6/site-packages/django/core/management/color.py 2pyXJh

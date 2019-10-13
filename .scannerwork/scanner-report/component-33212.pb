@@ -1,1 +1,0 @@
-¼ƒAvenv/lib/python3.6/site-packages/django_redis/serializers/json.py 2pyXh

@@ -1,1 +1,0 @@
-ê·bvenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/chardet/charsetgroupprober.py 2pyXkh

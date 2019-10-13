@@ -1,1 +1,0 @@
-есPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/meetup/tests.py 2pyX#h

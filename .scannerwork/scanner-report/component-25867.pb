@@ -1,1 +1,0 @@
-‹ÊDvenv/lib/python3.6/site-packages/simplejson/tests/test_namedtuple.py 2pyX{h

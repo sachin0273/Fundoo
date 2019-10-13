@@ -1,1 +1,0 @@
-±ôCvenv/lib/python3.6/site-packages/pyshorteners/shorteners/sentala.py 2pyXh

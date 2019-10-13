@@ -1,1 +1,0 @@
-éý=venv/lib/python3.6/site-packages/docutils/utils/urischemes.py 2pyX‰h

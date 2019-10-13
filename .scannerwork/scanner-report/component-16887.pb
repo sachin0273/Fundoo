@@ -1,1 +1,0 @@
-÷ƒ5venv/lib/python3.6/site-packages/django/db/migrations :*öƒ†„‡„ˆ„‰„Š„‹„Œ„„„„„‘„’„

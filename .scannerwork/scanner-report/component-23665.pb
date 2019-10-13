@@ -1,1 +1,0 @@
-ñ¸Yvenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/urllib3/util/ssl_.py 2pyX™h

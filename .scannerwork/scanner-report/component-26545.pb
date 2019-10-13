@@ -1,1 +1,0 @@
-±ÏFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/yahoo :°Ï³Ï´ÏµÏ¶Ï·Ï

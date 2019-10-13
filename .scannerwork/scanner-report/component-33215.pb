@@ -1,1 +1,0 @@
-¿ƒAvenv/lib/python3.6/site-packages/django_redis/serializers/base.py 2pyXh

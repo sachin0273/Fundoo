@@ -1,1 +1,0 @@
-‚F=venv/lib64/python3.6/site-packages/coreapi/codecs/download.py 2pyX–h

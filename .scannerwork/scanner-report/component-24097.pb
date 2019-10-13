@@ -1,1 +1,0 @@
-¡¼:venv/lib/python3.6/site-packages/packaging/requirements.py 2pyX‹h

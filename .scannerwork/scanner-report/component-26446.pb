@@ -1,1 +1,0 @@
-ннWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/quickbooks/__init__.py 2pyXh

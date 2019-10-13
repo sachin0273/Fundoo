@@ -1,1 +1,0 @@
-•ÓVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/nextcloud/provider.py 2pyXh

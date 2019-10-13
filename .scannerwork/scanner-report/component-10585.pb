@@ -1,1 +1,0 @@
-ÙRQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/azure/tests.py 2pyXh

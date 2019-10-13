@@ -1,1 +1,0 @@
-üÏSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/tumblr/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-óª,venv/lib/python3.6/site-packages/django/http :òªúªûªüªýª

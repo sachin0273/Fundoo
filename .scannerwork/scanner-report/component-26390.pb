@@ -1,1 +1,0 @@
-–ÎPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/flickr/views.py 2pyX2h

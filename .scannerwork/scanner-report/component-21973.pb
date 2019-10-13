@@ -1,1 +1,0 @@
-իEvenv/lib/python3.6/site-packages/django/core/mail/backends/console.py 2pyX+h

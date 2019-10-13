@@ -1,1 +1,0 @@
-ÓPTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/steam/provider.py 2pyXYh

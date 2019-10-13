@@ -1,1 +1,0 @@
-ү6venv/lib/python3.6/site-packages/chardet/big5prober.py 2pyX0h

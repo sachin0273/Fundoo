@@ -1,1 +1,0 @@
-илBvenv/lib/python3.6/site-packages/django/template/loaders/cached.py 2pyX`h

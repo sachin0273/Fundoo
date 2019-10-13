@@ -1,1 +1,0 @@
-¢s;venv/lib64/python3.6/site-packages/boto3/resources/model.py 2pyXïh

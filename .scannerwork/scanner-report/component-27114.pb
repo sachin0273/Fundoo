@@ -1,1 +1,0 @@
-ъгVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/sharefile/provider.py 2pyXh

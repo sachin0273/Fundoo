@@ -1,1 +1,0 @@
-é6venv/lib64/python3.6/site-packages/django/shortcuts.py 2pyXŸh

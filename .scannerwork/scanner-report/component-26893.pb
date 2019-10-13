@@ -1,1 +1,0 @@
-ç“Pvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/patreon/urls.py 2pyX	h

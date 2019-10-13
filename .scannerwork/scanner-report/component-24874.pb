@@ -1,1 +1,0 @@
-ªÂ>venv/lib/python3.6/site-packages/urlshortening/testsettings.py 2pyX"h

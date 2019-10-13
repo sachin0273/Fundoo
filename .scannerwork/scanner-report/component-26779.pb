@@ -1,1 +1,0 @@
-›ÑTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/shopify/provider.py 2pyX5h

@@ -1,1 +1,0 @@
-©Ù0venv/lib/python3.6/site-packages/PIL/FontFile.py 2pyXth

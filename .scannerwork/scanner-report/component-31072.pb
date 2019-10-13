@@ -1,1 +1,0 @@
-атRvenv/lib/python3.6/site-packages/awscli/customizations/s3/syncstrategy/sizeonly.py 2pyX&h

@@ -1,1 +1,0 @@
-¨ý1venv/lib/python3.6/site-packages/docutils/parsers :§ý©ý

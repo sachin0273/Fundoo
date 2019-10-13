@@ -1,1 +1,0 @@
-¡RVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/microsoft/models.py 2pyXh

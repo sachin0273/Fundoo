@@ -1,1 +1,0 @@
-Å74venv/lib64/python3.6/site-packages/botocore/vendored :Ä7Ç7

@@ -1,1 +1,0 @@
-ÎÊ0venv/lib/python3.6/site-packages/allauth/account :-ÍÊÏÊßÊçÊñÊòÊóÊôÊõÊöÊ÷ÊøÊùÊúÊ…Ë

@@ -1,1 +1,0 @@
-ðÎSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/authentiq/views.py 2pyX(h

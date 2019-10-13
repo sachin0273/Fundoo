@@ -1,1 +1,0 @@
-˜9venv/lib/python3.6/site-packages/django/contrib/flatpages :—£±º‘»‘¼‘½‘¾‘¿‘

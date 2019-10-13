@@ -1,1 +1,0 @@
-‰ÀOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/disqus/urls.py 2pyXh

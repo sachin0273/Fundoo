@@ -1,1 +1,0 @@
-ËNWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/digitalocean/urls.py 2pyXh

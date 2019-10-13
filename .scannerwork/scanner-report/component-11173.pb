@@ -1,1 +1,0 @@
-¥W8venv/lib64/python3.6/site-packages/PIL/XbmImagePlugin.py 2pyXch

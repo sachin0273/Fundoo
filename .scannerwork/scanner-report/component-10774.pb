@@ -1,1 +1,0 @@
-–TEvenv/lib64/python3.6/site-packages/requests_oauthlib/compliance_fixes :•T—T¢T£T¤T¥T¦T§T¬T

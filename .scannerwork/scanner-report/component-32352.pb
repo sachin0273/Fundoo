@@ -1,1 +1,0 @@
-àüEvenv/lib/python3.6/site-packages/docutils/parsers/rst/languages/af.py 2pyXkh

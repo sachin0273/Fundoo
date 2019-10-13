@@ -1,1 +1,0 @@
-Û—Ovenv/lib/python3.6/site-packages/allauth/socialaccount/providers/auth0/tests.py 2pyXh

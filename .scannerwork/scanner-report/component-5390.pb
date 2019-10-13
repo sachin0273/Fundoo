@@ -1,1 +1,0 @@
-Ž*Cvenv/lib64/python3.6/site-packages/django/core/checks/compatibility :Œ*

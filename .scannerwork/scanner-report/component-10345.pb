@@ -1,1 +1,0 @@
-ÈPRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/steam/models.py 2pyXh

@@ -1,1 +1,0 @@
-ä»=venv/lib/python3.6/site-packages/django_extensions/jobs/daily :	ã»å»æ»

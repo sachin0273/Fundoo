@@ -1,1 +1,0 @@
-©{+venv/lib64/python3.6/site-packages/docutils :¨{ª{µ{Ê{é{ê{ë{ì{

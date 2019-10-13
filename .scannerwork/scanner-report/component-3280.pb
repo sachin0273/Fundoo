@@ -1,1 +1,0 @@
-ÐAvenv/lib64/python3.6/site-packages/django/contrib/postgres/fields :ÏÑÒÓÔÕÖ×

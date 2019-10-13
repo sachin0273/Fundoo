@@ -1,1 +1,0 @@
-³ÑVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/pinterest/provider.py 2pyX$h

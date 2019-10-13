@@ -1,1 +1,0 @@
-‚M\venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openstreetmap/provider.py 2pyX!h

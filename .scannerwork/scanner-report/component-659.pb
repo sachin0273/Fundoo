@@ -1,1 +1,0 @@
-“Gvenv/lib64/python3.6/site-packages/django/contrib/redirects/__init__.py 2pyXh

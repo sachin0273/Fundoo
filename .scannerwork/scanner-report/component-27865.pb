@@ -1,1 +1,0 @@
-ÙÙ7venv/lib/python3.6/site-packages/PIL/WebPImagePlugin.py 2pyXéh

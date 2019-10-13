@@ -1,1 +1,0 @@
-ês5venv/lib64/python3.6/site-packages/importlib_metadata :ésˆt

@@ -1,1 +1,0 @@
-„œWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openstreetmap/tests.py 2pyX&h

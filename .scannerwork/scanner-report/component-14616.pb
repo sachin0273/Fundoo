@@ -1,1 +1,0 @@
-˜rEvenv/lib64/python3.6/site-packages/pyshorteners/shorteners/chilpit.py 2pyXh

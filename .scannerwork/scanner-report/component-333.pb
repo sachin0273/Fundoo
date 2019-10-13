@@ -1,1 +1,0 @@
-Í>venv/lib64/python3.6/site-packages/django/db/models/indexes.py 2pyX‡h

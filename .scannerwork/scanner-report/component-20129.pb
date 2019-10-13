@@ -1,1 +1,0 @@
-°ùFvenv/lib/python3.6/site-packages/django/contrib/postgres/operations.py 2pyXNh

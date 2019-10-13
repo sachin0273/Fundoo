@@ -1,1 +1,0 @@
-øMRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/tumblr/tests.py 2pyX+h

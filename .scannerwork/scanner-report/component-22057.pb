@@ -1,1 +1,0 @@
-©¬?venv/lib/python3.6/site-packages/django/core/checks/database.py 2pyXh

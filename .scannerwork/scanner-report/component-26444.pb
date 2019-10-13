@@ -1,1 +1,0 @@
-лнTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/quickbooks/views.py 2pyX1h

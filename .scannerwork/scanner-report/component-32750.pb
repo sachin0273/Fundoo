@@ -1,1 +1,0 @@
-îÿ=venv/lib/python3.6/site-packages/sqlparse/filters/reindent.py 2pyXòh

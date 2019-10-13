@@ -1,1 +1,0 @@
-œ€7venv/lib64/python3.6/site-packages/_pytest/resultlog.py 2pyXbh

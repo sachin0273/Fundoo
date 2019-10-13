@@ -1,1 +1,0 @@
-¡¹6venv/lib/python3.6/site-packages/jmespath/functions.py 2pyXëh

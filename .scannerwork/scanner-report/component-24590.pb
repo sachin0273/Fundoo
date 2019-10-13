@@ -1,1 +1,0 @@
-é¿Gvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_internal/vcs :ç¿è¿ñ¿ó¿ò¿

@@ -1,1 +1,0 @@
-аи4venv/lib/python3.6/site-packages/MySQLdb/__init__.py 2pyXch

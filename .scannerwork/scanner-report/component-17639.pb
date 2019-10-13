@@ -1,1 +1,0 @@
-ç‰Ovenv/lib/python3.6/site-packages/django/contrib/staticfiles/management/commands :	æ‰ì‰í‰

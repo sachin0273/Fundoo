@@ -1,1 +1,0 @@
-ÀÍHvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twitter :¿ÍÂÍÃÍÄÍÅÍ

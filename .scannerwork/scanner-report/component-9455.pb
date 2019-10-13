@@ -1,1 +1,0 @@
-ÔITvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/draugiem/tests.py 2pyX}h

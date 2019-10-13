@@ -1,1 +1,0 @@
-òƒKvenv/lib/python3.6/site-packages/django/db/migrations/operations/special.py 2pyXÌh

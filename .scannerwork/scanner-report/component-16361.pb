@@ -1,1 +1,0 @@
-é/venv/lib64/python3.6/site-packages/_pytest/mark :èêëì

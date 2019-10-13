@@ -1,1 +1,0 @@
-ˆÌFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/vimeo :‡Ì‰ÌŠÌ‹ÌŒÌ

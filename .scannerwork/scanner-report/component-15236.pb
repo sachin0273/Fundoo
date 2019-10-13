@@ -1,1 +1,0 @@
-„wZvenv/lib64/python3.6/site-packages/rest_framework/static/rest_framework/js/prettify-min.js 2jsXh

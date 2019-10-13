@@ -1,1 +1,0 @@
-ÀJVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/salesforce/views.py 2pyX)h

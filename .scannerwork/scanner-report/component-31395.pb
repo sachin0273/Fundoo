@@ -1,1 +1,0 @@
-£õ0venv/lib/python3.6/site-packages/boto3/resources :¢õ¥õ¦õ§õ¨õ©õªõ«õ

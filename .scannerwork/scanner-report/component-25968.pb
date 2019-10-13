@@ -1,1 +1,0 @@
-ðÊGvenv/lib/python3.6/site-packages/allauth/account/migrations/__init__.py 2pyXh

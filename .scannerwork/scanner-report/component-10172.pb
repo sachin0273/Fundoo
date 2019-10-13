@@ -1,1 +1,0 @@
-¼OQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/kakao/tests.py 2pyX%h

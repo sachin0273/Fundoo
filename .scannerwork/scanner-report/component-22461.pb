@@ -1,1 +1,0 @@
-½¯2venv/lib/python3.6/site-packages/chardet/compat.py 2pyX#h

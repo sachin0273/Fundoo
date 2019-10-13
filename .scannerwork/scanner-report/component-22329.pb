@@ -1,1 +1,0 @@
-¹®8venv/lib/python3.6/site-packages/django/views/decorators :¸®º®»®¼®½®¾®¿®À®

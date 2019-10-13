@@ -1,1 +1,0 @@
-§*Avenv/lib64/python3.6/site-packages/django/core/checks/messages.py 2pyXLh

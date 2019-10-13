@@ -1,1 +1,0 @@
-´Ø1venv/lib/python3.6/site-packages/PIL/ImageShow.py 2pyXáh

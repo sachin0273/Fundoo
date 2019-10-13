@@ -1,1 +1,0 @@
-ымOvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/line/models.py 2pyXh

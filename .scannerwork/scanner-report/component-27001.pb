@@ -1,1 +1,0 @@
-ùÒFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/oauth :øÒúÒûÒüÒıÒ

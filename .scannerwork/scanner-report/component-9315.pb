@@ -1,1 +1,0 @@
-„H?venv/lib64/python3.6/site-packages/allauth/account/templatetags :‚H‰H

@@ -1,1 +1,0 @@
-¾*<venv/lib64/python3.6/site-packages/django/core/files/move.py 2pyXXh

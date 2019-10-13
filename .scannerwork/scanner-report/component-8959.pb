@@ -1,1 +1,0 @@
-ÿE4venv/lib64/python3.6/site-packages/coreapi/compat.py 2pyXBh

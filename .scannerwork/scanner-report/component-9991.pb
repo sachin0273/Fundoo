@@ -1,1 +1,0 @@
-‡N[venv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vimeo_oauth2/__init__.py 2pyXh

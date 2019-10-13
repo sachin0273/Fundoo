@@ -1,1 +1,0 @@
-€ËPvenv/lib/python3.6/site-packages/allauth/account/management/commands/__init__.py 2pyXh

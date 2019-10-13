@@ -1,1 +1,0 @@
- Ÿ0venv/lib/python3.6/site-packages/PIL/ExifTags.py 2pyXªh

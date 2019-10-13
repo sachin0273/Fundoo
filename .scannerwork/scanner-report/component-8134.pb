@@ -1,1 +1,0 @@
-Æ?2venv/lib64/python3.6/site-packages/requests/api.py 2pyXŸh

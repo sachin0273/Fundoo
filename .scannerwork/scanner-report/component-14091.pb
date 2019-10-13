@@ -1,1 +1,0 @@
-‹n2venv/lib64/python3.6/site-packages/awscli/alias.py 2pyXœh

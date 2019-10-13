@@ -1,1 +1,0 @@
-¯žJvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/spatialite :®žºž»ž¼ž½ž¾ž¿žÀžÁž

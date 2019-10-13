@@ -1,1 +1,0 @@
-ÙûUvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/postgis/operations.py 2pyXçh

@@ -1,1 +1,0 @@
-—Cvenv/lib64/python3.6/site-packages/django/contrib/gis/db/models/sql :–˜

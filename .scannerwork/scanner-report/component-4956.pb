@@ -1,1 +1,0 @@
-Ü&Dvenv/lib64/python3.6/site-packages/django/conf/locale/ar/__init__.py 2pyXh

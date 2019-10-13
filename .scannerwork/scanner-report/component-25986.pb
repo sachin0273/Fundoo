@@ -1,1 +1,0 @@
-‚ËGvenv/lib/python3.6/site-packages/allauth/account/management/__init__.py 2pyXh

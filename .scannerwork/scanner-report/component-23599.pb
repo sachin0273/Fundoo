@@ -1,1 +1,0 @@
-¯¸bvenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/chardet/langbulgarianmodel.py 2pyXæh

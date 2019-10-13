@@ -1,1 +1,0 @@
-ñ)=venv/lib64/python3.6/site-packages/django/core/cache/backends :ð)ò)ó)ô)õ)ö)÷)

@@ -1,1 +1,0 @@
-óÍNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/stackexchange :òÍõÍôÍöÍ÷Í

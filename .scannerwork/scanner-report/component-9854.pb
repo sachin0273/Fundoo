@@ -1,1 +1,0 @@
-þLUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/edmodo/provider.py 2pyX$h

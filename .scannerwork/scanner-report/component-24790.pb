@@ -1,1 +1,0 @@
-÷¡0venv/lib/python3.6/site-packages/requests/api.py 2pyXüh

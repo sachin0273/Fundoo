@@ -1,1 +1,0 @@
-боSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/gitlab/__init__.py 2pyXh

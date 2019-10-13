@@ -1,1 +1,0 @@
-¼RPvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/agave/urls.py 2pyXh

@@ -1,1 +1,0 @@
-ﬁÚFvenv/lib/python3.6/site-packages/awscli/customizations/s3/syncstrategy :›ÚﬂÚ‡Ú·Ú‚Ú„Ú

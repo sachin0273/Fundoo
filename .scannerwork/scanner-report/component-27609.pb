@@ -1,1 +1,0 @@
-Ù×-venv/lib/python3.6/site-packages/braces/views :Ø×Ú×Û×Ü×Ý×Þ×

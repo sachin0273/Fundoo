@@ -1,1 +1,0 @@
-ÄHvenv/lib64/python3.6/site-packages/django/contrib/gis/db/backends/oracle :ÃÎÏÐÑÒÓÔ

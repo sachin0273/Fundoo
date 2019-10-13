@@ -1,1 +1,0 @@
-|Hvenv/lib64/python3.6/site-packages/django/db/backends/postgresql/base.py 2pyXœh

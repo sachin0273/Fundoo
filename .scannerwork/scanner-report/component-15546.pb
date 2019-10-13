@@ -1,1 +1,0 @@
-ºy;venv/lib64/python3.6/site-packages/docutils/languages/cs.py 2pyX=h

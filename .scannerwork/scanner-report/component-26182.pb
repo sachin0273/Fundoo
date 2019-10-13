@@ -1,1 +1,0 @@
-∆ÃKvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/salesforce :≈Ã«Ã»Ã…Ã Ã

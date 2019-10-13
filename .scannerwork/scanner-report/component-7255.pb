@@ -1,1 +1,0 @@
-×8:venv/lib64/python3.6/site-packages/django_extensions/utils :Ö8Ø8Ù8

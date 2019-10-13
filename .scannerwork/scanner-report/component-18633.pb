@@ -1,1 +1,0 @@
-ɑEvenv/lib/python3.6/site-packages/django/contrib/humanize/templatetags :ȑʑ

@@ -1,1 +1,0 @@
-¸‚venv/bin/django-admin.py 2pyXh

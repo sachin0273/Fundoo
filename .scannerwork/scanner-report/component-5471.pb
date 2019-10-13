@@ -1,1 +1,0 @@
-ß*Bvenv/lib64/python3.6/site-packages/django/core/management/commands :0Ş*à*á*â*ã*ä*ş*ÿ*€++‚+ƒ+„+…+†+‡+ˆ+‰+Š+‹+Œ++++

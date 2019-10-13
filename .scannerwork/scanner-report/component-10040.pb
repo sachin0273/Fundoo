@@ -1,1 +1,0 @@
-¸NKvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/facebook :·N»N¼N½N¾N¿NÀN

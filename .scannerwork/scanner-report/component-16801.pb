@@ -1,1 +1,0 @@
-¡ƒAvenv/lib/python3.6/site-packages/django/db/backends/dummy/base.py 2pyXJh

@@ -1,1 +1,0 @@
-’NRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/globus/tests.py 2pyXh

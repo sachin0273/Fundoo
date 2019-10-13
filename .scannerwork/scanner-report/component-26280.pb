@@ -1,1 +1,0 @@
-¨ÍGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/stripe :§ÍªÍ«Í¬Í­Í

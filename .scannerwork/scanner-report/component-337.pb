@@ -1,1 +1,0 @@
-Ñ>venv/lib64/python3.6/site-packages/django/db/models/manager.py 2pyXÊh

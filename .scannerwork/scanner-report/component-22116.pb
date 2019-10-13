@@ -1,1 +1,0 @@
-ä¬Qvenv/lib/python3.6/site-packages/django/core/management/commands/sendtestemail.py 2pyX)h

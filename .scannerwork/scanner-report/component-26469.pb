@@ -1,1 +1,0 @@
-åÎFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/asana :ãÎäÎæÎçÎèÎéÎ

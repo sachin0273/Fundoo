@@ -1,1 +1,0 @@
-½­Evenv/lib/python3.6/site-packages/django/utils/translation/reloader.py 2pyXh

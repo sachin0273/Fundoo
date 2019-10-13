@@ -1,1 +1,0 @@
-Á,7venv/lib64/python3.6/site-packages/django/views/i18n.py 2pyXµh

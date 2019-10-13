@@ -1,1 +1,0 @@
-‡œNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openstreetmap :ﬂœ‚œ„œ‰œÂœ

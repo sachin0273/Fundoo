@@ -1,1 +1,0 @@
-ÝNvenv/lib64/python3.6/site-packages/django/contrib/admin/migrations/__init__.py 2pyXh

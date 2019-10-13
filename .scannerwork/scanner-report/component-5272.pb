@@ -1,1 +1,0 @@
-˜)Cvenv/lib64/python3.6/site-packages/django/template/backends/base.py 2pyXRh

@@ -1,1 +1,0 @@
-¢ÐSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/paypal/__init__.py 2pyXh

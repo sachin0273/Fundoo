@@ -1,1 +1,0 @@
-ë”Jvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/nextcloud :ê”í”ì”î”ï”

@@ -1,1 +1,0 @@
-ìFvenv/lib/python3.6/site-packages/django/contrib/gis/geoip2/__init__.py 2pyXh

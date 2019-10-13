@@ -1,1 +1,0 @@
-ÒKXvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/stackexchange/urls.py 2pyXh

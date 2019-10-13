@@ -1,1 +1,0 @@
-èü5venv/lib/python3.6/site-packages/docutils/parsers/rst :çü‘ı’ı¦ı

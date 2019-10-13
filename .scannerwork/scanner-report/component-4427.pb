@@ -1,1 +1,0 @@
-Ë"3venv/lib64/python3.6/site-packages/django/conf/urls :Ê"Ì"Í"

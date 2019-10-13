@@ -1,1 +1,0 @@
-€z;venv/lib64/python3.6/site-packages/docutils/writers/s5_html :ÿy

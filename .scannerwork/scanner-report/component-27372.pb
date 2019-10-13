@@ -1,1 +1,0 @@
-ье2venv/lib/python3.6/site-packages/allauth/models.py 2pyXh

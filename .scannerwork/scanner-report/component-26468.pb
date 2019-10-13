@@ -1,1 +1,0 @@
-‰ŒPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/asana/models.py 2pyXh

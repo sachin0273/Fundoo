@@ -1,1 +1,0 @@
-‰“Vvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/eveonline/__init__.py 2pyXh

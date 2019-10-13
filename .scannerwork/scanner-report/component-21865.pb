@@ -1,1 +1,0 @@
-éª-venv/lib/python3.6/site-packages/django/forms :èªêªëªìªíªîªðªñª‘«

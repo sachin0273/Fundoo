@@ -1,1 +1,0 @@
-©V8venv/lib64/python3.6/site-packages/PIL/ImtImagePlugin.py 2pyXch

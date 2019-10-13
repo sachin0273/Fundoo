@@ -1,1 +1,0 @@
-Ȼ\venv/lib/python3.6/site-packages/django_extensions/management/commands/update_permissions.py 2pyX@h

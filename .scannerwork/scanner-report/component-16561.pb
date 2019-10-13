@@ -1,1 +1,0 @@
-±/venv/lib64/python3.6/site-packages/django_redis :¯¾¿ÀÁÚ

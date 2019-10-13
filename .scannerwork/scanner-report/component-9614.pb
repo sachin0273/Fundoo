@@ -1,1 +1,0 @@
-ŽKUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/battlenet/tests.py 2pyXBh

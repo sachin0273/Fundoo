@@ -1,1 +1,0 @@
-ª¹-venv/lib/python3.6/site-packages/pyparsing.py 2pyXï5h

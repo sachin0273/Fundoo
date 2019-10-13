@@ -1,1 +1,0 @@
-ҁCvenv/lib64/python3.6/site-packages/django_redis/compressors/zlib.py 2pyXh

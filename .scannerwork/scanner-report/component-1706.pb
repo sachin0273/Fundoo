@@ -1,1 +1,0 @@
-ªVvenv/lib64/python3.6/site-packages/django/contrib/flatpages/migrations/0001_initial.py 2pyX(h

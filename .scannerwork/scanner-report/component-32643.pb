@@ -1,1 +1,0 @@
-ƒÿYvenv/lib/python3.6/site-packages/oauthlib/openid/connect/core/endpoints/pre_configured.py 2pyXnh

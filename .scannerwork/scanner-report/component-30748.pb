@@ -1,1 +1,0 @@
-œğEvenv/lib/python3.6/site-packages/awscli/customizations/servicecatalog :›ğğğŸğ ğ¡ğ¢ğ¤ğ

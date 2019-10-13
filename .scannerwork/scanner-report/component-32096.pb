@@ -1,1 +1,0 @@
-את4venv/lib/python3.6/site-packages/pyasn1/codec/native :	ßתזתחת

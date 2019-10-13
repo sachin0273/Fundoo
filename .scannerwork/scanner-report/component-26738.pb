@@ -1,1 +1,0 @@
-Ú–Pvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/openid/views.py 2pyXÆh

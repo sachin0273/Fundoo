@@ -1,1 +1,0 @@
-Áô-venv/lib/python3.6/site-packages/pyshorteners :	ÀôÂôÃô

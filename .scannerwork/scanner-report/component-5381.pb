@@ -1,1 +1,0 @@
-…*Lvenv/lib64/python3.6/site-packages/django/core/serializers/xml_serializer.py 2pyX¥h

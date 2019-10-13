@@ -1,1 +1,0 @@
-…¹9venv/lib/python3.6/site-packages/botocore/vendored/six.py 2pyXåh

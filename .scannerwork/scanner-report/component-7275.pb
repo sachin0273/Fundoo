@@ -1,1 +1,0 @@
-Î8Vvenv/lib64/python3.6/site-packages/django_extensions/management/email_notifications.py 2pyXçh

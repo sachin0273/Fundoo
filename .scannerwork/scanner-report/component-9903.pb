@@ -1,1 +1,0 @@
-¯MHvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/yahoo :®M°M±M²M³M´M

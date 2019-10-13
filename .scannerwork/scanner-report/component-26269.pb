@@ -1,1 +1,0 @@
-อNvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/fivehundredpx :ออออ อกอ

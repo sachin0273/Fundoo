@@ -1,1 +1,0 @@
-‰MUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/dataporten/urls.py 2pyXh

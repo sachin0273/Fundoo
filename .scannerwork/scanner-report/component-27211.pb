@@ -1,1 +1,0 @@
-ктFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/slack :йтлтмтнтотпт

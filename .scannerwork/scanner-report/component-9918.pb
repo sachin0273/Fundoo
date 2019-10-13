@@ -1,1 +1,0 @@
-¾MRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/gitlab/tests.py 2pyX+h

@@ -1,1 +1,0 @@
-¡Bvenv/lib64/python3.6/site-packages/django/contrib/gis/geos/base.py 2pyXh

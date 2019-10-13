@@ -1,1 +1,0 @@
-®¯2venv/lib/python3.6/site-packages/chardet/jpcntx.py 2pyXêh

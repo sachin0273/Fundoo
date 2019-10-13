@@ -1,1 +1,0 @@
-£žFvenv/lib/python3.6/site-packages/django/contrib/gis/geos/linestring.py 2pyX°h

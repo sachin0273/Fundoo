@@ -1,1 +1,0 @@
-º"4venv/lib64/python3.6/site-packages/django/middleware :¹"¼"½"¾"¿"À"Á"Â"Ã"

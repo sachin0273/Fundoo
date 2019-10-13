@@ -1,1 +1,0 @@
-ÉRQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/slack/views.py 2pyX)h

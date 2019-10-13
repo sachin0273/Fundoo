@@ -1,1 +1,0 @@
-àq3venv/lib64/python3.6/site-packages/py/__metainfo.py 2pyXh

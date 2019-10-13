@@ -1,1 +1,0 @@
-·RQvenv/lib64/python3.6/site-packages/allauth/socialaccount/templatetags/__init__.py 2pyXh

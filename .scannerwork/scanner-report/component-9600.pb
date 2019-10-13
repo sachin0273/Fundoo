@@ -1,1 +1,0 @@
-€KVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/persona/provider.py 2pyX-h

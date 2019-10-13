@@ -1,1 +1,0 @@
-°MQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/yahoo/views.py 2pyXh

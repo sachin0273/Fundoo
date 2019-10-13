@@ -1,1 +1,0 @@
-½¹:venv/lib/python3.6/site-packages/django_extensions/mongodb :¼¹¾¹

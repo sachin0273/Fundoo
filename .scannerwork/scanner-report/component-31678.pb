@@ -1,1 +1,0 @@
-¾÷7venv/lib/python3.6/site-packages/rest_framework/schemas :¼÷À÷Á÷Â÷Ã÷Ä÷Å÷

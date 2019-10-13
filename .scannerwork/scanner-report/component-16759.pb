@@ -1,1 +1,0 @@
-÷‚Gvenv/lib/python3.6/site-packages/django/db/backends/postgresql/utils.py 2pyXh

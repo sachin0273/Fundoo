@@ -1,1 +1,0 @@
-мы3venv/lib/python3.6/site-packages/PIL/ContainerIO.py 2pyXvh

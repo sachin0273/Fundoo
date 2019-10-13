@@ -1,1 +1,0 @@
-ÍQSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/evernote/urls.py 2pyXh

@@ -1,1 +1,0 @@
-¬Evenv/lib64/python3.6/site-packages/django/contrib/admin/views/main.py 2pyXÞh

@@ -1,1 +1,0 @@
-ëq+venv/lib64/python3.6/site-packages/py/_path :éqìqíqîqïqðq

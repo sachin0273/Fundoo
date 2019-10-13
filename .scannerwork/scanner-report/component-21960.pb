@@ -1,1 +1,0 @@
-ȫ4venv/lib/python3.6/site-packages/django/core/wsgi.py 2pyXh

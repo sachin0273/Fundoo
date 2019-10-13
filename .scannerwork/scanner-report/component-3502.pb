@@ -1,1 +1,0 @@
-®Hvenv/lib64/python3.6/site-packages/django/contrib/gis/gdal/geometries.py 2pyXÌh

@@ -1,1 +1,0 @@
-ºuDvenv/lib64/python3.6/site-packages/rest_framework/schemas/coreapi.py 2pyX“h

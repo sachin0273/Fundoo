@@ -1,1 +1,0 @@
-баYvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/digitalocean/provider.py 2pyXh

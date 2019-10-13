@@ -1,1 +1,0 @@
-Û½Vvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/requests/__init__.py 2pyX†h

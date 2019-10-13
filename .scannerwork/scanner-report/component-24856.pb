@@ -1,1 +1,0 @@
-˜Âxvenv/lib/python3.6/site-packages/rest_framework_simplejwt/token_blacklist/migrations/0005_remove_outstandingtoken_jti.py 2pyXh

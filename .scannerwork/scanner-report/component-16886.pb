@@ -1,1 +1,0 @@
-öƒAvenv/lib/python3.6/site-packages/django/db/migrations/recorder.py 2pyX]h

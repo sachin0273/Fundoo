@@ -1,1 +1,0 @@
-´ÓGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/douban :²Ó¶Ó·Ó¸Ó¹Ó

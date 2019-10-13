@@ -1,1 +1,0 @@
-¥QNvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vk/views.py 2pyX@h

@@ -1,1 +1,0 @@
-ê8?venv/lib64/python3.6/site-packages/django_extensions/management :é8ë8ì8í8î8ï8ð8Ï9Ð9Ñ9Ò9è8

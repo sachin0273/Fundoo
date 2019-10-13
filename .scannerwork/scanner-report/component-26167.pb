@@ -1,1 +1,0 @@
-·ÌDvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/fxa :¶ÌºÌ»Ì¼Ì½Ì¾Ì

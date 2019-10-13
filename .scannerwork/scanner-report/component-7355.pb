@@ -1,1 +1,0 @@
-»9fvenv/lib64/python3.6/site-packages/django_extensions/management/commands/delete_squashed_migrations.py 2pyXµh

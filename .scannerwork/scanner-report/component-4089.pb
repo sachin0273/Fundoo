@@ -1,1 +1,0 @@
-ù:venv/lib64/python3.6/site-packages/django/contrib/sessions :øŠ ‹ ¨"©"ª"¯"

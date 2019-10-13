@@ -1,1 +1,0 @@
-è®Avenv/lib/python3.6/site-packages/django/conf/locale/az/formats.py 2pyX!h

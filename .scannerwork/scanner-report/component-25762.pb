@@ -1,1 +1,0 @@
-¢É(venv/lib/python3.6/site-packages/MySQLdb :«É­É»É¼É¾É¿ÉÀÉÁÉ

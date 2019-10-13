@@ -1,1 +1,0 @@
-§×5venv/lib/python3.6/site-packages/idna/package_data.py 2pyXh

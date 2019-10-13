@@ -1,1 +1,0 @@
-¨T@venv/lib64/python3.6/site-packages/requests_oauthlib/__init__.py 2pyXh

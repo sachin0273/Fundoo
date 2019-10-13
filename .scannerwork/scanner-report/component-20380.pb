@@ -1,1 +1,0 @@
-œŸ=venv/lib/python3.6/site-packages/django/contrib/gis/db/models :›ŸŸŸŸŸ Ÿ× 

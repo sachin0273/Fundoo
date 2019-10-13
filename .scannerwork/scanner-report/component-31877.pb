@@ -1,1 +1,0 @@
-…ùHvenv/lib/python3.6/site-packages/rest_framework/static/rest_framework/js :„ù†ù‡ùˆù‰ùŠù‹ù

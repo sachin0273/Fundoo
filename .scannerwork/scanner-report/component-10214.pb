@@ -1,1 +1,0 @@
-ÊOSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/daum/provider.py 2pyXh

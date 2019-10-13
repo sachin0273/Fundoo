@@ -1,1 +1,0 @@
-è‘Hvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/base.py 2pyX–h

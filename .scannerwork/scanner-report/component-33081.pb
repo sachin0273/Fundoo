@@ -1,1 +1,0 @@
-¹‚7venv/lib/python3.6/site-packages/urllib3/poolmanager.py 2pyX×h

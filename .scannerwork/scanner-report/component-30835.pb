@@ -1,1 +1,0 @@
-урAvenv/lib/python3.6/site-packages/awscli/customizations/codedeploy :трфрЂсЃсѓс‚с„с…с†с‡с

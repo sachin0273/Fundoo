@@ -1,1 +1,0 @@
-ë{7venv/lib64/python3.6/site-packages/docutils/examples.py 2pyXbh

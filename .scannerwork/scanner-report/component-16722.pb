@@ -1,1 +1,0 @@
-҂8venv/lib/python3.6/site-packages/django/urls/__init__.py 2pyXh

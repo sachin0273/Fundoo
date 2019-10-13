@@ -1,1 +1,0 @@
-лоUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/telegram/__init__.py 2pyXh

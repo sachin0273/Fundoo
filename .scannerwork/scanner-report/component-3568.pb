@@ -1,1 +1,0 @@
-ğEvenv/lib64/python3.6/site-packages/django/contrib/gis/geos/prototypes :ïüışÿ€‚ƒ„

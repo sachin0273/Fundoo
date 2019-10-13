@@ -1,1 +1,0 @@
-ˆöEvenv/lib/python3.6/site-packages/importlib_metadata/tests/fixtures.py 2pyXÉh

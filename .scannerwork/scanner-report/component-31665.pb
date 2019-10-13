@@ -1,1 +1,0 @@
-±÷<venv/lib/python3.6/site-packages/rest_framework/relations.py 2pyX«h

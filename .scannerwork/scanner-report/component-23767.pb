@@ -1,1 +1,0 @@
-×¹Ivenv/lib/python3.6/site-packages/django_extensions/collision_resolvers.py 2pyX’h

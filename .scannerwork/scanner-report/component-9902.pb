@@ -1,1 +1,0 @@
-®MRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/yahoo/models.py 2pyXh

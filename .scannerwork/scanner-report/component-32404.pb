@@ -1,1 +1,0 @@
-”ý@venv/lib/python3.6/site-packages/docutils/parsers/rst/directives :“ýžýŸý ý¡ý¢ý£ý¤ý¥ý

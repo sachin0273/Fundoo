@@ -1,1 +1,0 @@
-ä5\venv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/chardet/chardetect.py 2pyXQh

@@ -1,1 +1,0 @@
-’Evenv/lib64/python3.6/site-packages/django/contrib/redirects/models.py 2pyXh

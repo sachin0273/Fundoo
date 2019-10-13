@@ -1,1 +1,0 @@
-š~bvenv/lib64/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lang/ru.js 2jsX9h

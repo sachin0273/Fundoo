@@ -1,1 +1,0 @@
-‰ùYvenv/lib/python3.6/site-packages/rest_framework/static/rest_framework/js/bootstrap.min.js 2jsXh

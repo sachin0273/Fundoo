@@ -1,1 +1,0 @@
-¹Kvenv/lib64/python3.6/site-packages/django/contrib/gis/gdal/prototypes/ds.py 2pyXRh

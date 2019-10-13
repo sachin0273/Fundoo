@@ -1,1 +1,0 @@
-Ÿñ:venv/lib/python3.6/site-packages/awscli/customizations/eks :žñ¦ñ§ñ¨ñ©ñªñ

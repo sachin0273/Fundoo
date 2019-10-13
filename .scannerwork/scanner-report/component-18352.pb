@@ -1,1 +1,0 @@
-∞èPvenv/lib/python3.6/site-packages/django/contrib/flatpages/migrations/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-‡JQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/vimeo/tests.py 2pyX$h

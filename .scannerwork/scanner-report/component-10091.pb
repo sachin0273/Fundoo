@@ -1,1 +1,0 @@
-ÎNRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid/admin.py 2pyXh

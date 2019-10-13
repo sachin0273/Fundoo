@@ -1,1 +1,0 @@
-ÿª0venv/lib/python3.6/site-packages/django/dispatch :ƒ«…«

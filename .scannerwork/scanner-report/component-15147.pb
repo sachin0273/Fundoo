@@ -1,1 +1,0 @@
-«v<venv/lib64/python3.6/site-packages/rest_framework/routers.py 2pyXòh

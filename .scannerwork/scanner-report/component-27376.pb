@@ -1,1 +1,0 @@
-ğÕ1venv/lib/python3.6/site-packages/allauth/tests.py 2pyX¾h

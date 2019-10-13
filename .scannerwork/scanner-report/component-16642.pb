@@ -1,1 +1,0 @@
-‚‚7venv/share/doc/pygraphviz-1.5/examples/django_simple.py 2pyX2h

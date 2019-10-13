@@ -1,1 +1,0 @@
-убDvenv/lib/python3.6/site-packages/django/contrib/gis/utils/ogrinfo.py 2pyX4h

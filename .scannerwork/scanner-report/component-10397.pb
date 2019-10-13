@@ -1,1 +1,0 @@
-ùQVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/discord/__init__.py 2pyXh

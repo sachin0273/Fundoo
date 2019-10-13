@@ -1,1 +1,0 @@
-Ô?venv/lib64/python3.6/site-packages/django/contrib/sites/apps.py 2pyXh

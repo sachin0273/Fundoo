@@ -1,1 +1,0 @@
-µ~pvenv/lib64/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lib/jquery.ba-bbq.min.js 2jsXh

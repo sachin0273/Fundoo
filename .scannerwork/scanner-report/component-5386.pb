@@ -1,1 +1,0 @@
-Š*Bvenv/lib64/python3.6/site-packages/django/core/serializers/base.py 2pyX¿h

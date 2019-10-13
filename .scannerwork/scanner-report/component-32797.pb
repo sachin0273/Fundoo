@@ -1,1 +1,0 @@
-€avenv/lib/python3.6/site-packages/rest_framework_swagger/static/rest_framework_swagger/lang/geo.js 2jsX9h

@@ -1,1 +1,0 @@
-üÌHvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/persona :ûÌÿÌ€ÍÍ‚ÍƒÍ

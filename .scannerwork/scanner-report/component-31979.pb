@@ -1,1 +1,0 @@
-λω:venv/lib/python3.6/site-packages/openid/yadis/constants.py 2pyXh

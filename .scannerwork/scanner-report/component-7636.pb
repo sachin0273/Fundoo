@@ -1,1 +1,0 @@
-Ô;Vvenv/lib64/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/requests/compat.py 2pyXKh

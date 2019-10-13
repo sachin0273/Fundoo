@@ -1,1 +1,0 @@
-û8venv/lib/python3.6/site-packages/django/contrib/messages :ú‘’“”•–

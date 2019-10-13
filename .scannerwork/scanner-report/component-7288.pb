@@ -1,1 +1,0 @@
-ø8[venv/lib64/python3.6/site-packages/django_extensions/management/commands/admin_generator.py 2pyXáh

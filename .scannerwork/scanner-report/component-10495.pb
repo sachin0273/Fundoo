@@ -1,1 +1,0 @@
-ÿQWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/linkedin/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-ŠMVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/dataporten/tests.py 2pyXEh

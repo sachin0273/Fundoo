@@ -1,1 +1,0 @@
- ÓTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/discord/provider.py 2pyX/h

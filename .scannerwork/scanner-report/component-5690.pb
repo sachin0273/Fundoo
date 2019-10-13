@@ -1,1 +1,0 @@
-º,Bvenv/lib64/python3.6/site-packages/django/views/decorators/vary.py 2pyX*h

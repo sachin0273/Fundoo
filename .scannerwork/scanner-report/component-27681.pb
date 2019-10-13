@@ -1,1 +1,0 @@
-¡Ø2venv/lib/python3.6/site-packages/dotenv/version.py 2pyXh

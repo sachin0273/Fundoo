@@ -1,1 +1,0 @@
-q2venv/lib64/python3.6/site-packages/awscli/utils.py 2pyXÄh

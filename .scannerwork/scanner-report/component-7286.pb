@@ -1,1 +1,0 @@
-ö8Rvenv/lib64/python3.6/site-packages/django_extensions/management/commands/passwd.py 2pyX4h

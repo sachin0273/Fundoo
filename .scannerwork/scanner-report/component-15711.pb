@@ -1,1 +1,0 @@
-ßzGvenv/lib64/python3.6/site-packages/docutils/parsers/rst/languages/eo.py 2pyXwh

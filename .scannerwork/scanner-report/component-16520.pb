@@ -1,1 +1,0 @@
-àÅ8venv/lib64/python3.6/site-packages/urllib3/exceptions.py 2pyXÄh

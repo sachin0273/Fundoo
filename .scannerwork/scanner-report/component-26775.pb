@@ -1,1 +1,0 @@
-ó—Hvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/shopify :ñ—ò—ô—ö—õ—

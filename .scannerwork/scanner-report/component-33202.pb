@@ -1,1 +1,0 @@
-²ƒ:venv/lib/python3.6/site-packages/django_redis/hash_ring.py 2pyX>h

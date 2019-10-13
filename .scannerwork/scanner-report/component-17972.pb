@@ -1,1 +1,0 @@
-´Œ`venv/lib/python3.6/site-packages/django/contrib/auth/migrations/0011_update_proxy_permissions.py 2pyXEh

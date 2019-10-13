@@ -1,1 +1,0 @@
-ÎH=venv/lib64/python3.6/site-packages/allauth/account/migrations :ÍHÏHÌH

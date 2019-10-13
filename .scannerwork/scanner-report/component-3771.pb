@@ -1,1 +1,0 @@
-»Avenv/lib64/python3.6/site-packages/django/contrib/gis/serializers :º¼

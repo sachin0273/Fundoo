@@ -1,1 +1,0 @@
-ðƒ<venv/lib/python3.6/site-packages/pytest_django/migrations.py 2pyXh

@@ -1,1 +1,0 @@
-ï<venv/lib64/python3.6/site-packages/pytest_django/fixtures.py 2pyXÐh

@@ -1,1 +1,0 @@
-øPRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/oauth/client.py 2pyXÉh

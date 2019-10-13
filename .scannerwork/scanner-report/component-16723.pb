@@ -1,1 +1,0 @@
-Ó‚4venv/lib/python3.6/site-packages/django/urls/base.py 2pyX¸h

@@ -1,1 +1,0 @@
-ŞÂ%venv/lib/python3.6/site-packages/pytz :İÂßÂàÂáÂâÂÏÇ

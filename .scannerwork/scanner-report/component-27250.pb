@@ -1,1 +1,0 @@
-òÔ@venv/lib/python3.6/site-packages/allauth/socialaccount/models.py 2pyXÄh

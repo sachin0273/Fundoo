@@ -1,1 +1,0 @@
-‹õ9venv/lib/python3.6/site-packages/boto3/docs/collection.py 2pyXëh

@@ -1,1 +1,0 @@
-่มEvenv/lib/python3.6/site-packages/rest_framework_simplejwt/settings.py 2pyXKh

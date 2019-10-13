@@ -1,1 +1,0 @@
-ݬ>venv/lib/python3.6/site-packages/django/core/management/sql.py 2pyX5h

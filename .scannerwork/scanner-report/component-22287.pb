@@ -1,1 +1,0 @@
-По5venv/lib/python3.6/site-packages/django/utils/tree.py 2pyX}h

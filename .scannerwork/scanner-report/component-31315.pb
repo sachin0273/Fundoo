@@ -1,1 +1,0 @@
-”Ù&venv/lib/python3.6/site-packages/boto3 :“Ù¨ı≠ıÆı∑ı

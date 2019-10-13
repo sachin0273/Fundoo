@@ -1,1 +1,0 @@
-ƃ4venv/lib/python3.6/site-packages/django_redis/client :Ńǃ̓΃

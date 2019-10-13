@@ -1,1 +1,0 @@
-°Ø9venv/lib/python3.6/site-packages/PIL/SpiderImagePlugin.py 2pyXÇh

@@ -1,1 +1,0 @@
-Ê¾`venv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/webencodings/x_user_defined.py 2pyXÆh

@@ -1,1 +1,0 @@
-óÓEvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/cern :òÓôÓõÓöÓ÷Ó

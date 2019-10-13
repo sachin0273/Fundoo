@@ -1,1 +1,0 @@
-ÙW0venv/lib64/python3.6/site-packages/attr/_make.py 2pyXßh

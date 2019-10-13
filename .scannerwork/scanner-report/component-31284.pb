@@ -1,1 +1,0 @@
-´ôAvenv/lib/python3.6/site-packages/pyshorteners/shorteners/googl.py 2pyX6h

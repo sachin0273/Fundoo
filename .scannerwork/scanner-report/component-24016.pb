@@ -1,1 +1,0 @@
-Ð»Qvenv/lib/python3.6/site-packages/django_extensions/management/commands/sqldiff.py 2pyXü	h

@@ -1,1 +1,0 @@
-­Lvenv/lib64/python3.6/site-packages/django/contrib/gis/db/backends/spatialite :¬¸¹º»¼½¾¿

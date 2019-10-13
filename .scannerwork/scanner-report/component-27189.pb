@@ -1,1 +1,0 @@
-µÔRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitly/__init__.py 2pyXh

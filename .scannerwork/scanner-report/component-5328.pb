@@ -1,1 +1,0 @@
-Ð)<venv/lib64/python3.6/site-packages/django/core/mail/backends :Ï)Ò)Ó)Ô)Õ)Ö)×)

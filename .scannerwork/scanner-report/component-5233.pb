@@ -1,1 +1,0 @@
-ñ(8venv/lib64/python3.6/site-packages/django/http/cookie.py 2pyXh

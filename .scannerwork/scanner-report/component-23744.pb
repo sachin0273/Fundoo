@@ -1,1 +1,0 @@
-À¹2venv/lib/python3.6/site-packages/django_extensions :¿¹×¹Ù¹ºÒºÓºÜº

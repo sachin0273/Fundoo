@@ -1,1 +1,0 @@
-Òÿ4venv/lib/python3.6/site-packages/certifi/__main__.py 2pyXh

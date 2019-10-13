@@ -1,1 +1,0 @@
-üKTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/robinhood/urls.py 2pyXh

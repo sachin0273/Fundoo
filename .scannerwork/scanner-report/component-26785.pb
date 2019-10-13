@@ -1,1 +1,0 @@
-กัPvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/twitch/views.py 2pyX,h

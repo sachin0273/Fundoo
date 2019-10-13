@@ -1,1 +1,0 @@
-¦q;venv/lib64/python3.6/site-packages/markupsafe/_constants.py 2pyX‰h

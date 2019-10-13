@@ -1,1 +1,0 @@
-ƒ›Tvenv/lib/python3.6/site-packages/django/contrib/admin/static/admin/js/actions.min.js 2jsXh

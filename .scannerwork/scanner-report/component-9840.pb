@@ -1,1 +1,0 @@
-ðLUvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/authentiq/tests.py 2pyXch

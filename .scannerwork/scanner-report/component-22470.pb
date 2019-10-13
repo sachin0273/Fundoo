@@ -1,1 +1,0 @@
-Æ¯8venv/lib/python3.6/site-packages/chardet/latin1prober.py 2pyX’h

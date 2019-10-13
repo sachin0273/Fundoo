@@ -1,1 +1,0 @@
-®ÐVvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/angellist/__init__.py 2pyXh

@@ -1,1 +1,0 @@
-уEvenv/lib/python3.6/site-packages/django/db/backends/mysql/features.py 2pyXyh

@@ -1,1 +1,0 @@
-ÿÇ4venv/lib/python3.6/site-packages/coreapi/document.py 2pyX·h

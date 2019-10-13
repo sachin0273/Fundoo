@@ -1,1 +1,0 @@
-şHFvenv/lib64/python3.6/site-packages/allauth/account/management/commands :ıHÿH

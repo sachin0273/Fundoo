@@ -1,1 +1,0 @@
-‹ÏTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/dataporten/views.py 2pyXAh

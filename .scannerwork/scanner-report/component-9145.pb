@@ -1,1 +1,0 @@
-¹G9venv/lib64/python3.6/site-packages/MySQLdb/connections.py 2pyXÌh

@@ -1,1 +1,0 @@
-Ù @venv/lib/python3.6/site-packages/allauth/account/app_settings.py 2pyX«h

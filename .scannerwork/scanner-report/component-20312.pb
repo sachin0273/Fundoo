@@ -1,1 +1,0 @@
-Øž?venv/lib/python3.6/site-packages/django/contrib/gis/db/backends :×žûž

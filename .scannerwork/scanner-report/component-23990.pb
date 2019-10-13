@@ -1,1 +1,0 @@
-¶»Uvenv/lib/python3.6/site-packages/django_extensions/management/commands/create_jobs.py 2pyXAh

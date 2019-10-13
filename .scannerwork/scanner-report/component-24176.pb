@@ -1,1 +1,0 @@
-ð¼Xvenv/lib/python3.6/site-packages/pip-19.0.3-py3.6.egg/pip/_vendor/chardet/euckrprober.py 2pyX0h

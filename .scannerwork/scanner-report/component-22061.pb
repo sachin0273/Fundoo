@@ -1,1 +1,0 @@
-­¬;venv/lib/python3.6/site-packages/django/core/checks/urls.py 2pyXoh

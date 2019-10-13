@@ -1,1 +1,0 @@
-ﬁÃQvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/bitbucket_oauth2 :›ÃﬂÃ‡Ã·Ã„Ã

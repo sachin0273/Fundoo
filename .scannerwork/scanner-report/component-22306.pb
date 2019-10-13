@@ -1,1 +1,0 @@
-во5venv/lib/python3.6/site-packages/django/views/generic :богодоеожозо

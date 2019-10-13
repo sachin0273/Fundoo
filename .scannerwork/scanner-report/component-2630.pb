@@ -1,1 +1,0 @@
-ÆDvenv/lib64/python3.6/site-packages/django/contrib/admin/templatetags :ÅÇÐÑÒÓÔ

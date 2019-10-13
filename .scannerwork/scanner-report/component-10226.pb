@@ -1,1 +1,0 @@
-ÚOTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/auth0/provider.py 2pyX&h

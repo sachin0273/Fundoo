@@ -1,1 +1,0 @@
-Ãù<venv/lib/python3.6/site-packages/openid/consumer/consumer.py 2pyX…h

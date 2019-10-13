@@ -1,1 +1,0 @@
-онWvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/quickbooks/provider.py 2pyXDh

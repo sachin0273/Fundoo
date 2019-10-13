@@ -1,1 +1,0 @@
-õžXvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/postgis/introspection.py 2pyXeh

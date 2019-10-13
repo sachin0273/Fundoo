@@ -1,1 +1,0 @@
-Ã‘Ovenv/lib/python3.6/site-packages/allauth/socialaccount/providers/slack/views.py 2pyX)h

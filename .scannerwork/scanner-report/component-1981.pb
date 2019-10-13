@@ -1,1 +1,0 @@
-½:venv/lib64/python3.6/site-packages/django/contrib/humanize :¼Ó

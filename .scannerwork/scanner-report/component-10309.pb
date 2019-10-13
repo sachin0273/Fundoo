@@ -1,1 +1,0 @@
-ÅPTvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/doximity/views.py 2pyXh

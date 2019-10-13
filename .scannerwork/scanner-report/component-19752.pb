@@ -1,1 +1,0 @@
-¨š;venv/lib/python3.6/site-packages/django/contrib/admin/views :§š®š¯š°š

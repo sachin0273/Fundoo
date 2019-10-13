@@ -1,1 +1,0 @@
-¶U?venv/lib64/python3.6/site-packages/coreschema/encodings/html.py 2pyXKh

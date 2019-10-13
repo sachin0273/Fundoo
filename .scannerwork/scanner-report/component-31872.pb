@@ -1,1 +1,0 @@
-€ùFvenv/lib/python3.6/site-packages/rest_framework/management/__init__.py 2pyXh

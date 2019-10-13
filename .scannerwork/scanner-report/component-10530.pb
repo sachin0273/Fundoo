@@ -1,1 +1,0 @@
-¢RLvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/microsoft :¡R£R¤R¥R¦R§R

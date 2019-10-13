@@ -1,1 +1,0 @@
-Ť:venv/lib/python3.6/site-packages/django/middleware/gzip.py 2pyX5h

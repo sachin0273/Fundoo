@@ -1,1 +1,0 @@
-¯LSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/untappd/tests.py 2pyX`h

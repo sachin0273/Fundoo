@@ -1,1 +1,0 @@
-Á®5venv/lib/python3.6/site-packages/django/views/csrf.py 2pyX›h

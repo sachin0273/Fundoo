@@ -1,1 +1,0 @@
-¦MYvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/foursquare/provider.py 2pyX!h

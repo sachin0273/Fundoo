@@ -1,1 +1,0 @@
-ԻEvenv/lib/python3.6/site-packages/django_extensions/management/base.py 2pyX6h

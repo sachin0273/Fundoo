@@ -1,1 +1,0 @@
-¬ý4venv/lib/python3.6/site-packages/docutils/_compat.py 2pyXh

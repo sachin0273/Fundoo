@@ -1,1 +1,0 @@
-ú(:venv/lib64/python3.6/site-packages/django/http/response.py 2pyX°h

@@ -1,1 +1,0 @@
-µÎTvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/untappd/provider.py 2pyX5h

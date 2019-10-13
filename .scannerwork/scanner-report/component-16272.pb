@@ -1,1 +1,0 @@
-ê)venv/lib64/python3.6/site-packages/six.py 2pyXπh

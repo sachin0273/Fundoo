@@ -1,1 +1,0 @@
-цсGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/meetup :асбсдсесфсгс

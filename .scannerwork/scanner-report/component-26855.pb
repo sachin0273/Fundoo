@@ -1,1 +1,0 @@
-Á—Nvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/daum/tests.py 2pyXh

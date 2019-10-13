@@ -1,1 +1,0 @@
-ÒÖ2venv/lib/python3.6/site-packages/storages/backends :ÑÖÓÖÕÖÖÖ×ÖØÖÙÖÚÖÛÖ

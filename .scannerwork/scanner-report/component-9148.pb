@@ -1,1 +1,0 @@
-¼G4venv/lib64/python3.6/site-packages/MySQLdb/compat.py 2pyXh

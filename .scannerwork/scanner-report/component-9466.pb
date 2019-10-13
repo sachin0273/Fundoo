@@ -1,1 +1,0 @@
-úIQvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/reddit/urls.py 2pyXh

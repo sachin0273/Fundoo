@@ -1,1 +1,0 @@
-ну)venv/lib/python3.6/site-packages/py/_path :муоупурусуту

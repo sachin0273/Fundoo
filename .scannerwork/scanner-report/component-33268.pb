@@ -1,1 +1,0 @@
-ôƒ:venv/lib/python3.6/site-packages/pytest_django/__init__.py 2pyXh

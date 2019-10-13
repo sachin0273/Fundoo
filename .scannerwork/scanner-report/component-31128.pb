@@ -1,1 +1,0 @@
-˜ó3venv/lib/python3.6/site-packages/awscli/__init__.py 2pyX0h

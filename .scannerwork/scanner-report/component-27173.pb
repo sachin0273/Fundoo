@@ -1,1 +1,0 @@
-¥ÔJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/microsoft :¤Ô¦Ô§Ô¨Ô©ÔªÔ

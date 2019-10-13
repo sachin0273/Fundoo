@@ -1,1 +1,0 @@
-¼ÑFvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/kakao :»Ñ½Ñ¾Ñ¿ÑÀÑÁÑ

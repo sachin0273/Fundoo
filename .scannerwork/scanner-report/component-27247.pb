@@ -1,1 +1,0 @@
-ядAvenv/lib/python3.6/site-packages/allauth/socialaccount/signals.py 2pyXh

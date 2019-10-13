@@ -1,1 +1,0 @@
-£Gvenv/lib64/python3.6/site-packages/django/db/backends/ddl_references.py 2pyXÂh

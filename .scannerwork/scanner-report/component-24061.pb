@@ -1,1 +1,0 @@
-ý»Nvenv/lib/python3.6/site-packages/django_extensions/static/django_extensions/js :	ü»þ»ÿ»

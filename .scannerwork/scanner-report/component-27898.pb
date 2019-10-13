@@ -1,1 +1,0 @@
-úÙ3venv/lib/python3.6/site-packages/attr/exceptions.py 2pyX:h

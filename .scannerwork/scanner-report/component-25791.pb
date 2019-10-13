@@ -1,1 +1,0 @@
-¿É2venv/lib/python3.6/site-packages/MySQLdb/compat.py 2pyXh

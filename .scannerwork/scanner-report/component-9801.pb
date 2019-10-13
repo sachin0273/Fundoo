@@ -1,1 +1,0 @@
-ÉLVvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/quickbooks/views.py 2pyX1h

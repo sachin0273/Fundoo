@@ -1,1 +1,0 @@
-”§Avenv/lib/python3.6/site-packages/django/conf/locale/ko/formats.py 2pyX5h

@@ -1,1 +1,0 @@
-Œú-venv/lib/python3.6/site-packages/openid/store :Šú‹úúúúú

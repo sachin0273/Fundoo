@@ -1,1 +1,0 @@
-свJvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/eveonline :рвтвувфвхв

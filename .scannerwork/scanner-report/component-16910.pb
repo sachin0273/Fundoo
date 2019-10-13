@@ -1,1 +1,0 @@
-Ž„Bvenv/lib/python3.6/site-packages/django/db/migrations/migration.py 2pyXÂh

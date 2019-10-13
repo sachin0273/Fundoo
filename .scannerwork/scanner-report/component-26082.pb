@@ -1,1 +1,0 @@
-âËGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/disqus :áËäËåËæËçË

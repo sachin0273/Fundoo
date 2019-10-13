@@ -1,1 +1,0 @@
-ÝƒIvenv/lib/python3.6/site-packages/django/db/backends/sqlite3/operations.py 2pyXÎh

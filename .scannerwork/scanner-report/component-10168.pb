@@ -1,1 +1,0 @@
-¸ORvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/kakao/models.py 2pyXh

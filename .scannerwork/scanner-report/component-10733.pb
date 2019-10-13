@@ -1,1 +1,0 @@
-ÌS3venv/lib64/python3.6/site-packages/allauth/tests.py 2pyXæh

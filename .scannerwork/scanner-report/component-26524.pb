@@ -1,1 +1,0 @@
-œÏSvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/dwolla/provider.py 2pyXh

@@ -1,1 +1,0 @@
-„ŸEvenv/lib/python3.6/site-packages/django/contrib/gis/db/backends/mysql :‚Ÿ…Ÿ†Ÿ‡ŸˆŸ‰Ÿ

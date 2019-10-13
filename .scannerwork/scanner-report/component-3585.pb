@@ -1,1 +1,0 @@
-ÅMvenv/lib64/python3.6/site-packages/django/contrib/gis/geos/prototypes/misc.py 2pyX h

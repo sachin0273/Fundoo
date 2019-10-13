@@ -1,1 +1,0 @@
-ßRVvenv/lib64/python3.6/site-packages/allauth/socialaccount/templatetags/socialaccount.py 2pyX_h

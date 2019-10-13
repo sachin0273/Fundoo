@@ -1,1 +1,0 @@
-фо4venv/lib/python3.6/site-packages/dateutil/_common.py 2pyX,h

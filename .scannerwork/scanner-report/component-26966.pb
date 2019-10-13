@@ -1,1 +1,0 @@
-ÖÒLvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/box/urls.py 2pyXh

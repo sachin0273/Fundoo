@@ -1,1 +1,0 @@
-ʻUvenv/lib/python3.6/site-packages/django_extensions/management/commands/compile_pyc.py 2pyX%h

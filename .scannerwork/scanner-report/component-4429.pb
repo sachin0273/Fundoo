@@ -1,1 +1,0 @@
-Í";venv/lib64/python3.6/site-packages/django/conf/urls/i18n.py 2pyX(h

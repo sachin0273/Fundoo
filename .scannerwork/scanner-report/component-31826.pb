@@ -1,1 +1,0 @@
-ÒøCvenv/lib/python3.6/site-packages/rest_framework/utils/model_meta.py 2pyX¢h

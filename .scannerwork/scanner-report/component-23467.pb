@@ -1,1 +1,0 @@
-«·.venv/lib/python3.6/site-packages/botocore/docs :$ª·¹·º·»·¼·½·Ì·Í·Î·Ï·Ð·Ñ·

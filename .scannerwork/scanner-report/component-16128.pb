@@ -1,1 +1,0 @@
-€~7venv/lib64/python3.6/site-packages/sqlparse/__init__.py 2pyXIh

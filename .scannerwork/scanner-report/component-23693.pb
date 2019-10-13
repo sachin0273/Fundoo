@@ -1,1 +1,0 @@
-¹3venv/lib/python3.6/site-packages/botocore/compat.py 2pyXüh

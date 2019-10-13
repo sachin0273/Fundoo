@@ -1,1 +1,0 @@
-¯9Zvenv/lib64/python3.6/site-packages/django_extensions/management/commands/create_command.py 2pyX\h

@@ -1,1 +1,0 @@
-½Rvenv/lib64/python3.6/site-packages/django/contrib/admin/static/admin/js/inlines.js 2jsX«h

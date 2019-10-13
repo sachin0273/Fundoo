@@ -1,1 +1,0 @@
-ˆÐUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/vimeo_oauth2/urls.py 2pyX	h

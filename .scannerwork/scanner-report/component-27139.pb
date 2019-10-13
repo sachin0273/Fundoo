@@ -1,1 +1,0 @@
-É‘Uvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/linkedin/provider.py 2pyXBh

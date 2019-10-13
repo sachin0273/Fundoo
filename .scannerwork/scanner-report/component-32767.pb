@@ -1,1 +1,0 @@
-ÿÿ6venv/lib/python3.6/site-packages/sqlparse/formatter.py 2pyXÈh

@@ -1,1 +1,0 @@
-èŒUvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/basecamp/provider.py 2pyX)h

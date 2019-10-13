@@ -1,1 +1,0 @@
-®õ0venv/lib/python3.6/site-packages/boto3/compat.py 2pyX1h

@@ -1,1 +1,0 @@
-ìBvenv/lib64/python3.6/site-packages/django/db/migrations/operations :ëíîïðò

@@ -1,1 +1,0 @@
-¤?:venv/lib64/python3.6/site-packages/requests/__version__.py 2pyXh

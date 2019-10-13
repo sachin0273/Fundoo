@@ -1,1 +1,0 @@
-·ùAvenv/lib/python3.6/site-packages/django/contrib/gis/gdal/field.py 2pyXÎh

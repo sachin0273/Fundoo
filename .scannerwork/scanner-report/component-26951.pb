@@ -1,1 +1,0 @@
-грRvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/doximity/views.py 2pyXh

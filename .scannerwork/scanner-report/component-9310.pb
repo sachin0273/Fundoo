@@ -1,1 +1,0 @@
-ÞHCvenv/lib64/python3.6/site-packages/allauth/account/auth_backends.py 2pyXbh

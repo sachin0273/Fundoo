@@ -1,1 +1,0 @@
-¥¸avenv/lib/python3.6/site-packages/botocore/vendored/requests/packages/chardet/universaldetector.py 2pyX«h

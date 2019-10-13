@@ -1,1 +1,0 @@
-Ë77venv/lib64/python3.6/site-packages/django_extensions/db :Ê7Ì7

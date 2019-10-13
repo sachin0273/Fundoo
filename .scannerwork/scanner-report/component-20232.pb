@@ -1,1 +1,0 @@
-ˆ8venv/lib/python3.6/site-packages/django/contrib/gis/geos :*‡™š›œŸ ¡¢£¤¥

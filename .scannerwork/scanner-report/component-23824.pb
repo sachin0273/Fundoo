@@ -1,1 +1,0 @@
-ê∫@venv/lib/python3.6/site-packages/django_extensions/validators.py 2pyXnh

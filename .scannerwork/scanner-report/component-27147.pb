@@ -1,1 +1,0 @@
-ã‘Ivenv/lib/python3.6/site-packages/allauth/socialaccount/providers/coinbase :ä‘å‘ç‘é‘ê‘

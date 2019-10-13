@@ -1,1 +1,0 @@
-∑ÙDvenv/lib/python3.6/site-packages/pyshorteners/shorteners/__init__.py 2pyXèh

@@ -1,1 +1,0 @@
-ë“@venv/lib/python3.6/site-packages/allauth/socialaccount/providers :ê“è‘

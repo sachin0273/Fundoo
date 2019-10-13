@@ -1,1 +1,0 @@
-’°?venv/lib/python3.6/site-packages/pygraphviz/tests/test_graph.py 2pyXÞh

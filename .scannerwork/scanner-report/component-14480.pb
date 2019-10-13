@@ -1,1 +1,0 @@
-êq1venv/lib64/python3.6/site-packages/awscli/text.py 2pyXvh

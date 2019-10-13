@@ -1,1 +1,0 @@
-óRAvenv/lib64/python3.6/site-packages/allauth/socialaccount/tests.py 2pyXöh

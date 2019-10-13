@@ -1,1 +1,0 @@
-‡PJvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/patreon :†PˆP‰PŠP‹PŒP

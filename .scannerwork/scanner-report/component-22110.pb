@@ -1,1 +1,0 @@
-Þ¬7venv/lib/python3.6/site-packages/django/core/management :Ý¬ß¬à¬“­”­•­

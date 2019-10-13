@@ -1,1 +1,0 @@
-ğ0venv/lib/python3.6/site-packages/awscli/alias.py 2pyXœh

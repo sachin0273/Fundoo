@@ -1,1 +1,0 @@
-ıÎGvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/edmodo :üÎşÎÿÎ€ÏÏ

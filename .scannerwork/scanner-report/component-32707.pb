@@ -1,1 +1,0 @@
-Ãÿ2venv/lib/python3.6/site-packages/colorama/win32.py 2pyXh

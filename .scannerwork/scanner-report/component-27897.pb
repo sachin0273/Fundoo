@@ -1,1 +1,0 @@
-ùÙ0venv/lib/python3.6/site-packages/attr/_config.py 2pyXh

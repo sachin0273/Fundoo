@@ -1,1 +1,0 @@
-¿KRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/twitter/urls.py 2pyXh

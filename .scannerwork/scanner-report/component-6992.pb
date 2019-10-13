@@ -1,1 +1,0 @@
-Ð6Wvenv/lib64/python3.6/site-packages/botocore/vendored/requests/packages/urllib3/packages :Ï6Û6Ü6

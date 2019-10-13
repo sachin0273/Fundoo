@@ -1,1 +1,0 @@
-ÍÐMvenv/lib/python3.6/site-packages/allauth/socialaccount/providers/digitalocean :ÌÐÎÐÏÐÐÐÑÐ

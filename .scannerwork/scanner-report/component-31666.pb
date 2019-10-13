@@ -1,1 +1,0 @@
-²÷Avenv/lib/python3.6/site-packages/rest_framework/authentication.py 2pyXâh

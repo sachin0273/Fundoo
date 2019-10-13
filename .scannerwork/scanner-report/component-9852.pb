@@ -1,1 +1,0 @@
-üLRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/edmodo/tests.py 2pyX*h

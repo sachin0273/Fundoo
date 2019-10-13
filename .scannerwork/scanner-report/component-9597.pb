@@ -1,1 +1,0 @@
-ýJRvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/persona/urls.py 2pyX	h

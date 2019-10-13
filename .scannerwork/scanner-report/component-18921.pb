@@ -1,1 +1,0 @@
-é“@venv/lib/python3.6/site-packages/django/contrib/sites/migrations :	è“ë“ì“

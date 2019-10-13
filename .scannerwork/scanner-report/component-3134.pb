@@ -1,1 +1,0 @@
-¾Svenv/lib64/python3.6/site-packages/django/contrib/admin/static/admin/js/calendar.js 2jsXÑh

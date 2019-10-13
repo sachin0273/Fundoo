@@ -1,1 +1,0 @@
-ºô@venv/lib/python3.6/site-packages/pyshorteners/shorteners/base.py 2pyX=h

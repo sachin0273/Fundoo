@@ -1,1 +1,0 @@
-’t9venv/lib64/python3.6/site-packages/rest_framework/test.py 2pyXçh

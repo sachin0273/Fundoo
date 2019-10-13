@@ -1,1 +1,0 @@
-ïó2venv/lib/python3.6/site-packages/py/_path/local.py 2pyX„h

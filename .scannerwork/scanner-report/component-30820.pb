@@ -1,1 +1,0 @@
-дрDvenv/lib/python3.6/site-packages/awscli/customizations/globalargs.py 2pyXyh

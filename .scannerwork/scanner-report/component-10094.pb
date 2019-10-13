@@ -1,1 +1,0 @@
-ÓNSvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/openid/models.py 2pyXh

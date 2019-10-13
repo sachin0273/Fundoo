@@ -1,1 +1,0 @@
-¬ŒJvenv/lib/python3.6/site-packages/django/contrib/auth/context_processors.py 2pyX@h

@@ -1,1 +1,0 @@
-ûNWvenv/lib64/python3.6/site-packages/allauth/socialaccount/providers/windowslive/views.py 2pyX)h

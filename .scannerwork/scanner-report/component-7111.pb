@@ -1,1 +1,0 @@
-Ç7>venv/lib64/python3.6/site-packages/django_extensions/db/fields :Æ7È7É7

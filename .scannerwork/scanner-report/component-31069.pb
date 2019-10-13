@@ -1,1 +1,0 @@
-ЭтRvenv/lib/python3.6/site-packages/awscli/customizations/s3/syncstrategy/register.py 2pyX2h

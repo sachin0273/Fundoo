@@ -1,1 +1,0 @@
-Îv?venv/lib64/python3.6/site-packages/rest_framework/utils/urls.py 2pyXh

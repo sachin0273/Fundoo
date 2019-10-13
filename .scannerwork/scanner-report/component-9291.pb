@@ -1,1 +1,0 @@
-ËH:venv/lib64/python3.6/site-packages/allauth/account/apps.py 2pyX	h

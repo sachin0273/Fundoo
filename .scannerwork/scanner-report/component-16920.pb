@@ -1,1 +1,0 @@
-˜„1venv/lib/python3.6/site-packages/django/db/models :-—„©„ª„¬„Ï„Ð„Ñ„Ò„Ó„Ô„Õ„Ö„×„Ø„é„

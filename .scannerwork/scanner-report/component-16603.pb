@@ -1,1 +1,0 @@
-ہAvenv/lib64/python3.6/site-packages/pytest_django/django_compat.py 2pyXh

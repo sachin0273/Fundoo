@@ -1,1 +1,0 @@
-ó6Kvenv/lib64/python3.6/site-packages/botocore/vendored/requests/structures.py 2pyXih

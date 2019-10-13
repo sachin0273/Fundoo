@@ -1,1 +1,0 @@
-’Ù4venv/lib/python3.6/site-packages/PIL/ImagePalette.py 2pyXÞh
