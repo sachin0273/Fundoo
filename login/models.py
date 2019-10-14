@@ -3,3 +3,8 @@ from django.db import models
 
 
 # Create your models here.
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(blank=True)
+    time_stamp = models.DateTimeField(auto_now_add=True)

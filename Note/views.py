@@ -22,6 +22,10 @@ class Note_View(GenericAPIView):
     # parser_classes = (MultiPartParser, FormParser)
 
     def post(self, request, *args, **kwargs):
+        """
+        :param request:user request for create a note
+        :return:this function is used for create new note and save
+        """
         try:
             serializer = NoteSerializers(data=request.data)
             user = request.user
@@ -40,6 +44,14 @@ class Note_View(GenericAPIView):
 class Share_Note(GenericAPIView):
 
     def get(self, request, note_id, provider, *args, **kwargs):
+        """
+
+        :param request:user request for share a note
+        :param note_id:here we get note id for share a note
+        :param provider:here we get provider for share a note
+        :return:this function is used for share a specific note
+
+        """
         try:
             note = Note.objects.get(pk=int(note_id))
             if provider == 'twitter':

@@ -53,3 +53,5 @@ class Test_Social_share_Api:
         url = BASE_URL + '/share_note/' + note_id + '/' + provider
         Response = requests.get(url)
         assert Response.status_code == 400
+
+

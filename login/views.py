@@ -30,21 +30,18 @@ from rest_framework.views import APIView
 from Services import redis
 from login.decoraters import login_required
 # from login.models import Profile
-from .serializers import UserSerializer, EmailSerializer, PasswordSerializer,  LoginSerializer
+from login.models import Profile
+from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
 from Services.pyjwt_token import Jwt_Token, Jwt_token
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from Services.event_emmiter import ee
-from Services.S3 import upload_file
+from Services.amazons3 import upload_file
 import logging
 from utils import validate_email
 from urlshortening.models import get_short_url, invalidate_url, get_full_url, Url
 from utils import Smd_Response
 
 logger = logging.getLogger(__name__)
-
-
-def index(requset):
-    return render(requset, 'login/social_login.html')
 
 
 class User_Create(GenericAPIView):
@@ -84,11 +81,11 @@ class User_Create(GenericAPIView):
                     ee.emit("myevent", message, recipient_list)
                     return HttpResponse(json.dumps(response))
                 response = Smd_Response(False, 'you are not validated try again', [])
-                return Response(response)
+                return response
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
             smd = Smd_Response()
-            return Response(smd)
+        return smd
 
 
 class Login(GenericAPIView):
@@ -122,13 +119,11 @@ class Login(GenericAPIView):
                 return HttpResponse(json.dumps(smd))
             else:
                 smd = Smd_Response(False, 'please provide valid credentials', [])
-                return Response(smd)
         except KeyError:
             smd = Smd_Response(False, 'one of above field may not be blank', [])
-            return Response(smd)
         except Exception:
             smd = Smd_Response()
-            return Response(smd)
+        return smd
 
 
 def activate(request, short_id, *args, **kwargs):
@@ -203,23 +198,18 @@ class Reset_Passward(GenericAPIView):
                 recipient_list = [user.email, ]
                 ee.emit("myevent2", message, recipient_list)
                 smd = Smd_Response(True, 'you"re email is verified for reset password check you"re mail', [])
-
-                return Response(smd)
+                return smd
             else:
                 smd = Smd_Response(False, 'you are not valid user register first', [])
-                return Response(smd)
         except ObjectDoesNotExist:
             smd = Smd_Response(False, 'this email id not registered', [])
-            return Response(smd)
         except ValueError:
             smd = Smd_Response(False, 'please provide valid email address', [])
-            return Response(smd)
         except KeyError:
             smd = Smd_Response(False, 'above field not be blank', [])
-            return Response(smd)
         except Exception:
             smd = Smd_Response()
-            return Response(smd)
+        return smd
 
 
 def reset_password(request, id):
@@ -321,52 +311,69 @@ class Logout(GenericAPIView):
             if user:
                 redis.Del(user.username)
                 smd = Smd_Response(True, 'safely logged out', [])
-                return Response(smd)
             else:
                 smd = Smd_Response(True, 'you are not authorized user ', [])
-                return Response(smd)
         except ObjectDoesNotExist:
             smd = Smd_Response(False, 'not valid credentials', [])
-            return Response(smd)
         except Exception:
             smd = Smd_Response()
-            return Response(smd)
+        return smd
 
 
-# class S3Api(GenericAPIView):
-#     serializer_class = ImageSerializer
-#
-#     # permission_classes = (IsAuthenticated,)
-#
-#     def post(self, request, *args, **kwargs):
-#         try:
-#             serializer = ImageSerializer(data=request.data)
-#             if serializer.is_valid():
-#                 image = request.data['image']
-#                 if image:
-#                     print("here after image is found", image)
-#                 user = request.user
-#                 url = upload_file(image, object_name=request.user + image.name)
-#                 Profile.objects.create(file=url, user_id=user.id)
-#                 smd = Smd_Response(True, 'image uploaded successfully')
-#                 return Response(smd)
-#             else:
-#                 smd = Smd_Response(False, 'please provide valid image', [])
-#                 return Response(smd)
-#         except Exception:
-#             smd = Smd_Response()
-#             return Response(smd)
-#
-# class S3(APIView):
-#     def get(self, request, bucket, object_name, *args, **kwargs):
-#         import boto3
-#         s3 = boto3.client('s3')
-#         url = s3.generate_presigned_url(
-#             ClientMethod='get_object',
-#             Params={
-#                 'Bucket': bucket,
-#                 'Key': object_name
-#             }
-#         )
-#         print(url)
-#         return redirect(url)
+class S3Upload(GenericAPIView):
+    serializer_class = ImageSerializer
+
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request, *args, **kwargs):
+        """
+        :param request: here we using post request for uploading photo
+        :return: this function is used for upload a photo on amazon s3
+        """
+        try:
+            serializer = ImageSerializer(data=request.data)
+            if serializer.is_valid():
+                image = request.data['image']
+                if image:
+                    print("here after image is found", image)
+                user = request.user
+                exist_image = Profile.objects.get(user_id=user.id)
+                if exist_image:
+                    url = upload_file(image, object_name=user.username)
+                    exist_image.image = url
+                    exist_image.save()
+                    smd = Smd_Response(True, 'image uploaded successfully')
+                else:
+                    url = upload_file(image, object_name=user.username)
+                    Profile.objects.create(image=url, user_id=user.id)
+                    smd = Smd_Response(True, 'image uploaded successfully')
+            else:
+                smd = Smd_Response(False, 'please provide valid image', [])
+        except Exception:
+            smd = Smd_Response()
+        return smd
+
+
+def s3_read(request, bucket, object_name, *args, **kwargs):
+    """
+
+    :param bucket:here we taking bucket name from path parameter
+    :param object_name: here we taking object name from parameter
+    :return:this function is used for generate preassigned url for view photo
+
+    """
+    try:
+        import boto3
+        s3 = boto3.client('s3')
+        url = s3.generate_presigned_url(
+            ClientMethod='get_object',
+            Params={
+                'Bucket': bucket,
+                'Key': object_name
+            }
+        )
+        print(url)
+        return redirect(url)
+    except Exception:
+        smd = Smd_Response()
+        return smd

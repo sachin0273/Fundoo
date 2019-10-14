@@ -23,6 +23,6 @@ def upload_file(image, object_name=None):
     # Upload the file
     s3 = boto3.client('s3')
     s3.upload_fileobj(image, bucket, object_name)
-    file_url = 'http://127.0.0.1:8000'+'/S3/'+bucket+'/'+object_name+'/'
+    file_url = 'http://127.0.0.1:8000'+'/S3read/'+bucket+'/'+object_name+'/'
     print(file_url)
     return file_url

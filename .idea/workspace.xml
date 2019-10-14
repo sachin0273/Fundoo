@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce6891f1-2e3d-49ca-8a90-768763f18dee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Note/note_test.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.scannerwork/report-task.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ddddd.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ddddd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locustfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/locustfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/note_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/Note/note_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/S3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/amazons3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ddddd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/test" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/decoraters.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/decoraters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login/social_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login/social_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +104,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Services/S3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Services/amazons3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -245,7 +242,8 @@
       <workItem from="1570851419393" duration="9336000" />
       <workItem from="1570862235558" duration="23771000" />
       <workItem from="1570951934015" duration="532000" />
-      <workItem from="1570952584014" duration="12906000" />
+      <workItem from="1570952584014" duration="13303000" />
+      <workItem from="1571024675592" duration="22023000" />
     </task>
     <servers />
   </component>

@@ -51,21 +51,21 @@ class Test_Login_Api:
         data = load('login/test.json')
         user = data['login'][0]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
 
     def test_login_blank_input(self):
         url = BASE_URL + '/login/'
         data = load('login/test.json')
         user = data['login'][1]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
 
     def test_login_username_blank_input(self):
         url = BASE_URL + '/login/'
         data = load('login/test.json')
         user = data['login'][3]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
 
 
 class Test_Reset_Password_API:
@@ -82,25 +82,25 @@ class Test_Reset_Password_API:
         data = load('login/test.json')
         user = data['Reset_password'][1]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
 
     def test_reset_password_iinvalid_input(self):
         url = BASE_URL + '/Reset_Passward/'
         data = load('login/test.json')
         user = data['Reset_password'][2]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
 
     def test_reset_password_blank_input(self):
         url = BASE_URL + '/Reset_Passward/'
         data = load('login/test.json')
         user = data['Reset_password'][3]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
 
     def test_reset_password_email_not_exist(self):
         url = BASE_URL + '/Reset_Passward/'
         data = load('login/test.json')
         user = data['Reset_password'][0]
         Response = requests.post(url, user)
-        assert Response.status_code == 200
+        assert Response.status_code == 400
