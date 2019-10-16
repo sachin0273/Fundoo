@@ -87,6 +87,8 @@ __pycache__/
 local_settings.py
 venv/
 test.json/
+migrations
+media
 
 
 .env

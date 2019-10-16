@@ -25,7 +25,7 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='login/social_login.html')),
-    path('', include('login.urls')),
+    path('', include('User.urls')),
     path('', include('Note.urls')),
     path('fundoo', schema_view, name='fundoo'),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),

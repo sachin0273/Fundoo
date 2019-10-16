@@ -1,7 +1,7 @@
 """
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Purpose: in this views module we created rest_api for user login ,register,forgot_password
+Purpose: in this views module we created rest_api for user User ,register,forgot_password
 author:  Sachin Shrikant Jadhav
 since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,9 +28,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from Services import redis
-from login.decoraters import login_required
-# from login.models import Profile
-from login.models import Profile
+from User.decoraters import login_required
+# from User.models import Profile
+from User.models import Profile
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
 from Services.pyjwt_token import Jwt_Token, Jwt_token
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -82,8 +82,10 @@ class User_Create(GenericAPIView):
                     return HttpResponse(json.dumps(response))
                 response = Smd_Response(False, 'you are not validated try again', [])
                 return response
+            logger.warning('not valid input warning from User.views.register_api')
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
+            logger.warning('something was wrong warning from User.views.register_api')
             smd = Smd_Response()
         return smd
 
@@ -95,7 +97,7 @@ class Login(GenericAPIView):
         """
 
         :param request: here we get post request
-        :return:this is login api view for user login after login its generate the token
+        :return:this is User api view for user User after User its generate the token
 
         """
         try:
@@ -118,10 +120,13 @@ class Login(GenericAPIView):
                 smd = {"success": True, "message": "successful", "data": token}
                 return HttpResponse(json.dumps(smd))
             else:
+                logger.warning('not valid user warning from User.views.login_api')
                 smd = Smd_Response(False, 'please provide valid credentials', [])
         except KeyError:
+            logger.warning('any one input field is blank warning from User.views.login_api')
             smd = Smd_Response(False, 'one of above field may not be blank', [])
         except Exception:
+            logger.warning('something is wrong warning from User.views.login_api')
             smd = Smd_Response()
         return smd
 
@@ -201,13 +206,18 @@ class Reset_Passward(GenericAPIView):
                 return smd
             else:
                 smd = Smd_Response(False, 'you are not valid user register first', [])
+                logger.warning('not valid user warning from User.views.Reset_password_api')
         except ObjectDoesNotExist:
             smd = Smd_Response(False, 'this email id not registered', [])
+            logger.warning('email not registered warning from User.views.Reset_password_api')
         except ValueError:
             smd = Smd_Response(False, 'please provide valid email address', [])
+            logger.warning('not valid email address warning from User.views.Reset_password_api')
         except KeyError:
             smd = Smd_Response(False, 'above field not be blank', [])
+            logger.warning('input is blank warning from User.views.Reset_password_api')
         except Exception:
+            logger.warning('something is wrong warning from User.views.Reset_password_api')
             smd = Smd_Response()
         return smd
 
@@ -349,7 +359,9 @@ class S3Upload(GenericAPIView):
                     smd = Smd_Response(True, 'image uploaded successfully')
             else:
                 smd = Smd_Response(False, 'please provide valid image', [])
+                logger.warning('not a valid image warning from User.views.s3upload_api')
         except Exception:
+            logger.warning('something is wrong warning from User.views.s3upload_api')
             smd = Smd_Response()
         return smd
 

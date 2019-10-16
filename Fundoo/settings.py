@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django.contrib.sites',
     'rest_framework_swagger',
-    'login',
+    'User',
     'Note',
     'corsheaders',
     'urlshortening',
@@ -201,6 +201,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
@@ -212,48 +215,41 @@ API_KEY = os.getenv('API_KEY')
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'formatters': {
-#         'verbose': {
-#             'format': '{asctime} {module} {levelname} {message}',
-#             'style': '{',
-#         },
-#         'simple': {
-#             'format': '{levelname} {message}',
-#             'style': '{',
-#         },
-#     },
-#     'handlers': {
-#         'console': {
-#             'level': 'WARNING',
-#             'class': 'logging.StreamHandler',
-#             # 'filename': 'Fundoo/mylog.log',
-#             'formatter': 'verbose',
-#         },
-#         'mail_admins': {
-#             'level': 'ERROR',
-#             'class': 'django.utils.log.AdminEmailHandler',
-#         }
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['console'],
-#             'level': 'WARNING',
-#             'propagate': True,
-#         },
-#         'django.request': {
-#             'handlers': ['mail_admins'],
-#             'level': 'ERROR',
-#             'propagate': False,
-#         },
-#         'Fundoo.custom': {
-#             'handlers': ['console', 'mail_admins'],
-#             'level': 'INFO',
-#         }
-#     }
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': 'Fundoo/mylog.log',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'Note.views': {
+            'handlers': ['console'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        'User.views': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+
+    }
+}
 
 INITIAL_URL_LEN = 6
 RETRY_COUNT = 5
@@ -268,5 +264,3 @@ ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False
 SOCIAL_ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
-
-

@@ -5,18 +5,29 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note/note_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/Note/note_test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/migrations/0002_auto_20191013_0935.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/migrations/0003_auto_20191014_0437.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/S3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Services/amazons3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/ddddd.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locustfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/locustfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/decoraters.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/decoraters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/migrations/0002_profile_time_stamp.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/migrations/0002_profile_time_stamp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/test.json" beforeDir="false" afterPath="$PROJECT_DIR$/User/test.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/User/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +98,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.social_login.html">
+  <component name="RunManager" selected="Python.utils">
     <configuration name="social_login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Fundoo/templates/login/social_login.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -135,6 +146,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Fundoo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Fundoo" type="Python.DjangoServer" factoryName="Django server">
       <module name="Fundoo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,19 +200,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="db" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.sonarqube: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings>
@@ -195,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.utils" />
         <item itemvalue="JavaScript Debug.social_login.html" />
         <item itemvalue="Python.ddddd" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.sonarqube: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.db: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +263,9 @@
       <workItem from="1570862235558" duration="23771000" />
       <workItem from="1570951934015" duration="532000" />
       <workItem from="1570952584014" duration="13303000" />
-      <workItem from="1571024675592" duration="22023000" />
+      <workItem from="1571024675592" duration="22628000" />
+      <workItem from="1571110839482" duration="32773000" />
+      <workItem from="1571196692064" duration="33739000" />
     </task>
     <servers />
   </component>
@@ -268,7 +290,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Fundoo$ddddd.coverage" NAME="ddddd Coverage Results" MODIFIED="1570683856264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Services" />
-    <SUITE FILE_PATH="coverage/Fundoo$utils.coverage" NAME="utils Coverage Results" MODIFIED="1570093939815" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fundoo$utils.coverage" NAME="utils Coverage Results" MODIFIED="1571138161388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Fundoo$S3.coverage" NAME="S3 Coverage Results" MODIFIED="1570360391581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Services" />
   </component>
 </project>
