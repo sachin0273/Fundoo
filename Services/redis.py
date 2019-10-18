@@ -13,6 +13,9 @@ def Set(username, token):
     r.set(username, token)
 
 
+r
+
+
 def Get(username):
     """
 
@@ -40,3 +43,16 @@ def All_Delete():
 
     """
     r.flushall()
+
+
+def push(key, value):
+    r.lpush(key, value)
+
+
+def getrange(key):
+    t = r.lrange(key, 0, -1)
+    return t
+
+
+# elements = r.lrange("7", 0, -1)
+# print(elements)

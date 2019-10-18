@@ -1,4 +1,6 @@
 import json
+from Services import redis
+import pickle
 import logging
 from rest_framework.validators import UniqueValidator
 from django.core.exceptions import ObjectDoesNotExist
@@ -73,6 +75,7 @@ class Note_Create(GenericAPIView):
                 note_create.collaborator.add(add_collaborator)
             if label_flag:
                 note_create.label.add(add_label)
+            redis.Del(user)
             smd = Smd_Response(True, 'successfully note created', status_code=200)
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'your label is not valid please add label and try')
@@ -117,7 +120,8 @@ class Note_Create(GenericAPIView):
 class Note_Crud(GenericAPIView):
     serializer_class = NoteSerializers
 
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
+
     # parser_classes = (MultiPartParser, FormParser,)
 
     def put(self, request, note_id, *args, **kwargs):
@@ -161,7 +165,8 @@ class Note_Crud(GenericAPIView):
                 update_note.collaborator.add(add_label)
             if is_label:
                 update_note.label.add(add_collaborator)
-
+            user = request.user
+            redis.Del(user.id)
             smd = Smd_Response(True, 'successfully note updated', status_code=200)
             return Response(smd)
         except Label.DoesNotExist:
@@ -179,7 +184,8 @@ class Note_Crud(GenericAPIView):
         try:
 
             Note.objects.get(pk=note_id).delete()
-
+            user = request.user
+            redis.Del(user.id)
             smd = Smd_Response(False, 'note deleted successfully', status_code=200)
         except Note.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid note_id')
@@ -192,11 +198,17 @@ class Get_All_Note(GenericAPIView):
 
     def get(self, request, user_id, *args, **kwargs):
         try:
+            data = redis.Get(user_id)
+            if data:
+                hh = pickle.loads(data)
+                serializer = NoteSerializers(hh, many=True)
+                smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
+                return smd
             data = Note.objects.filter(user_id=user_id)
             if data:
-
                 serializer = NoteSerializers(data, many=True)
-                print(serializer.data)
+                fg = pickle.dumps(data)
+                redis.Set(user_id, fg)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
             else:
                 smd = Smd_Response(False, 'please enter valid user id')
@@ -222,6 +234,8 @@ class Label_Create(GenericAPIView):
             serializer = LabelSerializers(data=request.data)
             if serializer.is_valid():
                 serializer.save()
+                user = serializer.data['user']
+                redis.Del(str(user) + 'label')
                 smd = Smd_Response(True, 'label successfully created', status_code=200)
                 logger.warning('label created')
             else:
@@ -235,6 +249,7 @@ class Label_Create(GenericAPIView):
 
 class Label_Crud(GenericAPIView):
     serializer_class = LabelSerializers
+    authentication_classes = (IsAuthenticated,)
 
     def put(self, request, label_id, *args, **kwargs):
         try:
@@ -243,6 +258,7 @@ class Label_Crud(GenericAPIView):
             if label:
                 label.name = request.data['name']
                 label.save()
+                redis.Del(str(user) + 'label')
                 smd = Smd_Response(True, 'label updated successfully', status_code=200)
             else:
                 smd = Smd_Response(False, 'please enter valid label id or user id ')
@@ -255,6 +271,8 @@ class Label_Crud(GenericAPIView):
     def delete(self, request, label_id, *args, **kwargs):
         try:
             Label.objects.get(pk=label_id).delete()
+            user = request.user
+            redis.Del(str(user.id) + 'label')
             smd = Smd_Response(False, 'label deleted successfully', status_code=200)
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid label_id ')
@@ -267,9 +285,17 @@ class Get_Label(GenericAPIView):
 
     def get(self, request, user_id, *args, **kwargs):
         try:
+            data = redis.Get(str(user_id) + 'label')
+            if data:
+                hh = pickle.loads(data)
+                serializer = LabelSerializers(hh, many=True)
+                smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
+                return smd
             label = Label.objects.filter(user_id=user_id)
-            serializer = LabelSerializers(label, many=True)
             if label:
+                serializer = LabelSerializers(label, many=True)
+                fg = pickle.dumps(label)
+                redis.Set(str(user_id) + 'label', fg)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
             else:
                 smd = Smd_Response(False, 'not valid user id please enter valid user_id')

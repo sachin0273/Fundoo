@@ -347,6 +347,7 @@ class S3Upload(GenericAPIView):
                 if image:
                     print("here after image is found", image)
                 user = request.user
+                print(user.id)
                 exist_image = Profile.objects.get(user_id=user.id)
                 if exist_image:
                     url = upload_file(image, object_name=user.username)
