@@ -15,15 +15,21 @@ import requests
 from Fundoo import settings
 
 
-def Jwt_Token(payload):
-    """
-    :param payload: here we passing user information
-    :return:this function return jwt token
-    """
-    jwt_token = {'token': jwt.encode(payload, "SECRET_KEY", algorithm="HS256").decode('utf-8')}
-    return jwt_token['token']
+class Jwt:
+    def register_token(self, payload):
+        """
+        :param payload: here we passing user information
+        :return:this function return jwt token
+        """
+        try:
+            jwt_token = {'token': jwt.encode(payload, "SECRET_KEY", algorithm="HS256").decode('utf-8')}
+            return jwt_token['token']
+        except Exception:
+            return False
 
-
-def Jwt_token(payload):
-    response = requests.post(settings.Token, payload)
-    return response.json()['access']
+    def login_token(self, payload):
+        try:
+            response = requests.post(settings.Token, payload)
+            return response.json()['access']
+        except Exception:
+            return False

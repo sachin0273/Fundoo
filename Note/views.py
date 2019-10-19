@@ -14,8 +14,9 @@ from rest_framework.response import Response
 from .models import Note, Label
 from Note.serializers import NoteSerializers, LabelSerializers
 from utils import Smd_Response
-from User.decoraters import login_required
+from users.decoraters import login_required
 from django.contrib.auth.models import User
+from .service.note import Label_And_Note_Validator
 
 logger = logging.getLogger(__name__)
 
@@ -36,9 +37,6 @@ class Note_Create(GenericAPIView):
         """
 
         try:
-            collaborator_flag = True
-            label_flag = True
-
             collaborator = request.data['collaborator']
             pin = request.data['is_pin']
             trash = request.data['is_trash']
@@ -48,41 +46,23 @@ class Note_Create(GenericAPIView):
             title = request.data['title']
             image = request.data['image']
             user = request.data['user']
-            print(label)
-            print(collaborator)
-            print(trash)
-            if len(label) != 0:
-                new_label = Label.objects.get(name=label[0], user_id=user)
-                if new_label:
-                    add_label = new_label
-                else:
-                    raise KeyError
-            else:
-                label_flag = False
-            if len(collaborator) != 0:
-                new_collaborator = User.objects.get(email=collaborator[0])
-                if new_collaborator:
-                    add_collaborator = new_collaborator
-                else:
-                    raise KeyError
-            else:
-                collaborator_flag = False
-
+            validate_label = Label_And_Note_Validator().validate_label(label)
+            if not validate_label['success']:
+                return HttpResponse(json.dumps(validate_label), status=400)
+            validate_collaborator = Label_And_Note_Validator().validate_collaborator(collaborator)
+            if not validate_collaborator['success']:
+                return HttpResponse(json.dumps(validate_collaborator), status=400)
             note_create = Note.objects.create(user_id=user, title=title, note=note, is_pin=pin,
                                               image=image, is_trash=trash, is_archive=archive)
+            if validate_label['success'] == True:
+                for labels in validate_label:
+                    note_create.collaborator.add(labels)
+            if validate_collaborator['success'] == True:
+                for collaborators in validate_collaborator:
+                    note_create.label.add(collaborators)
 
-            if collaborator_flag:
-                note_create.collaborator.add(add_collaborator)
-            if label_flag:
-                note_create.label.add(add_label)
             redis.Del(user)
             smd = Smd_Response(True, 'successfully note created', status_code=200)
-        except Label.DoesNotExist:
-            smd = Smd_Response(False, 'your label is not valid please add label and try')
-        except User.DoesNotExist:
-            smd = Smd_Response(False, 'please enter valid collaborator')
-        except KeyError:
-            smd = Smd_Response(False, 'please enter valid label input ')
         except Exception:
             smd = Smd_Response()
             logger.warning('something was wrong warning from Note.views.note_api')
@@ -120,64 +100,101 @@ class Note_Create(GenericAPIView):
 class Note_Crud(GenericAPIView):
     serializer_class = NoteSerializers
 
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     # parser_classes = (MultiPartParser, FormParser,)
 
     def put(self, request, note_id, *args, **kwargs):
+
         try:
-            is_collaborator = True
-            is_label = True
-            collaborator = request.data['collaborator']
-            pin = request.data['is_pin']
-            trash = request.data['is_trash']
-            archive = request.data['is_archive']
-            label = request.data['label']
-            note = request.data['note']
-            title = request.data['title']
-            image = request.data['image']
-            user = request.data['user']
-            print(trash)
-            if len(label) != 0:
-                new_label = Label.objects.get(name=label)
-                if new_label:
-                    add_label = new_label
-                else:
-                    return Response('not valid note')
-            else:
-                is_label = False
-            if len(collaborator) != 0:
-                new_collaborator = User.objects.get(email=collaborator)
-                if new_collaborator:
-                    add_collaborator = new_collaborator
-                else:
-                    return Response('not valid user')
-            else:
-                is_collaborator = False
-            update_note = Note.objects.get(pk=note_id, user_id=user)
-            update_note.is_pin = pin
-            update_note.is_trash = trash
-            update_note.is_archive = archive
-            update_note.note = note
-            update_note.title = title
-            update_note.image = image
-            if is_collaborator:
-                update_note.collaborator.add(add_label)
-            if is_label:
-                update_note.label.add(add_collaborator)
-            user = request.user
-            redis.Del(user.id)
-            smd = Smd_Response(True, 'successfully note updated', status_code=200)
-            return Response(smd)
+            # uu = request.data
+            # uu=request.body
+            # hh = uu.dict()
+            # print(hh)
+            # myDict = dict(uu.iterlists())
+            # print(myDict)
+            # print(request.data)
+            yu = json.loads(request.body)
+            print(yu)
+            if "collaborator" in yu:
+                # klist = []
+                tt = yu['collaborator']
+                yuu = Label_And_Note_Validator().putvalid(tt)
+                # for i in tt:
+                #     user_obj = User.objects.get(email=i)
+                #     klist.append(user_obj.id)
+                #     print(user_obj.username)
+                yu['collaborator'] = yuu
+            # if "label" in yu:
+            #     tt = yu['label']
+            #     # for i in tt:
+            #     #     label_obj = Label.objects.get(name=i)
+            #     #     llist.append(label_obj.id)
+            #     yy = Label_And_Note_Validator().labelvalid(tt)
+            #     yu["label"] = yy
+
+            update_note = Note.objects.get(pk=note_id)
+            # print(update_note)
+            # print(yu)
+            # print(yu)
+            serializer = NoteSerializers(instance=update_note, data=yu, partial=True)
+            if serializer.is_valid():
+                print('gggg')
+                serializer.save()
+                #     smd = Smd_Response(True, 'dhdhdshss')
+                # else:
+                #     smd = Smd_Response(False, 'dhdhdshss')
+
+            # collaborator = request.data['collaborator']
+            # pin = request.data['is_pin']
+            # trash = request.data['is_trash']
+            # archive = request.data['is_archive']
+            # label = request.data['label']
+            # note = request.data['note']
+            # title = request.data['title']
+            # image = request.data['image']
+            # user = request.data['user']
+            # if len(label) != 0:
+            #     new_label = Label.objects.get(name=label)
+            #     if new_label:
+            #         add_label = new_label
+            #     else:
+            #         return Response('not valid note')
+            # else:
+            #     is_label = False
+            #
+            # if len(collaborator) != 0:
+            #     new_collaborator = User.objects.get(email=collaborator)
+            #     if new_collaborator:
+            #         add_collaborator = new_collaborator
+            #     else:
+            #         return Response('not valid user')
+            # else:
+            #     is_collaborator = False
+            #
+            # update_note.is_pin = pin
+            # update_note.is_trash = trash
+            # update_note.is_archive = archive
+            # update_note.note = note
+            # update_note.title = title
+            # update_note.image = image
+            # if is_collaborator:
+            #     update_note.collaborator.add(add_label)
+            # if is_label:
+            #     update_note.label.add(add_collaborator)
+            # user = request.user
+            # redis.Del(user.id)
+            # smd = Smd_Response(True, 'successfully note updated', status_code=200)
+            # return Response(smd)
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'your label is not valid please add label and try')
         except User.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid collaborator')
         except KeyError:
             smd = Smd_Response(False, 'please enter valid label input ')
-        except Exception:
-            smd = Smd_Response()
-            logger.warning('something was wrong warning from Note.views.note_api')
+        # except Exception:
+        #     smd = Smd_Response()
+        #     logger.warning('something was wrong warning from Note.views.note_api')
         return smd
 
     def delete(self, request, note_id, *args, **kwargs):
@@ -225,10 +242,8 @@ class Label_Create(GenericAPIView):
     # permission_classes = (IsAuthenticated,)
     def post(self, request, *args, **kwargs):
         """
-
         :param request:user request for create a note
         :return:this function is used for create new note and save
-
         """
         try:
             serializer = LabelSerializers(data=request.data)

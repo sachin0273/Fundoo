@@ -14,11 +14,11 @@ from django.core.mail import send_mail
 from Fundoo import settings
 from pymitter import EventEmitter
 
-ee = EventEmitter()
+email_event = EventEmitter()
 
 
-@ee.on("myevent")
-def email_handler(message, recipient_list):
+@email_event.on("account_activate_event")
+def email_for_account_activate(message, recipient_list):
     """
     :param message: here we passing message for mail
     :param recipient_list: here we passing receiver mail
@@ -29,8 +29,8 @@ def email_handler(message, recipient_list):
     send_mail(subject, message, email_from, recipient_list)
 
 
-@ee.on("myevent2")
-def reset_handler(message, recipient_list):
+@email_event.on("reset_password_event")
+def email_for_reset_password(message, recipient_list):
     """
     :param message: here we passing message for mail
     :param recipient_list: here we passing receiver mail

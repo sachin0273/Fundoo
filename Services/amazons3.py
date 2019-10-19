@@ -1,14 +1,8 @@
-import logging
-import boto3
-from botocore.exceptions import ClientError
-from django.contrib.sites.shortcuts import get_current_site
-from requests import request
-
-from Fundoo import settings
+from Fundoo.settings import s3, BUCKET, S3_BASE_URL
 
 
-class S3:
-    """Upload a file to an S3 bucket or delete"""
+class AmazonS3:
+    """Upload or Delete file on amazon s3 bucket"""
 
     def upload_file(self, image, object_name):
         """
@@ -20,29 +14,29 @@ class S3:
         """
         # If S3 object_name was not specified, use file_name
         try:
-            bucket = 'sachin0273'
+
             # Upload the file
-            s3 = boto3.client('s3')
+            bucket = BUCKET
             s3.upload_fileobj(image, bucket, object_name)
-            file_url = 'http://127.0.0.1:8000' + '/S3read/' + bucket + '/' + object_name + '/'
+            file_url = S3_BASE_URL + bucket + '/' + object_name + '/'
             print(file_url)
             return file_url
         except Exception:
             return False
 
     def delete_file(self, image_key):
-        s3 = boto3.client('s3')
+        """
+        
+        :param image_key: here we passing object name exist in s3
+        :return: this function used for delete the image from amazon s3 bucket from a
+
+        """
+
         try:
             response = s3.delete_object(
-                Bucket='sachin0273',
+                Bucket=BUCKET,
                 Key=image_key,
             )
             return response
         except Exception:
             return False
-
-
-if __name__ == '__main__':
-    gg = S3()
-    ty = gg.delete_file('@@@@')
-    print(ty)

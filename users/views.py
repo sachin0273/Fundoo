@@ -1,7 +1,7 @@
 """
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Purpose: in this views module we created rest_api for user User ,register,forgot_password
+Purpose: in this views module we created rest_api for user users ,register,forgot_password
 author:  Sachin Shrikant Jadhav
 since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,14 +28,14 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from Services import redis
-from User.decoraters import login_required
-# from User.models import Profile
-from User.models import Profile
+from users.decoraters import login_required
+# from users.models import Profile
+from users.models import Profile
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
-from Services.pyjwt_token import Jwt_Token, Jwt_token
+from Services.pyjwt_token import Jwt
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from Services.event_emmiter import ee
-from Services.amazons3 import upload_file
+from Services.event_emmiter import email_event
+from Services.amazons3 import AmazonS3
 import logging
 from utils import validate_email
 from urlshortening.models import get_short_url, invalidate_url, get_full_url, Url
@@ -67,7 +67,7 @@ class User_Create(GenericAPIView):
                         'username': self.request.data['username'],
                         'email': self.request.data['email'],
                     }
-                    token = Jwt_Token(payload)
+                    token = Jwt().register_token(payload)
                     long_url = 'activate' + '/' + token
                     short_url = get_short_url(long_url)  # Url object
                     message = render_to_string('login/token.html', {
@@ -78,14 +78,14 @@ class User_Create(GenericAPIView):
                     recipient_list = [self.request.data['email'], ]
                     response = Smd_Response(True, 'you registered successfully for activate your account please check '
                                                   'your email', [])
-                    ee.emit("myevent", message, recipient_list)
+                    email_event.emit("account_activate_event", message, recipient_list)
                     return HttpResponse(json.dumps(response))
                 response = Smd_Response(False, 'you are not validated try again', [])
                 return response
-            logger.warning('not valid input warning from User.views.register_api')
+            logger.warning('not valid input warning from users.views.register_api')
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         except Exception:
-            logger.warning('something was wrong warning from User.views.register_api')
+            logger.warning('something was wrong warning from users.views.register_api')
             smd = Smd_Response()
         return smd
 
@@ -97,7 +97,7 @@ class Login(GenericAPIView):
         """
 
         :param request: here we get post request
-        :return:this is User api view for user User after User its generate the token
+        :return:this is users api view for user users after users its generate the token
 
         """
         try:
@@ -115,18 +115,18 @@ class Login(GenericAPIView):
                     'username': username,
                     'password': password,
                 }
-                token = Jwt_token(payload)
+                token = Jwt().login_token(payload)
                 redis.Set(username, token)
                 smd = {"success": True, "message": "successful", "data": token}
                 return HttpResponse(json.dumps(smd))
             else:
-                logger.warning('not valid user warning from User.views.login_api')
+                logger.warning('not valid user warning from users.views.login_api')
                 smd = Smd_Response(False, 'please provide valid credentials', [])
         except KeyError:
-            logger.warning('any one input field is blank warning from User.views.login_api')
+            logger.warning('any one input field is blank warning from users.views.login_api')
             smd = Smd_Response(False, 'one of above field may not be blank', [])
         except Exception:
-            logger.warning('something is wrong warning from User.views.login_api')
+            logger.warning('something is wrong warning from users.views.login_api')
             smd = Smd_Response()
         return smd
 
@@ -192,7 +192,7 @@ class Reset_Passward(GenericAPIView):
                     'username': user.username,
                     'email': user.email,
                 }
-                token = Jwt_Token(payload)
+                token = Jwt().register_token(payload)
                 long_url = 'reset_password' + '/' + token
                 short_url = get_short_url(long_url)  # Url object
                 message = render_to_string('login/reset_token.html', {
@@ -201,23 +201,23 @@ class Reset_Passward(GenericAPIView):
                     'url': short_url.short_id
                 })
                 recipient_list = [user.email, ]
-                ee.emit("myevent2", message, recipient_list)
+                email_event.emit("reset_password_event", message, recipient_list)
                 smd = Smd_Response(True, 'you"re email is verified for reset password check you"re mail', [])
                 return smd
             else:
                 smd = Smd_Response(False, 'you are not valid user register first', [])
-                logger.warning('not valid user warning from User.views.Reset_password_api')
+                logger.warning('not valid user warning from users.views.Reset_password_api')
         except ObjectDoesNotExist:
             smd = Smd_Response(False, 'this email id not registered', [])
-            logger.warning('email not registered warning from User.views.Reset_password_api')
+            logger.warning('email not registered warning from users.views.Reset_password_api')
         except ValueError:
             smd = Smd_Response(False, 'please provide valid email address', [])
-            logger.warning('not valid email address warning from User.views.Reset_password_api')
+            logger.warning('not valid email address warning from users.views.Reset_password_api')
         except KeyError:
             smd = Smd_Response(False, 'above field not be blank', [])
-            logger.warning('input is blank warning from User.views.Reset_password_api')
+            logger.warning('input is blank warning from users.views.Reset_password_api')
         except Exception:
-            logger.warning('something is wrong warning from User.views.Reset_password_api')
+            logger.warning('something is wrong warning from users.views.Reset_password_api')
             smd = Smd_Response()
         return smd
 
@@ -350,19 +350,19 @@ class S3Upload(GenericAPIView):
                 print(user.id)
                 exist_image = Profile.objects.get(user_id=user.id)
                 if exist_image:
-                    url = upload_file(image, object_name=user.username)
+                    url = AmazonS3().upload_file(image, object_name=user.username)
                     exist_image.image = url
                     exist_image.save()
                     smd = Smd_Response(True, 'image uploaded successfully')
                 else:
-                    url = upload_file(image, object_name=user.username)
+                    url = AmazonS3().upload_file(image, object_name=user.username)
                     Profile.objects.create(image=url, user_id=user.id)
                     smd = Smd_Response(True, 'image uploaded successfully')
             else:
                 smd = Smd_Response(False, 'please provide valid image', [])
-                logger.warning('not a valid image warning from User.views.s3upload_api')
+                logger.warning('not a valid image warning from users.views.s3upload_api')
         except Exception:
-            logger.warning('something is wrong warning from User.views.s3upload_api')
+            logger.warning('something is wrong warning from users.views.s3upload_api')
             smd = Smd_Response()
         return smd
 

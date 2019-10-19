@@ -31,12 +31,11 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='login/social_login.html')),
-    path('', include('User.urls')),
+    path('', include('users.urls')),
     path('note/', include('Note.urls')),
     path('fundoo', schema_view, name='fundoo'),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
-    path('linkshortening/', include('urlshortening.urls')),
     path('accounts/', include('allauth.urls')),
 ]
 if settings.DEBUG:

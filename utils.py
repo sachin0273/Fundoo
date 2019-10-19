@@ -7,9 +7,9 @@ since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
-
 import json
 from django.http import JsonResponse
+import re
 
 
 def load(filename):
@@ -22,9 +22,6 @@ def load(filename):
     with open(filename) as json_file:
         data = json.load(json_file)
     return data
-
-
-import re
 
 
 def validate_email(email):
@@ -44,4 +41,3 @@ def Smd_Response(success=False, message='something was wrong', data=[], status_c
     }
     response = JsonResponse(smd, status=status_code)
     return response
-

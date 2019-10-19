@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
+import boto3
 from dotenv import load_dotenv, find_dotenv
 from pathlib import *
 
@@ -46,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django.contrib.sites',
     'rest_framework_swagger',
-    'User',
+    'users',
     'Note',
     'corsheaders',
     'urlshortening',
@@ -242,7 +244,7 @@ LOGGING = {
             'level': 'WARNING',
             'propagate': True,
         },
-        'User.views': {
+        'users.views': {
             'handlers': ['console'],
             'level': 'INFO',
             'propagate': True,
@@ -264,3 +266,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 # ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = False
 SOCIAL_ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+
+s3 = boto3.client('s3')
+BUCKET = os.getenv('BUCKET')
+S3_BASE_URL = os.getenv('AWS_BASE_URL')

@@ -1,6 +1,6 @@
 import redis
 
-r = redis.Redis("localhost")
+redis_object = redis.Redis("localhost")
 
 
 def Set(username, token):
@@ -10,10 +10,10 @@ def Set(username, token):
     :param token:this our actual token
     :return:in this function we save token in redis
     """
-    r.set(username, token)
-
-
-r
+    try:
+        redis_object.set(username, token)
+    except Exception:
+        return False
 
 
 def Get(username):
@@ -23,7 +23,10 @@ def Get(username):
     :return:this function used for get token from redis
 
     """
-    return r.get(username)
+    try:
+        return redis_object.get(username)
+    except Exception:
+        return False
 
 
 def Del(username):
@@ -33,7 +36,12 @@ def Del(username):
     :return: this function used for delete token from redis
 
     """
-    r.delete(username)
+    try:
+
+        redis_object.delete(username)
+
+    except Exception:
+        return False
 
 
 def All_Delete():
@@ -42,17 +50,7 @@ def All_Delete():
     :return: this function used for delete all token from redis
 
     """
-    r.flushall()
-
-
-def push(key, value):
-    r.lpush(key, value)
-
-
-def getrange(key):
-    t = r.lrange(key, 0, -1)
-    return t
-
-
-# elements = r.lrange("7", 0, -1)
-# print(elements)
+    try:
+        redis_object.flushall()
+    except Exception:
+        return False
