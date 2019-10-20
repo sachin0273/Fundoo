@@ -7,7 +7,7 @@ from django.db import models
 
 class Label(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=250, unique=True)
 
     def __str__(self):
         return self.name
@@ -24,4 +24,3 @@ class Note(models.Model):
     is_trash = models.BooleanField('is_trash', default=False)
     is_pin = models.BooleanField('is_pin', default=False)
     time_stamp = models.DateTimeField(auto_now_add=True)
-

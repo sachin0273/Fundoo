@@ -1,6 +1,6 @@
 import json
 
-from rest_framework_simplejwt.state import User
+from django.contrib.auth.models import User
 
 from Note.models import Label
 from django.http import HttpResponse
@@ -36,23 +36,39 @@ class Label_And_Note_Validator:
                 return {'success': True, 'data': collaborator_list}
             else:
                 return {'success': 'no_collaborator'}
-        except Label.DoesNotExist:
+        except User.DoesNotExist:
             smd = {'success': False, 'message': 'your collaborator is not valid please try valid collaborator'}
         except Exception:
             smd = {'success': False, 'message': 'something is wrong when validating your collaborator'}
         return smd
 
-    def putvalid(self, data):
-        klist = []
-        for i in data:
-            user_obj = User.objects.get(email=i)
-            klist.append(user_obj.id)
-            print(user_obj.username)
-        return klist
+    def validate_collaborator_for_put(self, data):
+        try:
 
-    def labelvalid(self, data):
-        llist = []
-        for i in data:
-            label_obj = Label.objects.get(name=i)
-            llist.append(label_obj.id)
-        return llist
+            collaborator_list = []
+            for collaborator in data:
+                user_obj = User.objects.get(email=collaborator)
+                collaborator_list.append(user_obj.id)
+                print(user_obj.username)
+            return {'success': True, 'data': collaborator_list}
+        except User.DoesNotExist:
+            smd = {'success': False, 'message': 'your collaborator is not valid please try valid collaborator',
+                   'data': []}
+        except Exception:
+            smd = {'success': False, 'message': 'something is wrong when validating your collaborator',
+                   'data': []}
+        return smd
+
+    def validate_label_for_put(self, data):
+        try:
+            label_list = []
+            for label in data:
+                label_obj = Label.objects.get(name=label)
+                label_list.append(label_obj.id)
+            return {'success': True, 'data': label_list}
+        except Label.DoesNotExist:
+            smd = {'success': False, 'message': 'your label is not valid please try valid labels', 'data': []}
+        except Exception:
+            smd = {'success': False, 'message': 'something is wrong when validating your labels',
+                   'data': []}
+        return smd

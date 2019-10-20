@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from jwt import DecodeError
 from rest_framework.response import Response
-from Services import redis
+from Lib import redis
 from utils import Smd_Response
 from Fundoo import settings
 

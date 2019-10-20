@@ -30,10 +30,10 @@ from django.views.generic import TemplateView
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='login/social_login.html')),
+    # path('', TemplateView.as_view(template_name='users/social_login.html')),
     path('', include('users.urls')),
     path('note/', include('Note.urls')),
-    path('fundoo', schema_view, name='fundoo'),
+    path('', schema_view),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
     path('accounts/', include('allauth.urls')),

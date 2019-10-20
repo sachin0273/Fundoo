@@ -7,6 +7,7 @@ since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
+from Fundoo.settings import s3
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import redirect, render
@@ -27,15 +28,15 @@ from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Services import redis
+from Lib import redis
 from users.decoraters import login_required
 # from users.models import Profile
 from users.models import Profile
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
-from Services.pyjwt_token import Jwt
+from Lib.pyjwt_token import Jwt
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from Services.event_emmiter import email_event
-from Services.amazons3 import AmazonS3
+from Lib.event_emmiter import email_event
+from Lib.amazons3 import AmazonS3
 import logging
 from utils import validate_email
 from urlshortening.models import get_short_url, invalidate_url, get_full_url, Url
@@ -70,7 +71,7 @@ class User_Create(GenericAPIView):
                     token = Jwt().register_token(payload)
                     long_url = 'activate' + '/' + token
                     short_url = get_short_url(long_url)  # Url object
-                    message = render_to_string('login/token.html', {
+                    message = render_to_string('users/token.html', {
                         'name': user.username,
                         'domain': get_current_site(request).domain,
                         'url': short_url.short_id
@@ -195,7 +196,7 @@ class Reset_Passward(GenericAPIView):
                 token = Jwt().register_token(payload)
                 long_url = 'reset_password' + '/' + token
                 short_url = get_short_url(long_url)  # Url object
-                message = render_to_string('login/reset_token.html', {
+                message = render_to_string('users/reset_token.html', {
                     'name': user.username,
                     'domain': get_current_site(request).domain,
                     'url': short_url.short_id
@@ -344,8 +345,6 @@ class S3Upload(GenericAPIView):
             serializer = ImageSerializer(data=request.data)
             if serializer.is_valid():
                 image = request.data['image']
-                if image:
-                    print("here after image is found", image)
                 user = request.user
                 print(user.id)
                 exist_image = Profile.objects.get(user_id=user.id)
@@ -376,8 +375,6 @@ def s3_read(request, bucket, object_name, *args, **kwargs):
 
     """
     try:
-        import boto3
-        s3 = boto3.client('s3')
         url = s3.generate_presigned_url(
             ClientMethod='get_object',
             Params={
