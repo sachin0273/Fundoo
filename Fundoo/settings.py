@@ -232,7 +232,6 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'WARNING',
             'class': 'logging.FileHandler',
             'filename': 'Fundoo/mylog.log',
             'formatter': 'verbose',
@@ -240,13 +239,13 @@ LOGGING = {
     },
     'loggers': {
         'Note.views': {
+            'level': 'DEBUG',
             'handlers': ['console'],
-            'level': 'WARNING',
             'propagate': True,
         },
         'users.views': {
+            'level': 'DEBUG',
             'handlers': ['console'],
-            'level': 'INFO',
             'propagate': True,
         },
 

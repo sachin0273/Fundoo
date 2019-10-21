@@ -11,6 +11,12 @@ from utils import Smd_Response
 class Label_And_Note_Validator:
 
     def validate_label(self, labels):
+        """
+
+        :param labels:here we pass number of labels
+        :return:this function is perform label validation
+
+        """
         try:
             if len(labels) != 0:
                 label_list = []
@@ -22,11 +28,17 @@ class Label_And_Note_Validator:
                 return {'success': 'no_labels'}
         except Label.DoesNotExist:
             smd = {'success': False, 'message': 'your label is not valid please add label and try'}
-        except Exception as e:
+        except Exception :
             smd = {'success': False, 'message': 'something is wrong when validating your label'}
         return smd
 
     def validate_collaborator(self, collaborators):
+        """
+
+        :param collaborators:here we pass number of collaborators
+        :return:this function is perform collaborators validation
+
+        """
         try:
             if len(collaborators) != 0:
                 collaborator_list = []
@@ -43,6 +55,12 @@ class Label_And_Note_Validator:
         return smd
 
     def validate_collaborator_for_put(self, data):
+        """
+
+        :param :here we pass number of labels
+        :return:this function is perform label validation
+
+        """
         try:
 
             collaborator_list = []
@@ -60,6 +78,12 @@ class Label_And_Note_Validator:
         return smd
 
     def validate_label_for_put(self, data):
+        """
+
+        :param data:here we pass number of collaborators
+        :return:this function is perform collaborators validation
+
+        """
         try:
             label_list = []
             for label in data:

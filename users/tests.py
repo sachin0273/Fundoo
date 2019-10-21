@@ -38,32 +38,33 @@ class Test_Registration_Api:
         assert Response.status_code == 400
 
 
+
 class Test_Login_Api:
     def test_login_valid_input(self):
-        url = BASE_URL + '/users/'
+        url = BASE_URL + '/login/'
         data = load('users/test.json')
-        user = data['users'][2]
+        user = data['login'][2]
         Response = requests.post(url, user)
         assert Response.status_code == 200
 
     def test_login_invalid_input(self):
-        url = BASE_URL + '/users/'
+        url = BASE_URL + '/login/'
         data = load('users/test.json')
-        user = data['users'][0]
+        user = data['login'][0]
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
     def test_login_blank_input(self):
-        url = BASE_URL + '/users/'
+        url = BASE_URL + '/login/'
         data = load('users/test.json')
-        user = data['users'][1]
+        user = data['login'][1]
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
     def test_login_username_blank_input(self):
-        url = BASE_URL + '/users/'
+        url = BASE_URL + '/login/'
         data = load('users/test.json')
-        user = data['users'][3]
+        user = data['login'][3]
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
@@ -71,35 +72,35 @@ class Test_Login_Api:
 class Test_Reset_Password_API:
 
     def test_reset_password_valid_input(self):
-        url = BASE_URL + '/Reset_Passward/'
+        url = BASE_URL + '/send_email/'
         data = load('users/test.json')
         user = data['Reset_password'][4]
         Response = requests.post(url, user)
         assert Response.status_code == 200
 
     def test_reset_password_invalid_input(self):
-        url = BASE_URL + '/Reset_Passward/'
+        url = BASE_URL + '/send_email/'
         data = load('users/test.json')
         user = data['Reset_password'][1]
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
     def test_reset_password_iinvalid_input(self):
-        url = BASE_URL + '/Reset_Passward/'
+        url = BASE_URL + '/send_email/'
         data = load('users/test.json')
         user = data['Reset_password'][2]
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
     def test_reset_password_blank_input(self):
-        url = BASE_URL + '/Reset_Passward/'
+        url = BASE_URL + '/send_email/'
         data = load('users/test.json')
         user = data['Reset_password'][3]
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
     def test_reset_password_email_not_exist(self):
-        url = BASE_URL + '/Reset_Passward/'
+        url = BASE_URL + '/send_email/'
         data = load('users/test.json')
         user = data['Reset_password'][0]
         Response = requests.post(url, user)

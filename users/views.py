@@ -62,7 +62,6 @@ class User_Create(GenericAPIView):
                 user = serializer.save()
                 user.is_active = False
                 user.save()
-
                 if user:
                     payload = {
                         'username': self.request.data['username'],
@@ -78,9 +77,9 @@ class User_Create(GenericAPIView):
                     })
                     recipient_list = [self.request.data['email'], ]
                     response = Smd_Response(True, 'you registered successfully for activate your account please check '
-                                                  'your email', [])
+                                                  'your email',status_code=200)
                     email_event.emit("account_activate_event", message, recipient_list)
-                    return HttpResponse(json.dumps(response))
+                    return response
                 response = Smd_Response(False, 'you are not validated try again', [])
                 return response
             logger.warning('not valid input warning from users.views.register_api')
@@ -203,7 +202,8 @@ class Reset_Passward(GenericAPIView):
                 })
                 recipient_list = [user.email, ]
                 email_event.emit("reset_password_event", message, recipient_list)
-                smd = Smd_Response(True, 'you"re email is verified for reset password check you"re mail', [])
+                smd = Smd_Response(True, 'you"re email is verified for reset password check you"re mail',
+                                   status_code=200)
                 return smd
             else:
                 smd = Smd_Response(False, 'you are not valid user register first', [])
@@ -246,7 +246,7 @@ def reset_password(request, id):
         # if user is not none then we will redirect to the reset password page
         if user is not None:
 
-            return redirect('http://localhost:8000/resetpassword/' + str(user))
+            return redirect('http://localhost:8000/set_new_password/' + str(user))
         else:
             return Response(smd)
     except ObjectDoesNotExist:

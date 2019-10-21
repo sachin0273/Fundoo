@@ -39,20 +39,18 @@ class Note_Create(GenericAPIView):
         try:
             print(request.data)
             collaborator = request.data['collaborator']
-            print(collaborator)
             pin = request.data['is_pin']
             trash = request.data['is_trash']
             archive = request.data['is_archive']
             label = request.data['label']
-            print([label])
             note = request.data['note']
             title = request.data['title']
             image = request.data['image']
             user = request.data['user']
-            validate_label = Label_And_Note_Validator().validate_label([label])
+            validate_label = Label_And_Note_Validator().validate_label(label)
             if not validate_label['success']:
                 return HttpResponse(json.dumps(validate_label), status=400)
-            validate_collaborator = Label_And_Note_Validator().validate_collaborator([collaborator])
+            validate_collaborator = Label_And_Note_Validator().validate_collaborator(collaborator)
             if not validate_collaborator['success']:
                 return HttpResponse(json.dumps(validate_collaborator), status=400)
             note_create = Note.objects.create(user_id=user, title=title, note=note, is_pin=pin,
@@ -66,10 +64,13 @@ class Note_Create(GenericAPIView):
                     note_create.collaborator.add(collaborators)
 
             redis.Del(user)
+            logger.debug(user)
+            logger.info('kkkkkkkkkkkkkkkkkkkk')
             smd = Smd_Response(True, 'successfully note created', status_code=200)
         except Exception:
             smd = Smd_Response()
             logger.warning('something was wrong warning from Note.views.note_api')
+            logger.exception('dkdkd')
         return smd
 
 
@@ -109,22 +110,29 @@ class Note_Crud(GenericAPIView):
     # parser_classes = (MultiPartParser, FormParser,)
 
     def put(self, request, note_id, *args, **kwargs):
+        """
+
+        :param request: user request for put operation
+        :param note_id: here we pass note id for specific update
+        :return:this function used for update a note
+
+        """
 
         try:
             request_data = json.loads(request.body)
             print(request_data)
             if "collaborator" in request_data:
                 collaborators = request_data['collaborator']
-                result = Label_And_Note_Validator().validate_collaborator_for_put([collaborators])
+                result = Label_And_Note_Validator().validate_collaborator_for_put(collaborators)
                 if not result['success']:
                     return HttpResponse(json.dumps(result))
-                request_data['collaborator'] = result
+                request_data['collaborator'] = result['data']
             if "label" in request_data:
                 labels = request_data['label']
-                label_result = Label_And_Note_Validator().validate_label_for_put([labels])
+                label_result = Label_And_Note_Validator().validate_label_for_put(labels)
                 if not label_result['success']:
                     return HttpResponse(json.dumps(label_result))
-                request_data['label'] = label_result
+                request_data['label'] = label_result['data']
             update_note = Note.objects.get(pk=int(note_id))
             serializer = NoteSerializers(instance=update_note, data=request_data, partial=True)
             if serializer.is_valid():
@@ -140,6 +148,13 @@ class Note_Crud(GenericAPIView):
         return smd
 
     def delete(self, request, note_id, *args, **kwargs):
+        """
+
+        :param request: user request for delete note
+        :param note_id:here we pass note id for specific delete
+        :return:this function used for perform delete operation of note
+
+        """
         try:
             Note.objects.get(pk=int(note_id)).delete()
             user = request.user
@@ -157,6 +172,13 @@ class Note_Crud(GenericAPIView):
 class Get_All_Note(GenericAPIView):
 
     def get(self, request, user_id, *args, **kwargs):
+        """
+
+        :param request:user request for get all notes
+        :param user_id:here we pass user id for get specific user notes
+        :return: this function perform get operation of notes
+
+        """
         try:
             note_data = redis.Get(user_id)
             if note_data:
@@ -189,6 +211,7 @@ class Label_Create(GenericAPIView):
         """
         :param request:user request for create a note
         :return:this function is used for create new note and save
+
         """
         try:
             serializer = LabelSerializers(data=request.data)
@@ -213,6 +236,13 @@ class Label_Crud(GenericAPIView):
     # authentication_classes = (IsAuthenticated,)
 
     def put(self, request, label_id, *args, **kwargs):
+        """
+
+        :param request: user request for put operation
+        :param label_id: here we pass label_id  for specific update
+        :return:this function used for update a label
+
+        """
         try:
             user = request.data['user']
             label = Label.objects.get(pk=int(label_id), user_id=user)
@@ -232,6 +262,13 @@ class Label_Crud(GenericAPIView):
         return smd
 
     def delete(self, request, label_id, *args, **kwargs):
+        """
+
+        :param request: user request for delete label
+        :param label_id:here we pass label id for specific delete
+        :return:this function used for perform delete operation of label
+
+        """
         try:
             Label.objects.get(pk=int(label_id)).delete()
             user = request.user
@@ -239,6 +276,8 @@ class Label_Crud(GenericAPIView):
             smd = Smd_Response(False, 'label deleted successfully', status_code=200)
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid label_id ')
+        except ValueError:
+            smd = Smd_Response(False, 'please enter label id in digits ')
         except Exception:
             smd = Smd_Response()
         return smd
@@ -247,18 +286,25 @@ class Label_Crud(GenericAPIView):
 class Get_Label(GenericAPIView):
 
     def get(self, request, user_id, *args, **kwargs):
+        """
+
+        :param request:user request for get all labels
+        :param user_id:here we pass user id for get specific user labels
+        :return: this function perform get operation of labels
+
+        """
         try:
             data = redis.Get(str(user_id) + 'label')
             if data:
-                hh = pickle.loads(data)
-                serializer = LabelSerializers(hh, many=True)
+                labels = pickle.loads(data)
+                serializer = LabelSerializers(labels, many=True)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
                 return smd
             label = Label.objects.filter(user_id=int(user_id))
             if label:
                 serializer = LabelSerializers(label, many=True)
-                fg = pickle.dumps(label)
-                redis.Set(str(user_id) + 'label', fg)
+                all_label = pickle.dumps(label)
+                redis.Set(str(user_id) + 'label', all_label)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
             else:
                 smd = Smd_Response(False, 'not valid user id please enter valid user_id')
