@@ -91,6 +91,6 @@ migrations
 media
 
 
-.env
+Fundoo/.env
 db.sqlite3
 

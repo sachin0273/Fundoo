@@ -37,10 +37,8 @@ class Note_Create(GenericAPIView):
         """
 
         try:
-            print(request.data)
             collaborator = request.data['collaborator']
             pin = request.data['is_pin']
-            trash = request.data['is_trash']
             archive = request.data['is_archive']
             label = request.data['label']
             note = request.data['note']
@@ -54,7 +52,7 @@ class Note_Create(GenericAPIView):
             if not validate_collaborator['success']:
                 return HttpResponse(json.dumps(validate_collaborator), status=400)
             note_create = Note.objects.create(user_id=user, title=title, note=note, is_pin=pin,
-                                              image=image, is_trash=trash, is_archive=archive)
+                                              image=image, is_archive=archive)
             if validate_label['success'] == True:
                 for labels in validate_label['data']:
                     note_create.label.add(labels)
@@ -64,13 +62,11 @@ class Note_Create(GenericAPIView):
                     note_create.collaborator.add(collaborators)
 
             redis.Del(user)
-            logger.debug(user)
-            logger.info('kkkkkkkkkkkkkkkkkkkk')
+            logger.info('note created successfully')
             smd = Smd_Response(True, 'successfully note created', status_code=200)
         except Exception:
             smd = Smd_Response()
-            logger.warning('something was wrong warning from Note.views.note_api')
-            logger.exception('dkdkd')
+            logger.error('something was wrong error from Note.views')
         return smd
 
 
@@ -120,7 +116,7 @@ class Note_Crud(GenericAPIView):
 
         try:
             request_data = json.loads(request.body)
-            print(request_data)
+            print(request_data['collaborator'])
             if "collaborator" in request_data:
                 collaborators = request_data['collaborator']
                 result = Label_And_Note_Validator().validate_collaborator_for_put(collaborators)
@@ -140,11 +136,12 @@ class Note_Crud(GenericAPIView):
                 user = request.user
                 redis.Del(user.id)
                 smd = Smd_Response(True, 'successfully note updated', status_code=200)
+                logger.info('successfully note updated')
             else:
                 smd = Smd_Response(False, serializer.errors)
         except Exception:
             smd = Smd_Response()
-            logger.warning('something was wrong warning from Note.views.note_api')
+            logger.error('something was wrong error from Note.views')
         return smd
 
     def delete(self, request, note_id, *args, **kwargs):
@@ -160,11 +157,14 @@ class Note_Crud(GenericAPIView):
             user = request.user
             redis.Del(user.id)
             smd = Smd_Response(False, 'note deleted successfully', status_code=200)
+            logger.info('note deleted successfully')
         except Note.DoesNotExist:
+            logger.error('note does not exist for this note id error from Note.views')
             smd = Smd_Response(False, 'please enter valid note_id')
         except ValueError:
             smd = Smd_Response(False, 'please enter note_id in digits')
         except Exception:
+            logger.error('parent exception occurred error from Note.views')
             smd = Smd_Response()
         return smd
 
@@ -185,6 +185,7 @@ class Get_All_Note(GenericAPIView):
                 notes = pickle.loads(note_data)
                 serializer = NoteSerializers(notes, many=True)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
+                logger.info('successfully get notes from redis')
                 return smd
             all_notes = Note.objects.filter(user_id=int(user_id))
             if all_notes:
@@ -192,13 +193,16 @@ class Get_All_Note(GenericAPIView):
                 note = pickle.dumps(all_notes)
                 redis.Set(user_id, note)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
+                logger.info('successfully get notes from database')
             else:
                 smd = Smd_Response(False, 'please enter valid user id')
         except Note.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid user for get a note')
+            logger.error('note not exist for this note id error from Note.views')
         except ValueError:
             smd = Smd_Response(False, 'please enter user_id in digits')
         except Exception:
+            logger.error('exception occurred while getting all notes error from Note.views')
             smd = Smd_Response()
         return smd
 
@@ -220,13 +224,13 @@ class Label_Create(GenericAPIView):
                 user = serializer.data['user']
                 redis.Del(str(user) + 'label')
                 smd = Smd_Response(True, 'label successfully created', status_code=200)
-                logger.warning('label created')
+                logger.info('successfully label created')
             else:
                 smd = Smd_Response(False, serializer.errors)
-                logger.warning('not valid input warning from Note.views.Label_api')
+                logger.warning('not valid input warning from Note.views')
         except Exception:
             smd = Smd_Response()
-            logger.warning('something was wrong warning from Note.views.Label_api')
+            logger.error('something was wrong warning from Note.views')
         return smd
 
 
@@ -251,13 +255,17 @@ class Label_Crud(GenericAPIView):
                 label.save()
                 redis.Del(str(user) + 'label')
                 smd = Smd_Response(True, 'label updated successfully', status_code=200)
+                logger.info('label updated successfully')
             else:
                 smd = Smd_Response(False, 'please enter valid label id or user id ')
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid label id or user id ')
+            logger.error('label not exist for this label id error from Note.views')
         except ValueError:
             smd = Smd_Response(False, 'please enter label id in digits')
+            logger.error('value error occurred in Note.views')
         except Exception:
+            logger.error('parent exception occurred in Note.views.label_crud')
             smd = Smd_Response()
         return smd
 
@@ -274,11 +282,15 @@ class Label_Crud(GenericAPIView):
             user = request.user
             redis.Del(str(user.id) + 'label')
             smd = Smd_Response(False, 'label deleted successfully', status_code=200)
+            logger.info('label deleted successfully')
         except Label.DoesNotExist:
+            logger.error('label not exist for this label id error from Note.views')
             smd = Smd_Response(False, 'please enter valid label_id ')
         except ValueError:
+            logger.error('value error occurred in Note.views')
             smd = Smd_Response(False, 'please enter label id in digits ')
         except Exception:
+            logger.error('parent exception occurred in Note.views.label_crud')
             smd = Smd_Response()
         return smd
 
@@ -299,6 +311,7 @@ class Get_Label(GenericAPIView):
                 labels = pickle.loads(data)
                 serializer = LabelSerializers(labels, many=True)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
+                logger.info('all labels get successfully from redis')
                 return smd
             label = Label.objects.filter(user_id=int(user_id))
             if label:
@@ -306,12 +319,16 @@ class Get_Label(GenericAPIView):
                 all_label = pickle.dumps(label)
                 redis.Set(str(user_id) + 'label', all_label)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
+                logger.info('all label get from database')
             else:
                 smd = Smd_Response(False, 'not valid user id please enter valid user_id')
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'for this user id label not available please enter valid user_id')
+            logger.error('for this user id label not exist error from Note.views.get_label')
         except ValueError:
             smd = Smd_Response(False, 'please enter user id in digits')
+            logger.error('value error occurred while getting all labels')
         except Exception:
             smd = Smd_Response()
+            logger.error('parent exception occurred while getting all labels')
         return smd

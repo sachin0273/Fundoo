@@ -8,7 +8,7 @@ from utils import load
 BASE_URL = 'http://127.0.0.1:8000'
 
 
-class Test_Note_and_Label_Api:
+class Test_Note_crud_api:
 
     def test_create_note(self):
         data = load('Note/note_test.json')
@@ -17,7 +17,7 @@ class Test_Note_and_Label_Api:
         print(notes)
         url = BASE_URL + '/note/' + 'create_note/'
         Response = requests.post(url, notes)
-        print(Response.content)
+        print(Response.text)
         assert Response.status_code == 200
 
     def test_wrong_collaborator_and_label(self):
@@ -86,6 +86,8 @@ class Test_Note_and_Label_Api:
         Response = requests.get(url)
         assert Response.status_code == 400
 
+
+class Test_Label_Crud_Api:
     def test_create_label_valid_input(self):
         data = load('Note/note_test.json')
         label = data['label_create'][0]
@@ -103,7 +105,7 @@ class Test_Note_and_Label_Api:
     def test_put_label_valid_input(self):
         data = load('Note/note_test.json')
         label = data['put_label'][0]
-        url = BASE_URL + '/note/' + 'label_crud/'+'3'
+        url = BASE_URL + '/note/' + 'label_crud/' + '3'
         Response = requests.put(url, label)
         assert Response.status_code == 200
 
@@ -162,4 +164,3 @@ class Test_Note_and_Label_Api:
         url = BASE_URL + '/note/' + 'get_label/' + id
         Response = requests.get(url)
         assert Response.status_code == 400
-

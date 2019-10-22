@@ -24,7 +24,7 @@ def email_for_account_activate(message, recipient_list):
     :param recipient_list: here we passing receiver mail
     :return:this function send the email
     """
-    email_from = settings.EMAIL_HOST_USER
+    email_from = settingss.EMAIL_HOST_USER
     subject = 'Thank you for registering to our site'
     send_mail(subject, message, email_from, recipient_list)
 
@@ -36,6 +36,6 @@ def email_for_reset_password(message, recipient_list):
     :param recipient_list: here we passing receiver mail
     :return:this function send the email
     """
-    email_from = settings.EMAIL_HOST_USER
+    email_from = settingss.EMAIL_HOST_USER
     subject = 'Reset your password'
     send_mail(subject, message, email_from, recipient_list)
