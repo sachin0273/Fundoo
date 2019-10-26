@@ -24,3 +24,4 @@ class Note(models.Model):
     is_trash = models.BooleanField('is_trash', default=False)
     is_pin = models.BooleanField('is_pin', default=False)
     time_stamp = models.DateTimeField(auto_now_add=True)
+    reminder = models.DateTimeField(null=True, blank=True)

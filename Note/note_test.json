@@ -41,7 +41,6 @@
   "note": "okk new one",
   "image": "deployment-strategy.jpg",
   "is_archive": true,
-  "is_trash": true,
   "is_pin": true,
   "user": 1,
   "collaborator": [
@@ -71,15 +70,12 @@
 
   ],
   "label_create": [{
-  "name": "yjnjii",
-  "user": 1
+  "name": "yjnjii"
 },{
-  "name": "ssssssss",
-  "user": 67
+  "name": "ssssssss"
 }],
   "put_label": [{
-  "name": "yyyyyyyyy",
-  "user": 1}
+  "name": "yyyyyyyyy"}
 
   ],
   "delete_label": [

@@ -15,25 +15,17 @@ def login_required(function):
             header = request.META['HTTP_AUTHORIZATION']
             token = header.split(' ')
             try:
-                decoded = jwt.decode(token[1], settingss.SECRET_KEY, algorithm="HS256")
+                decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
             except DecodeError:
                 smd = Smd_Response(False, 'invalid token redirected to users page', [])
                 return HttpResponse(smd)
-            user = User.objects.get(pk=decoded['user_id'])
-            tokan = redis.Get(user.username)
+            redis_token = redis.Get(decoded['user_id'])
             try:
-                print('isssss token')
-                payload = jwt.decode(tokan, settingss.SECRET_KEY, algorithm="HS256")
+                jwt.decode(redis_token, settings.SECRET_KEY, algorithm="HS256")
             except DecodeError:
                 smd = Smd_Response(False, 'invalid user redirected to users page', [])
                 return HttpResponse(smd)
-            user = User.objects.get(pk=payload['user_id'])
-            if user:
-                print('in wrapper', user)
-                return function(request, *args, **kwargs)
-            else:
-                smd = Smd_Response(False, 'invalid user redirected to users page', [])
-                return HttpResponse(smd)
+            return function(request, *args, **kwargs)
         except Exception:
             smd = Smd_Response()
             return HttpResponse(smd)

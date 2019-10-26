@@ -2,25 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce6891f1-2e3d-49ca-8a90-768763f18dee" name="Default Changelist" comment="K">
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/dev.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/production.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/stage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fundoo/settingss/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Fundoo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fundoo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/event_emmiter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/event_emmiter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lib/pyjwt_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/pyjwt_token.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/note_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/Note/note_test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/service/note.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/service/note.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/decoraters.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/decoraters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,9 +63,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Fundoo/settingss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -94,9 +92,55 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.demo">
+  <component name="RunManager" selected="Django server.Fundoo">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="S3" type="PythonConfigurationType" factoryName="Python">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -117,8 +161,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="amazons3" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -140,7 +206,7 @@
       <method v="2" />
     </configuration>
     <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -162,7 +228,7 @@
       <method v="2" />
     </configuration>
     <configuration name="ggg" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -184,7 +250,7 @@
       <method v="2" />
     </configuration>
     <configuration name="redis" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -206,7 +272,7 @@
       <method v="2" />
     </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -228,7 +294,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Fundoo" type="Python.DjangoServer" factoryName="Django server">
-      <module name="Fundoo" />
+      <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -249,6 +315,65 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -311,6 +436,11 @@
       <workItem from="1571547016867" duration="22179000" />
       <workItem from="1571628252354" duration="27111000" />
       <workItem from="1571715818189" duration="27211000" />
+      <workItem from="1571802104974" duration="10330000" />
+      <workItem from="1571821026997" duration="15762000" />
+      <workItem from="1571888071731" duration="26061000" />
+      <workItem from="1571975722413" duration="17970000" />
+      <workItem from="1572061026843" duration="30242000" />
     </task>
     <servers />
   </component>

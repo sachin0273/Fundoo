@@ -6,10 +6,10 @@ from rest_framework import serializers
 class NoteSerializers(serializers.ModelSerializer):
     class Meta:
         model = Note
-        fields = ["title", "note", "image", "is_archive", "is_pin", "user", "collaborator", "label"]
+        fields = ["title", "note", "image", "is_archive", "is_pin", "collaborator", "label"]
 
 
 class LabelSerializers(serializers.ModelSerializer):
     class Meta:
         model = Label
-        fields = '__all__'
+        fields = ['name']

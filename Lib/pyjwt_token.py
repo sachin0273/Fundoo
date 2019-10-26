@@ -29,7 +29,7 @@ class Jwt:
 
     def login_token(self, payload):
         try:
-            response = requests.post(settingss.Token, payload)
+            response = requests.post(settings.Token, payload)
             return response.json()['access']
         except Exception:
             return False

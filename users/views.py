@@ -50,6 +50,7 @@ class User_Create(GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         """
+
         :purpose: in this function we register a new user via sending jwt token on email
         :param request: here we get post request
         :return:in this function we take user input for registration and sent mail to email id
@@ -77,7 +78,7 @@ class User_Create(GenericAPIView):
                     })
                     recipient_list = [self.request.data['email'], ]
                     response = Smd_Response(True, 'you registered successfully for activate your account please check '
-                                                  'your email',status_code=200)
+                                                  'your email', status_code=200)
                     email_event.emit("account_activate_event", message, recipient_list)
                     return response
                 response = Smd_Response(False, 'you are not validated try again', [])
@@ -101,14 +102,22 @@ class Login(GenericAPIView):
 
         """
         try:
+
+            if not "username" in request.data and not "password" in request.data:
+                raise KeyError("username or password is missing")
+            if not 'username' in request.data:
+                raise KeyError('username is missing')
+            if not 'password' in request.data:
+                raise KeyError('password is missing')
             username = request.data["username"]
             password = request.data["password"]
+
             if username == "" and password == "":
-                raise KeyError
+                raise KeyError("username and password is not be blank ")
             if username == "":
-                raise KeyError
+                raise KeyError('username is required')
             if password == "":
-                raise KeyError
+                raise KeyError('password is required')
             user = authenticate(username=username, password=password)
             if user:
                 payload = {
@@ -116,15 +125,16 @@ class Login(GenericAPIView):
                     'password': password,
                 }
                 token = Jwt().login_token(payload)
-                redis.Set(username, token)
+                redis.Set(user.id, token)
                 smd = {"success": True, "message": "successful", "data": token}
                 return HttpResponse(json.dumps(smd))
             else:
                 logger.warning('not valid user warning from users.views.login_api')
                 smd = Smd_Response(False, 'please provide valid credentials', [])
-        except KeyError:
+        except KeyError as error:
+            print(error)
             logger.warning('any one input field is blank warning from users.views.login_api')
-            smd = Smd_Response(False, 'one of above field may not be blank', [])
+            smd = Smd_Response(False, str(error), [])
         except Exception:
             logger.warning('something is wrong warning from users.views.login_api')
             smd = Smd_Response()
@@ -133,10 +143,12 @@ class Login(GenericAPIView):
 
 def activate(request, short_id, *args, **kwargs):
     """
+
     :param request: here we use get request
     :param short_id:in this id we gate token
     :return:in this function we get tokan when user click the link and we decode the token and
             activate the user
+
     """
     smd = {'success': False,
            'Message': 'account activation failed',
@@ -181,9 +193,11 @@ class Reset_Passward(GenericAPIView):
         :return: in this function we take email from user and send toaken for verification
         """
         try:
+            if not 'email' in request.data:
+                raise KeyError('email is missing')
             email = request.data['email']
             if email == "":
-                raise KeyError
+                raise KeyError('email field not be blank')
             if not validate_email(email):
                 raise ValueError
             user = User.objects.get(email=email)
@@ -214,8 +228,8 @@ class Reset_Passward(GenericAPIView):
         except ValueError:
             smd = Smd_Response(False, 'please provide valid email address', [])
             logger.warning('not valid email address warning from users.views.Reset_password_api')
-        except KeyError:
-            smd = Smd_Response(False, 'above field not be blank', [])
+        except KeyError as error:
+            smd = Smd_Response(False, str(error), [])
             logger.warning('input is blank warning from users.views.Reset_password_api')
         except Exception:
             logger.warning('something is wrong warning from users.views.Reset_password_api')
@@ -266,17 +280,23 @@ class Resetpassword(GenericAPIView):
                'Message': 'please enter valid password',
                'Data': []}
         try:
+            if not 'password' in request.data and not 'confirm_password' in request.data:
+                raise KeyError('password and confirm password is missing')
+            if not 'password' in request.data:
+                raise KeyError('password is missing')
+            if not 'confirm password' in request.data:
+                raise KeyError('confirm password is missing')
             user = User.objects.get(username=userReset)
             username = user.username
             password = request.data['password']
             confirm_password = request.data['confirm_password']
             # here we will save the user password in the database
             if password == "" or confirm_password == "":
-                raise KeyError
+                raise KeyError('password and confirm password may not be blank')
             if password == "":
-                raise KeyError
+                raise KeyError('password field may not be blank')
             if confirm_password == "":
-                raise KeyError
+                raise KeyError('confirm password field may not be blank')
             if password != confirm_password:
                 smd['Message'] = 'password not match'
                 return Response(smd)
@@ -292,8 +312,8 @@ class Resetpassword(GenericAPIView):
         except ObjectDoesNotExist:
             smd['Message'] = 'not valid credentials try again'
             return Response(smd)
-        except KeyError:
-            smd['Message'] = 'above field is may not be blank'
+        except KeyError as error:
+            smd['Message'] = str(error)
             return Response(smd)
         except Exception:
             smd['Message'] = 'something was wrong try again'
@@ -315,17 +335,12 @@ class Logout(GenericAPIView):
 
     def get(self, request):
         try:
-            header = request.META['HTTP_AUTHORIZATION']
-            token = header.split(' ')
-            decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
-            user = User.objects.get(pk=decoded['user_id'])
+            user = request.user
             if user:
-                redis.Del(user.username)
+                redis.Del(user.id)
                 smd = Smd_Response(True, 'safely logged out', [])
             else:
                 smd = Smd_Response(True, 'you are not authorized user ', [])
-        except ObjectDoesNotExist:
-            smd = Smd_Response(False, 'not valid credentials', [])
         except Exception:
             smd = Smd_Response()
         return smd
@@ -338,8 +353,10 @@ class S3Upload(GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         """
+
         :param request: here we using post request for uploading photo
         :return: this function is used for upload a photo on amazon s3
+
         """
         try:
             serializer = ImageSerializer(data=request.data)
