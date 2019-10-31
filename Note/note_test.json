@@ -65,7 +65,11 @@
 
   ],
   "delete_label": [
+<<<<<<< HEAD
     {"label_id":""
+=======
+    {"label_id":"5"
+>>>>>>> 9631004b... commenting done properly
     },
     {"label_id":" "
     },

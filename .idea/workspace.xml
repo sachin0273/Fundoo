@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce6891f1-2e3d-49ca-8a90-768763f18dee" name="Default Changelist" comment="K">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/templates/users/email_template.html" afterDir="false" />
+=======
+>>>>>>> 9631004b... commenting done properly
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fundoo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Fundoo/settings.py" afterDir="false" />
@@ -11,9 +14,11 @@
       <change beforePath="$PROJECT_DIR$/Note/note_test.json" beforeDir="false" afterPath="$PROJECT_DIR$/Note/note_test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/service/note.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/service/note.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Note/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Note/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Note/views.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
+=======
+>>>>>>> 9631004b... commenting done properly
       <change beforePath="$PROJECT_DIR$/sonar-project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/decoraters.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/decoraters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/tests.py" afterDir="false" />
@@ -115,7 +120,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fundoo" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -144,10 +149,14 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Django server.Fundoo">
     <configuration name="email_template.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/fundoonotes/templates/users/email_template.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+=======
+  <component name="RunManager" selected="Python.S3">
+>>>>>>> 9631004b... commenting done properly
     <configuration name="S3" type="PythonConfigurationType" factoryName="Python">
       <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,6 +179,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration name="amazons3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fundoonotes" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Lib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lib/amazons3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+>>>>>>> 9631004b... commenting done properly
     <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="fundoonotes" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,11 +318,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="JavaScript Debug.email_template.html" />
+=======
+>>>>>>> 9631004b... commenting done properly
         <item itemvalue="Python.manage" />
         <item itemvalue="Python.demo" />
         <item itemvalue="Python.ggg" />
         <item itemvalue="Python.tests" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="Python.amazons3" />
+>>>>>>> 9631004b... commenting done properly
       </list>
     </recent_temporary>
   </component>
@@ -370,9 +411,12 @@
       <workItem from="1572441706074" duration="1747000" />
       <workItem from="1572443520004" duration="1116000" />
       <workItem from="1572495020663" duration="4000" />
+<<<<<<< HEAD
       <workItem from="1572520037669" duration="3838000" />
       <workItem from="1572528654956" duration="2529000" />
       <workItem from="1572579736841" duration="22284000" />
+=======
+>>>>>>> 9631004b... commenting done properly
     </task>
     <servers />
   </component>
@@ -406,4 +450,18 @@
       </default-breakpoints>
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Fundoo$demo.coverage" NAME="demo Coverage Results" MODIFIED="1571723171402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Note" />
+    <SUITE FILE_PATH="coverage/Fundoo$tests.coverage" NAME="tests Coverage Results" MODIFIED="1571565827985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Note" />
+    <SUITE FILE_PATH="coverage/Fundoo$ddddd.coverage" NAME="ddddd Coverage Results" MODIFIED="1570683856264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Services" />
+    <SUITE FILE_PATH="coverage/Fundoo$redis.coverage" NAME="redis Coverage Results" MODIFIED="1571380428558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Services" />
+    <SUITE FILE_PATH="coverage/Fundoo$amazons3.coverage" NAME="amazons3 Coverage Results" MODIFIED="1571558299992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Lib" />
+    <SUITE FILE_PATH="coverage/Fundoo$ggg.coverage" NAME="ggg Coverage Results" MODIFIED="1571642164864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/users" />
+    <SUITE FILE_PATH="coverage/Fundoo$utils.coverage" NAME="utils Coverage Results" MODIFIED="1571288151856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fundoonotes$manage.coverage" NAME="manage Coverage Results" MODIFIED="1572427096503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Fundoo$S3.coverage" NAME="S3 Coverage Results" MODIFIED="1571458239733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Services" />
+  </component>
+>>>>>>> 9631004b... commenting done properly
 </project>

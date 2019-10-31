@@ -9,7 +9,11 @@ from django.conf import settings
 BASE_URL = settings.BASE_URL
 header = {'Content_Type': 'Application/json',
           'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+<<<<<<< HEAD
                            '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcyNjcxNjAzLCJqdGkiOiIyMzFhZDYzMWM3ZTM0NTFmYmM3NDY5OTcxOWU2NjQ2OSIsInVzZXJfaWQiOjF9.U9crzG7Vcer651aVELqLy2SdJQatHCLfYh6FBe20t24'}
+=======
+                           '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcyNTIxODU4LCJqdGkiOiI0YmVhOTI4ZmY4ODA0ZTEwYWZmNTFiYzcwOWRiZjVmNyIsInVzZXJfaWQiOjF9.PE6xK59bUwfm7Ov5SCt6Ate5nI7_i282MKS_poF8Zi8'}
+>>>>>>> 9631004b... commenting done properly
 
 
 class Test_Note_Api:
