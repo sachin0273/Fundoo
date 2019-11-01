@@ -113,9 +113,9 @@ WSGI_APPLICATION = 'Fundoo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'myproject',
-        'USER': 'admin',
-        'PASSWORD': 'sachin1234',
+        'NAME': os.getenv('DATABASE'),
+        'USER': os.getenv('DATABASE_USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -133,7 +133,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=300),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -222,7 +222,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
+            'format': '{levelname} {asctime} {pathname} {lineno} {message}',
             'style': '{',
         },
         'simple': {
@@ -257,7 +257,7 @@ RETRY_COUNT = 5
 # SHORT_URL_PATH = 'http://127.0.0.1:8000/short-prefix/'
 REDIRECT_PREFIX = 'r'
 
-Token = 'http://127.0.0.1:8000/api/token/'
+Token = os.getenv('Token')
 SITE_ID = 1
 LOGIN_REDIRECT_URL = 'fundoo'
 ACCOUNT_EMAIL_VERIFICATION = "optional"
@@ -269,3 +269,4 @@ ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 s3 = boto3.client('s3')
 BUCKET = os.getenv('BUCKET')
 S3_BASE_URL = os.getenv('AWS_BASE_URL')
+BASE_URL = os.getenv('BASE_URL')

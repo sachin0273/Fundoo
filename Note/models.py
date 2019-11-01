@@ -1,4 +1,4 @@
-import self as self
+# import self as self
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -23,5 +23,5 @@ class Note(models.Model):
     is_archive = models.BooleanField('is_archive', default=False)
     is_trash = models.BooleanField('is_trash', default=False)
     is_pin = models.BooleanField('is_pin', default=False)
-    time_stamp = models.DateTimeField(auto_now_add=True)
+    creation_time = models.DateTimeField(auto_now_add=True)
     reminder = models.DateTimeField(null=True, blank=True)

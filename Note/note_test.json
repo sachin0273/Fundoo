@@ -25,20 +25,6 @@
     {
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy",
-  "is_archive": true,
-  "is_trash": true,
-  "is_pin": true,
-  "user": 1,
-  "collaborator": [
-   "sachinjadhav0273@gmail.com"
-  ],
-  "label": [
-     "streeing"
-  ]
-},{
-  "title": "hi this one",
-  "note": "okk new one",
   "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
@@ -52,7 +38,7 @@
 }
   ],
   "note_crud": [
-    {"note_id":"40"
+    {"note_id":"38"
     },
     {"note_id":" "
     },
@@ -70,7 +56,7 @@
 
   ],
   "label_create": [{
-  "name": "yjnjii"
+  "name": "yjnttjii"
 },{
   "name": "ssssssss"
 }],
@@ -79,7 +65,7 @@
 
   ],
   "delete_label": [
-    {"label_id":"13"
+    {"label_id":""
     },
     {"label_id":" "
     },

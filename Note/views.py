@@ -151,8 +151,8 @@ class UpdateAndDeleteNote(GenericAPIView):
         """
 
         try:
+            print(request.data)
             request_data = json.loads(request.body)
-            print(request_data['collaborator'])
             if "collaborator" in request_data:
                 collaborators = request_data['collaborator']
                 result = Label_And_Note_Validator().validate_collaborator_for_put(collaborators)
@@ -333,6 +333,12 @@ class Reminders(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
+        """
+
+        :param request: user request for get all reminder notes
+        :return: this function is used for return all reminder nits fired or upcoming
+
+        """
         try:
             user = request.user
             print(request.user)
@@ -350,6 +356,12 @@ class Trash_Notes(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
+        """
+
+        :param request:user request for get all trash notes
+        :return:this function return all trashed notes
+
+        """
         try:
             user = request.user
             print(request.user)
@@ -367,6 +379,12 @@ class Archive_Notes(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
+        """
+
+        :param request: user request for get archive notes
+        :return:this function is used for return all archive notes
+
+        """
         try:
             user = request.user
             print(request.user)

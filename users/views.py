@@ -127,6 +127,7 @@ class Login(GenericAPIView):
                 token = Jwt().login_token(payload)
                 redis.Set(user.id, token)
                 smd = {"success": True, "message": "successful", "data": token}
+                logger.info('successfully logged in info from users.views.login_api')
                 return HttpResponse(json.dumps(smd))
             else:
                 logger.warning('not valid user warning from users.views.login_api')
@@ -209,14 +210,14 @@ class Reset_Passward(GenericAPIView):
                 token = Jwt().register_token(payload)
                 long_url = 'reset_password' + '/' + token
                 short_url = get_short_url(long_url)  # Url object
-                message = render_to_string('users/reset_token.html', {
+                message = render_to_string('users/email_template.html', {
                     'name': user.username,
                     'domain': get_current_site(request).domain,
                     'url': short_url.short_id
                 })
                 recipient_list = [user.email, ]
                 email_event.emit("reset_password_event", message, recipient_list)
-                smd = Smd_Response(True, 'you"re email is verified for reset password check you"re mail',
+                smd = Smd_Response(True, 'you"re email is verified for reset password check you"re email',
                                    status_code=200)
                 return smd
             else:
@@ -325,6 +326,7 @@ class HelloView(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
+        print(request.user)
         content = {'message': 'Hello, World!'}
         return Response(content)
 
@@ -404,3 +406,4 @@ def s3_read(request, bucket, object_name, *args, **kwargs):
     except Exception:
         smd = Smd_Response()
         return smd
+

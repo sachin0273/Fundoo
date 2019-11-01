@@ -4,29 +4,20 @@ from django.test import TestCase
 import requests
 from users import urls
 from utils import load
+from django.conf import settings
 
-BASE_URL = 'http://127.0.0.1:8000'
+BASE_URL = settings.BASE_URL
 header = {'Content_Type': 'Application/json',
           'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
-                           '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcyMTA4NTQyLCJqdGkiOiI5ODhlZjdkM2NiYzU0NjZlYjRmNDJjMjlkMTA3Y2Q4ZSIsInVzZXJfaWQiOjF9.USnByMSrnKoYrVTLgyKUAvsKHPhOz9E4BBfTqgKTA2s'}
+                           '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcyNjcxNjAzLCJqdGkiOiIyMzFhZDYzMWM3ZTM0NTFmYmM3NDY5OTcxOWU2NjQ2OSIsInVzZXJfaWQiOjF9.U9crzG7Vcer651aVELqLy2SdJQatHCLfYh6FBe20t24'}
 
 
-class Test_Note_crud_api:
-
-    def test_create_note(self):
-        data = load('Note/note_test.json')
-        print(data)
-        notes = data['note_create'][0]
-        print(notes)
-        url = BASE_URL + '/note/' + 'get_or_create_note/'
-        Response = requests.post(url, notes, headers=header)
-        print(Response.text)
-        assert Response.status_code == 200
+class Test_Note_Api:
 
     def test_wrong_collaborator_and_label(self):
         data = load('Note/note_test.json')
         print(data)
-        notes = data['note_create'][1]
+        notes = data['note_create'][0]
         print(notes)
         url = BASE_URL + '/note/' + 'get_or_create_note/'
         Response = requests.post(url, notes, headers=header)
@@ -67,27 +58,6 @@ class Test_Note_crud_api:
         url = BASE_URL + '/note/' + 'get_or_create_note/'
         Response = requests.get(url, headers=header)
         assert Response.status_code == 200
-
-    # def test_get_all_note_blank_input(self):
-    #     data = load('Note/note_test.json')
-    #     id = data['get_all_note'][1]['user_id']
-    #     url = BASE_URL + '/note/' + 'get_or_create_note/'
-    #     Response = requests.get(url, headers=header)
-    #     assert Response.status_code == 400
-    #
-    # def test_get_all_note_invalid_input(self):
-    #     data = load('Note/note_test.json')
-    #     id = data['get_all_note'][2]['user_id']
-    #     url = BASE_URL + '/note/' + 'get_or_create_note/'
-    #     Response = requests.get(url, headers=header)
-    #     assert Response.status_code == 400
-    #
-    # def test_get_all_note_string_input(self):
-    #     data = load('Note/note_test.json')
-    #     id = data['get_all_note'][3]['user_id']
-    #     url = BASE_URL + '/note/' + 'get_or_create_note/'
-    #     Response = requests.get(url, headers=header)
-    #     assert Response.status_code == 400
 
 
 class Test_Label_Crud_Api:
@@ -147,23 +117,34 @@ class Test_Label_Crud_Api:
         Response = requests.get(url, headers=header)
         assert Response.status_code == 200
 
-    # def test_get_all_label_blank_input(self):
-    #     data = load('Note/note_test.json')
-    #     id = data['get_all_label'][1]['user_id']
-    #     url = BASE_URL + '/note/' + 'get_or_create_label/'
-    #     Response = requests.get(url, headers=header)
-    #     assert Response.status_code == 400
-    #
-    # def test_get_all_label_invalid_input(self):
-    #     data = load('Note/note_test.json')
-    #     id = data['get_all_label'][2]['user_id']
-    #     url = BASE_URL + '/note/' + 'get_or_create_label/'
-    #     Response = requests.get(url, headers=header)
-    #     assert Response.status_code == 400
-    #
-    # def test_get_all_label_string_input(self):
-    #     data = load('Note/note_test.json')
-    #     id = data['get_all_label'][3]['user_id']
-    #     url = BASE_URL + '/note/' + 'get_or_create_label/'
-    #     Response = requests.get(url, headers=header)
-    #     assert Response.status_code == 400
+
+class TestListingPages:
+    def test_get_reminder_notes(self):
+        url = BASE_URL + '/note/' + 'reminder/'
+        Response = requests.get(url, headers=header)
+        assert Response.status_code == 200
+
+    def test_get_reminder_wrong_url(self):
+        url = BASE_URL + '/note/' + 'reminde/'
+        Response = requests.get(url, headers=header)
+        assert Response.status_code == 404
+
+    def test_get_trash_notes(self):
+        url = BASE_URL + '/note/' + 'trash/'
+        Response = requests.get(url, headers=header)
+        assert Response.status_code == 200
+
+    def test_get_trash_notes_wrong_url(self):
+        url = BASE_URL + '/note/' + 'tras/'
+        Response = requests.get(url, headers=header)
+        assert Response.status_code == 404
+
+    def test_get_archive_notes(self):
+        url = BASE_URL + '/note/' + 'archive/'
+        Response = requests.get(url, headers=header)
+        assert Response.status_code == 200
+
+    def test_get_archive_notes_wrong_url(self):
+        url = BASE_URL + '/note/' + 'archiv/'
+        Response = requests.get(url, headers=header)
+        assert Response.status_code == 404

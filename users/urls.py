@@ -19,9 +19,9 @@ urlpatterns = [
     path('set_new_password/<userReset>', views.Resetpassword.as_view(), name='resetpassword'),
     path('hello/', views.HelloView.as_view(), name='hello'),
     path('logout/', views.Logout.as_view(), name='logout'),
-    path('s3upload/', views.S3Upload.as_view(), name='s3'),
+    path('upload_profile/', views.S3Upload.as_view(), name='upload_profile'),
     path('login/', views.Login.as_view(), name='users'),
     path('r/<str:id>/', views.reset_password, name='reset_password'),
     path('a/<str:short_id>/', views.activate, name='activate'),
-    path('S3read/<str:bucket>/<str:object_name>/', views.s3_read, name='s3'),
+    path('read_profile/<str:bucket>/<str:object_name>/', views.s3_read, name='read_profile'),
 ]

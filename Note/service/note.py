@@ -108,6 +108,12 @@ class Label_And_Note_Validator:
 
 class Listing_Pages:
     def reminder_notes(self, user):
+        """
+
+        :param user:this is logged in user
+        :return:this function is used for return the reminder notes both fired and upcoming
+
+        """
         try:
             fired_reminder = redis.Get(str(user.username) + 'fired_reminders')
             upcoming_reminder = redis.Get(user.username + 'upcoming_reminders')
@@ -123,8 +129,8 @@ class Listing_Pages:
                                                                'upcoming': upcoming_reminder_serializer.data})
                 logger.info('successfully get notes from redis')
                 return smd
-            fired_reminder_object = Note.objects.filter(user_id=int(user.id), reminder__gte=timezone.now())
-            upcoming_reminder_object = Note.objects.filter(user_id=user.id, reminder__lte=timezone.now())
+            fired_reminder_object = Note.objects.filter(user_id=int(user.id), reminder__lte=timezone.now())
+            upcoming_reminder_object = Note.objects.filter(user_id=user.id, reminder__gte=timezone.now())
             if fired_reminder_object or upcoming_reminder_object:
                 fired_serializer = NoteSerializers(upcoming_reminder_object, many=True)
                 upcoming_serializer = NoteSerializers(fired_reminder_object, many=True)
@@ -151,6 +157,12 @@ class Listing_Pages:
         return smd
 
     def trash_notes(self, user):
+        """
+
+        :param user:this is our logged in user
+        :return:this function is used for return the all trash notes
+
+        """
         try:
             trash_note_data = redis.Get(user.username + 'trash')
 
@@ -180,6 +192,12 @@ class Listing_Pages:
         return smd
 
     def archive_notes(self, user):
+        """
+
+        :param user:this is our logged in user
+        :return:this function is used for return all archive notes
+
+        """
         try:
             archive_note_data = redis.Get(str(user.username) + 'archive')
 
@@ -210,6 +228,12 @@ class Listing_Pages:
 
 
 def update_redis(user):
+    """
+
+    :param user:this is our logged in user
+    :return:this function is used update notes in redis
+
+    """
     try:
         all_notes = Note.objects.filter(user_id=int(user.id), is_trash=False, is_archive=False)
         notes = pickle.dumps(all_notes)
@@ -219,6 +243,12 @@ def update_redis(user):
 
 
 def label_update_in_redis(user):
+    """
+
+    :param user:this our logged in user
+    :return:this function is used for update_redis labels in redis
+
+    """
     try:
 
         labels = Label.objects.get(user_id=user.id)
@@ -226,3 +256,4 @@ def label_update_in_redis(user):
         redis.Set(user.username + 'label', all_label)
     except Exception:
         return False
+

@@ -3,8 +3,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('get_or_create_label/', views.CreateAndGetLabel.as_view(), name='get_or_create_label'),
-    path('get_or_create_note/', views.CreateAndGetNote.as_view(), name='get_or_create_note'),
+    path('label/', views.CreateAndGetLabel.as_view(), name='get_or_create_label'),
+    path('note/', views.CreateAndGetNote.as_view(), name='get_or_create_note'),
     path('update_or_delete_note/<note_id>', views.UpdateAndDeleteNote.as_view(), name='update_or_delete_note'),
     path('update_or_delete_label/<label_id>', views.UpdateAndDeleteLabel.as_view(), name='update_or_delete_label'),
     # path('get_label/<user_id>', views.Get_Label.as_view(), name='get_label'),
