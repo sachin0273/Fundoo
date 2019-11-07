@@ -7,39 +7,35 @@ since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
-from Fundoo.settings import s3
+from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ObjectDoesNotExist
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 import json
 import jwt
-from django.conf import settings
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.template.loader import render_to_string
-from django.urls import reverse_lazy
 from django.utils.decorators import method_decorator
-from django.views.generic import CreateView
 from jwt import DecodeError
 from rest_framework import status
 from rest_framework.generics import GenericAPIView
-from rest_framework.parsers import FileUploadParser, MultiPartParser, FormParser
 from rest_framework.response import Response
-from rest_framework.views import APIView
 
 from Lib import redis
+from Note.tasks import rebuild_search_index
 from users.decoraters import login_required
 # from users.models import Profile
 from users.models import Profile
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
 from Lib.pyjwt_token import Jwt
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticated
 from Lib.event_emmiter import email_event
 from Lib.amazons3 import AmazonS3
 import logging
 from utils import validate_email
-from urlshortening.models import get_short_url, invalidate_url, get_full_url, Url
+from urlshortening.models import get_short_url, Url
 from utils import Smd_Response
 
 logger = logging.getLogger(__name__)
@@ -128,6 +124,7 @@ class Login(GenericAPIView):
                 redis.Set(user.id, token)
                 smd = {"success": True, "message": "successful", "data": token}
                 logger.info('successfully logged in info from users.views.login_api')
+                rebuild_search_index.delay()
                 return HttpResponse(json.dumps(smd))
             else:
                 logger.warning('not valid user warning from users.views.login_api')
@@ -394,7 +391,7 @@ def s3_read(request, bucket, object_name, *args, **kwargs):
 
     """
     try:
-        url = s3.generate_presigned_url(
+        url = settings.s3.generate_presigned_url(
             ClientMethod='get_object',
             Params={
                 'Bucket': bucket,

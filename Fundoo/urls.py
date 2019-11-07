@@ -25,7 +25,6 @@ from rest_framework_simplejwt import views as jwt_views
 from Fundoo import settings
 
 schema_view = get_swagger_view(title='Fundoo API')
-from django.views.generic import TemplateView
 
 urlpatterns = [
 

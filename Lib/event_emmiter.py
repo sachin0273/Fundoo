@@ -8,7 +8,7 @@ since :  25-09-2019
 
 """
 
-from django.core.mail import send_mail, EmailMultiAlternatives
+from django.core.mail import EmailMultiAlternatives
 
 from Fundoo import settings
 from pymitter import EventEmitter

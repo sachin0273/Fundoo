@@ -1,4 +1,4 @@
-from Fundoo.settings import s3, BUCKET, S3_BASE_URL
+from django.conf import settings
 
 
 class AmazonS3:
@@ -16,9 +16,9 @@ class AmazonS3:
         try:
 
             # Upload the file
-            bucket = BUCKET
-            s3.upload_fileobj(image, bucket, object_name)
-            file_url = S3_BASE_URL + bucket + '/' + object_name + '/'
+            bucket = settings.BUCKET
+            settings.s3.upload_fileobj(image, bucket, object_name)
+            file_url = settings.S3_BASE_URL + bucket + '/' + object_name + '/'
             print(file_url)
             return file_url
         except Exception:
