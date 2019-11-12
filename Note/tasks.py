@@ -1,38 +1,38 @@
-import time
+# import time
+# from Note import views
+# from Note import views
+# from datetime import timedelta
 
 from celery.task import task, periodic_task
-
-
-@task(ignore_result=True)
-def send_email(recepient, title, subject):
-    print('sending email')
+from django.contrib.auth.models import User
+from Lib.event_emmiter import email_event
+from Note.models import Note
+from django.utils import timezone
 
 
 @task
 def rebuild_search_index():
+    user = User.objects.get(pk=id)
     # mimicking a long running process
+    print(user.email)
+    # print(note.title)
+    message = 'hi hello'
+    recipient_list = [user.email, ]
+    email_event.emit("reset_password_event", message, recipient_list)
     print('rebuilt search index')
     return 42
 
 
-from celery.schedules import crontab
-
-
-# from celery.decorators import periodic_task
-# from celery.utils.log import get_task_logger
-
-
-# logger = get_task_logger(__name__)
-
-
-@periodic_task(
-    run_every=(crontab()),
-    name="task_save_latest_flickr_image",
-    ignore_result=True
-)
+@task
 def task_save_latest_flickr_image():
     """
+
     Saves latest image from Flickr
+
     """
-    rebuild_search_index.delay()
-    return 'rhjrfgdghfghf'
+    notes = Note.objects.filter(reminder__isnull=False)
+    for i in notes:
+        nextTime = timezone.now() + timezone.timedelta(minutes=1)
+        if timezone.now() <= i.reminder < nextTime:
+            print('dkjjjjjjjjjjjjjj')
+            rebuild_search_index.delay()

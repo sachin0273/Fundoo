@@ -1,6 +1,7 @@
 from django.test import TestCase
 
 # Create your tests here.
+
 import requests
 from users import urls
 from utils import load
@@ -9,12 +10,16 @@ from django.conf import settings
 BASE_URL = settings.BASE_URL
 header = {'Content_Type': 'Application/json',
           'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+<<<<<<< HEAD:Note/tests.py
 <<<<<<< HEAD
                            '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcyNjcxNjAzLCJqdGkiOiIyMzFhZDYzMWM3ZTM0NTFmYmM3NDY5OTcxOWU2NjQ2OSIsInVzZXJfaWQiOjF9.U9crzG7Vcer651aVELqLy2SdJQatHCLfYh6FBe20t24'}
 =======
                            '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTcyNTIxODU4LCJqdGkiOiI0YmVhOTI4ZmY4ODA0ZTEwYWZmNTFiYzcwOWRiZjVmNyIsInVzZXJfaWQiOjF9.PE6xK59bUwfm7Ov5SCt6Ate5nI7_i282MKS_poF8Zi8'}
 >>>>>>> 9631004b... commenting done properly
 
+=======
+                           '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTczNDY4NTcwLCJqdGkiOiI4NmM3ZjFjMDBiMzY0ZmQ0OWVjYzYzZmUzNmM2YWI0OCIsInVzZXJfaWQiOjF9.v3XXmKnLWKLegRktn38ew_alCzywHKhaEwbcKKpKWwM'}
+>>>>>>> 2f1c5cd5... elastic search done:Note/test_note.py
 
 class Test_Note_Api:
 

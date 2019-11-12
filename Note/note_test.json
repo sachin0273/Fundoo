@@ -38,7 +38,11 @@
 }
   ],
   "note_crud": [
+<<<<<<< HEAD
     {"note_id":"38"
+=======
+    {"note_id":"23"
+>>>>>>> 2f1c5cd5... elastic search done
     },
     {"note_id":" "
     },
@@ -56,7 +60,11 @@
 
   ],
   "label_create": [{
+<<<<<<< HEAD
   "name": "yjnttjii"
+=======
+  "name": "gtyyyutyttyyyt"
+>>>>>>> 2f1c5cd5... elastic search done
 },{
   "name": "ssssssss"
 }],
@@ -66,10 +74,14 @@
   ],
   "delete_label": [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {"label_id":""
 =======
     {"label_id":"5"
 >>>>>>> 9631004b... commenting done properly
+=======
+    {"label_id":"13"
+>>>>>>> 2f1c5cd5... elastic search done
     },
     {"label_id":" "
     },

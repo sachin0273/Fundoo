@@ -34,7 +34,7 @@ from rest_framework.permissions import IsAuthenticated
 from Lib.event_emmiter import email_event
 from Lib.amazons3 import AmazonS3
 import logging
-from utils import validate_email
+from utils import validate_email, build_url
 from urlshortening.models import get_short_url, Url
 from utils import Smd_Response
 
@@ -98,7 +98,6 @@ class Login(GenericAPIView):
 
         """
         try:
-
             if not "username" in request.data and not "password" in request.data:
                 raise KeyError("username or password is missing")
             if not 'username' in request.data:
@@ -205,7 +204,9 @@ class Reset_Passward(GenericAPIView):
                     'email': user.email,
                 }
                 token = Jwt().register_token(payload)
-                long_url = 'reset_password' + '/' + token
+                # todo check here output of build url not working without http
+                long_url = build_url('reset_password' + '/', token)
+                # long_url = 'reset_password' + '/' + token
                 short_url = get_short_url(long_url)  # Url object
                 message = render_to_string('users/email_template.html', {
                     'name': user.username,
@@ -285,7 +286,6 @@ class Resetpassword(GenericAPIView):
             if not 'confirm password' in request.data:
                 raise KeyError('confirm password is missing')
             user = User.objects.get(username=userReset)
-            username = user.username
             password = request.data['password']
             confirm_password = request.data['confirm_password']
             # here we will save the user password in the database
@@ -299,7 +299,6 @@ class Resetpassword(GenericAPIView):
                 smd['Message'] = 'password not match'
                 return Response(smd)
             else:
-                user = User.objects.get(username=username)
                 user.set_password(password)
                 # here we will save the user password in the database
                 user.save()

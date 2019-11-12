@@ -104,3 +104,35 @@ class Test_Reset_Password_API:
         Response = requests.post(url, user)
         assert Response.status_code == 400
 
+<<<<<<< HEAD
+=======
+    def test_resetpassword(self):
+        url = settings.BASE_URL + '/setnewpassword/sachin0273'
+        data = load('users/test.json')
+        user = data['reset_password'][0]
+        Response = requests.post(url, user)
+        assert Response.status_code == 200
+
+    def test_resetpassword_blank(self):
+        url = settings.BASE_URL + '/setnewpassword/sachin0273'
+        data = load('users/test.json')
+        user = data['reset_password'][1]
+        Response = requests.post(url, user)
+        assert Response.status_code == 200
+
+    def test_resetpassword_no_confirm_password(self):
+        url = settings.BASE_URL + '/setnewpassword/sachin0273'
+        data = load('users/test.json')
+        user = data['reset_password'][2]
+        Response = requests.post(url, user)
+        assert Response.status_code == 200
+
+    def test_resetpassword_no_password(self):
+        url = settings.BASE_URL + '/setnewpassword/sachin0273'
+        data = load('users/test.json')
+        user = data['reset_password'][3]
+        Response = requests.post(url, user)
+        assert Response.status_code == 200
+
+
+>>>>>>> 2f1c5cd5... elastic search done

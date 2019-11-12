@@ -8,8 +8,9 @@ since :  25-09-2019
 
 """
 import json
-from django.http import JsonResponse
 import re
+
+from django.http import JsonResponse
 
 
 def load(filename):
@@ -50,3 +51,35 @@ def smd_response(success=False, message='something was wrong', data=[]):
         'data': data,
     }
     return smd
+
+
+# 'import urllib'
+
+
+from urllib import parse
+
+
+def build_url(baseurl, path):
+    """
+
+    :param baseurl: here we passing base url
+    :param path: here we passing actual path
+    :return:this function is used for return the long url or actual url of given path
+
+    """
+    url_parts = list(parse.urlparse(baseurl))
+    url_parts[2] = path
+    return parse.urlunparse(url_parts)
+
+
+args = {'arg1': 'value1', 'arg2': 'value2'}
+# works with double slash scenario
+token = 'dfffffffffffffffffffffffffff'
+url1 = build_url('fffff/', token)
+print(url1)
+
+#
+#
+# def call():
+#     tt = Note.objects.all()
+#     return tt

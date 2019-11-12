@@ -25,3 +25,5 @@ class Note(models.Model):
     is_pin = models.BooleanField('is_pin', default=False)
     creation_time = models.DateTimeField(auto_now_add=True)
     reminder = models.DateTimeField(null=True, blank=True)
+
+

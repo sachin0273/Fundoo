@@ -254,6 +254,7 @@ def label_update_in_redis(user):
         labels = Label.objects.get(user_id=user.id)
         all_label = pickle.dumps(labels)
         redis.Set(user.username + 'label', all_label)
+
     except Exception:
         return False
 

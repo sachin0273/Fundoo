@@ -1,5 +1,7 @@
 from django.conf import settings
 
+from utils import build_url
+
 
 class AmazonS3:
     """Upload or Delete file on amazon s3 bucket"""
@@ -18,7 +20,8 @@ class AmazonS3:
             # Upload the file
             bucket = settings.BUCKET
             settings.s3.upload_fileobj(image, bucket, object_name)
-            file_url = settings.S3_BASE_URL + bucket + '/' + object_name + '/'
+            file_url = build_url(settings.S3_BASE_URL, bucket + '/' + object_name + '/')
+            # file_url = settings.S3_BASE_URL + bucket + '/' + object_name + '/'
             print(file_url)
             return file_url
         except Exception:
@@ -33,8 +36,8 @@ class AmazonS3:
         """
 
         try:
-            response = s3.delete_object(
-                Bucket=BUCKET,
+            response = settings.s3.delete_object(
+                Bucket=settings.BUCKET,
                 Key=image_key,
             )
             return response

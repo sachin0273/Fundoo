@@ -1,4 +1,7 @@
 import json
+
+from elasticsearch_dsl import MultiSearch, Search
+
 from Lib import redis
 import pickle
 import logging
@@ -57,7 +60,6 @@ class CreateAndGetNote(GenericAPIView):
             if validate_label['success'] == True:
                 for labels in validate_label['data']:
                     note_create.label.add(labels)
-
             if validate_collaborator['success'] == True:
                 for collaborators in validate_collaborator['data']:
                     note_create.collaborator.add(collaborators)
@@ -396,3 +398,143 @@ class Archive_Notes(GenericAPIView):
         except Exception:
             smd = Smd_Response()
             return smd
+<<<<<<< HEAD
+=======
+
+
+def pagination(request):
+    """
+
+    :param request:user request for get pages
+    :return:this function used for pagination means gives data after request of page
+
+    """
+    try:
+        note_list = Note.objects.all()
+        paginator = Paginator(note_list, 10)
+        page = request.GET.get('page', 1)
+        notes = paginator.page(page)
+    except PageNotAnInteger:
+        notes = paginator.page(1)
+    except EmptyPage:
+        notes = paginator.page(paginator.num_pages)
+    except Exception:
+        smd = Smd_Response()
+        return smd
+    return render(request, 'users/pagination.html', {'notes': notes})
+
+
+from django.shortcuts import render
+
+from .documents import PostDocument
+from elasticsearch import Elasticsearch
+from elasticsearch_dsl import Search
+from elasticsearch_dsl import Q
+
+
+class Elastic(GenericAPIView):
+
+    def get(self, request, path):
+        search_note = path
+        user = request.user
+        # user = request.user
+        # ty = PostDocument.search().query("nested", path="label", query=Q("match", label__name="ssssssss"))
+        # Qa = PostDocument.search().query({
+        #     "nested": {
+        #         "path": "label",
+        #         "query": {
+        #             "bool": {
+        #                 "must": [
+        #                     {"match": {"label.name": "78"}}
+        #                 ]
+        #             }
+        #         }
+        #     }
+        # })
+        # yu = PostDocument.search().query({
+        #     "bool": {"must": {
+        #
+        #         "multi_match": {
+        #             "query": search_note,
+        #             "fields": ['label.name', 'title', 'note', 'reminder']
+        #         }
+        #     },
+        #
+        #         "filter": {
+        #             "term": {
+        #                 'user_id': 1
+        #             }
+        #
+        #         }
+        #     }
+        # })
+        # print(yu.count())
+        # tt = yu.to_queryset()
+        # serializer = NoteSerializers(tt, many=True)
+        # print(serializer.data)
+
+        # print(yu.to_dict)
+        # print(Qa.to_queryset())
+        # es = Elasticsearch()
+        # response = es.search(index='note_search', body={'query': {'match': {'title': 'F'}}})
+        # print(response)
+
+        jobs = Q("match", note=search_note) or Q("match", title=search_note)
+        print(jobs)
+
+        # client = Elasticsearch()
+        #
+        # s = Search(using=client, index="notes") \
+        #     .filter("term", category='search') \
+        #     .query("match", title=search_note)
+
+        # s.aggs.bucket('per_tag', 'terms', field='tags') \
+        #     .metric('max_lines', 'max', field='lines')
+        #
+        # response = s.execute()
+        # print(response)
+        # for hit in response:
+        #     print(hit)
+        #
+        # for tag in response.aggregations.per_tag.buckets:
+        #     print(tag.key, tag.max_lines.value)
+        # ms = ms.add(Search().filter(
+        #
+        #     # "filter": {
+        #     #     "term": {
+        #     #         "user_id": 1
+        #     #     }
+        #     # }
+        #
+        # ))
+        # # ms = ms.add(Search().filter()
+        #
+        # result = ms.execute()
+
+        # posts = PostDocument.search().query(
+        #     {
+        #         "bool": {
+        #             "must": [
+        #                 {"match": {"title": search_note}},
+        #                 {"match": {"user_id": 1}},
+        #             ]
+        #         }
+        #     }
+        # )
+        # uu = posts.query('match', user_id=1)
+        # print(uu)
+        # yy = PostDocument.search().query("match", title=search_note)
+        # count = result.count
+        # print(yy)
+        # print(count)
+        # # # print(json.dumps(posts))
+        # result = posts[0:count].execute()
+        # for i in result:
+        #     print(i)
+        # print(posts.to_queryset())
+        # # print('kkkkkkkkkkkkkkkkkkkk')
+        for i in yu:
+            print(i)
+        # print(uu.to_dict())
+        return HttpResponse(json.dumps(serializer.data, indent=1))
+>>>>>>> 2f1c5cd5... elastic search done

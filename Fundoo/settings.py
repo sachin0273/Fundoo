@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'users',
     'Note',
+    'django_elasticsearch_dsl',
     'corsheaders',
     'urlshortening',
     'storages',
@@ -75,6 +76,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    # 'Fundoo.middleware.LabelCollaborators',
 
 ]
 CORS_ORIGIN_ALLOW_ALL = True
@@ -111,6 +113,7 @@ WSGI_APPLICATION = 'Fundoo.wsgi.application'
 # }
 
 DATABASES = {
+
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': os.getenv('DATABASE'),
@@ -119,6 +122,12 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '3306',
     }
+}
+
+ELASTICSEARCH_DSL = {
+    'default': {
+        'hosts': 'localhost:9200'
+    },
 }
 
 REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': [
