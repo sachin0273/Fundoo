@@ -427,6 +427,7 @@ def pagination(request):
 from django.shortcuts import render
 
 from .documents import PostDocument
+<<<<<<< HEAD
 from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Search
 from elasticsearch_dsl import Q
@@ -538,3 +539,55 @@ class Elastic(GenericAPIView):
         # print(uu.to_dict())
         return HttpResponse(json.dumps(serializer.data, indent=1))
 >>>>>>> 2f1c5cd5... elastic search done
+=======
+
+
+class SearchNotes(GenericAPIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, search_note):
+        """
+
+        :param request: user request for search note
+        :param search_note: here we passing parameter for search note
+        :return: this function return searched notes using elasticsearch search engine
+
+        """
+        try:
+            user = request.user
+            notes = PostDocument.search().query({
+                "bool": {"must": {
+
+                    "multi_match": {
+                        "query": search_note,
+                        "fields": ['label.name', 'title', 'note', 'reminder', 'color']
+                    }
+                },
+
+                    "filter": {
+                        "term": {
+                            'user_id': user.id
+                        }
+
+                    }
+                }
+            })
+            total_count = notes.count()
+            if total_count != 0:
+                searched_notes = notes.to_queryset()
+                serializer = NoteSerializers(searched_notes, many=True)
+                print(serializer.data)
+                # print(value_count)
+                # # # print(json.dumps(posts))
+                # result = notes[0:total_count].execute()
+                # all_notes = result.to_dict()
+                smd = Smd_Response(True, 'successfully', serializer.data, 200)
+                logger.info('successfully notes searched and returned')
+            else:
+                logger.warning('for this search note does not exist')
+                smd = Smd_Response(message='for this search note does not exist')
+        except Exception as e:
+            logger.error('while searching a notes exception accrued', str(e))
+            smd = Smd_Response()
+        return smd
+>>>>>>> b2154c4e... code coverage done

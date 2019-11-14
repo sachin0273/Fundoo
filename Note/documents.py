@@ -27,13 +27,14 @@ class PostDocument(Document):
     )
     user_id = fields.IntegerField()
 
+    # color = fields.StringField()
+
     class Index:
         # Name of the Elasticsearch index
         name = 'note_search'
-        # See Elasticsearch Indices API reference for available settings
+
         settings = {'number_of_shards': 1,
                     'number_of_replicas': 0}
 
     class Django:
         model = Note
-

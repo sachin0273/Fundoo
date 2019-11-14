@@ -27,11 +27,11 @@ def email_for_account_activate(message, recipient_list):
     """
     email_from = settings.EMAIL_HOST_USER
     subject = 'Thank you for registering to our site'
-    send_mail(subject, message, email_from, recipient_list)
-    # msg = EmailMultiAlternatives(subject=subject, from_email=email_from,
-    #                              to=recipient_list, body=message)
-    # msg.attach_alternative(message, "text/html")
-    # msg.send()
+    # send_mail(subject, message, email_from, recipient_list)
+    msg = EmailMultiAlternatives(subject=subject, from_email=email_from,
+                                 to=recipient_list, body=message)
+    msg.attach_alternative(message, "text/html")
+    msg.send()
 
 
 @email_event.on("reset_password_event")
@@ -49,3 +49,18 @@ def email_for_reset_password(message, recipient_list):
     msg.attach_alternative(message, "text/html")
     msg.send()
 
+
+@email_event.on("reminder_event")
+def email_for_reset_password(message, recipient_list):
+    """
+    :param message: here we passing message for mail
+    :param recipient_list: here we passing receiver mail
+    :return:this function send the email
+    """
+    email_from = settings.EMAIL_HOST_USER
+    subject = 'reminder for you'
+    # send_mail(subject, message, email_from, recipient_list)
+    msg = EmailMultiAlternatives(subject=subject, from_email=email_from,
+                                 to=recipient_list, body=message)
+    msg.attach_alternative(message, "text/html")
+    msg.send()

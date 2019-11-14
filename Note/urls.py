@@ -23,8 +23,12 @@ urlpatterns = [
     path('note/trash/', views.Trash_Notes.as_view(), name='trash'),
     path('note/archive/', views.Archive_Notes.as_view(), name='archive'),
     path('note/pagination/', views.pagination, name='pagination'),
+<<<<<<< HEAD
     path('note/search/<path>', views.Elastic.as_view(), name='search'),
     # path('note/ddd/',views.DocumentViewSet.as_view(),name='kk'),
 >>>>>>> 2f1c5cd5... elastic search done
+=======
+    path('note/search/<search_note>', views.SearchNotes.as_view(), name='search')
+>>>>>>> b2154c4e... code coverage done
 
 ]

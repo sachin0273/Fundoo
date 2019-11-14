@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'users',
     'Note',
     'django_elasticsearch_dsl',
+    'django_nose',
     'corsheaders',
     'urlshortening',
     'storages',
@@ -111,6 +112,11 @@ WSGI_APPLICATION = 'Fundoo.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+# TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+# NOSE_ARGS = [
+#     '--with-coverage',
+#     '--cover-package=users,Note',
+# ]
 
 DATABASES = {
 
@@ -121,6 +127,9 @@ DATABASES = {
         'PASSWORD': os.getenv('PASSWORD'),
         'HOST': 'localhost',
         'PORT': '3306',
+        'TEST': {
+            'NAME': 'test_myproject',
+        },
     }
 }
 
@@ -280,3 +289,5 @@ BUCKET = os.getenv('BUCKET')
 S3_BASE_URL = os.getenv('AWS_BASE_URL')
 BASE_URL = os.getenv('BASE_URL')
 BROKER_URL = 'amqp://guest@localhost//'
+
+

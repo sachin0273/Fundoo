@@ -24,7 +24,6 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 
 from Lib import redis
-from Note.tasks import rebuild_search_index
 from users.decoraters import login_required
 # from users.models import Profile
 from users.models import Profile
@@ -106,7 +105,7 @@ class Login(GenericAPIView):
                 raise KeyError('password is missing')
             username = request.data["username"]
             password = request.data["password"]
-
+            print(username)
             if username == "" and password == "":
                 raise KeyError("username and password is not be blank ")
             if username == "":
@@ -123,7 +122,6 @@ class Login(GenericAPIView):
                 redis.Set(user.id, token)
                 smd = {"success": True, "message": "successful", "data": token}
                 logger.info('successfully logged in info from users.views.login_api')
-                rebuild_search_index.delay()
                 return HttpResponse(json.dumps(smd))
             else:
                 logger.warning('not valid user warning from users.views.login_api')
@@ -193,6 +191,7 @@ class Reset_Passward(GenericAPIView):
             if not 'email' in request.data:
                 raise KeyError('email is missing')
             email = request.data['email']
+            print(email)
             if email == "":
                 raise KeyError('email field not be blank')
             if not validate_email(email):
@@ -205,8 +204,8 @@ class Reset_Passward(GenericAPIView):
                 }
                 token = Jwt().register_token(payload)
                 # todo check here output of build url not working without http
-                long_url = build_url('reset_password' + '/', token)
-                # long_url = 'reset_password' + '/' + token
+                # long_url = build_url('reset_password' + '/', token)
+                long_url = 'reset_password' + '/' + token
                 short_url = get_short_url(long_url)  # Url object
                 message = render_to_string('users/email_template.html', {
                     'name': user.username,
@@ -289,7 +288,7 @@ class Resetpassword(GenericAPIView):
             password = request.data['password']
             confirm_password = request.data['confirm_password']
             # here we will save the user password in the database
-            if password == "" or confirm_password == "":
+            if password == "" and confirm_password == "":
                 raise KeyError('password and confirm password may not be blank')
             if password == "":
                 raise KeyError('password field may not be blank')
@@ -318,6 +317,7 @@ class Resetpassword(GenericAPIView):
 
 
 @method_decorator(login_required, name='dispatch')
+<<<<<<< HEAD
 class HelloView(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
@@ -328,6 +328,8 @@ class HelloView(GenericAPIView):
 
 
 @method_decorator(login_required, name='dispatch')
+=======
+>>>>>>> b2154c4e... code coverage done
 class Logout(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
@@ -344,6 +346,7 @@ class Logout(GenericAPIView):
         return smd
 
 
+<<<<<<< HEAD
 class S3Upload(GenericAPIView):
     serializer_class = ImageSerializer
 
@@ -403,3 +406,6 @@ def s3_read(request, bucket, object_name, *args, **kwargs):
         smd = Smd_Response()
         return smd
 
+=======
+
+>>>>>>> b2154c4e... code coverage done

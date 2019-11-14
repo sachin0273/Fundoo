@@ -89,7 +89,7 @@ venv/
 test.json/
 migrations
 media
-
+fixtures
 
 Fundoo/.env
 db.sqlite3

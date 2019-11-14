@@ -26,8 +26,16 @@ def login_required(function):
                 smd = Smd_Response(False, 'invalid user redirected to users page', [])
                 return smd
             return function(request, *args, **kwargs)
+<<<<<<< HEAD
         except Exception:
             smd = Smd_Response()
             return smd
+=======
+        except DecodeError:
+            smd = Smd_Response(False, 'invalid token redirected to users page', [])
+        except KeyError:
+            smd = Smd_Response(message='user_id is not inside redis')
+        return smd
+>>>>>>> b2154c4e... code coverage done
 
     return wraper

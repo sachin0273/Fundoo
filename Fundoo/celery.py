@@ -18,11 +18,12 @@ app.config_from_object(settings, namespace='CELERY')
 app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
-    'add-every-30-seconds': {
-        'task': 'Note.tasks.task_save_latest_flickr_image',
+    'add-every-1-minute': {
+        'task': 'Note.tasks.task_check_reminder',
         'schedule': crontab(),
     },
 }
+
 # @app.on_after_configure.connect
 # def setup_periodic_tasks(sender, **kwargs):
 #     # Calls test('hello') every 10 seconds.
@@ -43,3 +44,5 @@ app.conf.beat_schedule = {
 # def test(arg):
 #     import Note
 #     print(arg)
+
+

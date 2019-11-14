@@ -19,20 +19,46 @@
   }
 ],"login": [
   {
+  },
+  {
+    "username":"sachin"
+  },
+  {
+    "password": "admin123"
+  },
+  {
     "username":"sachin",
     "password": "admin123"
   },
   {
-    "username":" ",
-    "password": "  "
+    "username":"",
+    "password":""
   },{
+<<<<<<< HEAD
     "username":"jadhav",
     "password": "jadhav123"
+=======
+    "username":"",
+    "password":"ggg"
+  },
+  {
+     "username":"dfgg",
+    "password": ""
+  }
+,{
+    "username":"admin",
+    "password": "admin123"
+>>>>>>> b2154c4e... code coverage done
   },{
     "username":" ",
     "password": "admin123"
   }
-],"Reset_password": [
+],
+
+  "Reset_password": [
+    {
+
+    },
   {
     "email": "sachinjadhadgfffd@gmail.com"
   },
@@ -45,6 +71,38 @@
   },{
     "email": "sachinjadhav0273@gmail.com"
   }
+<<<<<<< HEAD
+=======
+],"reset_password": [
+  {
+
+  },
+  {
+   "password": "",
+    "confirm_password": ""
+  },
+  {
+   "password": "",
+    "confirm_password": "12345678"
+  },
+  {
+   "password": "12345678",
+    "confirm_password": ""
+  },
+  {
+   "password": "12345678",
+    "confirm_password": "12345678"
+  },{
+    "password": "12345678"
+  },
+  {
+    "confirm_password": "12345678"
+  },
+  {
+    "password": "1234578",
+    "confirm_password": "12345678"
+  }
+>>>>>>> b2154c4e... code coverage done
 ]
 
 }
