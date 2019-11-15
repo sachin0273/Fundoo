@@ -6,14 +6,23 @@ from django.db import models
 # Create your models here.
 
 class Label(models.Model):
+    """
+    here we creating models for labels
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=250, unique=True)
+    name = models.CharField(max_length=250)
+
+    class Meta:
+        unique_together = ('name', 'user')
 
     def __str__(self):
         return self.name
 
 
 class Note(models.Model):
+    """
+    here we creating models for Notes
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
     title = models.CharField(max_length=250)
     note = models.CharField(max_length=250, blank=True)
@@ -25,5 +34,8 @@ class Note(models.Model):
     is_pin = models.BooleanField('is_pin', default=False)
     creation_time = models.DateTimeField(auto_now_add=True)
     reminder = models.DateTimeField(null=True, blank=True)
+    color = models.TextField(null=True, blank=True)
 
+    def __str__(self):
+        return self.title
 

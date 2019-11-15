@@ -54,3 +54,5 @@ def All_Delete():
         redis_object.flushall()
     except Exception:
         return False
+
+

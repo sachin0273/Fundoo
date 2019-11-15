@@ -8,7 +8,7 @@ from Note.models import Label
 from Note.models import Note
 from django.http import HttpResponse
 
-from Note.serializers import NoteSerializers
+from Note.serializers import NoteSerializers, NotesSerializer
 from utils import Smd_Response
 import logging
 from utils import smd_response
@@ -16,7 +16,7 @@ from utils import smd_response
 logger = logging.getLogger(__name__)
 
 
-class Label_And_Note_Validator:
+class Label_Note_Validator:
 
     def validate_label(self, labels):
         """
@@ -226,6 +226,35 @@ class Listing_Pages:
             smd = smd_response()
         return smd
 
+    def pin_notes(self, user):
+        try:
+            pinned_note_data = redis.Get(str(user.username) + 'pin')
+
+            if pinned_note_data:
+                notes = pickle.loads(pinned_note_data)
+                serializer = NotesSerializer(notes, many=True)
+                smd = smd_response(True, 'successfully', data=serializer.data)
+                logger.info('successfully get notes from redis')
+                return smd
+            pinned_notes = Note.objects.filter(user_id=user.id, is_pin=True)
+            if pinned_notes:
+                serializer = NotesSerializer(pinned_notes, many=True)
+                note = pickle.dumps(pinned_notes)
+                redis.Set(user.username + 'pin', note)
+                smd = smd_response(True, 'successfully', data=serializer.data)
+                logger.info('successfully get notes from database')
+            else:
+                smd = smd_response(False, 'please enter valid user id')
+        except Note.DoesNotExist:
+            smd = smd_response(False, 'please enter valid user for get a note')
+            logger.error('note not exist for this note id error from Note.views')
+        except ValueError:
+            smd = smd_response(False, 'please enter user_id in digits')
+        except Exception:
+            logger.error('exception occurred while getting all notes error from Note.views')
+            smd = smd_response()
+        return smd
+
 
 def update_redis(user):
     """
@@ -257,4 +286,3 @@ def label_update_in_redis(user):
 
     except Exception:
         return False
-

@@ -1,7 +1,9 @@
 import json
 
 from elasticsearch_dsl import MultiSearch, Search
+from django.shortcuts import render
 
+from .documents import NoteDocument
 from Lib import redis
 import pickle
 import logging
@@ -15,11 +17,17 @@ from rest_framework.parsers import MultiPartParser, FormParser, FileUploadParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .models import Note, Label
-from Note.serializers import NoteSerializers, LabelSerializers
+from Note.serializers import NoteSerializers, LabelSerializers, NotesSerializer
 from utils import Smd_Response
 from users.decoraters import login_required
 from django.contrib.auth.models import User
+<<<<<<< HEAD
 from .service.note import Label_And_Note_Validator, Listing_Pages, update_redis, label_update_in_redis
+=======
+from .service.note import Label_Note_Validator, Listing_Pages, update_redis, label_update_in_redis
+from django.contrib.auth.models import User
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+>>>>>>> 15498327... done user
 
 logger = logging.getLogger(__name__)
 
@@ -48,10 +56,10 @@ class CreateAndGetNote(GenericAPIView):
             title = request.data['title']
             image = request.data['image']
             user = request.user
-            validate_label = Label_And_Note_Validator().validate_label(label)
+            validate_label = Label_Note_Validator().validate_label(label)
             if not validate_label['success']:
                 return HttpResponse(json.dumps(validate_label), status=400)
-            validate_collaborator = Label_And_Note_Validator().validate_collaborator(collaborator)
+            validate_collaborator = Label_Note_Validator().validate_collaborator(collaborator)
             if not validate_collaborator['success']:
                 return HttpResponse(json.dumps(validate_collaborator), status=400)
             note_create = Note.objects.create(user_id=user.id, title=title, note=note, is_pin=pin,
@@ -67,9 +75,13 @@ class CreateAndGetNote(GenericAPIView):
             update_redis(user)
             logger.info('note created successfully')
             smd = Smd_Response(True, 'successfully note created', status_code=200)
-        except Exception:
+        except Exception as e:
             smd = Smd_Response()
+<<<<<<< HEAD
             logger.error('something was wrong error from Note.views')
+=======
+            logger.error('something was wrong ' + str(e))
+>>>>>>> 15498327... done user
         return smd
 
     def get(self, request, *args, **kwargs):
@@ -97,13 +109,21 @@ class CreateAndGetNote(GenericAPIView):
                 logger.info('successfully get notes from database')
             else:
                 smd = Smd_Response(False, 'please enter valid user id')
-        except Note.DoesNotExist:
+        except Note.DoesNotExist as e:
             smd = Smd_Response(False, 'please enter valid user for get a note')
+<<<<<<< HEAD
             logger.error('note not exist for this note id error from Note.views')
         except ValueError:
             smd = Smd_Response(False, 'please enter user_id in digits')
         except Exception:
             logger.error('exception occurred while getting all notes error from Note.views')
+=======
+            logger.error('note not exist for this note id ' + str(e))
+        except ValueError:
+            smd = Smd_Response(False, 'please enter user_id in digits')
+        except Exception as e:
+            logger.error('exception occurred while getting all notes' + str(e))
+>>>>>>> 15498327... done user
             smd = Smd_Response()
         return smd
 
@@ -157,13 +177,13 @@ class UpdateAndDeleteNote(GenericAPIView):
             request_data = json.loads(request.body)
             if "collaborator" in request_data:
                 collaborators = request_data['collaborator']
-                result = Label_And_Note_Validator().validate_collaborator_for_put(collaborators)
+                result = Label_Note_Validator().validate_collaborator_for_put(collaborators)
                 if not result['success']:
                     return HttpResponse(json.dumps(result))
                 request_data['collaborator'] = result['data']
             if "label" in request_data:
                 labels = request_data['label']
-                label_result = Label_And_Note_Validator().validate_label_for_put(labels)
+                label_result = Label_Note_Validator().validate_label_for_put(labels)
                 if not label_result['success']:
                     return HttpResponse(json.dumps(label_result))
                 request_data['label'] = label_result['data']
@@ -177,9 +197,13 @@ class UpdateAndDeleteNote(GenericAPIView):
                 logger.info('successfully note updated')
             else:
                 smd = Smd_Response(False, serializer.errors)
-        except Exception:
+        except Exception as e:
             smd = Smd_Response()
+<<<<<<< HEAD
             logger.error('something was wrong error from Note.views')
+=======
+            logger.error('something was wrong ' + str(e))
+>>>>>>> 15498327... done user
         return smd
 
     def delete(self, request, note_id, *args, **kwargs):
@@ -196,13 +220,20 @@ class UpdateAndDeleteNote(GenericAPIView):
             update_redis(user)
             smd = Smd_Response(False, 'note deleted successfully', status_code=200)
             logger.info('note deleted successfully')
-        except Note.DoesNotExist:
-            logger.error('note does not exist for this note id error from Note.views')
+        except Note.DoesNotExist as e:
+            logger.error('note does not exist for this note id error from Note.views' + str(e))
             smd = Smd_Response(False, 'please enter valid note_id')
+<<<<<<< HEAD
         except ValueError:
             smd = Smd_Response(False, 'please enter note_id in digits')
         except Exception:
             logger.error('parent exception occurred error from Note.views')
+=======
+        except ValueError as e:
+            smd = Smd_Response(False, 'please enter note_id in digits' + str(e))
+        except Exception as e:
+            logger.error('parent exception occurred ' + str(e))
+>>>>>>> 15498327... done user
             smd = Smd_Response()
         return smd
 
@@ -227,10 +258,17 @@ class CreateAndGetLabel(GenericAPIView):
                 logger.info('successfully label created')
             else:
                 smd = Smd_Response(False, serializer.errors)
+<<<<<<< HEAD
                 logger.warning('not valid input warning from Note.views')
         except Exception:
             smd = Smd_Response()
             logger.error('something was wrong warning from Note.views')
+=======
+                logger.warning('not valid input')
+        except Exception as e:
+            smd = Smd_Response()
+            logger.error('something was wrong ' + str(e))
+>>>>>>> 15498327... done user
         return smd
 
     def get(self, request, *args, **kwargs):
@@ -258,15 +296,20 @@ class CreateAndGetLabel(GenericAPIView):
                 logger.info('all label get from database')
             else:
                 smd = Smd_Response(False, 'not valid user id please enter valid user_id')
-        except Label.DoesNotExist:
+        except Label.DoesNotExist as e:
             smd = Smd_Response(False, 'for this user id label not available please enter valid user_id')
+<<<<<<< HEAD
             logger.error('for this user id label not exist error from Note.views.get_label')
         except ValueError:
+=======
+            logger.error('for this user id label not exist error' + str(e))
+        except ValueError as e:
+>>>>>>> 15498327... done user
             smd = Smd_Response(False, 'please enter user id in digits')
-            logger.error('value error occurred while getting all labels')
-        except Exception:
+            logger.error('value error occurred while getting all labels' + str(e))
+        except Exception as e:
             smd = Smd_Response()
-            logger.error('parent exception occurred while getting all labels')
+            logger.error('parent exception occurred while getting all labels' + str(e))
         return smd
 
 
@@ -294,14 +337,23 @@ class UpdateAndDeleteLabel(GenericAPIView):
                 logger.info('label updated successfully')
             else:
                 smd = Smd_Response(False, 'please enter valid label id or user id ')
-        except Label.DoesNotExist:
+        except Label.DoesNotExist as e:
             smd = Smd_Response(False, 'please enter valid label id or user id ')
+<<<<<<< HEAD
             logger.error('label not exist for this label id error from Note.views')
         except ValueError:
             smd = Smd_Response(False, 'please enter label id in digits')
             logger.error('value error occurred in Note.views')
         except Exception:
             logger.error('parent exception occurred in Note.views.label_crud')
+=======
+            logger.error('label not exist for this label id' + str(e))
+        except ValueError as e:
+            smd = Smd_Response(False, 'please enter label id in digits')
+            logger.error('value error occurred ' + str(e))
+        except Exception as e:
+            logger.error('parent exception occurred' + str(e))
+>>>>>>> 15498327... done user
             smd = Smd_Response()
         return smd
 
@@ -322,11 +374,19 @@ class UpdateAndDeleteLabel(GenericAPIView):
         except Label.DoesNotExist:
             logger.error('label not exist for this label id error from Note.views')
             smd = Smd_Response(False, 'please enter valid label_id ')
+<<<<<<< HEAD
         except ValueError:
             logger.error('value error occurred in Note.views')
             smd = Smd_Response(False, 'please enter label id in digits ')
         except Exception:
             logger.error('parent exception occurred in Note.views.label_crud')
+=======
+        except ValueError as e:
+            logger.error('value error occurred' + str(e))
+            smd = Smd_Response(False, 'please enter label id in digits ')
+        except Exception as e:
+            logger.error('parent exception occurred' + str(e))
+>>>>>>> 15498327... done user
             smd = Smd_Response()
         return smd
 
@@ -402,6 +462,28 @@ class Archive_Notes(GenericAPIView):
 =======
 
 
+class Pinned_Notes(GenericAPIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, *args, **kwargs):
+        """
+
+        :param request: user request for get archive notes
+        :return:this function is used for return all archive notes
+
+        """
+        try:
+            user = request.user
+            data = Listing_Pages().pin_notes(user)
+            if data['success']:
+                return HttpResponse(json.dumps(data, indent=1), status=200)
+            else:
+                return HttpResponse(json.dumps(data), status=400)
+        except Exception:
+            smd = Smd_Response()
+            return smd
+
+
 def pagination(request):
     """
 
@@ -424,6 +506,7 @@ def pagination(request):
     return render(request, 'users/pagination.html', {'notes': notes})
 
 
+<<<<<<< HEAD
 from django.shortcuts import render
 
 from .documents import PostDocument
@@ -542,6 +625,8 @@ class Elastic(GenericAPIView):
 =======
 
 
+=======
+>>>>>>> 15498327... done user
 class SearchNotes(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
@@ -555,7 +640,7 @@ class SearchNotes(GenericAPIView):
         """
         try:
             user = request.user
-            notes = PostDocument.search().query({
+            notes = NoteDocument.search().query({
                 "bool": {"must": {
 
                     "multi_match": {
@@ -575,7 +660,7 @@ class SearchNotes(GenericAPIView):
             total_count = notes.count()
             if total_count != 0:
                 searched_notes = notes.to_queryset()
-                serializer = NoteSerializers(searched_notes, many=True)
+                serializer = NotesSerializer(searched_notes, many=True)
                 print(serializer.data)
                 # print(value_count)
                 # # # print(json.dumps(posts))
@@ -587,7 +672,7 @@ class SearchNotes(GenericAPIView):
                 logger.warning('for this search note does not exist')
                 smd = Smd_Response(message='for this search note does not exist')
         except Exception as e:
-            logger.error('while searching a notes exception accrued', str(e))
+            logger.error('while searching a notes exception accrued' + str(e))
             smd = Smd_Response()
         return smd
 >>>>>>> b2154c4e... code coverage done

@@ -128,11 +128,15 @@ class Login(GenericAPIView):
                 logger.warning('not valid user warning from users.views.login_api')
                 smd = Smd_Response(False, 'please provide valid credentials', [])
         except KeyError as error:
+<<<<<<< HEAD
             print(error)
             logger.warning('any one input field is blank warning from users.views.login_api')
+=======
+            logger.error('any one input field is blank' + str(error))
+>>>>>>> 15498327... done user
             smd = Smd_Response(False, str(error), [])
-        except Exception:
-            logger.warning('something is wrong warning from users.views.login_api')
+        except Exception as e:
+            logger.error('something is wrong warning' + str(e))
             smd = Smd_Response()
         return smd
 
@@ -219,17 +223,17 @@ class Reset_Passward(GenericAPIView):
             else:
                 smd = Smd_Response(False, 'you are not valid user register first', [])
                 logger.warning('not valid user warning from users.views.Reset_password_api')
-        except ObjectDoesNotExist:
+        except ObjectDoesNotExist as e:
+            logger.warning('email not registered' + str(e))
             smd = Smd_Response(False, 'this email id not registered', [])
-            logger.warning('email not registered warning from users.views.Reset_password_api')
-        except ValueError:
+        except ValueError as e:
             smd = Smd_Response(False, 'please provide valid email address', [])
-            logger.warning('not valid email address warning from users.views.Reset_password_api')
+            logger.warning('not valid email address' + str(e))
         except KeyError as error:
             smd = Smd_Response(False, str(error), [])
-            logger.warning('input is blank warning from users.views.Reset_password_api')
-        except Exception:
-            logger.warning('something is wrong warning from users.views.Reset_password_api')
+            logger.warning('input is blank ' + str(error))
+        except Exception as e:
+            logger.warning('something is wrong ' + str(e))
             smd = Smd_Response()
         return smd
 
@@ -454,6 +458,9 @@ def read_profile(request, bucket, object_name, *args, **kwargs):
 =======
 =======
     return smd
+<<<<<<< HEAD
 >>>>>>> c5a1d28d... editing done with middlleware
 
 >>>>>>> b2154c4e... code coverage done
+=======
+>>>>>>> 15498327... done user

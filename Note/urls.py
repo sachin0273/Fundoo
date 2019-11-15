@@ -22,6 +22,7 @@ urlpatterns = [
     path('note/reminder/', views.Reminders.as_view(), name='reminder'),
     path('note/trash/', views.Trash_Notes.as_view(), name='trash'),
     path('note/archive/', views.Archive_Notes.as_view(), name='archive'),
+    path('note/pinned/', views.Pinned_Notes.as_view(), name='pin'),
     path('note/pagination/', views.pagination, name='pagination'),
 <<<<<<< HEAD
     path('note/search/<path>', views.Elastic.as_view(), name='search'),

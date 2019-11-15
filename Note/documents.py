@@ -12,7 +12,7 @@ html_strip = analyzer(
 
 
 @registry.register_document
-class PostDocument(Document):
+class NoteDocument(Document):
     label = fields.ObjectField(properties={
         'name': fields.TextField()
     })
@@ -27,7 +27,7 @@ class PostDocument(Document):
     )
     user_id = fields.IntegerField()
 
-    # color = fields.StringField()
+    color = fields.StringField()
 
     class Index:
         # Name of the Elasticsearch index

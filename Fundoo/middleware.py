@@ -17,7 +17,7 @@ class LabelCollaborators:
     def __call__(self, request):
         # Code to be executed for each request before
         # the view (and later middleware) are called.
-        print(request.method, "))))))))))))))))))))")
+        print(request.method)
         print(request.user)
         print(request)
         print(request.get_full_path())
