@@ -14,11 +14,15 @@ def login_required(function):
         try:
             header = request.META['HTTP_AUTHORIZATION']
             token = header.split(' ')
+<<<<<<< HEAD
             try:
                 decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
             except DecodeError:
                 smd = Smd_Response(False, 'invalid token redirected to users page', [])
                 return smd
+=======
+            decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
+>>>>>>> c5a1d28d... editing done with middlleware
             redis_token = redis.Get(decoded['user_id'])
             try:
                 jwt.decode(redis_token, settings.SECRET_KEY, algorithm="HS256")

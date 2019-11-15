@@ -77,7 +77,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'Fundoo.middleware.LabelCollaborators',
+    'Fundoo.middleware.LabelCollaborators',
 
 ]
 CORS_ORIGIN_ALLOW_ALL = True

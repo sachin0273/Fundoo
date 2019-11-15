@@ -2,6 +2,8 @@ import json
 
 from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.urls import reverse
+
 from utils import Smd_Response
 from Note.models import Label
 
@@ -18,8 +20,10 @@ class LabelCollaborators:
         print(request.method, "))))))))))))))))))))")
         print(request.user)
         print(request)
+        print(request.get_full_path())
         try:
-            if request.get_full_path() == "/api/note/" and request.method == 'POST' or 'PUT':
+            if request.get_full_path() == "/api/note/" and request.method == 'POST' or request.path.startswith(
+                    reverse('note', args=[str])) and request.method == 'PUT':
 
                 request_data = json.loads(request.body)
 
@@ -29,9 +33,6 @@ class LabelCollaborators:
                         for label in request_data['label']:
                             new_label = Label.objects.get(name=label)
                             label_list.append(new_label)
-                        response = self.function(request)
-                    else:
-                        pass
                     if len(request_data['collaborator']) != 0:
                         collaborator_list = []
                         for collaborator in request_data['collaborator']:
@@ -39,16 +40,16 @@ class LabelCollaborators:
                             collaborator_list.append(new_collaborator)
                         response = self.function(request)
                     else:
-                        pass
+                        response = self.function(request)
                 else:
-                    pass
+                    response = self.function(request)
             else:
-                response = self.function(request)
+                return self.function(request)
         except Label.DoesNotExist:
-            response = Smd_Response(message='your label is not valid please add label and try')
+            response = Smd_Response(message='your label is not @@@ valid please add label and try')
 
         except User.DoesNotExist:
-            response = Smd_Response(message='for this email id us')
+            response = Smd_Response(message='for this email id user is not exist')
         except Exception:
-            response = Smd_Response(message='something is wrong when validating your label or collaborator')
+            response = Smd_Response(message='something is@@ wrong when validating your label or collaborator')
         return response

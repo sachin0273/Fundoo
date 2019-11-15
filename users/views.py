@@ -36,6 +36,7 @@ import logging
 from utils import validate_email, build_url
 from urlshortening.models import get_short_url, Url
 from utils import Smd_Response
+from django.urls import reverse
 
 logger = logging.getLogger(__name__)
 
@@ -64,7 +65,7 @@ class User_Create(GenericAPIView):
                         'email': self.request.data['email'],
                     }
                     token = Jwt().register_token(payload)
-                    long_url = 'activate' + '/' + token
+                    long_url = reverse('activate', args=[token])
                     short_url = get_short_url(long_url)  # Url object
                     message = render_to_string('users/token.html', {
                         'name': user.username,
@@ -156,7 +157,7 @@ def activate(request, short_id, *args, **kwargs):
         token = url.url.split('/')
 
         try:
-            decodedPayload = jwt.decode(token[1], "SECRET_KEY")
+            decodedPayload = jwt.decode(token[2], "SECRET_KEY")
         except DecodeError:
             return HttpResponse(json.dumps(smd))
 
@@ -203,9 +204,7 @@ class Reset_Passward(GenericAPIView):
                     'email': user.email,
                 }
                 token = Jwt().register_token(payload)
-                # todo check here output of build url not working without http
-                # long_url = build_url('reset_password' + '/', token)
-                long_url = 'reset_password' + '/' + token
+                long_url = reverse('reset_password', args=[token])
                 short_url = get_short_url(long_url)  # Url object
                 message = render_to_string('users/email_template.html', {
                     'name': user.username,
@@ -248,7 +247,7 @@ def reset_password(request, id):
         try:
             url = Url.objects.get(short_id=id)
             token = url.url.split('/')
-            decode = jwt.decode(token[1], "SECRET_KEY")
+            decode = jwt.decode(token[2], "SECRET_KEY")
         except DecodeError:
             smd['Message'] = 'token is invalid'
             return Response(smd)
@@ -257,8 +256,12 @@ def reset_password(request, id):
 
         # if user is not none then we will redirect to the reset password page
         if user is not None:
+<<<<<<< HEAD
 
             return redirect('http://localhost:8000/set_new_password/' + str(user))
+=======
+            return redirect(reverse('resetpassword', args=[str(user)]))
+>>>>>>> c5a1d28d... editing done with middlleware
         else:
             return Response(smd)
     except ObjectDoesNotExist:
@@ -284,7 +287,6 @@ class Resetpassword(GenericAPIView):
                 raise KeyError('password is missing')
             if not 'confirm password' in request.data:
                 raise KeyError('confirm password is missing')
-            user = User.objects.get(username=userReset)
             password = request.data['password']
             confirm_password = request.data['confirm_password']
             # here we will save the user password in the database
@@ -298,6 +300,7 @@ class Resetpassword(GenericAPIView):
                 smd['Message'] = 'password not match'
                 return Response(smd)
             else:
+                user = User.objects.get(username=userReset)
                 user.set_password(password)
                 # here we will save the user password in the database
                 user.save()
@@ -384,7 +387,48 @@ class S3Upload(GenericAPIView):
         return smd
 
 
+<<<<<<< HEAD
 def s3_read(request, bucket, object_name, *args, **kwargs):
+=======
+class ProfileUpload(GenericAPIView):
+    serializer_class = ImageSerializer
+
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request, *args, **kwargs):
+        """
+
+        :param request: here we using post request for uploading photo
+        :return: this function is used for upload a photo on amazon s3
+
+        """
+        try:
+            serializer = ImageSerializer(data=request.data)
+            if serializer.is_valid():
+                image = request.data['image']
+                user = request.user
+                print(user.id)
+                exist_image = Profile.objects.get(user_id=user.id)
+                if exist_image:
+                    url = AmazonS3().upload_file(image, object_name=user.username)
+                    exist_image.image = url
+                    exist_image.save()
+                    smd = Smd_Response(True, 'image uploaded successfully')
+                else:
+                    url = AmazonS3().upload_file(image, object_name=user.username)
+                    Profile.objects.create(image=url, user_id=user.id)
+                    smd = Smd_Response(True, 'image uploaded successfully')
+            else:
+                smd = Smd_Response(False, 'please provide valid image', [])
+                logger.warning('not a valid image warning from users.views.s3upload_api')
+        except Exception:
+            logger.warning('something is wrong warning from users.views.s3upload_api')
+            smd = Smd_Response()
+        return smd
+
+
+def read_profile(request, bucket, object_name, *args, **kwargs):
+>>>>>>> c5a1d28d... editing done with middlleware
     """
 
     :param bucket:here we taking bucket name from path parameter
@@ -404,8 +448,12 @@ def s3_read(request, bucket, object_name, *args, **kwargs):
         return redirect(url)
     except Exception:
         smd = Smd_Response()
+<<<<<<< HEAD
         return smd
 
 =======
+=======
+    return smd
+>>>>>>> c5a1d28d... editing done with middlleware
 
 >>>>>>> b2154c4e... code coverage done
