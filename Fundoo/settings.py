@@ -146,8 +146,13 @@ REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': [
 }
 
 AUTHENTICATION_BACKENDS = (
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.google.GoogleOpenId',
+    'social_core.backends.github.GithubOAuth2',
     'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
+
 )
 
 SIMPLE_JWT = {
@@ -289,4 +294,3 @@ BUCKET = os.getenv('BUCKET')
 S3_BASE_URL = os.getenv('AWS_BASE_URL')
 BASE_URL = os.getenv('BASE_URL')
 BROKER_URL = 'amqp://guest@localhost//'
-
