@@ -43,10 +43,9 @@ class Note(models.Model):
         return self.title
 
     def __eq__(self, other):
-        other_is_archive = self.is_archive
-        other_is_trash = self.is_trash
+        other_is_archive = other.is_archive
+        other_is_trash = other.is_trash
         return other_is_archive == self.is_archive and other_is_trash == self.is_trash
 
     def __repr__(self):
-        return "Card({!r},{!r})".format(self.title, self.note)
-
+        return "Note({!r},{!r},{!r})".format(self.title, self.note, self.is_archive)
