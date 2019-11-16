@@ -128,12 +128,9 @@ class Login(GenericAPIView):
                 logger.warning('not valid user warning from users.views.login_api')
                 smd = Smd_Response(False, 'please provide valid credentials', [])
         except KeyError as error:
-<<<<<<< HEAD
             print(error)
             logger.warning('any one input field is blank warning from users.views.login_api')
-=======
             logger.error('any one input field is blank' + str(error))
->>>>>>> 15498327... done user
             smd = Smd_Response(False, str(error), [])
         except Exception as e:
             logger.error('something is wrong warning' + str(e))
@@ -260,12 +257,7 @@ def reset_password(request, id):
 
         # if user is not none then we will redirect to the reset password page
         if user is not None:
-<<<<<<< HEAD
-
-            return redirect('http://localhost:8000/set_new_password/' + str(user))
-=======
             return redirect(reverse('resetpassword', args=[str(user)]))
->>>>>>> c5a1d28d... editing done with middlleware
         else:
             return Response(smd)
     except ObjectDoesNotExist:
@@ -324,76 +316,19 @@ class Resetpassword(GenericAPIView):
 
 
 @method_decorator(login_required, name='dispatch')
-<<<<<<< HEAD
-class HelloView(GenericAPIView):
-    permission_classes = (IsAuthenticated,)
-
-    def get(self, request):
-        print(request.user)
-        content = {'message': 'Hello, World!'}
-        return Response(content)
-
-
-@method_decorator(login_required, name='dispatch')
-=======
->>>>>>> b2154c4e... code coverage done
 class Logout(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         try:
             user = request.user
-            if user:
-                redis.Del(user.id)
-                smd = Smd_Response(True, 'safely logged out', [])
-            else:
-                smd = Smd_Response(True, 'you are not authorized user ', [])
+            redis.Del(user.id)
+            smd = Smd_Response(True, 'safely logged out', [])
         except Exception:
             smd = Smd_Response()
         return smd
 
 
-<<<<<<< HEAD
-class S3Upload(GenericAPIView):
-    serializer_class = ImageSerializer
-
-    permission_classes = (IsAuthenticated,)
-
-    def post(self, request, *args, **kwargs):
-        """
-
-        :param request: here we using post request for uploading photo
-        :return: this function is used for upload a photo on amazon s3
-
-        """
-        try:
-            serializer = ImageSerializer(data=request.data)
-            if serializer.is_valid():
-                image = request.data['image']
-                user = request.user
-                print(user.id)
-                exist_image = Profile.objects.get(user_id=user.id)
-                if exist_image:
-                    url = AmazonS3().upload_file(image, object_name=user.username)
-                    exist_image.image = url
-                    exist_image.save()
-                    smd = Smd_Response(True, 'image uploaded successfully')
-                else:
-                    url = AmazonS3().upload_file(image, object_name=user.username)
-                    Profile.objects.create(image=url, user_id=user.id)
-                    smd = Smd_Response(True, 'image uploaded successfully')
-            else:
-                smd = Smd_Response(False, 'please provide valid image', [])
-                logger.warning('not a valid image warning from users.views.s3upload_api')
-        except Exception:
-            logger.warning('something is wrong warning from users.views.s3upload_api')
-            smd = Smd_Response()
-        return smd
-
-
-<<<<<<< HEAD
-def s3_read(request, bucket, object_name, *args, **kwargs):
-=======
 class ProfileUpload(GenericAPIView):
     serializer_class = ImageSerializer
 
@@ -432,7 +367,6 @@ class ProfileUpload(GenericAPIView):
 
 
 def read_profile(request, bucket, object_name, *args, **kwargs):
->>>>>>> c5a1d28d... editing done with middlleware
     """
 
     :param bucket:here we taking bucket name from path parameter
@@ -452,15 +386,4 @@ def read_profile(request, bucket, object_name, *args, **kwargs):
         return redirect(url)
     except Exception:
         smd = Smd_Response()
-<<<<<<< HEAD
         return smd
-
-=======
-=======
-    return smd
-<<<<<<< HEAD
->>>>>>> c5a1d28d... editing done with middlleware
-
->>>>>>> b2154c4e... code coverage done
-=======
->>>>>>> 15498327... done user

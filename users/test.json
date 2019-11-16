@@ -33,11 +33,11 @@
   {
     "username":"",
     "password":""
-  },{
-<<<<<<< HEAD
-    "username":"jadhav",
+  },
+  {
+    "username": "jadhav",
     "password": "jadhav123"
-=======
+  },{
     "username":"",
     "password":"ggg"
   },
@@ -48,7 +48,6 @@
 ,{
     "username":"admin",
     "password": "admin123"
->>>>>>> b2154c4e... code coverage done
   },{
     "username":" ",
     "password": "admin123"
@@ -71,8 +70,6 @@
   },{
     "email": "sachinjadhav0273@gmail.com"
   }
-<<<<<<< HEAD
-=======
 ],"reset_password": [
   {
 
@@ -102,7 +99,6 @@
     "password": "1234578",
     "confirm_password": "12345678"
   }
->>>>>>> b2154c4e... code coverage done
 ]
 
 }

@@ -40,11 +40,7 @@ class TestUsersApp(TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_Registration_blank_username(self):
-<<<<<<< HEAD
-        url = settings.BASE_URL+'/register/'
-=======
         url = settings.BASE_URL + reverse('register')
->>>>>>> b2154c4e... code coverage done
         data = load('users/test.json')
         user = data['register'][3]
         c = Client()
@@ -116,11 +112,8 @@ class TestUsersApp(TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_reset_password_valid_input(self):
-<<<<<<< HEAD
-        url = settings.BASE_URL + '/send_email/'
-=======
+
         url = settings.BASE_URL + reverse('reset_passward')
->>>>>>> b2154c4e... code coverage done
         data = load('users/test.json')
         user = data['Reset_password'][5]
         c = Client()
@@ -128,11 +121,8 @@ class TestUsersApp(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_reset_password_invalid_input(self):
-<<<<<<< HEAD
-        url = settings.BASE_URL + '/send_email/'
-=======
+
         url = settings.BASE_URL + reverse('reset_passward')
->>>>>>> b2154c4e... code coverage done
         data = load('users/test.json')
         user = data['Reset_password'][1]
         c = Client()
@@ -140,11 +130,8 @@ class TestUsersApp(TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_reset_password_iinvalid_input(self):
-<<<<<<< HEAD
-        url = settings.BASE_URL + '/send_email/'
-=======
+
         url = settings.BASE_URL + reverse('reset_passward')
->>>>>>> b2154c4e... code coverage done
         data = load('users/test.json')
         user = data['Reset_password'][2]
         c = Client()
@@ -152,11 +139,8 @@ class TestUsersApp(TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_reset_password_blank_input(self):
-<<<<<<< HEAD
-        url = settings.BASE_URL + '/send_email/'
-=======
+
         url = settings.BASE_URL + reverse('reset_passward')
->>>>>>> b2154c4e... code coverage done
         data = load('users/test.json')
         user = data['Reset_password'][3]
         c = Client()
@@ -164,9 +148,6 @@ class TestUsersApp(TestCase):
         self.assertEqual(response.status_code, 400)
 
     def test_reset_password_email_not_exist(self):
-<<<<<<< HEAD
-        url = settings.BASE_URL + '/send_email/'
-=======
         url = settings.BASE_URL + reverse('reset_passward')
         data = load('users/test.json')
         user = data['Reset_password'][1]
@@ -176,15 +157,12 @@ class TestUsersApp(TestCase):
 
     def test_reset_password_5(self):
         url = settings.BASE_URL + reverse('reset_passward')
->>>>>>> b2154c4e... code coverage done
         data = load('users/test.json')
         user = data['Reset_password'][0]
         c = Client()
         response = c.post(url, user)
         self.assertEqual(response.status_code, 400)
 
-<<<<<<< HEAD
-=======
     def test_resetpassword(self):
         url = settings.BASE_URL + reverse('resetpassword', args=['jadhav123'])
         data = load('users/test.json')
@@ -257,5 +235,3 @@ class TestUsersApp(TestCase):
         response = c.post(url, user)
         self.assertEqual(response.status_code, 200)
 
-
->>>>>>> 2f1c5cd5... elastic search done
