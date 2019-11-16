@@ -18,6 +18,9 @@ class Label(models.Model):
     def __str__(self):
         return self.name
 
+    def __repr__(self):
+        return 'Object: {}'.format(self.name)
+
 
 class Note(models.Model):
     """
@@ -38,4 +41,12 @@ class Note(models.Model):
 
     def __str__(self):
         return self.title
+
+    def __eq__(self, other):
+        other_is_archive = self.is_archive
+        other_is_trash = self.is_trash
+        return other_is_archive == self.is_archive and other_is_trash == self.is_trash
+
+    def __repr__(self):
+        return "Card({!r},{!r})".format(self.title, self.note)
 
