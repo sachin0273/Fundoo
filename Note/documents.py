@@ -31,7 +31,7 @@ class NoteDocument(Document):
 
     class Index:
         # Name of the Elasticsearch index
-        name = 'note_search'
+        name = 'search_note'
 
         settings = {'number_of_shards': 1,
                     'number_of_replicas': 0}

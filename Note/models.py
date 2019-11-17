@@ -1,5 +1,5 @@
 # import self as self
-from django.contrib.auth.models import User
+from django.conf import settings
 from django.db import models
 
 
@@ -9,7 +9,7 @@ class Label(models.Model):
     """
     here we creating models for labels
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     name = models.CharField(max_length=250)
 
     class Meta:
@@ -26,11 +26,11 @@ class Note(models.Model):
     """
     here we creating models for Notes
     """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user')
     title = models.CharField(max_length=250)
     note = models.CharField(max_length=250, blank=True)
     image = models.FileField(blank=True)
-    collaborator = models.ManyToManyField(User, related_name='collaborator', blank=True)
+    collaborator = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name='collaborator', blank=True)
     label = models.ManyToManyField(Label, related_name='label', blank=True)
     is_archive = models.BooleanField('is_archive', default=False)
     is_trash = models.BooleanField('is_trash', default=False)

@@ -1,4 +1,5 @@
 import json
+import pdb
 
 from elasticsearch_dsl import MultiSearch, Search
 from django.shortcuts import render
@@ -157,7 +158,6 @@ class UpdateAndDeleteNote(GenericAPIView):
         """
 
         try:
-            print(request.data)
             request_data = json.loads(request.body)
             if "collaborator" in request_data:
                 collaborators = request_data['collaborator']
@@ -261,7 +261,7 @@ class CreateAndGetLabel(GenericAPIView):
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
                 logger.info('all label get from database')
             else:
-                smd = Smd_Response(False, 'not valid user id please enter valid user_id')
+                smd = Smd_Response(False, 'for this user label not exist')
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'for this user id label not available please enter valid user_id')
             logger.error('for this user id label not exist error from Note.views.get_label')
@@ -460,6 +460,7 @@ class SearchNotes(GenericAPIView):
 
         """
         try:
+            # pdb.set_trace()
             user = request.user
             notes = NoteDocument.search().query({
                 "bool": {"must": {
@@ -479,8 +480,10 @@ class SearchNotes(GenericAPIView):
                 }
             })
             total_count = notes.count()
+            print(total_count)
             if total_count != 0:
                 searched_notes = notes.to_queryset()
+                print(searched_notes)
                 serializer = NotesSerializer(searched_notes, many=True)
                 print(serializer.data)
                 # print(value_count)

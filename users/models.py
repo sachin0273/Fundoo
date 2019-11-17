@@ -1,10 +1,8 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
 # Create your models here.
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    image = models.ImageField(blank=True)
-    time_stamp = models.DateTimeField(auto_now_add=True)
+class CustomUser(AbstractUser):
+    image = models.ImageField(null=True, blank=True)

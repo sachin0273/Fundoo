@@ -13,8 +13,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import redirect
 import json
 import jwt
-from django.contrib.auth import authenticate
-from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, get_user_model
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
@@ -22,13 +21,11 @@ from jwt import DecodeError
 from rest_framework import status, generics
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
-
 from Lib import redis
 from users.decoraters import login_required
 # from users.models import Profile
-from users.models import Profile
-from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer, \
-    UserRegisterSerializer
+# from users.models import Profile
+from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
 from Lib.pyjwt_token import Jwt
 from rest_framework.permissions import IsAuthenticated
 from Lib.event_emmiter import email_event
@@ -40,6 +37,7 @@ from utils import Smd_Response
 from django.urls import reverse
 
 logger = logging.getLogger(__name__)
+User = get_user_model()
 
 
 class User_Create(GenericAPIView):
@@ -329,141 +327,140 @@ class Logout(GenericAPIView):
             smd = Smd_Response()
         return smd
 
+# class ProfileUpload(GenericAPIView):
+#     serializer_class = ImageSerializer
+#
+#     permission_classes = (IsAuthenticated,)
+#
+#     def post(self, request, *args, **kwargs):
+#         """
+#
+#         :param request: here we using post request for uploading photo
+#         :return: this function is used for upload a photo on amazon s3
+#
+#         """
+#         try:
+#             serializer = ImageSerializer(data=request.data)
+#             if serializer.is_valid():
+#                 image = request.data['image']
+#                 user = request.user
+#                 print(user.id)
+#                 exist_image = Profile.objects.get(user_id=user.id)
+#                 if exist_image:
+#                     url = AmazonS3().upload_file(image, object_name=user.username)
+#                     exist_image.image = url
+#                     exist_image.save()
+#                     smd = Smd_Response(True, 'image uploaded successfully')
+#                 else:
+#                     url = AmazonS3().upload_file(image, object_name=user.username)
+#                     Profile.objects.create(image=url, user_id=user.id)
+#                     smd = Smd_Response(True, 'image uploaded successfully')
+#             else:
+#                 smd = Smd_Response(False, 'please provide valid image', [])
+#                 logger.warning('not a valid image warning from users.views.s3upload_api')
+#         except Exception:
+#             logger.warning('something is wrong warning from users.views.s3upload_api')
+#             smd = Smd_Response()
+#         return smd
+#
+#
+# def read_profile(request, bucket, object_name, *args, **kwargs):
+#     """
+#
+#     :param bucket:here we taking bucket name from path parameter
+#     :param object_name: here we taking object name from parameter
+#     :return:this function is used for generate preassigned url for view photo
+#
+#     """
+#     try:
+#         url = settings.s3.generate_presigned_url(
+#             ClientMethod='get_object',
+#             Params={
+#                 'Bucket': bucket,
+#                 'Key': object_name
+#             }
+#         )
+#         print(url)
+#         return redirect(url)
+#     except Exception:
+#         smd = Smd_Response()
+#         return smd
 
-class ProfileUpload(GenericAPIView):
-    serializer_class = ImageSerializer
-
-    permission_classes = (IsAuthenticated,)
-
-    def post(self, request, *args, **kwargs):
-        """
-
-        :param request: here we using post request for uploading photo
-        :return: this function is used for upload a photo on amazon s3
-
-        """
-        try:
-            serializer = ImageSerializer(data=request.data)
-            if serializer.is_valid():
-                image = request.data['image']
-                user = request.user
-                print(user.id)
-                exist_image = Profile.objects.get(user_id=user.id)
-                if exist_image:
-                    url = AmazonS3().upload_file(image, object_name=user.username)
-                    exist_image.image = url
-                    exist_image.save()
-                    smd = Smd_Response(True, 'image uploaded successfully')
-                else:
-                    url = AmazonS3().upload_file(image, object_name=user.username)
-                    Profile.objects.create(image=url, user_id=user.id)
-                    smd = Smd_Response(True, 'image uploaded successfully')
-            else:
-                smd = Smd_Response(False, 'please provide valid image', [])
-                logger.warning('not a valid image warning from users.views.s3upload_api')
-        except Exception:
-            logger.warning('something is wrong warning from users.views.s3upload_api')
-            smd = Smd_Response()
-        return smd
+#
+# from rest_framework import status
+# from rest_framework.response import Response
+# from social.apps.django_app.utils import load_backend
+# from social.apps.django_app.utils import load_strategy
+# from social.backends.oauth import BaseOAuth1, BaseOAuth2
+# from social.exceptions import AuthAlreadyAssociated
 
 
-def read_profile(request, bucket, object_name, *args, **kwargs):
-    """
-
-    :param bucket:here we taking bucket name from path parameter
-    :param object_name: here we taking object name from parameter
-    :return:this function is used for generate preassigned url for view photo
-
-    """
-    try:
-        url = settings.s3.generate_presigned_url(
-            ClientMethod='get_object',
-            Params={
-                'Bucket': bucket,
-                'Key': object_name
-            }
-        )
-        print(url)
-        return redirect(url)
-    except Exception:
-        smd = Smd_Response()
-        return smd
-
-
-from rest_framework import status
-from rest_framework.response import Response
-from social.apps.django_app.utils import load_backend
-from social.apps.django_app.utils import load_strategy
-from social.backends.oauth import BaseOAuth1, BaseOAuth2
-from social.exceptions import AuthAlreadyAssociated
-
-
-class SocialSignUp(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserRegisterSerializer
-    # This permission is nothing special, see part 2 of this series to see its entirety
-    # permission_classes = (IsAuthenticated,)
-
-    def create(self, request, *args, **kwargs):
-        """
-        Override `create` instead of `perform_create` to access request
-        request is necessary for `load_strategy`
-        """
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-
-        provider = request.data['provider']
-
-        # If this request was made with an authenticated user, try to associate this social
-        # account with it
-        authed_user = request.user if not request.user.is_anonymous else None
-
-        # `strategy` is a python-social-auth concept referencing the Python framework to
-        # be used (Django, Flask, etc.). By passing `request` to `load_strategy`, PSA
-        # knows to use the Django strategy
-        strategy = load_strategy(request)
-        # Now we get the backend that corresponds to our user's social auth provider
-        # e.g., Facebook, Twitter, etc.
-        backend = load_backend(strategy=strategy, name=provider, redirect_uri=None)
-
-        if isinstance(backend, BaseOAuth1):
-            # Twitter, for example, uses OAuth1 and requires that you also pass
-            # an `oauth_token_secret` with your authentication request
-            token = {
-                'oauth_token': request.data['access_token'],
-                'oauth_token_secret': request.data['access_token_secret'],
-            }
-        elif isinstance(backend, BaseOAuth2):
-            # We're using oauth's implicit grant type (usually used for web and mobile
-            # applications), so all we have to pass here is an access_token
-            token = request.data['access_token']
-
-        try:
-            # if `authed_user` is None, python-social-auth will make a new user,
-            # else this social account will be associated with the user you pass in
-            user = backend.do_auth(token, user=authed_user)
-        except AuthAlreadyAssociated:
-            # You can't associate a social account with more than user
-            return Response({"errors": "That social media account is already in use"},
-                            status=status.HTTP_400_BAD_REQUEST)
-
-        if user and user.is_active:
-            # if the access token was set to an empty string, then save the access token
-            # from the request
-            auth_created = user.social_auth.get(provider=provider)
-            if not auth_created.extra_data['access_token']:
-                # Facebook for example will return the access_token in its response to you.
-                # This access_token is then saved for your future use. However, others
-                # e.g., Instagram do not respond with the access_token that you just
-                # provided. We save it here so it can be used to make subsequent calls.
-                auth_created.extra_data['access_token'] = token
-                auth_created.save()
-
-            # Set instance since we are not calling `serializer.save()`
-            serializer.instance = user
-            headers = self.get_success_headers(serializer.data)
-            return Response(serializer.data, status=status.HTTP_201_CREATED,
-                            headers=headers)
-        else:
-            return Response({"errors": "Error with social authentication"},
-                            status=status.HTTP_400_BAD_REQUEST)
+# class SocialSignUp(generics.CreateAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = UserRegisterSerializer
+#     # This permission is nothing special, see part 2 of this series to see its entirety
+#     # permission_classes = (IsAuthenticated,)
+#
+#     def create(self, request, *args, **kwargs):
+#         """
+#         Override `create` instead of `perform_create` to access request
+#         request is necessary for `load_strategy`
+#         """
+#         serializer = self.get_serializer(data=request.data)
+#         serializer.is_valid(raise_exception=True)
+#
+#         provider = request.data['provider']
+#
+#         # If this request was made with an authenticated user, try to associate this social
+#         # account with it
+#         authed_user = request.user if not request.user.is_anonymous else None
+#
+#         # `strategy` is a python-social-auth concept referencing the Python framework to
+#         # be used (Django, Flask, etc.). By passing `request` to `load_strategy`, PSA
+#         # knows to use the Django strategy
+#         strategy = load_strategy(request)
+#         # Now we get the backend that corresponds to our user's social auth provider
+#         # e.g., Facebook, Twitter, etc.
+#         backend = load_backend(strategy=strategy, name=provider, redirect_uri=None)
+#
+#         if isinstance(backend, BaseOAuth1):
+#             # Twitter, for example, uses OAuth1 and requires that you also pass
+#             # an `oauth_token_secret` with your authentication request
+#             token = {
+#                 'oauth_token': request.data['access_token'],
+#                 'oauth_token_secret': request.data['access_token_secret'],
+#             }
+#         elif isinstance(backend, BaseOAuth2):
+#             # We're using oauth's implicit grant type (usually used for web and mobile
+#             # applications), so all we have to pass here is an access_token
+#             token = request.data['access_token']
+#
+#         try:
+#             # if `authed_user` is None, python-social-auth will make a new user,
+#             # else this social account will be associated with the user you pass in
+#             user = backend.do_auth(token, user=authed_user)
+#         except AuthAlreadyAssociated:
+#             # You can't associate a social account with more than user
+#             return Response({"errors": "That social media account is already in use"},
+#                             status=status.HTTP_400_BAD_REQUEST)
+#
+#         if user and user.is_active:
+#             # if the access token was set to an empty string, then save the access token
+#             # from the request
+#             auth_created = user.social_auth.get(provider=provider)
+#             if not auth_created.extra_data['access_token']:
+#                 # Facebook for example will return the access_token in its response to you.
+#                 # This access_token is then saved for your future use. However, others
+#                 # e.g., Instagram do not respond with the access_token that you just
+#                 # provided. We save it here so it can be used to make subsequent calls.
+#                 auth_created.extra_data['access_token'] = token
+#                 auth_created.save()
+#
+#             # Set instance since we are not calling `serializer.save()`
+#             serializer.instance = user
+#             headers = self.get_success_headers(serializer.data)
+#             return Response(serializer.data, status=status.HTTP_201_CREATED,
+#                             headers=headers)
+#         else:
+#             return Response({"errors": "Error with social authentication"},
+#                             status=status.HTTP_400_BAD_REQUEST)

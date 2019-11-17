@@ -83,6 +83,8 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = True
 ROOT_URLCONF = 'Fundoo.urls'
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -146,11 +148,11 @@ REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': [
 }
 
 AUTHENTICATION_BACKENDS = (
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.google.GoogleOAuth2',
-    'social_core.backends.google.GoogleOpenId',
-    'social_core.backends.github.GithubOAuth2',
-    'allauth.account.auth_backends.AuthenticationBackend',
+    # 'social_core.backends.twitter.TwitterOAuth',
+    # 'social_core.backends.google.GoogleOAuth2',
+    # 'social_core.backends.google.GoogleOpenId',
+    # 'social_core.backends.github.GithubOAuth2',
+    # 'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 
 )
