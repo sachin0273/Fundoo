@@ -45,6 +45,7 @@ class CreateAndGetNote(GenericAPIView):
         """
 
         try:
+            #     pdb.set_trace()
             collaborator = request.data['collaborator']
             pin = request.data['is_pin']
             archive = request.data['is_archive']

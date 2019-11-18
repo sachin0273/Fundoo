@@ -280,7 +280,7 @@ class Resetpassword(GenericAPIView):
                 raise KeyError('password and confirm password is missing')
             if not 'password' in request.data:
                 raise KeyError('password is missing')
-            if not 'confirm password' in request.data:
+            if not 'confirm_password' in request.data:
                 raise KeyError('confirm password is missing')
             password = request.data['password']
             confirm_password = request.data['confirm_password']

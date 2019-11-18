@@ -63,7 +63,6 @@
   ],"note_update": [{
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
   "user": 1,
@@ -76,7 +75,6 @@
 },{
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
   "user": 1,
@@ -89,7 +87,6 @@
 },{
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
   "user": 1,
@@ -103,7 +100,7 @@
 
 ],
   "note_crud": [
-    {"note_id":"34"
+    {"note_id":"47"
     },
     {"note_id":" "
     },

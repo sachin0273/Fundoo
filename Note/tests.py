@@ -10,7 +10,7 @@ from django.conf import settings
 BASE_URL = settings.BASE_URL
 header = {
     'HTTP_AUTHORIZATION': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
-                          '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0MDcxNzU5LCJqdGkiOiJjODYwMjAwOTk2NGM0NTU0YTIwNmRmYzY3NGZkODkyYiIsInVzZXJfaWQiOjF9.jUzqdBSIfZOJSatdebGkabRHmO6eUwHsOsPwBXWke3E'}
+                          '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0MTM0NTY1LCJqdGkiOiJmODgwOWRkNWM3OWQ0YjUyODE1OTNiOGUwMmI1ZTFhNCIsInVzZXJfaWQiOjF9.PBgkRy6oxqCCV4zrciegI0wukaROAkwnZlA-lHuwmXc'}
 
 
 class NoteAppTest(TestCase):
@@ -22,7 +22,6 @@ class NoteAppTest(TestCase):
         url = BASE_URL + reverse('notes')
         c = Client()
         response = c.post(url, notes, content_type='application/json', **header)
-        print(response.body)
         self.assertEqual(response.status_code, 400)
 
     def test_wrong_collaborator_and_label_2(self):
@@ -31,7 +30,6 @@ class NoteAppTest(TestCase):
         url = BASE_URL + reverse('notes')
         c = Client()
         response = c.post(url, notes, content_type='application/json', **header)
-        print(response.body)
         self.assertEqual(response.status_code, 400)
 
     def test_valid_collaborator_and_label(self):
@@ -40,7 +38,6 @@ class NoteAppTest(TestCase):
         url = BASE_URL + reverse('notes')
         c = Client()
         response = c.post(url, notes, content_type='application/json', **header)
-        print(response.body)
         self.assertEqual(response.status_code, 200)
 
     def test_update_note_1(self):
@@ -134,7 +131,7 @@ class NoteAppTest(TestCase):
     def test_put_label_valid_input(self):
         data = load('Note/note_test.json')
         label = data['put_label'][0]
-        url = BASE_URL + reverse('label', args=['8'])
+        url = BASE_URL + reverse('label', args=['7'])
         c = Client()
         response = c.put(url, label, content_type='application/json', **header)
         self.assertEqual(response.status_code, 200)

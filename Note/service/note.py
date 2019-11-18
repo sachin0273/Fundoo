@@ -1,20 +1,20 @@
 import json
 import pickle
 from datetime import datetime
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.utils import timezone
 from Lib import redis
 from Note.models import Label
 from Note.models import Note
 from django.http import HttpResponse
-
+from django.contrib.auth import get_user_model
 from Note.serializers import NoteSerializers, NotesSerializer
 from utils import Smd_Response
 import logging
 from utils import smd_response
 
 logger = logging.getLogger(__name__)
-
+User=get_user_model()
 
 class Label_Note_Validator:
 
