@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django.contrib.sites',
     'rest_framework_swagger',
+    'rest_framework.authtoken',
     'users',
     'Note',
     'django_elasticsearch_dsl',
@@ -56,13 +57,7 @@ INSTALLED_APPS = [
     'urlshortening',
     'storages',
     'django_social_share',
-
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.github',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -143,15 +138,16 @@ ELASTICSEARCH_DSL = {
 
 REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': [
     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    'rest_framework.authentication.TokenAuthentication',
 ],
     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
 }
 
 AUTHENTICATION_BACKENDS = (
-    # 'social_core.backends.twitter.TwitterOAuth',
-    # 'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.google.GoogleOAuth2',
     # 'social_core.backends.google.GoogleOpenId',
-    # 'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.github.GithubOAuth2',
     # 'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 
@@ -296,3 +292,5 @@ BUCKET = os.getenv('BUCKET')
 S3_BASE_URL = os.getenv('AWS_BASE_URL')
 BASE_URL = os.getenv('BASE_URL')
 BROKER_URL = 'amqp://guest@localhost//'
+GOOGLE_OAUTH2_KEY = '925217326199-i52lshiof4sd99e1ei3qu5kk54r0b3qe.apps.googleusercontent.com'
+GOOGLE_OAUTH2_SECRET = 'WDjjK-Bao0MTVKvkDgoudIz1'

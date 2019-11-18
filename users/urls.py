@@ -24,6 +24,7 @@ urlpatterns = [
     path('reset/<str:id>/', views.reset_password, name='reset_password'),
     path('active/<str:short_id>/', views.activate, name='activate'),
     # path('read_profile/<str:bucket>/<str:object_name>/', views.s3_read, name='read_profile'),
-    # url(r'^social-auth/$', views.SocialSignUp.as_view(),
-    #     name='api-social-auth-register'),
+    path('new/', views.fg, name='it'),
+    url(r'^social-auth/$', views.SocialSignUp.as_view(),
+        name='api-social-auth-register'),
 ]

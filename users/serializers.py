@@ -74,16 +74,16 @@ from rest_framework import serializers
 from rest_framework.authtoken.models import Token
 
 
-# class UserRegisterSerializer(serializers.ModelSerializer):
-#     token = serializers.SerializerMethodField('get_user_token')
-#     provider = serializers.CharField(min_length=5, max_length=20)
-#     access_token = serializers.CharField(max_length=250)
-#     access_token_secret = serializers.CharField(max_length=200)
-#
-#     def get_user_token(self, obj):
-#         token, created = Token.objects.get_or_create(user=obj.user)
-#         return token.key
-#
-#     class Meta:
-#         model = User
-#         fields = ['username', 'email', 'token', 'provider', 'access_token', 'access_token_secret']
+class UserRegisterSerializer(serializers.ModelSerializer):
+    token = serializers.SerializerMethodField('get_user_token')
+    provider = serializers.CharField(min_length=5, max_length=20)
+    access_token = serializers.CharField(max_length=250)
+    access_token_secret = serializers.CharField(max_length=200)
+
+    def get_user_token(self, obj):
+        token, created = Token.objects.create(user=obj.user)
+        return token.key
+
+    class Meta:
+        model = User
+        fields = ['access_token', 'provider', 'token', 'access_token_secret']
