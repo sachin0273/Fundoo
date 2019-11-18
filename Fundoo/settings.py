@@ -292,5 +292,4 @@ BUCKET = os.getenv('BUCKET')
 S3_BASE_URL = os.getenv('AWS_BASE_URL')
 BASE_URL = os.getenv('BASE_URL')
 BROKER_URL = 'amqp://guest@localhost//'
-GOOGLE_OAUTH2_KEY = '925217326199-i52lshiof4sd99e1ei3qu5kk54r0b3qe.apps.googleusercontent.com'
-GOOGLE_OAUTH2_SECRET = 'WDjjK-Bao0MTVKvkDgoudIz1'
+
