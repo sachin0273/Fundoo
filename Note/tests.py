@@ -10,7 +10,7 @@ from django.conf import settings
 BASE_URL = settings.BASE_URL
 header = {
     'HTTP_AUTHORIZATION': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
-                          '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0MTM0NTY1LCJqdGkiOiJmODgwOWRkNWM3OWQ0YjUyODE1OTNiOGUwMmI1ZTFhNCIsInVzZXJfaWQiOjF9.PBgkRy6oxqCCV4zrciegI0wukaROAkwnZlA-lHuwmXc'}
+                          '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0MjIyMzA2LCJqdGkiOiI3OTM4OTU5MTc4ZGE0Yzc3OWNmMWZiNDgyMDZkMTUzNCIsInVzZXJfaWQiOjF9.G2-d1IFsEATnyikVD2s8FhMrO6CBixxAw6cSi-MTRTo'}
 
 
 class NoteAppTest(TestCase):

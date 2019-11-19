@@ -9,12 +9,18 @@ since :  25-09-2019
 """
 import pdb
 import re
-
+from urllib.parse import unquote
+from rest_framework import status
+from rest_framework.response import Response
+from social.apps.django_app.utils import load_backend
+from social.apps.django_app.utils import load_strategy
+from social.backends.oauth import BaseOAuth1, BaseOAuth2
+from social.exceptions import AuthAlreadyAssociated
 import requests
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.exceptions import ObjectDoesNotExist
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 import json
 import jwt
 from django.contrib.auth import authenticate, get_user_model
@@ -25,12 +31,13 @@ from jwt import DecodeError
 from rest_framework import status, generics
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
+from rest_framework.views import APIView
+
 from Lib import redis
 from users.decoraters import login_required
 # from users.models import Profile
 # from users.models import Profile
-from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer, \
-    UserRegisterSerializer
+from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
 from Lib.pyjwt_token import Jwt
 from rest_framework.permissions import IsAuthenticated
 from Lib.event_emmiter import email_event
@@ -392,80 +399,93 @@ class Logout(GenericAPIView):
 #         smd = Smd_Response()
 #         return smd
 
-#
-from rest_framework import status
-from rest_framework.response import Response
-from social.apps.django_app.utils import load_backend
-from social.apps.django_app.utils import load_strategy
-from social.backends.oauth import BaseOAuth1, BaseOAuth2
-from social.exceptions import AuthAlreadyAssociated
+
+def social_login(request):
+    """
+
+    :param request: here request means rendering the page
+    :return:this function is used for render to the social login html page
+
+    """
+    return render(request, 'users/social_login.html')
 
 
-def fg(request):
-    ty = request.get_full_path()
-    gg = ty.split('&')
-    hh = gg[0].split('=')
-    print(hh[1])
-    url = 'https://www.googleapis.com/oauth2/v4/token'
-    data = {
-        "code": hh[1],
-        "client_id": "925217326199-i52lshiof4sd99e1ei3qu5kk54r0b3qe.apps.googleusercontent.com",
-        "client_secret": "WDjjK-Bao0MTVKvkDgoudIz1",
-        "grant_type": "authorization_code",
-        "redirect_uri": "http://127.0.0.1:8000/new/"
-    }
-    jj = requests.post(url, data)
-    request.post(reverse('api-social-auth-register'))
-    print(jj.text)
+def access_token(request):
+    """
 
+    :param request: here we get code from google oauth2
+    :return:in this function using the code from the google get access token by using that token we get user information
+           after that we create that user and successfully logged in user
+    """
+    try:
+        path = request.get_full_path()
+        code_path = path.split('&')
+        code = code_path[0].split('=')
+        code = unquote(code[1])
 
-class SocialSignUp(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserRegisterSerializer
-
-    def create(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        # pdb.set_trace()
-        print(request.body)
-        provider = 'google-oauth2'
-
-        authed_user = request.user if not request.user.is_anonymous else None
-
-        strategy = load_strategy(request)
-
-        backend = load_backend(strategy=strategy, name=provider, redirect_uri=None)
-
-        if isinstance(backend, BaseOAuth1):
-
-            token = {
-                'oauth_token': request.data['access_token'],
-                'oauth_token_secret': request.data['access_token_secret'],
-            }
-        elif isinstance(backend, BaseOAuth2):
-
-            token = "ya29.ImSxB5E_hjJLYnhMknDcYIPfIK8lWXEK7Gn6WlcdVGHXP_KM7nexwhmg2qFIbxGw8qQHhbUlrPnbwhfuK-PDuZTAJKmQ1FNSKjpaQngTE9B4GmsqefvTtF99ouKjWMe4d5FUAlTc"
-
-        try:
-            print(token)
-            user = backend.do_auth(token, user=authed_user)
-            print(user)
-        except AuthAlreadyAssociated:
-
-            return Response({"errors": "That social media account is already in use"},
-                            status=status.HTTP_400_BAD_REQUEST)
-
-        if user and user.is_active:
-
-            auth_created = user.social_auth.get(provider=provider)
-            print(auth_created)
-            if not auth_created.extra_data['access_token']:
-                auth_created.extra_data['access_token'] = token
-                auth_created.save()
-            serializer.instance = user
-            print(serializer.instance)
-            # headers = self.get_success_headers(user)
-            return Response('logged in', status=status.HTTP_201_CREATED)
+        url = settings.GOOGLE_ACCESS_TOKEN_URI
+        data = {
+            "code": code,
+            "client_id": settings.GOOGLE_OAUTH2_KEY,
+            "client_secret": settings.GOOGLE_OAUTH2_SECRET,
+            "grant_type": "authorization_code",
+            "redirect_uri": settings.GOOGLE_REDIRECT_URI
+        }
+        response = requests.post(url, data)
+        url = settings.GOOGLE_AUTH
+        print(response.text)
+        user_create = requests.post(url, response.json())
+        print(user_create.status_code)
+        if user_create.status_code == 201:
+            return redirect(settings.BASE_URL)
         else:
-            return Response({"errors": "Error with social authentication"},
-                            status=status.HTTP_400_BAD_REQUEST)
+            smd = Smd_Response(message='social user is not created')
+    except Exception:
+        smd = Smd_Response()
+    return smd
+
+
+class SocialSignUp(APIView):
+    """
+    in this class we used post function to create user for social login
+    """
+
+    def post(self, request, *args, **kwargs):
+        """
+
+        :param request:here we get post request with access token
+        :return:this function use that access token and authenticate with backend and create a user
+                and return response code 201 for created
+        """
+        try:
+            provider = 'google-oauth2'
+            authed_user = request.user if not request.user.is_anonymous else None
+
+            strategy = load_strategy(request)
+
+            backend = load_backend(strategy=strategy, name=provider, redirect_uri=None)
+
+            if isinstance(backend, BaseOAuth1):
+
+                token = {
+                    'oauth_token': request.data['access_token'],
+                    'oauth_token_secret': request.data['access_token_secret'],
+                }
+            elif isinstance(backend, BaseOAuth2):
+
+                token = request.data['access_token']
+            try:
+                user = backend.do_auth(token, user=authed_user)
+            except AuthAlreadyAssociated:
+
+                return Response({"errors": "That social media account is already in use"},
+                                status=status.HTTP_400_BAD_REQUEST)
+
+            if user and user.is_active:
+                return Response('logged in', status=status.HTTP_201_CREATED)
+            else:
+                return Response({"errors": "Error with social authentication"},
+                                status=status.HTTP_400_BAD_REQUEST)
+        except Exception:
+            smd = Smd_Response()
+            return smd

@@ -17,10 +17,10 @@ class LabelCollaborators:
     def __call__(self, request):
         # Code to be executed for each request before
         # the view (and later middleware) are called.
-        print(request.method)
-        print(request.user)
-        print(request)
-        print(request.get_full_path())
+        # print(request.method)
+        # print(request.user)
+        # print(request)
+        # print(request.get_full_path())
         try:
             if request.get_full_path() == "/api/note/" and request.method == 'POST' or request.path.startswith(
                     reverse('note', args=[str])) and request.method == 'PUT':
@@ -46,7 +46,7 @@ class LabelCollaborators:
             else:
                 return self.function(request)
         except Label.DoesNotExist:
-            response = Smd_Response(message='your label is not @@@ valid please add label and try')
+            response = Smd_Response(message='your label is not  valid please add label and try')
 
         except User.DoesNotExist:
             response = Smd_Response(message='for this email id user is not exist')

@@ -72,7 +72,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'Fundoo.middleware.LabelCollaborators',
+    # 'Fundoo.middleware.LabelCollaborators',
 
 ]
 CORS_ORIGIN_ALLOW_ALL = True
@@ -293,3 +293,8 @@ S3_BASE_URL = os.getenv('AWS_BASE_URL')
 BASE_URL = os.getenv('BASE_URL')
 BROKER_URL = 'amqp://guest@localhost//'
 
+GOOGLE_OAUTH2_KEY = os.getenv('GOOGLE_OAUTH2_KEY')
+GOOGLE_OAUTH2_SECRET = os.getenv('GOOGLE_OAUTH2_SECRET')
+GOOGLE_REDIRECT_URI = os.getenv('REDIRECT_URI')
+GOOGLE_AUTH = os.getenv('SOCIAL_CREATE')
+GOOGLE_ACCESS_TOKEN_URI = os.getenv('GOOGLE_ACCESS_TOKEN_URI')

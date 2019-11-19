@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-
-{% load socialaccount %}
-{% load social_share %}
-{% providers_media_js %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,12 +6,9 @@
 </head>
 <body bgcolor="#7fffd4">
         <div align="center" ><br/><br/><br/><br/><br/><br/><br/><br/>
-        <a href={% provider_login_url "google" %}>
+        <a href='https://accounts.google.com/o/oauth2/v2/auth?client_id=925217326199-i52lshiof4sd99e1ei3qu5kk54r0b3qe.apps.googleusercontent.com&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email&redirect_uri=http://127.0.0.1:8000/new/&access_type=offline '
         <button type="button" name="button" class="btn btn-danger">login with Google</button>
         </a><br/><br/><br/><br/><br/>
-         <a href={% provider_login_url "github" %}>
-        <button type="button" name="button" class="btn btn-danger">login with Github</button>
-        </a>
         </div>
 </body>
 </html>
