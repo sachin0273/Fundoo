@@ -72,7 +72,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'Fundoo.middleware.LabelCollaborators',
+    'Fundoo.middleware.LabelCollaborators',
 
 ]
 CORS_ORIGIN_ALLOW_ALL = True
@@ -146,9 +146,6 @@ REST_FRAMEWORK = {'DEFAULT_AUTHENTICATION_CLASSES': [
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.twitter.TwitterOAuth',
     'social_core.backends.google.GoogleOAuth2',
-    # 'social_core.backends.google.GoogleOpenId',
-    'social_core.backends.github.GithubOAuth2',
-    # 'allauth.account.auth_backends.AuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 
 )

@@ -19,12 +19,11 @@ def login_required(function):
             if redis_token is None:
                 raise KeyError
             return function(request, *args, **kwargs)
-        except Exception:
-            smd = Smd_Response()
-            return smd
         except DecodeError:
-            smd = Smd_Response(False, 'invalid token redirected to users page', [])
+            smd = Smd_Response(message='invalid token redirected to users page')
         except KeyError:
             smd = Smd_Response(message='user_id is not inside redis')
+        except Exception:
+            smd = Smd_Response()
         return smd
     return wraper
