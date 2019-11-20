@@ -2,7 +2,7 @@ from locust import HttpLocust, TaskSet
 
 
 def login(l):
-    l.client.post("/users/", {"username": "jadhav", "password": "jadhav123"})
+    l.client.post("login/", {"username": "admin", "password": "admin123"})
 
 
 # def logout(l):
