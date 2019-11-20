@@ -90,6 +90,7 @@ test.json/
 migrations
 media
 fixtures
+.scannerwork
 
 Fundoo/.env
 db.sqlite3
