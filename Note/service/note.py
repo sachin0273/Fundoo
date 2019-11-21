@@ -14,55 +14,12 @@ import logging
 from utils import smd_response
 
 logger = logging.getLogger(__name__)
-User=get_user_model()
+User = get_user_model()
 
-class Label_Note_Validator:
 
-    def validate_label(self, labels):
-        """
+class NoteService:
 
-        :param labels:here we pass number of labels
-        :return:this function is perform label validation
-
-        """
-        try:
-            if len(labels) != 0:
-                label_list = []
-                for label in labels:
-                    new_label = Label.objects.get(name=label)
-                    label_list.append(new_label)
-                return {'success': True, 'data': label_list}
-            else:
-                return {'success': 'no_labels'}
-        except Label.DoesNotExist:
-            smd = {'success': False, 'message': 'your label is not valid please add label and try'}
-        except Exception:
-            smd = {'success': False, 'message': 'something is wrong when validating your label'}
-        return smd
-
-    def validate_collaborator(self, collaborators):
-        """
-
-        :param collaborators:here we pass number of collaborators
-        :return:this function is perform collaborators validation
-
-        """
-        try:
-            if len(collaborators) != 0:
-                collaborator_list = []
-                for collaborator in collaborators:
-                    new_collaborator = User.objects.get(email=collaborator)
-                    collaborator_list.append(new_collaborator)
-                return {'success': True, 'data': collaborator_list}
-            else:
-                return {'success': 'no_collaborator'}
-        except User.DoesNotExist:
-            smd = {'success': False, 'message': 'your collaborator is not valid please try valid collaborator'}
-        except Exception:
-            smd = {'success': False, 'message': 'something is wrong when validating your collaborator'}
-        return smd
-
-    def validate_collaborator_for_put(self, data):
+    def add_collaborator(self, data):
         """
 
         :param :here we pass number of labels
@@ -85,7 +42,7 @@ class Label_Note_Validator:
                    'data': []}
         return smd
 
-    def validate_label_for_put(self, data):
+    def add_label(self, data):
         """
 
         :param data:here we pass number of collaborators
@@ -105,8 +62,6 @@ class Label_Note_Validator:
                    'data': []}
         return smd
 
-
-class Listing_Pages:
     def reminder_notes(self, user):
         """
 

@@ -1,11 +1,14 @@
 import json
+import pdb
 
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.http import HttpResponse
 from django.urls import reverse
 
 from utils import Smd_Response
 from Note.models import Label
+
+User = get_user_model()
 
 
 class LabelCollaborators:
@@ -16,21 +19,26 @@ class LabelCollaborators:
 
     def __call__(self, request):
         # Code to be executed for each request before
-        # the view (and later middleware) are called.
+        # the view (and later middleware) are called
         # print(request.method)
         # print(request.user)
         # print(request)
         # print(request.get_full_path())
+
         try:
+            # pdb.set_trace()
+            # request.parse_file_upload()
             if request.get_full_path() == "/api/note/" and request.method == 'POST' or request.path.startswith(
                     reverse('note', args=[str])) and request.method == 'PUT':
-
-                request_data = json.loads(request.body)
-
+                if request.headers['Content-Type'].split(';')[0] == 'multipart/form-data':
+                    request_data = request.POST
+                else:
+                    request_data = json.loads(request.body)
                 if 'label' in request_data or 'collaborator' in request_data:
                     if len(request_data['label']) != 0:
                         label_list = []
                         for label in request_data['label']:
+                            print(label)
                             new_label = Label.objects.get(name=label)
                             label_list.append(new_label)
                     if len(request_data['collaborator']) != 0:
@@ -51,5 +59,5 @@ class LabelCollaborators:
         except User.DoesNotExist:
             response = Smd_Response(message='for this email id user is not exist')
         except Exception:
-            response = Smd_Response(message='something is@@ wrong when validating your label or collaborator')
+            response = Smd_Response(message='something is wrong when validating your label or collaborator')
         return response

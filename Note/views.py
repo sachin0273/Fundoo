@@ -22,7 +22,7 @@ from Note.serializers import NoteSerializers, LabelSerializers, NotesSerializer
 from utils import Smd_Response
 from users.decoraters import login_required
 from django.contrib.auth.models import User
-from .service.note import Label_Note_Validator, Listing_Pages, update_redis, label_update_in_redis
+from .service.note import NoteService,update_redis, label_update_in_redis
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -45,34 +45,28 @@ class CreateAndGetNote(GenericAPIView):
         """
 
         try:
-            # pdb.set_trace()
-            collaborator = request.data['collaborator']
-            pin = request.data['is_pin']
-            archive = request.data['is_archive']
-            label = request.data['label']
-            note = request.data['note']
-            title = request.data['title']
-            image = request.data['image']
-            user = request.user
-            validate_label = Label_Note_Validator().validate_label(label)
-            if not validate_label['success']:
-                return HttpResponse(json.dumps(validate_label), status=400)
-            validate_collaborator = Label_Note_Validator().validate_collaborator(collaborator)
-            if not validate_collaborator['success']:
-                return HttpResponse(json.dumps(validate_collaborator), status=400)
-            note_create = Note.objects.create(user_id=user.id, title=title, note=note, is_pin=pin,
-                                              image=image, is_archive=archive)
-
-            if validate_label['success'] == True:
-                for labels in validate_label['data']:
-                    note_create.label.add(labels)
-            if validate_collaborator['success'] == True:
-                for collaborators in validate_collaborator['data']:
-                    note_create.collaborator.add(collaborators)
-
-            update_redis(user)
-            logger.info('note created successfully')
-            smd = Smd_Response(True, 'successfully note created', status_code=200)
+            request_data = request.data
+            if "collaborator" in request_data:
+                collaborators = request_data['collaborator']
+                result = NoteService().add_collaborator(collaborators)
+                if not result['success']:
+                    return HttpResponse(json.dumps(result))
+                request_data['collaborator'] = result['data']
+            if "label" in request_data:
+                labels = request_data['label']
+                label_result = NoteService().add_label(labels)
+                if not label_result['success']:
+                    return HttpResponse(json.dumps(label_result))
+                request_data['label'] = label_result['data']
+            serializer = NoteSerializers(data=request_data, partial=True)
+            if serializer.is_valid():
+                serializer.save(user=request.user)
+                user = request.user
+                update_redis(user)
+                smd = Smd_Response(True, 'successfully note updated', data=[serializer.data], status_code=200)
+                logger.info('successfully note updated')
+            else:
+                smd = Smd_Response(False, serializer.errors, [])
         except Exception as e:
             smd = Smd_Response()
             logger.error('something was wrong ' + str(e))
@@ -143,7 +137,7 @@ class CreateAndGetNote(GenericAPIView):
 
 
 class UpdateAndDeleteNote(GenericAPIView):
-    serializer_class = NoteSerializers
+    serializer_class = NotesSerializer
 
     permission_classes = (IsAuthenticated,)
 
@@ -151,34 +145,34 @@ class UpdateAndDeleteNote(GenericAPIView):
 
     def put(self, request, note_id, *args, **kwargs):
         """
-
         :param request: user request for put operation
         :param note_id: here we pass note id for specific update
         :return:this function used for update a note
-
         """
 
         try:
-            request_data = json.loads(request.body)
+            # request_data = json.loads(request.body)
+            request_data = request.data
+
             if "collaborator" in request_data:
                 collaborators = request_data['collaborator']
-                result = Label_Note_Validator().validate_collaborator_for_put(collaborators)
+                result = NoteService().add_collaborator(collaborators)
                 if not result['success']:
                     return HttpResponse(json.dumps(result))
                 request_data['collaborator'] = result['data']
             if "label" in request_data:
                 labels = request_data['label']
-                label_result = Label_Note_Validator().validate_label_for_put(labels)
+                label_result = NoteService().add_label(labels)
                 if not label_result['success']:
                     return HttpResponse(json.dumps(label_result))
                 request_data['label'] = label_result['data']
             update_note = Note.objects.get(pk=int(note_id))
-            serializer = NoteSerializers(instance=update_note, data=request_data, partial=True)
+            serializer = NotesSerializer(instance=update_note, data=request_data, partial=True)
             if serializer.is_valid():
                 serializer.save()
                 user = request.user
                 update_redis(user)
-                smd = Smd_Response(True, 'successfully note updated', status_code=200)
+                smd = Smd_Response(True, 'successfully note updated', data=[serializer.data], status_code=200)
                 logger.info('successfully note updated')
             else:
                 smd = Smd_Response(False, serializer.errors)
@@ -349,7 +343,7 @@ class Reminders(GenericAPIView):
         try:
             user = request.user
             print(request.user)
-            data = Listing_Pages().reminder_notes(user)
+            data = NoteService().reminder_notes(user)
             if data['success']:
                 return HttpResponse(json.dumps(data, indent=1), status=200)
             else:
@@ -372,7 +366,7 @@ class Trash_Notes(GenericAPIView):
         try:
             user = request.user
             print(request.user)
-            data = Listing_Pages().trash_notes(user)
+            data = NoteService().trash_notes(user)
             if data['success']:
                 return HttpResponse(json.dumps(data, indent=1), status=200)
             else:
@@ -395,7 +389,7 @@ class Archive_Notes(GenericAPIView):
         try:
             user = request.user
             print(request.user)
-            data = Listing_Pages().archive_notes(user)
+            data = NoteService().archive_notes(user)
             if data['success']:
                 return HttpResponse(json.dumps(data, indent=1), status=200)
             else:
@@ -417,7 +411,7 @@ class Pinned_Notes(GenericAPIView):
         """
         try:
             user = request.user
-            data = Listing_Pages().pin_notes(user)
+            data = NoteService().pin_notes(user)
             if data['success']:
                 return HttpResponse(json.dumps(data, indent=1), status=200)
             else:
@@ -500,3 +494,4 @@ class SearchNotes(GenericAPIView):
             logger.error('while searching a notes exception accrued' + str(e))
             smd = Smd_Response()
         return smd
+
