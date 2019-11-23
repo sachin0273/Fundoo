@@ -1,16 +1,14 @@
-import json
+import logging
 import pickle
-from datetime import datetime
+
+from django.contrib.auth import get_user_model
 # from django.contrib.auth.models import User
 from django.utils import timezone
+
 from Lib import redis
 from Note.models import Label
 from Note.models import Note
-from django.http import HttpResponse
-from django.contrib.auth import get_user_model
-from Note.serializers import NoteSerializers, NotesSerializer
-from utils import Smd_Response
-import logging
+from Note.serializers import NotesSerializer
 from utils import smd_response
 
 logger = logging.getLogger(__name__)
@@ -77,8 +75,8 @@ class NoteService:
                 notes = pickle.loads(fired_reminder)
                 notes_upcoming = pickle.loads(upcoming_reminder)
 
-                fired_reminder_serializer = NoteSerializers(notes, many=True)
-                upcoming_reminder_serializer = NoteSerializers(notes_upcoming, many=True)
+                fired_reminder_serializer = NotesSerializer(notes, many=True)
+                upcoming_reminder_serializer = NotesSerializer(notes_upcoming, many=True)
 
                 smd = smd_response(True, 'successfully', data={'fired': fired_reminder_serializer.data,
                                                                'upcoming': upcoming_reminder_serializer.data})
@@ -87,8 +85,8 @@ class NoteService:
             fired_reminder_object = Note.objects.filter(user_id=int(user.id), reminder__lte=timezone.now())
             upcoming_reminder_object = Note.objects.filter(user_id=user.id, reminder__gte=timezone.now())
             if fired_reminder_object or upcoming_reminder_object:
-                fired_serializer = NoteSerializers(upcoming_reminder_object, many=True)
-                upcoming_serializer = NoteSerializers(fired_reminder_object, many=True)
+                fired_serializer = NotesSerializer(upcoming_reminder_object, many=True)
+                upcoming_serializer = NotesSerializer(fired_reminder_object, many=True)
 
                 fired_reminder_notes = pickle.dumps(fired_reminder_object)
                 upcoming_reminder_notes = pickle.dumps(upcoming_reminder_object)
@@ -123,13 +121,13 @@ class NoteService:
 
             if trash_note_data:
                 notes = pickle.loads(trash_note_data)
-                serializer = NoteSerializers(notes, many=True)
+                serializer = NotesSerializer(notes, many=True)
                 smd = smd_response(True, 'successfully', data=serializer.data)
                 logger.info('successfully get notes from redis')
                 return smd
             trash_notes = Note.objects.filter(user_id=int(user.id), is_trash=True)
             if trash_notes:
-                serializer = NoteSerializers(trash_notes, many=True)
+                serializer = NotesSerializer(trash_notes, many=True)
                 note = pickle.dumps(trash_notes)
                 redis.Set(user.username + 'trash', note)
                 smd = smd_response(True, 'successfully', data=serializer.data)
@@ -158,13 +156,13 @@ class NoteService:
 
             if archive_note_data:
                 notes = pickle.loads(archive_note_data)
-                serializer = NoteSerializers(notes, many=True)
+                serializer = NotesSerializer(notes, many=True)
                 smd = smd_response(True, 'successfully', data=serializer.data)
                 logger.info('successfully get notes from redis')
                 return smd
             archive_notes = Note.objects.filter(user_id=user.id, is_archive=True)
             if archive_notes:
-                serializer = NoteSerializers(archive_notes, many=True)
+                serializer = NotesSerializer(archive_notes, many=True)
                 note = pickle.dumps(archive_notes)
                 redis.Set(user.username + 'archive', note)
                 smd = smd_response(True, 'successfully', data=serializer.data)

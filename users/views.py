@@ -1,10 +1,12 @@
 """
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+**************************************************************************************************
+
 Purpose: in this views module we created rest_api for user users ,register,forgot_password
 author:  Sachin Shrikant Jadhav
 since :  25-09-2019
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+**************************************************************************************************
 
 """
 import pdb
@@ -52,7 +54,7 @@ logger = logging.getLogger(__name__)
 User = get_user_model()
 
 
-class User_Create(GenericAPIView):
+class UserCreate(GenericAPIView):
     serializer_class = UserSerializer
 
     def post(self, request, *args, **kwargs):
@@ -65,6 +67,7 @@ class User_Create(GenericAPIView):
         """
 
         try:
+            # pdb.set_trace()
             serializer = UserSerializer(data=request.data)
             if serializer.is_valid():
                 user = serializer.save()
@@ -92,8 +95,8 @@ class User_Create(GenericAPIView):
                 return response
             logger.warning('not valid input warning from users.views.register_api')
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        except Exception:
-            logger.warning('something was wrong warning from users.views.register_api')
+        except Exception as e:
+            logger.warning('something was wrong ' + str(e))
             smd = Smd_Response()
         return smd
 

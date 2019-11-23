@@ -1,3 +1,6 @@
+import json
+import pdb
+
 from django.test import TestCase, Client
 
 # Create your tests here.
@@ -8,13 +11,23 @@ from utils import load
 from django.conf import settings
 
 BASE_URL = settings.BASE_URL
-header = {
-    'HTTP_AUTHORIZATION': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
-                          '.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0MjIyMzA2LCJqdGkiOiI3OTM4OTU5MTc4ZGE0Yzc3OWNmMWZiNDgyMDZkMTUzNCIsInVzZXJfaWQiOjF9.G2-d1IFsEATnyikVD2s8FhMrO6CBixxAw6cSi-MTRTo'}
 
 
 class NoteAppTest(TestCase):
     fixtures = ['fixtures/django_db']
+
+    def test_login_user(self):
+        # pdb.set_trace()
+        global header
+        url = settings.BASE_URL + reverse('users')
+        c = Client()
+        data = load('Note/note_test.json')
+        user = data['user_login'][0]
+        response = c.post(url, user)
+        token = json.loads(response.content)
+        header = {'HTTP_AUTHORIZATION': 'Bearer ' + token['data']}
+        print(header)
+        self.assertEqual(response.status_code, 200)
 
     def test_wrong_collaborator_and_label(self):
         data = load('Note/note_test.json')

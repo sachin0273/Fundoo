@@ -84,13 +84,13 @@ class CreateAndGetNote(GenericAPIView):
             note_data = redis.Get(user.username)
             if note_data:
                 notes = pickle.loads(note_data)
-                serializer = NoteSerializers(notes, many=True)
+                serializer = NotesSerializer(notes, many=True)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
                 logger.info('successfully get notes from redis')
                 return smd
             all_notes = Note.objects.filter(user_id=int(user.id), is_trash=False, is_archive=False)
             if all_notes:
-                serializer = NoteSerializers(all_notes, many=True)
+                serializer = NotesSerializer(all_notes, many=True)
                 note = pickle.dumps(all_notes)
                 redis.Set(user.username, note)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)

@@ -5,8 +5,7 @@ from locust import HttpLocust, TaskSet
 
 header = {"Content-Type": "application/json",
           "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
-                           ".eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0MzE4MzIxLCJqdGkiOiJlMzFmNjcxZTE5ODY0Mzk5YWY0ZTFkNmYzYWU0YWFlZiIsInVzZXJfaWQiOjF9.ihPvdHILOZvkc2YTuTUhIVP7SEzC7Ryj7n66iWb0kSU"}
-
+                           ".eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0NDgwMTE1LCJqdGkiOiI0OTExNjVlMDU5ZmI0NTVjOWViMTJkZTAwMDA0NmQ4MSIsInVzZXJfaWQiOjF9.qi5kIR0nLp5nAddc4b825MAPMDLw6Cg03acOsHd5sVE"}
 
 def login(l):
     l.client.post("/login/", {"username": "admin", "password": "admin123"})
@@ -22,7 +21,7 @@ def reset_password(l):
 
 def note_put(l):
     l.client.put("/api/note/9",
-                 json.dumps({"title": "stringjkjk", "note": "stringhh", "collaborator": [], "label": []}),
+                 json.dumps({"title": "stringjkjk", "note": "stringhh"}),
                  headers=header)
 
 
@@ -30,15 +29,8 @@ def note_post(l):
     l.client.post("/api/note/", json.dumps({
         "title": "string",
         "note": "string",
-        "image": "string",
         "is_archive": True,
         "is_pin": True,
-        "collaborator": [
-
-        ],
-        "label": [
-
-        ]
     }), headers=header)
 
 
@@ -47,7 +39,7 @@ def note_get(l):
 
 
 def label_post(l):
-    l.client.post("/api/label/", json.dumps({"name": "jkll"}), headers=header)
+    l.client.post("/api/label/", json.dumps({"name": "jklll"}), headers=header)
 
 
 def label_get(l):

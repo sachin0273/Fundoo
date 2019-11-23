@@ -14,7 +14,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    url(r'^register/$', views.User_Create.as_view(), name='register'),
+    url(r'^register/$', views.UserCreate.as_view(), name='register'),
     path('sendemail/', views.Reset_Passward.as_view(), name='reset_passward'),
     path('setnewpassword/<userReset>', views.Resetpassword.as_view(), name='resetpassword'),
     path('logout/', views.Logout.as_view(), name='logout'),

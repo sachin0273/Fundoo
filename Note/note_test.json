@@ -1,24 +1,9 @@
 {
-  "social_share": [
+  "user_login": [
     {
-      "note_id": "31",
-      "provider":"twitter"
-    },
-    {
-      "note_id": "jdhshshshs",
-      "provider":"twitter"
-    },
-    {
-      "note_id": " ",
-      "provider":"reddit"
-    },
-    {
-      "note_id": "31",
-      "provider":"reddit"
-    },{
-      "note_id": "31",
-      "provider":"dfjhfhdhdn"
-    }
+    "username":"admin",
+    "password": "admin123"
+  }
   ],
 
   "note_create": [
