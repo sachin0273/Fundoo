@@ -13,21 +13,19 @@ from django.conf import settings
 BASE_URL = settings.BASE_URL
 
 
+def test_login_user():
+    global header
+    url = settings.BASE_URL + reverse('users')
+    data = load('Note/note_test.json')
+    user = data['user_login'][0]
+    response = requests.post(url, user)
+    token = json.loads(response.content)
+    header = {'HTTP_AUTHORIZATION': 'Bearer ' + token['data']}
+    assert response.status_code == 200
+
+
 class NoteAppTest(TestCase):
     fixtures = ['fixtures/django_db']
-
-    def test_login_user(self):
-        # pdb.set_trace()
-        global header
-        url = settings.BASE_URL + reverse('users')
-        c = Client()
-        data = load('Note/note_test.json')
-        user = data['user_login'][0]
-        response = c.post(url, user)
-        token = json.loads(response.content)
-        header = {'HTTP_AUTHORIZATION': 'Bearer ' + token['data']}
-        print(header)
-        self.assertEqual(response.status_code, 200)
 
     def test_wrong_collaborator_and_label(self):
         data = load('Note/note_test.json')
@@ -252,7 +250,7 @@ class NoteAppTest(TestCase):
     def test_pagination(self):
         url = BASE_URL + reverse('pagination')
         c = Client()
-        response = c.get(url)
+        response = c.get(url, **header)
         self.assertEqual(response.status_code, 200)
 
     def test_elastic_search_1(self):

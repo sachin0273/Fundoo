@@ -94,7 +94,7 @@ class UserCreate(GenericAPIView):
                 response = Smd_Response(False, 'you are not validated try again', [])
                 return response
             logger.warning('not valid input warning from users.views.register_api')
-            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            return Smd_Response(message=serializer.errors)
         except Exception as e:
             logger.warning('something was wrong ' + str(e))
             smd = Smd_Response()

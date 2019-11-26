@@ -10,7 +10,6 @@
     {
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
   "collaborator": [
@@ -22,7 +21,6 @@
 },{
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
   "collaborator": [
@@ -34,7 +32,6 @@
 },{
   "title": "hi this one",
   "note": "okk new one",
-  "image": "deployment-strategy.jpg",
   "is_archive": true,
   "is_pin": true,
   "user": 1,

@@ -5,8 +5,7 @@ from locust import HttpLocust, TaskSet
 
 header = {"Content-Type": "application/json",
           "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
-                           ".eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0NDgwMTE1LCJqdGkiOiI0OTExNjVlMDU5ZmI0NTVjOWViMTJkZTAwMDA0NmQ4MSIsInVzZXJfaWQiOjF9.qi5kIR0nLp5nAddc4b825MAPMDLw6Cg03acOsHd5sVE"}
-
+                           ".eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTc0ODI4MTQwLCJqdGkiOiIxMGViYzlkNWQyMWQ0MWY5OGNjYzFiMzQ3MWVkNzU4YyIsInVzZXJfaWQiOjF9.TPsGn1aD-_ajs4XRLG7VIp1rA2ZrVj_UALqFAwoEJhc"}
 def login(l):
     l.client.post("/login/", {"username": "admin", "password": "admin123"})
 

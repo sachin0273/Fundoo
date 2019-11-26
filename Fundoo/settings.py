@@ -72,6 +72,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'Fundoo.middleware.login_required_middleware',
     'Fundoo.middleware.LabelCollaborators',
 
 ]

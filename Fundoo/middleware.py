@@ -1,10 +1,10 @@
 import json
-import pdb
-
+import re
+import jwt
+from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.http import HttpResponse
 from django.urls import reverse
-
+from jwt import DecodeError
 from utils import Smd_Response
 from Note.models import Label
 
@@ -17,17 +17,14 @@ class LabelCollaborators:
 
     # One-time configuration and initialization.
 
-    def __call__(self, request):
+    def __call__(self, request, *view_args, **kwargs):
         # Code to be executed for each request before
         # the view (and later middleware) are called
         # print(request.method)
         # print(request.user)
         # print(request)
         # print(request.get_full_path())
-
         try:
-            # pdb.set_trace()
-            # request.parse_file_upload()
             if request.get_full_path() == "/api/note/" and request.method == 'POST' or request.path.startswith(
                     reverse('note', args=[str])) and request.method == 'PUT':
                 if request.headers['Content-Type'].split(';')[0] == 'multipart/form-data':
@@ -46,13 +43,13 @@ class LabelCollaborators:
                         for collaborator in request_data['collaborator']:
                             new_collaborator = User.objects.get(email=collaborator)
                             collaborator_list.append(new_collaborator)
-                        response = self.function(request)
+                        response = self.function(request, *view_args, **kwargs)
                     else:
-                        response = self.function(request)
+                        response = self.function(request, *view_args, **kwargs)
                 else:
-                    response = self.function(request)
+                    response = self.function(request, *view_args, **kwargs)
             else:
-                return self.function(request)
+                return self.function(request, *view_args, **kwargs)
         except Label.DoesNotExist:
             response = Smd_Response(message='your label is not  valid please add label and try')
 
@@ -61,3 +58,25 @@ class LabelCollaborators:
         except Exception:
             response = Smd_Response(message='something is wrong when validating your label or collaborator')
         return response
+
+
+def login_required_middleware(get_response):
+    def middleware(request):
+        try:
+            if re.match('^/api/', request.get_full_path()) and not re.match('^/api/token/', request.get_full_path()):
+                bearer_token = request.META.get("HTTP_AUTHORIZATION", "")
+                if bearer_token.startswith("Bearer"):
+                    token = bearer_token.split(' ')
+                    jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
+                else:
+                    response = Smd_Response(message='Bearer is missing in token')
+                    return response
+            return get_response(request)
+        except DecodeError:
+            response = Smd_Response(message='not valid token')
+            return response
+        except Exception:
+            response = Smd_Response()
+            return response
+
+    return middleware

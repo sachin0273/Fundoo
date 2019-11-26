@@ -18,11 +18,11 @@ from rest_framework.parsers import MultiPartParser, FormParser, FileUploadParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .models import Note, Label
-from Note.serializers import NoteSerializers, LabelSerializers, NotesSerializer
+from Note.serializers import NoteSerializers, LabelSerializers, NotesSerializer, NoteSerializerPut
 from utils import Smd_Response
 from users.decoraters import login_required
 from django.contrib.auth.models import User
-from .service.note import NoteService,update_redis, label_update_in_redis
+from .service.note import NoteService, update_redis, label_update_in_redis
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
@@ -137,7 +137,7 @@ class CreateAndGetNote(GenericAPIView):
 
 
 class UpdateAndDeleteNote(GenericAPIView):
-    serializer_class = NotesSerializer
+    serializer_class = NoteSerializerPut
 
     permission_classes = (IsAuthenticated,)
 
@@ -167,7 +167,7 @@ class UpdateAndDeleteNote(GenericAPIView):
                     return HttpResponse(json.dumps(label_result))
                 request_data['label'] = label_result['data']
             update_note = Note.objects.get(pk=int(note_id))
-            serializer = NotesSerializer(instance=update_note, data=request_data, partial=True)
+            serializer = NoteSerializerPut(instance=update_note, data=request_data, partial=True)
             if serializer.is_valid():
                 serializer.save()
                 user = request.user
@@ -494,4 +494,3 @@ class SearchNotes(GenericAPIView):
             logger.error('while searching a notes exception accrued' + str(e))
             smd = Smd_Response()
         return smd
-
