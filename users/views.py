@@ -425,6 +425,7 @@ def access_token(request):
         code_path = path.split('&')
         code = code_path[0].split('=')
         code = unquote(code[1])
+        print(code)
 
         url = settings.GOOGLE_ACCESS_TOKEN_URI
         data = {
@@ -446,6 +447,7 @@ def access_token(request):
     except Exception:
         smd = Smd_Response()
     return smd
+
 
 
 class SocialSignUp(APIView):
