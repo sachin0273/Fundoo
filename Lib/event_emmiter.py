@@ -7,11 +7,10 @@ since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
-import pdb
 
-from django.core.mail import EmailMultiAlternatives, send_mail
+from django.core.mail import EmailMultiAlternatives
 
-from Fundoo import settings
+from django.conf import settings
 from pymitter import EventEmitter
 
 email_event = EventEmitter()

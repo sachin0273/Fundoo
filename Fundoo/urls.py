@@ -22,7 +22,7 @@ from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework_simplejwt import views as jwt_views
 
-from Fundoo import settings
+from django.conf import settings
 
 schema_view = get_swagger_view(title='Fundoo API')
 

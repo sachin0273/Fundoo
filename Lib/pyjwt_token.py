@@ -9,10 +9,11 @@ since :  25-09-2019
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """
+import pdb
+
 import jwt
 import requests
-
-from Fundoo import settings
+from Fundoo.settings import base
 
 
 class Jwt:
@@ -29,7 +30,8 @@ class Jwt:
 
     def login_token(self, payload):
         try:
-            response = requests.post(settings.Token, payload)
+            pdb.set_trace()
+            response = requests.post(base.Token, payload)
             return response.json()['access']
         except Exception:
             return False

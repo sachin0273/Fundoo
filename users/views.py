@@ -449,7 +449,6 @@ def access_token(request):
     return smd
 
 
-
 class SocialSignUp(APIView):
     """
     in this class we used post function to create user for social login

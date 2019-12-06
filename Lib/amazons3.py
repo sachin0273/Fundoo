@@ -1,4 +1,4 @@
-from django.conf import settings
+from Fundoo.settings import base
 
 from utils import build_url
 
@@ -18,9 +18,9 @@ class AmazonS3:
         try:
 
             # Upload the file
-            bucket = settings.BUCKET
-            settings.s3.upload_fileobj(image, bucket, object_name)
-            file_url = build_url(settings.S3_BASE_URL, bucket + '/' + object_name + '/')
+            bucket = base.BUCKET
+            base.s3.upload_fileobj(image, bucket, object_name)
+            file_url = build_url(base.S3_BASE_URL, bucket + '/' + object_name + '/')
             print(file_url)
             return file_url
         except Exception:
@@ -35,8 +35,8 @@ class AmazonS3:
         """
 
         try:
-            response = settings.s3.delete_object(
-                Bucket=settings.BUCKET,
+            response = base.s3.delete_object(
+                Bucket=base.BUCKET,
                 Key=image_key,
             )
             return response

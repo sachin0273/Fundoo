@@ -30,7 +30,7 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 logger = logging.getLogger(__name__)
 
 
-class CreateAndGetNote(GenericAPIView):
+class NoteView(GenericAPIView):
     serializer_class = NoteSerializers
 
     permission_classes = (IsAuthenticated,)
@@ -75,7 +75,6 @@ class CreateAndGetNote(GenericAPIView):
 
     def get(self, request, *args, **kwargs):
         """
-
         :param request:user request for get all notes
         :return: this function perform get operation of notes
 
@@ -137,7 +136,7 @@ class CreateAndGetNote(GenericAPIView):
 #         return smd
 
 
-class UpdateAndDeleteNote(GenericAPIView):
+class NoteDetailsView(GenericAPIView):
     serializer_class = NoteSerializerPut
 
     permission_classes = (IsAuthenticated,)
@@ -207,7 +206,7 @@ class UpdateAndDeleteNote(GenericAPIView):
         return smd
 
 
-class CreateAndGetLabel(GenericAPIView):
+class LabelView(GenericAPIView):
     serializer_class = LabelSerializers
 
     permission_classes = (IsAuthenticated,)
@@ -270,7 +269,7 @@ class CreateAndGetLabel(GenericAPIView):
         return smd
 
 
-class UpdateAndDeleteLabel(GenericAPIView):
+class LabelDetailsView(GenericAPIView):
     serializer_class = LabelSerializers
 
     permission_classes = (IsAuthenticated,)
@@ -354,7 +353,7 @@ class Reminders(GenericAPIView):
             return smd
 
 
-class Trash_Notes(GenericAPIView):
+class TrashNotes(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
@@ -377,7 +376,7 @@ class Trash_Notes(GenericAPIView):
             return smd
 
 
-class Archive_Notes(GenericAPIView):
+class ArchiveNotes(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
@@ -400,7 +399,7 @@ class Archive_Notes(GenericAPIView):
             return smd
 
 
-class Pinned_Notes(GenericAPIView):
+class PinnedNotes(GenericAPIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request, *args, **kwargs):
