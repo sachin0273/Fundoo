@@ -11,7 +11,7 @@ from django.conf import settings
 sys.path.append(os.path.abspath('Fundoo'))
 # app = Celery('Fundoo')
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Fundoo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Fundoo.settings.development')
 app = Celery('Fundoo')
 app.config_from_object(settings, namespace='CELERY')
 app.autodiscover_tasks()
