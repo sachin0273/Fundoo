@@ -44,4 +44,3 @@ app.conf.beat_schedule = {
 #     import Note
 #     print(arg)
 
-
