@@ -56,3 +56,27 @@ def All_Delete():
         return False
 
 
+class Cache:
+    def __init__(self, host='localhost', port=6379, db=0):
+        self.host = host
+        self.port = port
+        self.db = db
+        self.connect = self.connection()
+
+    def connection(self):
+        self.redis_obj = redis.StrictRedis(host=self.host, port=self.port, db=self.db)
+
+        return self.redis_obj
+
+    def set(self, key, value):
+        self.redis_obj.set(key, value)
+
+    def get(self, key):
+        gh = self.redis_obj.get(key)
+        return gh
+
+    def delete(self, key):
+        self.redis_obj.delete(key)
+
+
+cache_obj = Cache()
