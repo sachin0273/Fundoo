@@ -23,7 +23,8 @@ class LabelCollaborators:
         # print(request.method)
         # print(request.user)
         # print(request)
-        # print(request.get_full_path())
+        # print(requ est.get_full_path())
+
         try:
             if request.get_full_path() == "/api/note/" and request.method == 'POST' or request.path.startswith(
                     reverse('note', args=[str])) and request.method == 'PUT':

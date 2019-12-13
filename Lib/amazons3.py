@@ -1,3 +1,7 @@
+import pdb
+
+import boto3
+
 from Fundoo.settings import base
 
 from utils import build_url
@@ -16,19 +20,19 @@ class AmazonS3:
         """
         # If S3 object_name was not specified, use file_name
         try:
-
+            pdb.set_trace()
             # Upload the file
             bucket = base.BUCKET
             base.s3.upload_fileobj(image, bucket, object_name)
-            file_url = build_url(base.S3_BASE_URL, bucket + '/' + object_name + '/')
-            print(file_url)
-            return file_url
+            image_url = build_url(base.S3_BASE_URL, 'readprofile/' + bucket + '/' + object_name + '/')
+
+            return image_url
         except Exception:
             return False
 
     def delete_file(self, image_key):
         """
-        
+
         :param image_key: here we passing object name exist in s3
         :return: this function used for delete the image from amazon s3 bucket from a
 
@@ -42,3 +46,4 @@ class AmazonS3:
             return response
         except Exception:
             return False
+

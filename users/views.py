@@ -11,6 +11,7 @@ since :  25-09-2019
 """
 import pdb
 import re
+from Fundoo.settings import base
 from urllib.parse import unquote
 from rest_framework import status
 from rest_framework.response import Response
@@ -35,7 +36,7 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Lib import redis
+from Lib.redis import cache_obj
 from users.decoraters import login_required
 # from users.models import Profile
 # from users.models import Profile
@@ -134,7 +135,7 @@ class Login(GenericAPIView):
                     'password': password,
                 }
                 token = Jwt().login_token(payload)
-                redis.Set(user.id, token)
+                cache_obj.set(user.id, token)
                 smd = {"success": True, "message": "successful", "data": token}
                 logger.info('successfully logged in info from users.views.login_api')
                 return HttpResponse(json.dumps(smd))
@@ -336,71 +337,65 @@ class Logout(GenericAPIView):
     def get(self, request):
         try:
             user = request.user
-            redis.Del(user.id)
+            cache_obj.delete(user.id)
             smd = Smd_Response(True, 'safely logged out', [])
         except Exception:
             smd = Smd_Response()
         return smd
 
 
-# class ProfileUpload(GenericAPIView):
-#     serializer_class = ImageSerializer
-#
-#     permission_classes = (IsAuthenticated,)
-#
-#     def post(self, request, *args, **kwargs):
-#         """
-#
-#         :param request: here we using post request for uploading photo
-#         :return: this function is used for upload a photo on amazon s3
-#
-#         """
-#         try:
-#             serializer = ImageSerializer(data=request.data)
-#             if serializer.is_valid():
-#                 image = request.data['image']
-#                 user = request.user
-#                 print(user.id)
-#                 exist_image = Profile.objects.get(user_id=user.id)
-#                 if exist_image:
-#                     url = AmazonS3().upload_file(image, object_name=user.username)
-#                     exist_image.image = url
-#                     exist_image.save()
-#                     smd = Smd_Response(True, 'image uploaded successfully')
-#                 else:
-#                     url = AmazonS3().upload_file(image, object_name=user.username)
-#                     Profile.objects.create(image=url, user_id=user.id)
-#                     smd = Smd_Response(True, 'image uploaded successfully')
-#             else:
-#                 smd = Smd_Response(False, 'please provide valid image', [])
-#                 logger.warning('not a valid image warning from users.views.s3upload_api')
-#         except Exception:
-#             logger.warning('something is wrong warning from users.views.s3upload_api')
-#             smd = Smd_Response()
-#         return smd
-#
-#
-# def read_profile(request, bucket, object_name, *args, **kwargs):
-#     """
-#
-#     :param bucket:here we taking bucket name from path parameter
-#     :param object_name: here we taking object name from parameter
-#     :return:this function is used for generate preassigned url for view photo
-#
-#     """
-#     try:
-#         url = settings.s3.generate_presigned_url(
-#             ClientMethod='get_object',
-#             Params={
-#                 'Bucket': bucket,
-#                 'Key': object_name
-#             }
-#         )
-#         print(url)
-#         return redirect(url)
-#     except Exception:
-#         smd = Smd_Response()
-#         return smd
+class ProfileUpload(GenericAPIView):
+    serializer_class = ImageSerializer
+
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request, *args, **kwargs):
+        """
+
+        :param request: here we using post request for uploading photo
+        :return: this function is used for upload a photo on amazon s3
+
+        """
+        try:
+            serializer = ImageSerializer(data=request.data)
+            if serializer.is_valid():
+                image = request.data['image']
+                user = request.user
+                exist_image = User.objects.get(pk=user.id)
+                url = AmazonS3().upload_file(image, object_name=user.username)
+                exist_image.image = url
+                exist_image.save()
+                smd = Smd_Response(True, 'image uploaded successfully', status_code=200)
+            else:
+                smd = Smd_Response(False, 'please provide valid image', [])
+                logger.warning('not a valid image warning from users.views.s3upload_api')
+        except Exception:
+            logger.warning('something is wrong warning from users.views.s3upload_api')
+            smd = Smd_Response()
+        return smd
+
+
+def read_profile(request, bucket, object_name, *args, **kwargs):
+    """
+
+    :param bucket:here we taking bucket name from path parameter
+    :param object_name: here we taking object name from parameter
+    :return:this function is used for generate preassigned url for view photo
+
+    """
+    try:
+        url = base.s3.generate_presigned_url(
+            ClientMethod='get_object',
+            Params={
+                'Bucket': bucket,
+                'Key': object_name
+            }
+        )
+        print(url)
+        return redirect(url)
+    except Exception:
+        smd = Smd_Response()
+        return smd
 
 
 def social_login(request):
@@ -419,6 +414,7 @@ def access_token(request):
     :param request: here we get code from google oauth2
     :return:in this function using the code from the google get access token by using that token we get user information
            after that we create that user and successfully logged in user
+
     """
     try:
         path = request.get_full_path()
