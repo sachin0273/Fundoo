@@ -1,12 +1,13 @@
 import json
 import pdb
 
+from django.db import IntegrityError
 from elasticsearch_dsl import MultiSearch, Search
 from django.shortcuts import render
 from rest_framework.views import APIView
 
 from .documents import NoteDocument
-from Lib import redis
+from Lib import redis_service
 import pickle
 import logging
 from rest_framework.validators import UniqueValidator
@@ -81,7 +82,7 @@ class NoteView(GenericAPIView):
         """
         try:
             user = request.user
-            note_data = redis.Get(user.username)
+            note_data = redis_service.Get(user.username)
             if note_data:
                 notes = pickle.loads(note_data)
                 serializer = NotesSerializer(notes, many=True)
@@ -92,7 +93,7 @@ class NoteView(GenericAPIView):
             if all_notes:
                 serializer = NotesSerializer(all_notes, many=True)
                 note = pickle.dumps(all_notes)
-                redis.Set(user.username, note)
+                redis_service.Set(user.username, note)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
                 logger.info('successfully get notes from database')
             else:
@@ -199,7 +200,7 @@ class NoteDetailsView(GenericAPIView):
             logger.error('note does not exist for this note id error from Note.views' + str(e))
             smd = Smd_Response(False, 'please enter valid note_id')
         except ValueError as e:
-            smd = Smd_Response(False, 'please enter note_id in digits' + str(e))
+            smd = Smd_Response(False, 'please enter note_id in digits')
         except Exception as e:
             logger.error('parent exception occurred ' + str(e))
             smd = Smd_Response()
@@ -222,11 +223,14 @@ class LabelView(GenericAPIView):
             serializer = LabelSerializers(data=request.data)
             if serializer.is_valid():
                 serializer.save(user=request.user)
-                smd = Smd_Response(True, 'label successfully created', status_code=200)
+                smd = Smd_Response(True, 'label successfully created', data=serializer.data, status_code=200)
                 logger.info('successfully label created')
             else:
                 smd = Smd_Response(False, serializer.errors)
                 logger.warning('not valid input warning from Note.views')
+        except IntegrityError:
+            logger.error('duplicate entry for label')
+            smd = Smd_Response(message='entered label already exist please try different')
         except Exception as e:
             smd = Smd_Response()
             logger.error('something was wrong ' + str(e))
@@ -241,7 +245,7 @@ class LabelView(GenericAPIView):
         """
         try:
             user = request.user
-            data = redis.Get(user.username + 'label')
+            data = redis_service.Get(user.username + 'label')
             if data:
                 labels = pickle.loads(data)
                 serializer = LabelSerializers(labels, many=True)
@@ -252,7 +256,7 @@ class LabelView(GenericAPIView):
             if label:
                 serializer = LabelSerializers(label, many=True)
                 all_label = pickle.dumps(label)
-                redis.Set(user.username + 'label', all_label)
+                redis_service.Set(user.username + 'label', all_label)
                 smd = Smd_Response(True, 'successfully', data=serializer.data, status_code=200)
                 logger.info('all label get from database')
             else:
@@ -289,13 +293,17 @@ class LabelDetailsView(GenericAPIView):
                 label.name = request.data['name']
                 label.save()
                 label_update_in_redis(user)
-                smd = Smd_Response(True, 'label updated successfully', status_code=200)
+                smd = Smd_Response(True, 'label updated successfully', data={'id': label.id, 'name': label.name},
+                                   status_code=200)
                 logger.info('label updated successfully')
             else:
                 smd = Smd_Response(False, 'please enter valid label id or user id ')
         except Label.DoesNotExist:
             smd = Smd_Response(False, 'please enter valid label id or user id ')
             logger.error('label not exist for this label id error from Note.views')
+        except IntegrityError:
+            logger.error('duplicate entry for while updating label')
+            smd = Smd_Response(message='entered label already exist so please try different')
         except ValueError as e:
             smd = Smd_Response(False, 'please enter label id in digits')
             logger.error('value error occurred ' + str(e))
@@ -455,8 +463,10 @@ class SearchNotes(GenericAPIView):
 
         """
         try:
+
             # pdb.set_trace()
             user = request.user
+            print(user.id)
             notes = NoteDocument.search().query({
                 "bool": {"must": {
 

@@ -36,7 +36,7 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Lib.redis import cache_obj
+from Lib.redis_service import cache_obj
 from users.decoraters import login_required
 # from users.models import Profile
 # from users.models import Profile

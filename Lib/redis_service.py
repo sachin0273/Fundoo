@@ -1,5 +1,6 @@
 import redis
 
+
 redis_object = redis.Redis("localhost")
 
 
@@ -61,9 +62,9 @@ class Cache:
         self.host = host
         self.port = port
         self.db = db
-        self.connect = self.connection()
+        self.connect = self.connect()
 
-    def connection(self):
+    def connect(self):
         self.redis_obj = redis.StrictRedis(host=self.host, port=self.port, db=self.db)
 
         return self.redis_obj
@@ -72,11 +73,11 @@ class Cache:
         self.redis_obj.set(key, value)
 
     def get(self, key):
-        gh = self.redis_obj.get(key)
-        return gh
+        return self.redis_obj.get(key)
 
     def delete(self, key):
         self.redis_obj.delete(key)
 
 
 cache_obj = Cache()
+

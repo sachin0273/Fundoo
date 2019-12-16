@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 # from django.contrib.auth.models import User
 from django.utils import timezone
 
-from Lib import redis
+from Lib import redis_service
 from Note.models import Label
 from Note.models import Note
 from Note.serializers import NotesSerializer
@@ -68,8 +68,8 @@ class NoteService:
 
         """
         try:
-            fired_reminder = redis.Get(str(user.username) + 'fired_reminders')
-            upcoming_reminder = redis.Get(user.username + 'upcoming_reminders')
+            fired_reminder = redis_service.Get(str(user.username) + 'fired_reminders')
+            upcoming_reminder = redis_service.Get(user.username + 'upcoming_reminders')
             print(user)
             if fired_reminder or upcoming_reminder:
                 notes = pickle.loads(fired_reminder)
@@ -85,14 +85,14 @@ class NoteService:
             fired_reminder_object = Note.objects.filter(user_id=int(user.id), reminder__lte=timezone.now())
             upcoming_reminder_object = Note.objects.filter(user_id=user.id, reminder__gte=timezone.now())
             if fired_reminder_object or upcoming_reminder_object:
-                fired_serializer = NotesSerializer(upcoming_reminder_object, many=True)
-                upcoming_serializer = NotesSerializer(fired_reminder_object, many=True)
+                fired_serializer = NotesSerializer(fired_reminder_object, many=True)
+                upcoming_serializer = NotesSerializer(upcoming_reminder_object, many=True)
 
                 fired_reminder_notes = pickle.dumps(fired_reminder_object)
                 upcoming_reminder_notes = pickle.dumps(upcoming_reminder_object)
 
-                redis.Set(str(user.username) + 'fired_reminders', fired_reminder_notes)
-                redis.Set(user.username + 'upcoming_reminders', upcoming_reminder_notes)
+                redis_service.Set(str(user.username) + 'fired_reminders', fired_reminder_notes)
+                redis_service.Set(user.username + 'upcoming_reminders', upcoming_reminder_notes)
 
                 smd = smd_response(True, 'successfully',
                                    data={'fired': fired_serializer.data, 'upcoming': upcoming_serializer.data})
@@ -117,7 +117,7 @@ class NoteService:
 
         """
         try:
-            trash_note_data = redis.Get(user.username + 'trash')
+            trash_note_data = redis_service.Get(user.username + 'trash')
 
             if trash_note_data:
                 notes = pickle.loads(trash_note_data)
@@ -129,7 +129,7 @@ class NoteService:
             if trash_notes:
                 serializer = NotesSerializer(trash_notes, many=True)
                 note = pickle.dumps(trash_notes)
-                redis.Set(user.username + 'trash', note)
+                redis_service.Set(user.username + 'trash', note)
                 smd = smd_response(True, 'successfully', data=serializer.data)
                 logger.info('successfully get notes from database')
             else:
@@ -152,7 +152,7 @@ class NoteService:
 
         """
         try:
-            archive_note_data = redis.Get(str(user.username) + 'archive')
+            archive_note_data = redis_service.Get(str(user.username) + 'archive')
 
             if archive_note_data:
                 notes = pickle.loads(archive_note_data)
@@ -164,7 +164,7 @@ class NoteService:
             if archive_notes:
                 serializer = NotesSerializer(archive_notes, many=True)
                 note = pickle.dumps(archive_notes)
-                redis.Set(user.username + 'archive', note)
+                redis_service.Set(user.username + 'archive', note)
                 smd = smd_response(True, 'successfully', data=serializer.data)
                 logger.info('successfully get notes from database')
             else:
@@ -181,7 +181,7 @@ class NoteService:
 
     def pin_notes(self, user):
         try:
-            pinned_note_data = redis.Get(str(user.username) + 'pin')
+            pinned_note_data = redis_service.Get(str(user.username) + 'pin')
 
             if pinned_note_data:
                 notes = pickle.loads(pinned_note_data)
@@ -193,7 +193,7 @@ class NoteService:
             if pinned_notes:
                 serializer = NotesSerializer(pinned_notes, many=True)
                 note = pickle.dumps(pinned_notes)
-                redis.Set(user.username + 'pin', note)
+                redis_service.Set(user.username + 'pin', note)
                 smd = smd_response(True, 'successfully', data=serializer.data)
                 logger.info('successfully get notes from database')
             else:
@@ -213,13 +213,13 @@ def update_redis(user):
     """
 
     :param user:this is our logged in user
-    :return:this function is used update notes in redis
+    :return:this function is used update notes in redis_service
 
     """
     try:
         all_notes = Note.objects.filter(user_id=int(user.id), is_trash=False, is_archive=False)
         notes = pickle.dumps(all_notes)
-        redis.Set(user.username, notes)
+        redis_service.Set(user.username, notes)
     except Exception:
         return False
 
@@ -235,7 +235,7 @@ def label_update_in_redis(user):
 
         labels = Label.objects.get(user_id=user.id)
         all_label = pickle.dumps(labels)
-        redis.Set(user.username + 'label', all_label)
+        redis_service.Set(user.username + 'label', all_label)
 
     except Exception:
         return False

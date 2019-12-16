@@ -1,7 +1,5 @@
 import pdb
 
-import boto3
-
 from Fundoo.settings import base
 
 from utils import build_url
@@ -46,4 +44,3 @@ class AmazonS3:
             return response
         except Exception:
             return False
-
