@@ -30,7 +30,9 @@ class NoteDocument(Document):
     color = fields.StringField()
 
     class Index:
+
         # Name of the Elasticsearch index
+
         name = 'search_note'
 
         settings = {'number_of_shards': 1,
@@ -38,3 +40,4 @@ class NoteDocument(Document):
 
     class Django:
         model = Note
+

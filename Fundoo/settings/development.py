@@ -9,7 +9,7 @@ INSTALLED_APPS += [
     'rest_framework_swagger',
     'rest_framework.authtoken',
     'users',
-    'Note',
+    'note',
     'django_elasticsearch_dsl',
     'django_nose',
     'corsheaders',
@@ -96,7 +96,7 @@ LOGGING = {
         },
     },
     'loggers': {
-        'Note': {
+        'note': {
             'level': 'DEBUG',
             'handlers': ['console'],
             'propagate': True,

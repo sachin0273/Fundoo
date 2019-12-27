@@ -7,7 +7,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 
 from .documents import NoteDocument
-from Lib import redis_service
+from lib import redis_service
 import pickle
 import logging
 from rest_framework.validators import UniqueValidator
@@ -20,7 +20,7 @@ from rest_framework.parsers import MultiPartParser, FormParser, FileUploadParser
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .models import Note, Label
-from Note.serializers import NoteSerializers, LabelSerializers, NotesSerializer, NoteSerializerPut
+from note.serializers import NoteSerializers, LabelSerializers, NotesSerializer, NoteSerializerPut
 from utils import Smd_Response
 from users.decoraters import login_required
 from django.contrib.auth.models import User
@@ -80,6 +80,7 @@ class NoteView(GenericAPIView):
         :return: this function perform get operation of notes
 
         """
+        pdb.set_trace()
         try:
             user = request.user
             note_data = redis_service.Get(user.username)

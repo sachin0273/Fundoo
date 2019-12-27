@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 from jwt import DecodeError
 from utils import Smd_Response
-from Note.models import Label
+from note.models import Label
 
 User = get_user_model()
 

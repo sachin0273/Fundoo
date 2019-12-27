@@ -1,5 +1,5 @@
 from django.test import TestCase
-from Note.models import Note, Label
+from note.models import Note, Label
 from django.urls import reverse
 import pytest
 import requests

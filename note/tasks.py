@@ -7,8 +7,8 @@ from celery.task import task, periodic_task
 from django.contrib.auth.models import User
 from django.template.loader import render_to_string
 from django.contrib.sites.models import Site
-from Lib.event_emmiter import email_event
-from Note.models import Note
+from lib.event_emmiter import email_event
+from note.models import Note
 from django.utils import timezone
 
 

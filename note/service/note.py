@@ -5,10 +5,10 @@ from django.contrib.auth import get_user_model
 # from django.contrib.auth.models import User
 from django.utils import timezone
 
-from Lib import redis_service
-from Note.models import Label
-from Note.models import Note
-from Note.serializers import NotesSerializer
+from lib import redis_service
+from note.models import Label
+from note.models import Note
+from note.serializers import NotesSerializer
 from utils import smd_response
 
 logger = logging.getLogger(__name__)

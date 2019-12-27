@@ -9,7 +9,7 @@ since :  25-09-2019
 """
 import json
 import re
-
+from urllib import parse
 from django.http import JsonResponse
 
 
@@ -53,12 +53,6 @@ def smd_response(success=False, message='something was wrong', data=[]):
     return smd
 
 
-# 'import urllib'
-
-
-from urllib import parse
-
-
 def build_url(baseurl, path):
     """
 
@@ -70,16 +64,3 @@ def build_url(baseurl, path):
     url_parts = list(parse.urlparse(baseurl))
     url_parts[2] = path
     return parse.urlunparse(url_parts)
-
-
-# args = {'arg1': 'value1', 'arg2': 'value2'}
-# # works with double slash scenario
-# token = 'dfffffffffffffffffffffffffff'
-# url1 = build_url('http://127.0.0.1:8000/readprofile/', token)
-# print(url1)
-
-#
-#
-# def call():
-#     tt = Note.objects.all()
-#     return tt

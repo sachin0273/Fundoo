@@ -36,15 +36,15 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from Lib.redis_service import cache_obj
+from lib.redis_service import cache_obj
 from users.decoraters import login_required
 # from users.models import Profile
 # from users.models import Profile
 from .serializers import UserSerializer, EmailSerializer, PasswordSerializer, LoginSerializer, ImageSerializer
-from Lib.pyjwt_token import Jwt
+from lib.pyjwt_token import Jwt
 from rest_framework.permissions import IsAuthenticated
-from Lib.event_emmiter import email_event
-from Lib.amazons3 import AmazonS3
+from lib.event_emmiter import email_event
+from lib.amazons3 import AmazonS3
 import logging
 from utils import validate_email, build_url
 from urlshortening.models import get_short_url, Url

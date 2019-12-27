@@ -1,16 +1,19 @@
+import pdb
+
 import jwt
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from jwt import DecodeError
 from rest_framework.response import Response
-from Lib import redis_service
+from lib import redis_service
 from utils import Smd_Response
 
 
 def login_required(function):
     def wraper(request, *args, **kwargs):
         try:
+            # pdb.set_trace()
             header = request.META['HTTP_AUTHORIZATION']
             token = header.split(' ')
             decoded = jwt.decode(token[1], settings.SECRET_KEY, algorithm="HS256")
@@ -25,4 +28,5 @@ def login_required(function):
         except Exception:
             smd = Smd_Response()
         return smd
+
     return wraper

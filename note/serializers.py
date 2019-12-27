@@ -1,4 +1,4 @@
-from Note.documents import NoteDocument
+from note.documents import NoteDocument
 from .models import Note, Label
 from django.contrib.auth import get_user_model
 from rest_framework import serializers

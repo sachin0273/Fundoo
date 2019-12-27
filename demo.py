@@ -12,6 +12,8 @@
 #     print('ddjdd')
 # print(uu.__gt__(ui))
 # # print(True)
+
+import json
 import pdb
 
 # class Node:
@@ -314,5 +316,150 @@ import pdb
 #     Dl.traverse_list()
 #     Dl.reverse_linked_list()
 #     Dl.traverse_list()
-import redis
+import sys
+from pprint import pprint
 
+# printing json response
+data = {'status': 'OK', 'results': [{'address_components': [{'long_name': 'Rajpath', 'types': ['route'],
+                                                             'short_name': 'Rajpath'}, {'long_name': 'India Gate',
+                                                                                        'types': ['political',
+                                                                                                  'sublocality',
+                                                                                                  'sublocality_level_1'],
+                                                                                        'short_name': 'India Gate'},
+                                                            {'long_name': 'New Delhi', 'types':
+                                                                ['locality', 'political'], 'short_name': 'New Delhi'},
+                                                            {'long_name': 'New Delhi',
+                                                             'types': ['administrative_area_level_2', 'political'],
+                                                             'short_name': 'New Delhi'}, {'long_name':
+                                                                                              'Delhi', 'types': [
+        'administrative_area_level_1', 'political'], 'short_name': 'DL'}, {'long_name':
+                                                                               'India',
+                                                                           'types': ['country', 'political'],
+                                                                           'short_name': 'IN'},
+                                                            {'long_name': '110001', 'types':
+                                                                ['postal_code'], 'short_name': '110001'}],
+                                     'geometry': {'location': {'lng': 77.2295097, 'lat': 28.612912},
+                                                  'viewport': {
+                                                      'northeast': {'lng': 77.2308586802915, 'lat': 28.6142609802915},
+                                                      'southwest': {'lng':
+                                                                        77.22816071970848, 'lat': 28.6115630197085}},
+                                                  'location_type': 'APPROXIMATE'}, 'types':
+                                         ['establishment', 'point_of_interest'],
+                                     'formatted_address': 'Rajpath, India Gate, New Delhi, Delhi 110001',
+                                     'place_id': 'ChIJC03rqdriDDkRXT6SJRGXFwc'}]}
+
+print(data)
+
+# class all:
+#     def __init__(self):
+#         self.jh = 00
+#
+#     def it(self):
+#         return self.jh
+#
+#
+# class y(all):
+#     def __init__(self):
+#         all.__init__(self)
+#
+#
+# gh = y()
+# print(gh.it())
+# ui = 'dsdksssm'
+# if isinstance(gh, all):
+#     print('ya ya ')
+# if isinstance(ui, all):
+#     print('ddkjdd')
+# if issubclass(y, all):
+#     print('fdhdjusdn')
+# print(y.__mro__)
+# print(y.mro())
+#
+#
+# class PowTwo:
+#     """Class to implement an iterator
+#     of powers of two"""
+#
+#     @classmethod
+#     def gh(cls, iii):
+#         return iii
+#
+#     def __init__(self, max=0):
+#         self.max = max
+#
+#     def __iter__(self):
+#         self.min = 0
+#         return self
+#
+#     def __next__(self):
+#         if self.min <= self.max:
+#             result = 2 ** self.min
+#             self.min += 1
+#             return result
+#         else:
+#             raise StopIteration
+#
+#
+# a = PowTwo(4)
+# i = iter(a)
+# print(next(i))
+# print(next(i))
+# print(next(i))
+# for i in PowTwo(5):
+#     print(i)
+# matrix = ['f', 'ff', 'hk']
+# flattened = [n for row in matrix for n in row]
+# print(flattened)
+# first_letters = set()
+# words = 'sachin'
+# for w in words:
+#     print(w[0])
+#     first_letters.add(w[0])
+# print(first_letters)
+# count = 0
+# gh = {w for w in words}
+# valu = [9, 9, 90, 766, 55]
+# exp = ['kl', 'jk', 'jlm']
+# kl = {'jkl': 8989, 'kjih': 889}
+# flipped = {key: value for key, value in kl.items()}
+# print(flipped)
+# print(a.gh('juiyh'))
+
+# number = '100'
+# print(float(number))
+# import array
+#
+# arr = array.array('i', [9, 8, 9])
+# for i in arr:
+#     print(i)
+# x, y = input("Enter a two value: ").split()
+# print(x)
+# print(y)
+# x = list(map(int, input("Enter a multiple value: ").split()))
+# print("List of students: ", x)
+
+# x, y, z = [int(x) for x in input("Enter three value: ").split()]
+# print(x, y, z)
+
+fg = {'kl': 89, 'lj': 0}
+tg = fg.pop('kl')
+print(fg)
+print(tg)
+
+
+class CustomException(BaseException):
+    pass
+
+
+class new(CustomException):
+    pass
+
+
+g = 2
+try:
+    if 1 == g:
+        raise new('hi error is occurred')
+except new as e:
+    print(e)
+finally:
+    print('kahlil')
